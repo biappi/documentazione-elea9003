@@ -1,4 +1,4 @@
-# CAP. 4°: L° UNITA CENTRALE
+# L'unita' centrale
 
 ## 4.1. Memoria principale
 
@@ -9,6 +9,7 @@ Sette piani sovrapposti contengono 70000 bit neces-
 sari a rappresentare 10.000 informazioni alfanumeri.
 che; il loro insieme forma un elemento tecnologico
 di memoria.
+
 Due elementi tecnologici di memoria, per un totale di
 20.000 informazioni alfanumeriche, costituiscono in
 vece la minima unita funzionale di memoria: un cal
@@ -16,18 +17,22 @@ colatore puo' disporre di un numero di unita' di me-
 moria variabile da 1 a 8, corrispondenti ad un nume-
 ro di informazioni alfanumeriche compreso fra 20.000
 e 160.000.
+
 I sette bit costituenti ogni carattere vengono opera
 ti in parallelo: il tempo necessario al loro trasfe
 rimento da una zona ad un' altra della memoria, o dal
 la memoria agli altri organi della unita centrale e'
 di 10 microsecondi; tale intervallo di tempo e' det
-to "periodo di cifra
+to "periodo di cifra".
+
 In un periodo di cifra si possono estrarre o intro-
 durre dalla memoria due caratteri, ed operare su di
 essi.
+
 La memoria e' circolare e indirizzabile posizione per
 posizione mediante indirizzi di quattro cifre la cui
 aritmetica e per contare modulo 40.000.
+
 Cio' significa che in una macchina con memoria di
 20.000 posizioni qualora si oltrepassasse l'indiriz.
 zo 19.999 (I999), in tutti gli organi programmabili
@@ -40,6 +45,7 @@ che per la circolarita' della memoria l'indirizzo
 E000 corrisponde alla posizione 0000 e che l' indi-
 rizzo J000 corrisponde alla posizione 1000 ecc., co
 me illustrato dalla figura seguente:
+
 0001
 0000
 19000
@@ -133,6 +139,7 @@ sivo al 99 e l'indirizzo 00, cioe' 1' accumulatore
 e' circolare. L'indirizzo iniziale di una parola con
 tenuta in accumulatore e' dato dal contenuto di uno
 speciale registro detto DA.
+
 DA - Mediante l'istruzione DA si puo' fissare l'ini
 zio dell' accumulatore in una qualsiasi delle sue 100
 posizioni. Cio' significa che il primo carattere di
@@ -141,6 +148,7 @@ latore proverra' o andra' all'indirizzo fissato me-
 diante la istruzione DA. I caratteri successivi han
 no riferimento agli indirizzi identificati da nume
 ro d' ordine maggiore.
+
 Esempio:
 Accumulatore do
 po un trasteri.
@@ -155,6 +163,7 @@ moria.
 000000
 6 • • . . . .. •• 7.654,32,1
 13 4 5
+
 BIT GA
 Bit gA - Il registro DA indica dunque l' indirizzo di
 una parola contenuta in accumulatore; la fine del-
@@ -168,17 +177,19 @@ I diversi bit gA sono materializzati da un ottavo
 piano di nuclei ferromagnetici, che si aggiunge ai
 sette utilizzati per la registrazione dei caratteri
 alfanumerici e per la verifica di disparita'.
+
 Il bit gA ha i seguenti effetti :
-- nelle operazioni aritmetiche le cifre che lo
-guono sono considerate degli zeri;
-- nelle operazioni di trasferimento da accumulatore
-a memoria il bit gA non viene considerato.
+  - nelle operazioni aritmetiche le cifre che lo seguono sono considerate degli zeri;
+  - nelle operazioni di trasferimento da accumulatore a memoria il bit gA non viene considerato.
+
 La posizione del bit gA e' determinata dalle seguen
 ti regole generali
-l'istruzione AoM (trasferimento da accumulatore a
+
+ - l'istruzione AoM (trasferimento da accumulatore a
 memoria con azzeramento delle posizioni di accumu
 latore trasferite) pone un gA in corrispondenza di
 ogni posizione che viene azzerata.
+
 Esempio
 9 9
 Accumulatore do-
@@ -188,7 +199,8 @@ nendo A 00
 HF 5 S
 5700000000
 BIT GA
-- L'istruzione di trasferimento da memoria ad accu-
+
+ - L'istruzione di trasferimento da memoria ad accu-
 mulatore (MA) pone un bit gA in corrispondenza del
 l'ultimo carattere trasferito e lascia inalterati
 i bit gA posti precedentemente purche' non si ri-
@@ -196,7 +208,8 @@ feriscano ai caratteri trasferiti.
 38
 Esempio
 00000000
-- Accumulatore do-
+
+Accumulatore do-
 Do un AoM (esem-
 pio precedente) e
 un trasterimento
@@ -206,21 +219,23 @@ numero 1420.
 117 6 1 919111 9 91 1/1010141
 HF 5 S
 5700142000
-- Nelle istruzioni aritmetiche il bit gA viene di
+
+Nelle istruzioni aritmetiche il bit gA viene di
 sposto secondo le seguenti regole
-. se l' operando chiamato dalla memoria ha una lun
+
+  - se l' operando chiamato dalla memoria ha una lun
 ghezza minore o uguale al numero di posizioni
 comprese fra DA e gA, questo non viene sposta
 to;
-. in caso contrario il gA viene posto in corri-
+ - in caso contrario il gA viene posto in corri-
 spondenza della cifra piu' significativa del-
 l' operando chiamato da memoria;
-. nel caso di superamento di capacita' dovuto a ri
+ - nel caso di superamento di capacita' dovuto a ri
 porto, il gA viene posto in corrispondenza del -
 la cifra piu' significativa e cioe' eventualmen
 te una posizione piu' a sinistra di quella che
 risulterebbe diversamente
-39
+
 L'esempio che segue mostra la posizione del bit gA
 attraverso una successione di istruzioni
 •• 9 9 8 9 9 9 95
@@ -243,6 +258,7 @@ dopo l'addizione del numero 9000
 (lung. 4)
 140816236
 40
+
 Per quanto riguarda le operazioni algebriche il va-
 lore assoluto di un numero puo' essere registrato in
 accumulatore sia nella sua vera grandezza che nel
@@ -250,17 +266,20 @@ suo complemento alla potenza di 10 immediatamente
 superiore : un apposito organo a flip-flop segnala
 con la sua posizione quale delle due rappresentazio
 ni e' in quel momento utilizzata.
+
 La memorizzazione del segno e' invece affidata ad
 uno speciale registro, chiamato "registro del segno:
 che segnala se la parola contenuta in accumulatore
 e' dotata di segno, e in caso affermativo, se il se
-gno e spiu' : o "meno*
+gno e spiu' : o "meno"
+
 Questo registro e il flip-flop segnalatore dei com-
 plementi possono essere considerati come organo uni
 co che puo' indicare una eventualita' fra sei possi
 bili : le due eventualita' -in vera grandezza e in
 "complemento: si compongono infatti con le tre even
 tualita' "non segnato, "segno piu' » e "segno meno .
+
 VERA GRANDEZZA
 COMPLEMENTO
 NON
@@ -271,12 +290,13 @@ NON
 SEGNATO
 SEGNO
 SEGNO
+
 Altri tre registri concorrono all'esecuzione delle
 operazioni algebriche (le operazioni aritmetiche pos
 sono essere considerate operazioni algebriche
-t.ra
-operandi di segno + : in questo caso pero' i risul-
+tra operandi di segno + : in questo caso pero' i risul-
 tati non sono ovviamente segnati).
+
 NORME CHE RECOLANO LO STATO DEL REGTSTRO DE SE GNO
 VERA GRANDEZZA
 COM LEMENTO
@@ -316,11 +336,12 @@ b) dono una operazio
 ne tra anerandi.
 di cui uno almeno
 sia segnato
+
 Essi servono a ricavare rispettivamente :
-(1) il segno dell' operazione da eseguirsi (somma, sot
-trazione);
-(2) il segno dell' operando contenuto in memoria;
-3) il segno del moltiplicatore.
+ 1. il segno dell' operazione da eseguirsi (somma, sottrazione);
+ 2. il segno dell' operando contenuto in memoria;
+ 3. il segno del moltiplicatore.
+
 Si hanno quindi complessivamente 4 registri e conse
 guentemente 4 indicazioni di segno per ogni opera-
 zione. (Il segno del moltiplicatore non e' conside-
@@ -333,21 +354,24 @@ In base al numero complessivo dei segni "-. che pos
 sono comparire nei quattro registri, durante una ope
 razione, si hanno le seguenti norme che regolano la
 complementazione dei dati operandi e dei risultati:
+
 10) Se il numero dei segni .. e dispari: si ha la
 complementazione dell' operando contenuto in me-
 moria con inversione di segno prima che su que-
 sti si effettui l'operazione richiesta.
-21
+
 20) Se in seguito alla complementazione del dato in
 memoria e alla sua inversione di segno si ottie
 ne un risultato con "riporto", il riporto viene
 annullato e il risultato compare in vera gran-
 dezza". Vedi esempio 1.
+
 30) Se in seguito alla complementazione del dato di
 memoria e della sua inversione di segno si ot-
 tiene un risultato senza riporto il risultato
 compare in "complemento. Vedi esempio 2.
-Esembio
+
+Esempio
 1 = Dispari
 COMPLEMENTAZIONE
 Esemaio2
@@ -406,9 +430,11 @@ do di memoria viene operato tale e quale se si
 tratta di una somma, o col segno inverso se
 tratta di una sottrazione. Vedi esempio 4.
 si
+
 Per quanto riguarda il trasferimento di un operando
 o di un risultato dall' accumulatore a memoria si han-
 no le seguenti possibilita'
+
 DATO IN ACCUMULATORE
 4
 NATO DOPO IL TRASFERIMENTI
@@ -433,9 +459,11 @@ ria a nuclei magnetici della capacita' di 200 carat
 teri alfanumerici, indirizzabili di 5 in 5 posizio-
 ni. Ad ogni possibile indirizzo corrisponde un regi
 stro T; vi sono dunque 40 di tali registri.
+
 Ogni registro ha la lunghezza massima di 10 posizio
 ni; e' chiaro quindi che, ad esempio, il registro 2
 ed il registro B si sovrappongono parzialmente.
+
 NOME
 E
 в
@@ -448,6 +476,7 @@ E
 R
 o
 N
+
 Quando il registro T e' utilizzato per modificare
 un'istruzione, o, come si dice, quando opera come mo
 dificatore, al massimo i primi 5 caratteri del suo
@@ -455,7 +484,9 @@ contenuto vengono utilizzati; conseguentemente, tut
 ti i 40 registri possono operare come modificatori
 senza che risulti alcun inconveniente dallaloro par
 Ziale sovrapposizione
+
 4 6
+
 Immaginando per convenienza di esposizione le posi-
 zioni di memoria numerate da 000 a 199, la parola re
 gistrata a partire dall' indirizzo zero, normalmente
@@ -465,6 +496,7 @@ teri, piu' un segno che viene trasferito in un appo
 sito registro; le parole registrate a partire dagli
 altri indirizzi possono avere un massimo di 10
 ratteri.
+
 Bit gr - Non esiste per i registri T 1' analogo del-
 la DA: le informazioni contenute in ogni registro
 hanno sempre inizio dall'indirizzo corrispondente a
@@ -474,20 +506,22 @@ rializzato da un ottavo piano di nuclei magnetici.
 Esiste ambiparita' anche per quanto riguarda il re-
 gistro del segno; solo che questo resta accessibile
 esclusivamente mediante l'istruzione "y".
+
 Per quanto riguarda l'utilizzazione ed il posiziona
 mento del bit gT valgono le stesse considerazioni
 fatte a proposito del bit gA ovviamente sostituendo
 le istruzioni per •1' accumulatore con le corrispon-
 denti per i registri T.
+
 Nelle singole istruzioni verra' specificato quando
 il risultato puo' avere lunghezza più lunga del
 piu' lungo degli operandi ed in quali casi si ha in
 dicazione di overflow.
+
 Un registro T viene identificato nell'istruzione da
 un carattere; la tabella precedente indica l'indiriz-
 zo iniziale di ogni registro Tin corrispondenza del
 carattere che lo identifica.
-47
 
 ## 4.4. Logica aritmetica dell' Elea 9003
 
