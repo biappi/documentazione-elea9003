@@ -27,8 +27,10 @@ le delle unita' in linea e fuori linea che
 restano oggetto di una trattazione specifi
 ca.
 
-CAP. 1° : DESCRIZIONE GENERALE DELL' ELABORATORE
-1.1. Caratteristiche generali
+# CAP. 1° : DESCRIZIONE GENERALE DELL' ELABORATORE
+
+## 1.1. Caratteristiche generali
+
 L' elaboratore elettronico aritmetico Elea 9003 e'
 uno strumento automatico di grandi capacita per
 il trattamento delle informazioni aziendali e per
@@ -101,7 +103,9 @@ Q
 1
 IT
 SCHEMA LOGICO DEL SISTEMA ELEA 9003
-1.2. La struttura modulare
+
+## 1.2. La struttura modulare
+
 La struttura modulare, che caratterizza l'intero si-
 stema, permette di adeguare la potenza dell' Elea al
 reale bisogno dell'utente, e cio' da completa garan
@@ -118,7 +122,9 @@ per rendere l' elaboratore piu' adatto alle nuove esi
 genze. Queste prerogative consentono all'utente di e
 vitare continue riorganizzazioni del centro di elabo
 razione
-1. 3. La codificazione dei caratteri
+
+## 1.3. La codificazione dei caratteri
+
 Un insieme di caratteri numerici, alfabetici o spe-
 ciali, che ha un significato compiuto e che indivi-
 dua una determinata funzione (un codice, un importo,
@@ -155,7 +161,9 @@ che di volta in volta risulta piu' conveniente
 i T
 funzione del tipo di supporto e della struttura del
 le informazioni su cui operare.
-1.4. I supporti di introduzione e di estrazione
+
+## 1.4. I supporti di introduzione e di estrazione
+
 Le informazioni possono essere introdotte nel calco
 latore da nastro magnetico, da schede o da nastro
 perforato, o per mezzo di una tastiera manuale di in
@@ -252,7 +260,9 @@ Queste caratteristiche contribuiscono a far si che
 1' elaboratore non abbia solo un impiego limitato, ma
 sia universale, atto a risolvere problemi di qual-
 siasi tipo.
-1. 5. Caratteristiche tecnologiche del sistema
+
+## 1.5. Caratteristiche tecnologiche del sistema
+
 La sicurezza operativa dell' Elea 9003 e' favorita
 dalla moderna tecnologia costruttiva seguita per
 la sua realizzazione.
@@ -278,9 +288,10 @@ esercizio.
 10
 PIASTRINA A CIRCUITO STAMPATO
 
-CAP. 2° : CARATTERISTICHE LOGICHE DELL' UNITA' CENTRA
-LE
-2.1. Caratteristiche generali
+# CAP. 2° : CARATTERISTICHE LOGICHE DELL' UNITA' CENTRALE
+
+## 2.1. Caratteristiche generali
+
 L' unita' centrale del sistema Elea 9003, intesa come
 insieme di organi interni, ha il compito di ricevere
 le informazioni dalle unita' di introduzione, di ela
@@ -298,7 +309,9 @@ guire questi compiti sono :
 - 1' accumulatore
 - 1' unita aritmetica e logica
 - il tavolo di comando
-2.2. Il programma
+
+## 2.2. Il programma
+
 La successione delle operazioni da eseguirsi dall'ela
 boratore e' determinata dal "programma" registrato nel
 la memoria di lavoro: questo e' formato da una serie
@@ -365,7 +378,9 @@ grado di funzionare come convertitore senza che
 svolgimento delle elaborazioni ne venga alterato.
 in
 10
-2.3. L'unita' di governo
+
+## 2.3. L'unita' di governo
+
 Cuore dell' elaboratore e' l' unita di governo;
 essa
 dirige tutte le operazioni, comanda l' unita' aritme-
@@ -382,7 +397,9 @@ lo di quanto e' stato eseguito. Inoltre il governo e'
 in grado di tenere conto delle segnalazioni che i va
 ri organi centrali e periferici possono dare per va-
 riare il corso delle operazioni
-2.4. Il flusso delle informazioni
+
+## 2.4. Il flusso delle informazioni
+
 Il collegamento fra le diverse parti componenti l'u-
 nita' centrale e assicurato da due canali di trasfe
 rimento, uno dei quali, detto canale interno", serve
@@ -433,7 +450,9 @@ ra agli operatori aritmetico e logico l'uno attraver
 so il canale esterno, l'altro attraverso il canale in
 terno. Il risultato viene inviato in memoria dall'o-
 peratore aritmetico attraverso il canale interno.
-2.5. La memoria di lavoro
+
+## 2.5. La memoria di lavoro
+
 Tutte le informazioni in entrata vengono convogliate
 alla memoria di lavoro. Da essa sono prelevate le in
 formazioni in uscita; in essa sono considerati i ri-
@@ -470,7 +489,9 @@ caso non vengono occupate posizioni di memoria per
 delimitare le parole di lunghezza sconosciuta. L'E-
 lea 9003 e dunque una macchina a parole di lunghez
 za variabile senza limitazioni.
-2. 6. L' accumulatore e i registri T
+
+## 2.6. L' accumulatore e i registri T
+
 L' accumulatore e' una piccola memoria ausiliare a nu
 clei magnetici, la cui funzione principale e quel
 la di contenere uno degli operandi e, successivamen
@@ -500,7 +521,9 @@ memoria principale ai registri modificatori e vice
 versa: ma non direttamente dall' accumulatore ai re
 gistri e viceversa; il tempo di trasferimento di-
 pende dalla lunghezza della parola.
-2.7. L'unita' aritmetica e logica
+
+## 2.7. L'unita' aritmetica e logica
+
 L'unita› aritmetica e logica effettua i calcoli a-
 ritmetici, i confronti e le operazioni logiche: mo-
 difica le istruzioni per mezzo dei registri T: puo'
@@ -536,7 +559,9 @@ e alfabetiche e fra parole dotate o prive di segno.
 Le caratteristiche di quest' operazione rendono parti
 colarmente facile l'ordinamento alfabetico e la sele
 zione di codici o nominativi di identificazione.
-2.8. I controlli
+
+## 2.8. I controlli
+
 L' esatta esecuzione di tutte le elaborazioni che 10
 Elea 9003 svolge e' garantita da un insieme di con-
 trolli automatici che individuando qualsiasi errore
@@ -574,7 +599,9 @@ zione dei caratteri numerici ed alfabetici; in essi
 infatti non compaiono mai le configurazioni c, b, a,
 = 101, oppure b, a,
 10
-2.9. Il tavolo di comando
+
+## 2.9. Il tavolo di comando
+
 Il mezzo di comunicazione fra l'operatore e l'elabo.
 ratore e' il tavolo di comando, che contiene i coman
 di manuali, il quadro e le linee di controllo.
@@ -610,10 +637,10 @@ tempo necessario ai trasferimenti che avvengono al
 la normale velocita' di macchina.
 21
 
-CAP. 3°: CARATTERISTICHE LOGICHE DEL GOVERNO DELLE
-UNITA' A NASTRO MAGNETICO E DELLE ALTRE
-UNITA' DI INTRODUZIONE E DI ESTRAZIONE
-3.0. Caratteristiche generali
+# CAP. 3°: CARATTERISTICHE LOGICHE DEL GOVERNO DELLE UNITA' A NASTRO MAGNETICO E DELLE ALTRE UNITA' DI INTRODUZIONE E DI ESTRAZIONE
+
+## 3.0. Caratteristiche generali
+
 Il governo dell' unita' a nastro magnetico e' parte co
 stitutiva del sistema Elea 9003. Abbiamo gia' defini
 to il nastro magnetico come il supporto piu' congenia.
@@ -645,7 +672,9 @@ seguire l'operazione inversa da quella ora descritta
 23
 di portare cioe' i dati da nastro magnetico a sche
 da o nastro perforato, e a stampa.
-3. 1. Governo unita' a nastro magnetico (GUN)
+
+## 3.1. Governo unita' a nastro magnetico (GUN)
+
 Fino a 20 unita' a nastro magnetico possono esse
 re collegate ad un apposito governo (che costitui
 sce il tramite fra esse e il calcolatore), le cui
@@ -693,7 +722,9 @@ fronto.
 Nel caso di disuguaglianza, le registrazione conti
 nua, ma l' elaboratore denuncia l' errore, che viene
 corretto subito dopo automaticamente.
-3.2. Le unita' in linea
+
+## 3.2. Le unita' in linea
+
 Il collegamento di queste unita' con l'unita' centra
 le e' stato ottenuto mediante appositi organi le cui
 funzioni sono di interpretare gli ordini trasmessi
@@ -884,9 +915,10 @@ merciali e di interpunzione. Sono ottenibili fino a
 6 copie simultaneamente.
 LA MEMORIA DI LAVORO
 
-CAP.
-4°: L° UNITA CENTRALE
-4. 1. Memoria principale
+# CAP. 4°: L° UNITA CENTRALE
+
+## 4.1. Memoria principale
+
 La memoria principale e' costituita da nuclei di fer
 rite a ciclo di isteresi rettangolare. I nuclei sono
 montati su piani, ognuno dei quali ne contiene 10.000.
@@ -1008,7 +1040,9 @@ POSIZIONE O PER OGNI GRUPPO TECNOLOGICO DI MEMORIA
 80000÷119999
 CIRCOLARITA NELL/AMBITO DI UN ELEMENTO TECNOLOGICO DI MEMORIA
 ORDINE DI SUCCESSIONE DEGLI ELEMENTI TECNOLOGICI DI MEMORI
-4.2. Accumulatore
+
+## 4.2. Accumulatore
+
 L' accumulatore e' una speciale memoria a 100 posi-
 zioni; ad ogni posizione e' associato un indirizzo.
 Gli indirizzi vanno da 00 a 99; l'indirizzo succes-
@@ -1308,7 +1342,9 @@ vera grandezzo
 complemento
 vera grandezzo
 45
-4. 3. Registri T
+
+## 4.3. Registri T
+
 L'insieme dei registri T e' costituito da una memo-
 ria a nuclei magnetici della capacita' di 200 carat
 teri alfanumerici, indirizzabili di 5 in 5 posizio-
@@ -1369,7 +1405,9 @@ un carattere; la tabella precedente indica l'indiriz-
 zo iniziale di ogni registro Tin corrispondenza del
 carattere che lo identifica.
 47
-4. 4. Logica aritmetica dell' Elea 9003
+
+## 4.4. Logica aritmetica dell' Elea 9003
+
 Operazioni aritmetiche che possono interessare lame
 moria, 1' accumulatore e i registri T ( + MM :
 + MT; - MT; + MA;
@@ -1492,9 +1530,11 @@ y
 R
 CARATTERI NON OPI
 Tabella N. 2
-CAP.
-5°: LE UNITA° A NASTRO MAGNETICO
-5.1. Governo delle unita' a nastro
+
+# CAP.5°: LE UNITA° A NASTRO MAGNETICO
+
+## 5.1. Governo delle unita' a nastro
+
 E' questo l'organo mediante il quale si effettua il
 collegamento tra unita' a nastro e calcolatore, op
 pure fra due unita' a nastro.
@@ -1525,7 +1565,9 @@ no la parola cercata ad un nastro in registrazione.
 Essa rende possibile la consultazione ed aggiorna-
 mento di un nastro archivio a grande velocita' e sen
 za che sia impegnato il calcolatore
-5.2. Nastro magnetico
+
+## 5.2. Nastro magnetico
+
 Il nastro magnetico e una banda di materia plasti
 ca (mylar) ricoperto su una faccia da ossido di fer
 ro magnetizzabile. si puo' pensare che la superfi-
@@ -1609,8 +1651,9 @@ stro collegabili al GUN, in numero di 20, sono i se
 guenti
 1, 2, 3, 4, 5, 6, 7, 8, 9, ~
 o, A, B, C, D, E, F, G, H, I,
-5.3. Organizzazione delle informazioni su nastro ma
-gnetico
+
+## 5.3. Organizzazione delle informazioni su nastro magnetico
+
 Il raggruppamento dei caratteri in blocchi, dovuto
 alla necessita' di trasferire un numero limitato di
 caratteri dal nastro magnetico alla memoria princi-
@@ -1637,9 +1680,10 @@ su indirizzi non consecutivi di memoria, viene usa-
 to il carattere 0
 57
 
-CAP.
-6°: ORGANIZZAZIONE DELLA PROGRAMMAZIONE
-6.1. Struttura della programmazione
+# CAP.  6°: ORGANIZZAZIONE DELLA PROGRAMMAZIONE
+
+## 6.1. Struttura della programmazione
+
 Chiamiamo programma una sequenza di disposizioni o
 comandi che eseguiti uno di seguito all'altro, por
 tano alla soluzione di un problema secondo la logi
@@ -1690,7 +1734,9 @@ struzioni, i comandi cioe' che si possono impartire
 alla macchina, se ne elencano le caratteristiche, ed
 infine si espongono le norme relative all'utilizza-
 zione dei nastri e dei programmi plurisequenziali
-6. 2. La codificazione delle informazioni
+
+## 6.2. La codificazione delle informazioni
+
 Le informazioni - dati, risultati e istruzioni di
 programma - sono rappresentate per mezzo di caratte
 ri alfanumerici e speciali, la cui codificazione va
@@ -1787,7 +1833,9 @@ no,
 ecc.
 Un blocco e' composto da uno o piu' elementi. Una se
 auenza e' composta da uno o piu blocchi.
-6.3. La codificazione delle istruzioni
+
+## 6.3. La codificazione delle istruzioni
+
 Una istruzione di programma e' codificata per mezzo
 di otto caratteri alfanumerici. Questi hanno normal
 mente la seguente funzione : il primo - nell'ordine
@@ -1920,7 +1968,9 @@ R
 UV WXYZ
 68
 Tabella N. 3
-S. 4. Modifica automatica delle istruzioni
+
+## 6.4. Modifica automatica delle istruzioni
+
 Per ogni istruzione e' indicato se essa e' modifica
 bile automaticamente, nel qual caso il registro T mg
 dificatore e' specificato nella posizione p2.
@@ -2007,8 +2057,9 @@ ta l'istruzione modificata (nella quale ovviamente
 resse).
 Il contenuto del T modificatore non viene alterato
 dalla modifica automatica dell'istruzione.
-- 6.5. Lunghezza degli operandi nelle istruzioni in-
-terne.
+
+## 6.5. Lunghezza degli operandi nelle istruzioni interne.
+
 Le istruzioni interne sottoindicate possono speci-
 ficare la lunghezza dell' operando, o indicando con
 due caratteri numerici posti in p7 e p8 (LL) il nu
@@ -2079,7 +2130,9 @@ Posizioni di memoria
 73
 la parte lunghezza e indirizzo dell'istruzione puo'
 essere espressa
-6.6. Registrazione del programma
+
+## 6.6. Registrazione del programma
+
 Perche' possano essere esaminate ed eseguite dalla
 unita' centrale, le istruzioni di programma devono
 essere registrate nella memoria principale.
@@ -2171,8 +2224,10 @@ contenuto,
 malizz
 77
 
-CAP. 7° : ISTRUZIONI RIGUARDANTI L° UNITA CENTRALE
-7.1. Istruzioni memoria-accumulatore
+# CAP. 7° : ISTRUZIONI RIGUARDANTI L° UNITA CENTRALE
+
+## 7.1. Istruzioni memoria-accumulatore
+
 Queste istruzioni interessano la memoria principale
 e 1' accumulatore; nel loro svolgimento impegnano la
 unita' aritmetica e logica ed il governo dell' elabo
@@ -2668,7 +2723,9 @@ Im
 Im
 =
 =
-7.2. Istruzioni memoria-memoria
+
+## 7.2. Istruzioni memoria-memoria
+
 Queste istruzioni interessano soltanto la memoria
 principale; nel loro svolgimento impegnano l'unita'
 aritmetica e logica ed il governo dell' elaboratore.
@@ -2913,7 +2970,9 @@ Indirizzi
 0000 a r'99 (vedi tabella del testo).
 CON FIGURAZIONE
 CARATTEON
-7.3. Istruzioni memoria-registri
+
+## 7.3. Istruzioni memoria-registri
+
 Queste istruzioni interessano la memoria principale
 ed i registri T: nel loro svolgimento impegnano la
 unita' aritmetica e logica ed il governo dell' elabo
@@ -3316,7 +3375,9 @@ Tm
 Im
 CARAtTER
 o o
-7.4. - Istruzioni costanti-registri
+
+## 7.4. - Istruzioni costanti-registri
+
 Queste istruzioni interessano parole costituite da
 caratteri o valori fissi (costanti): nel loro svol-
 gimento impegnano 1' unita' aritmetica e logica ed il
@@ -3634,7 +3695,9 @@ CONFIGURAZIONE
 • СС
 22 a
 To
-7.5. Istruzioni per la moltiplicazione
+
+## 7.5. Istruzioni per la moltiplicazione
+
 Queste istruzioni interessano lamemoria principale,
 i registri T e l' accumulatore; nel loro svolgimento
 impegnano l' unita' aritmetica e logica ed il gover-
@@ -3810,7 +3873,9 @@ interno
 10 +(3+1)L L LILI
 'Im
 os
-7.6. Istruzioni per la ricerca in memoria
+
+## 7.6. Istruzioni per la ricerca in memoria
+
 Le istruzioni di ricerca interessano la memoria prin
 cipale; nel loro svolgimento impegnano l'unita' arit
 metica e logica ed il governo dell' elaboratore.
@@ -3940,7 +4005,9 @@ ratteri confrontati prima di raggiungere quello de.
 siderato.
 RIi
 CONFIGURAZIONE
-7.7. Le istruzioni per le operazioni logiche
+
+## 7.7. Le istruzioni per le operazioni logiche
+
 Il calcolatore e' capace di eseguire operazioni lo-
 giche, bit per bit, secondo 1' algebra di Boole, fra
 un operando proveniente da memoria e un altro prove
@@ -4102,7 +4169,9 @@ candi.
 CONFIGURAZIONE
 CARATTERE
 Im
-7.8. Istruzioni relative al tavolo di comando
+
+## 7.8. Istruzioni relative al tavolo di comando
+
 Queste istruzioni possono interessare con la memo
 ria principale o il fotolettore o la telescrivente;
 durante il loro svolgimento impegnano l'unita' arit
@@ -4224,7 +4293,9 @@ tolettore. e di 7 caratteri al secondo ner la MS
 CONEIGURAZIONE
 Im
 a
-7.9. Istruzioni di salto
+
+## 7.9. Istruzioni di salto
+
 La successione delle istruzioni di programma puo' do
 ver essere alterata al verificarsi di certe eventua
 lita'. A questo scopo servono le istruzioni di sal.
@@ -4615,7 +4686,9 @@ Im
 yyyy
 racc
 X х х х
-7.10. Istruzioni di salto su errore
+
+## 7.10. Istruzioni di salto su errore
+
 La probabilita' di un errore nel movimento di un ca-
 rattere tra i vari organi dell' elaboratore e' estre-
 mamente piccola.
@@ -4809,9 +4882,10 @@ CARATTERE
 (o'
 UNITA' A NASTRO MAGNETICO FR - 400 .-
 
-CAP
-8° : UTILIZZAZIONE DEI NASTRI MAGNETICI
-8.1. Caratteristiche generali
+# CAP 8° : UTILIZZAZIONE DEI NASTRI MAGNETICI
+
+## 8.1. Caratteristiche generali
+
 Il nastro magnetico come supporto d'informazione per
 l'elaborazione elettronica dei dati e' certamente il
 piu' funzionale : e' veloce, facilmente trasferibi-
@@ -4886,7 +4960,9 @@ ria di lavoro dell' elaboratore; ovviamente una me-
 moria di capacita' ridotta implichera' l'impiego di
 blocchi di piccole dimensioni che esalteranno gli
 inconvenienti citati.
-8.2. La registrazione e la lettura del nastro
+
+## 8.2. La registrazione e la lettura del nastro
+
 I caratteri rappresentati nella memoria di lavoro
 mediante sei bit vengono riprodotti sul nastro ma-
 gnetico in modo analogo, con la sola variante che
@@ -4954,9 +5030,9 @@ zioni di registrazione, e da modo inoltre di evi
 tare che in operazioni di trascrizione da nastro
 a nastro si sommino tra di loro successive dif-
 ferenze di frequenza di impaccamento.
-8. 3. Organizzazione delle informazioni
-magnetico
-su nastro
+
+## 8.3. Organizzazione delle informazioni su nastro magnetico
+
 Gruppi di caratteri, a seconda della funzione per
 la quale sono stati creati, possono costituire le
 seguenti unita' di elaborazione
@@ -5736,9 +5812,11 @@ CARATTE
 i =
 .a
 o o o
-CAP. 9° : LA SIMULTANEITA' OPERATIVA DELL' ELEA 9003;
-LOGICA E UTILIZZAZIONE DEL 1° E 2° PROGRAMMA
-9.1. Considerazioni generali
+
+# CAP. 9° : LA SIMULTANEITA' OPERATIVA DELL' ELEA 9003; LOGICA E UTILIZZAZIONE DEL 1° E 2° PROGRAMMA
+
+## 9.1. Considerazioni generali
+
 Alla memoria principale dell' ELEA 9003 si puo' acce
 dere mediante due canali di trasferimento delle in-
 formazioni, uno interno ed uno esterno. Il canale in
@@ -5828,7 +5906,9 @@ altra sede la sequenza che e' propria del collega-
 mento delle unita' in linea dell' ELEA 9003.
 Esaminiamo ora le caratteristiche particolari dei
 due tipi di programmi precedentemente definiti.
-9.2. Programma con istruzioni doppie
+
+## 9.2. Programma con istruzioni doppie
+
 Non considerando la sequenza relativa al terzo pro.
 gramma, in questo tipo di organizzazione avremo lo
 svolgimento di una sequenza principale di program-
@@ -5862,8 +5942,9 @@ SIMULTANEITA® DI ELABORAZIONE E LETTURA O REGISTRAZIONE
 29 PROGRA CANALE
 CANALE INTEONI
 184
-9.3. Programma con simultaneita' operative organiz
-zate
+
+## 9.3. Programma con simultaneita' operative organizzate
+
 Un programma di questo tipo, sempre non consideran-
 do la sequenza del terzo programma, comprendera due
 Sequenze di istruzioni : una definita di primo pro.
@@ -5872,7 +5953,9 @@ Le caratteristiche principali di questa organizza-
 zione sono due : a) la necessita di una particola-
 re organizzazione dei dati; b) i rapporti tra le due
 sequenze e la logica della simultaneita' interna.
-9.3.1. L'organizzazione dei dati
+
+### 9.3.1. L'organizzazione dei dati
+
 Per utilizzare la possibilita' di sovrapposizione
 del tempo esecutivo dei due programmi e' necessario
 assegnare ad ogni flusso di informazioni piu' zone
@@ -5945,7 +6028,9 @@ attua un meccanismo di flip-flop
 Generalmente le istruzioni di elaborazione interna
 saranno modificate da uno o piu° registri per poter
 operare dalle zone Zi a Ze e da Zi a Ze.
-9.3.2. Rapporti tra le due sequenze di programma
+
+### 9.3.2. Rapporti tra le due sequenze di programma
+
 L' esame delle due sequenze di programma e la contem
 poranea esecuzione vengono eseguiti dalla macchina
 secondo le seguenti regole logiche interne
@@ -5979,7 +6064,9 @@ In ogni modo se si volesse fare ugualmente uso del-
 1' accumulatore e degli stessi registri e' necessa-
 rio scaricarli prima e ricaricarli dopo averli usa-
 ti.
-9.4. Metodi di utilizzazione del 20 programma
+
+## 9.4. Metodi di utilizzazione del 20 programma
+
 Ogni metodo di utilizzazione del 10 e del 2°program
 ma deve soddisfare alle due seguenti condizioni che
 costituiscono dei vincoli per il programmatore.
@@ -6002,7 +6089,9 @@ Esistono due metodi di utilizzazione delle simulta
 neita' operative, realizzabili mediante le due
 1--
 struzioni di salto speciale S2P e S2P*
-9.5. Descrizione del primo metodo
+
+## 9.5. Descrizione del primo metodo
+
 Al secondo programma si accede mediante l'istruzio
 ne S2P (salta al secondo programma) posta sul pri-
 mo programma.
@@ -6132,7 +6221,9 @@ il generico blocco da introdurre in memoria; con n
 il numero dei blocchi da elaborare e con B. X.d.
 M. 7 i deviatori utilizzati.
 193
-9.6. Descrizione del secondo metodo
+
+## 9.6. Descrizione del secondo metodo
+
 Questo metodo si basa non su una condizione rigida
 di rapporti tra il 10 ed il 20 programma, come avve
 niva nel primo metodo, ma su scambi di informazioni
@@ -6373,8 +6464,10 @@ Im
 Tm
 •
 
-CAP. 10° : LA TERZA SEQUENZA DI PROGRAMMA
-10.1. Generalita'
+# CAP. 10° : LA TERZA SEQUENZA DI PROGRAMMA
+
+## 10.1. Generalita'
+
 1) All' unita' centrale del sistema Elea 9003 posso~
 no essere collegate unita' in linea capaci di fun
 zionare simultaneamente e di operare senza inter
@@ -6408,7 +6501,9 @@ che le regola, sono affidate ad un sincronizzato
 203
 re che armonizza tutte le operazioni di terzo pro
 gramma.
-10.2. Caratteristiche logiche del 30 programma
+
+## 10.2. Caratteristiche logiche del 30 programma
+
 1) L'ordine di lavoro alle singole unita' viene tra
 smesso dall' unita' centrale, che procede quindi
 in parallelo con esse, senza che queste ultime
@@ -6528,7 +6623,9 @@ gramma;
 c) puo' eseguire istruzioni di qualsiasi genere pur
 avendo come funzione specifica i comandi relati-
 vi alle apparecchiature in linea.
-10.3. Fasi di svolgimento del 30 programma
+
+## 10.3. Fasi di svolgimento del 30 programma
+
 1) Una istruzione S3P da inizio all'esecuzione del-
 la sequenza. Appositi registri, distinti da quel
 li con ugual funzione, di 10 e di 20 programma,
@@ -6571,9 +6668,9 @@ rotto;
 b) se lo STOP e' eseguito dopo 1' avvenuta lettu-
 radegli altri STOP 1' unita' passaallo stato di inat
 tiva ed il programma si arresta.
-10.4. Funzione e logica delle istruzioni s3P,
-TOL, STOP
-suO,
+
+## 10.4. Funzione e logica delle istruzioni s3P, TOL, STOP
+
 L'istruzione S3P a) comanda l'inizio di una sequen
 za di 30 programma;
 208
@@ -6641,7 +6738,9 @@ clo operativo in corso, ma le operazioni atte a pre.
 disporre l' unita' in linea al successivo ciclo di
 lavoro dopo 1' azzeramento automatico della memoria
 di transito.
-10.5. L'istruzione SP*
+
+## 10.5. L'istruzione SP*
+
 Mediante questa istruzione si vuole ovviare all'in-
 conveniente generato dall'uso della sola istruzione
 S3P normale, che non permette di realizzare un mec-
@@ -6675,9 +6774,9 @@ unita' fittizia).
 L' istruzione SUO su unita' fittizia deve appa-
 rire in testa alla sequenza di istruzioni ed esse-
 re letta nel 1° ciclo di 30 programma.
-10.6. L'organizzazione di un 3° programma che preve
-de l'uso della istruzione S3P* dovra' pertan-
-to essere legata alle seguenti norme.
+
+## 10.6. L'organizzazione di un 3° programma che prevede l'uso della istruzione S3P* dovra' pertanto essere legata alle seguenti norme.
+
 1) Sul 1° o 2° programma deve essere registrata una
 istruzione S3P che permetta l'attivazione di tut
 te le unita' interessate all' elaborazione.
@@ -6987,8 +7086,11 @@ TIm
 #
 o
 o
-10.7. Esempio di 30 sequenza con uso della sola SP
+
+## 10.7. Esempio di 30 sequenza con uso della sola SP
+
 Generalita'
+
 .Nell'esempio seguente si fa riferimento ad una se
 quenza di 30 programma avviata dal 1°mediante $3P.
 - La sequenza e' costituita da 2 cicli fondamentali
@@ -7288,7 +7390,9 @@ anche le operazioni di lettura siano
 terminate.
 L'esecuzione dello STOP dell' unita' 2
 arrestera' infine il 30 programma.
-10.8. Esempio di 30 sequenza con uso della SP*
+
+## 10.8. Esempio di 30 sequenza con uso della SP*
+
 Generalita'
 - Nell' esempio seguente si fa riferimento ad una se-
 quenza di 30 programma che pur essendo avviata da
@@ -7513,8 +7617,10 @@ di 1° programma permettono 1c
 arresto del 3° programma.
 229
 
-CAP. 11° : IL TAVOLO DI COMANDO
-11.1. Generalita'
+# CAP. 11° : IL TAVOLO DI COMANDO
+
+## 11.1. Generalita'
+
 Il tavolo di comando e' l'organo che costituisce un tra-
 mite di comunicazione fra l'operatore ed il sistema per
 l'elaborazione dei dati. Con esso si puo' seguire lo svol
@@ -7558,7 +7664,9 @@ Terminata la fase di correzione il programma in via norma
 le viene definitivamente registrato su nastro magnetico,
 da dove sara successivamente prelevato nera esecuzionE
 vera e propria del lavoro.
-11.2. Quadro di comando manuale
+
+## 11.2. Quadro di comando manuale
+
 Il quadro di comando manuale e' composto di una serie
 tasti che per comodita' raggruppiamo in 6 zone.
 di
@@ -7699,7 +7807,9 @@ re.
 I tasti non considerati hanno una funzione variabile a seconda del
 le particolari caratteristiche dell'impianto.
 236
-11.3. Il quadro di controllo
+
+## 11.3. Il quadro di controllo
+
 11 quadro di controllo si compone di 13 batterie di indica-
 torl luminosi poste superiormente al quadro di comando ma-
 nuale.
