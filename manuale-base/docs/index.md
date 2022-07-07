@@ -1,28 +1,23 @@
-# Olivetti ELEA 9003 - Manuale Base di Programmazione
+# Manuale base di programmazione
 
-Il presente manuale e' strettamente riservato al personale della Olivetti e non puo' essere ceduto ne' mostrato in visione ad estranei.
+Il presente manuale e' strettamente riservato al personale della Olivetti e non
+puo' essere ceduto ne' mostrato in visione ad estranei.
 
-## PREMESSA
+## Premessa
 
-Il presente manuale ha lo scopo di descri-
-vere le caratteristiche basilari dell' ela-
-boratore Elea 9003, e di fornire gli ele-
-menti necessari alla compilazione dei pro-
-grammi relativi.
-Oggetto quindi dei primi capitoli sono la
-struttura logica funzionale del sistema e
-la dettagliata descrizione degli elementi
-che lo compongono.
-Nei restanti capitoli vengono analizzati
-gli elementi che interessano la programma-
-zione; le istruzioni, le possibilita' of-
-ferte dai due canali di flusso, dai suppor
-ti magnetici collegati, e dalla utilizza-
-zione in linea di apparecchiature partico-
-lari di introduzione ed estrazione dei da-
-ti.
-Non ci si sofferma invece nel presente ma-
-nuale sulla descrizione tecnica e funziona
-le delle unita' in linea e fuori linea che
-restano oggetto di una trattazione specifi
-ca.
+Il presente manuale ha lo scopo di descrivere le caratteristiche basilari
+dell'elaboratore Elea 9003, e di fornire gli elementi necessari alla
+compilazione dei programmi relativi.
+
+Oggetto quindi dei primi capitoli sono la struttura logica funzionale del
+sistema e la dettagliata descrizione degli elementi che lo compongono.
+
+Nei restanti capitoli vengono analizzati gli elementi che interessano la
+programmazione; le istruzioni, le possibilita' offerte dai due canali di
+flusso, dai supporti magnetici collegati, e dalla utilizzazione in linea di
+apparecchiature particolari di introduzione ed estrazione dei dati.
+
+Non ci si sofferma invece nel presente manuale sulla descrizione tecnica e
+funzionale delle unita' in linea e fuori linea che restano oggetto di una
+trattazione specifica.
+
