@@ -1,4 +1,4 @@
-# CAP 8° : UTILIZZAZIONE DEI NASTRI MAGNETICI
+# Utilizzazione dei nastri magnetici
 
 ## 8.1. Caratteristiche generali
 

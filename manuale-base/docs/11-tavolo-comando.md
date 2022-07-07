@@ -1,4 +1,4 @@
-# CAP. 11° : IL TAVOLO DI COMANDO
+# Il tavolo di comando
 
 ## 11.1. Generalita'
 

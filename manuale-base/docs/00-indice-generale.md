@@ -1,4 +1,4 @@
-# INDICE GENERALE
+# Indice generale
 
 ## Cap. 1° - Descrizione generale dell'elaboratore
  - 1.1. Caratteristiche generali

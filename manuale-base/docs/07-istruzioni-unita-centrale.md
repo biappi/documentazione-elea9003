@@ -1,4 +1,4 @@
-# CAP. 7° : ISTRUZIONI RIGUARDANTI L° UNITA CENTRALE
+# Istruzioni riguardanti l'unita' centrale
 
 ## 7.1. Istruzioni memoria-accumulatore
 

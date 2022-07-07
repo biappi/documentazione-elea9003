@@ -1,4 +1,4 @@
-# CAP. 10° : LA TERZA SEQUENZA DI PROGRAMMA
+# La terza sequenza di programma
 
 ## 10.1. Generalita'
 

@@ -1,4 +1,4 @@
-# CAP.  6°: ORGANIZZAZIONE DELLA PROGRAMMAZIONE
+# Organizzazione della programmazione
 
 ## 6.1. Struttura della programmazione
 

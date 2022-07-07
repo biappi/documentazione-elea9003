@@ -1,4 +1,4 @@
-# CAP.5°: LE UNITA° A NASTRO MAGNETICO
+# Le unita' a nastro magnetico
 
 ## 5.1. Governo delle unita' a nastro
 

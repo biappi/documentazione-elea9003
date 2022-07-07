@@ -1,4 +1,4 @@
-# CAP. 9° : LA SIMULTANEITA' OPERATIVA DELL' ELEA 9003; LOGICA E UTILIZZAZIONE DEL 1° E 2° PROGRAMMA
+# La simultaneita' operativa dell'ELEA 9003; Logica e utilizzazione del 1° e 2° programma
 
 ## 9.1. Considerazioni generali
 
