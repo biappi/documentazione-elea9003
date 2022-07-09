@@ -22,9 +22,9 @@
     </defs>
 
     <g transform="scale(5 5)">
-        <rect width="30" height="30"     style="stroke-width: 2px;   stroke: rgb(43, 140, 238); fill-opacity: 0%;"/>
         <use x="0" y="0" xlink:href="#w" style="stroke-width: 2px;   stroke: rgb(43, 140, 238);"/>
         <use x="0" y="0" xlink:href="#w" style="stroke-width: 1.5px; stroke: rgb(26,  28,  30);"/>
+        <rect width="30" height="30"     style="stroke-width: 0.5px;   stroke: rgb(43, 140, 238); fill-opacity: 0%;"/>
     </g>
 
 </svg>
