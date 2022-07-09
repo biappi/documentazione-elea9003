@@ -1,0 +1,632 @@
+<!doctype html>
+<html class="no-js" lang="it">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Indice" href="genindex.html" /><link rel="search" title="Cerca" href="search.html" /><link rel="next" title="L’unita” centrale" href="04-unita-centrale.html" /><link rel="prev" title="Caratteristiche logiche dell’unita” centrale" href="02-caratteristiche-generali.html" />
+
+    <meta name="generator" content="sphinx-5.0.2, furo 2022.06.21.dev1"/>
+        <title>Caratteristiche logiche del governo delle unita” a nastro magnetico e delle altre unita” di introduzione e estrazione - Manuale base di programmazione documentazione</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=ed0832e8f449bfee71351ecca00ed8bc1cdd0a21" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Manuale base di programmazione  documentazione</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">Manuale base di programmazione  documentazione</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Cerca name="q" aria-label="Cerca">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="01-descrizione-generale.html">Descrizione generale dell’elaboratore</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="01-descrizione-generale.html#caratteristiche-generali">1.1. Caratteristiche generali</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-descrizione-generale.html#la-struttura-modulare">1.2. La struttura modulare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-descrizione-generale.html#la-codificazione-dei-caratteri">1.3. La codificazione dei caratteri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-descrizione-generale.html#i-supporti-di-introduzione-e-di-estrazione">1.4. I supporti di introduzione e di estrazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-descrizione-generale.html#caratteristiche-tecnologiche-del-sistema">1.5. Caratteristiche tecnologiche del sistema</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="02-caratteristiche-generali.html">Caratteristiche logiche dell’unita” centrale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="02-caratteristiche-generali.html#caratteristiche-generali">2.1. Caratteristiche generali</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-caratteristiche-generali.html#il-programma">2.2. Il programma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-caratteristiche-generali.html#l-unita-di-governo">2.3. L’unita” di governo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-caratteristiche-generali.html#il-flusso-delle-informazioni">2.4. Il flusso delle informazioni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-caratteristiche-generali.html#la-memoria-di-lavoro">2.5. La memoria di lavoro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-caratteristiche-generali.html#l-accumulatore-e-i-registri-t">2.6. L” accumulatore e i registri T</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-caratteristiche-generali.html#l-unita-aritmetica-e-logica">2.7. L’unita” aritmetica e logica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-caratteristiche-generali.html#i-controlli">2.8. I controlli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-caratteristiche-generali.html#il-tavolo-di-comando">2.9. Il tavolo di comando</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Caratteristiche logiche del governo delle unita” a nastro magnetico e delle altre unita” di introduzione e estrazione</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="#caratteristiche-generali">3.0. Caratteristiche generali</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#governo-unita-a-nastro-magnetico-gun">3.1. Governo unita” a nastro magnetico (GUN)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="#le-unita-in-linea">3.2. Le unita” in linea</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sincronizzatore">Sincronizzatore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lettore-di-schede">Lettore di schede</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#perforatore-di-schede">Perforatore di schede</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stampante-in-linea">Stampante in linea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fotolettore">Fotolettore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#il-convertitore-da-banda-o-schede-perforate-a-nastro-magnetico">Il convertitore da banda o schede perforate a nastro magnetico</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#la-stampante-fuori-linea">La stampante fuori linea</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="04-unita-centrale.html">L’unita” centrale</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="04-unita-centrale.html#memoria-principale">4.1. Memoria principale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-unita-centrale.html#accumulatore">4.2. Accumulatore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-unita-centrale.html#registri-t">4.3. Registri T</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-unita-centrale.html#logica-aritmetica-dell-elea-9003">4.4. Logica aritmetica dell” Elea 9003</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="05-unita-nastro.html">Le unita” a nastro magnetico</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="05-unita-nastro.html#governo-delle-unita-a-nastro">5.1. Governo delle unita” a nastro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-unita-nastro.html#nastro-magnetico">5.2. Nastro magnetico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-unita-nastro.html#organizzazione-delle-informazioni-su-nastro-magnetico">5.3. Organizzazione delle informazioni su nastro magnetico</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="06-organizzazione-programmazione.html">Organizzazione della programmazione</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="06-organizzazione-programmazione.html#struttura-della-programmazione">6.1. Struttura della programmazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-organizzazione-programmazione.html#la-codificazione-delle-informazioni">6.2. La codificazione delle informazioni</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="06-organizzazione-programmazione.html#id1"></a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-organizzazione-programmazione.html#id2"></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="06-organizzazione-programmazione.html#id3"></a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="06-organizzazione-programmazione.html#o-x-de-eghis-u">5 6 7 8 9
+~
+o
+x
+DE EGHIS
+u</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-organizzazione-programmazione.html#la-codificazione-delle-istruzioni">6.3. La codificazione delle istruzioni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-organizzazione-programmazione.html#modifica-automatica-delle-istruzioni">6.4. Modifica automatica delle istruzioni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-organizzazione-programmazione.html#lunghezza-degli-operandi-nelle-istruzioni-interne">6.5. Lunghezza degli operandi nelle istruzioni interne.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-organizzazione-programmazione.html#registrazione-del-programma">6.6. Registrazione del programma</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="caratteristiche-logiche-del-governo-delle-unita-a-nastro-magnetico-e-delle-altre-unita-di-introduzione-e-estrazione">
+<h1>Caratteristiche logiche del governo delle unita” a nastro magnetico e delle altre unita” di introduzione e estrazione<a class="headerlink" href="#caratteristiche-logiche-del-governo-delle-unita-a-nastro-magnetico-e-delle-altre-unita-di-introduzione-e-estrazione" title="Permalink to this heading">#</a></h1>
+<section id="caratteristiche-generali">
+<h2>3.0. Caratteristiche generali<a class="headerlink" href="#caratteristiche-generali" title="Permalink to this heading">#</a></h2>
+<p>Il governo dell” unita” a nastro magnetico e” parte co
+stitutiva del sistema Elea 9003. Abbiamo gia” defini
+to il nastro magnetico come il supporto piu” congenia.
+le all” elaboratore elettronico; le unita” relative e
+il loro governo consentono rispettivamente la sua uti
+lizzazione e il collegamento tra questi e l’unita”
+centrale.</p>
+<p>Alla parte centrale dell” elaboratore e” necessario ac
+cedere dall’esterno sia per fare affluire i dati e il
+programma relativo, sia per estrarre i risultati del
+conseguente ciclo di elaborazione. Queste due funzio
+ni d’introduzione dei dati e d’estrazione dei risul-
+tati, sono affidate alle unita” a nastro magnetico
+che possiamo quindi definire «unita” d’introduzione»
+e «unita” di estrazione» del sistema. Esse costitui-
+scono la parte periferica che completa la struttura
+dell” elaboratore Elea 9003.</p>
+<p>La principale caratteristica di queste unita” e” di
+poter essere collegate alla parte centrale del si-
+stema sia direttamente come unita” in linea, sia in-
+direttamente come unita” fuori linea.</p>
+<p>In quest’ultimo caso esse restano staccate fisicamen
+te e logicamente dall” unita” centrale e hanno lo sco
+po di trasferire i dati da nastro perforato o da sche
+da perforata, a nastro magnetico eseguendo l’opportu
+na conversione di linguaggio.</p>
+<p>Funzione di questi convertitori e” anche quella di e
+seguire l’operazione inversa da quella ora descritta
+di portare cioe” i dati da nastro magnetico a sche
+da o nastro perforato, e a stampa.</p>
+</section>
+<section id="governo-unita-a-nastro-magnetico-gun">
+<h2>3.1. Governo unita” a nastro magnetico (GUN)<a class="headerlink" href="#governo-unita-a-nastro-magnetico-gun" title="Permalink to this heading">#</a></h2>
+<p>Fino a 20 unita” a nastro magnetico possono esse
+re collegate ad un apposito governo (che costitui
+sce il tramite fra esse e il calcolatore), le cui
+funzioni sono molteplici ed importanti. Il governo
+delle unita” a nastro, interamente transistorizza-
+to, assicura e controlla il trasferimento delle in
+formazioni dai nastri magnetici alla memoria prin-
+cipale, e viceversa. Questo trasferimento puo” av-
+venire consecutivamente oppure selettivamente,
+interessare una o piu” unita” a nastro.</p>
+<p>Le operazioni di lettura e di registrazione su na
+stro magnetico oltre che simultaneamente, possono
+essere eseguite infatti in modo selettivo, nel sen
+so che e” possibile registrare di seguito sul
+nastro il contenuto di zone di memoria non contigue
+e contemporaneamente suddividere le informazioni in
+entrata nelle zone di memoria piu” adatte all’ela-
+borazione.</p>
+<p>Il governo delle unita” a nastro puo” anche ordina
+re e controllare la trascrizione delle informazio-
+ni da una unita” a nastro, in lettura, ad un’altra
+unita” in registrazione: e cio” per un numero pre-
+fissato di informazioni, o fino a quando non viene
+trascritta una informazione determinata.</p>
+<p>E” possibile inoltre la ricerca di una particolare
+informazione registrata su nastro magnetico.
+Detta operazione puo” avvenire contemporaneamente
+alla trascrizione del nastro su un altro nastro
+con evidente vantaggio, quindi, nelle operazioni di
+aggiornamento di un archivio, specialmente quando
+sia basso il rapporto tra variazione e contenuto
+.dell’archivio stesso. Oltre a cio”, il governo del-
+le unita” a nastro puo” ordinare il riavvolgimento
+contemporaneo di una bobina in un senso o nell’al-
+tro per una determinata lunghezza, ecc.</p>
+<p>LE CONFIGURAZIONI DEI CARATTERI SU NASTRO MAGNETICO E SU NASTRO PERFORATO
+TEMPORIZZ.</p>
+<p>La lettura viene controllata per mezzo della verifi
+ca di disparita”; la registrazione invece viene ve-
+rificata rileggendo attraverso la testina di lettu-
+ra cio” che e” stato appena registrato attraverso la
+testina di registrazione, ed eseguendo quindi il con
+fronto.</p>
+<p>Nel caso di disuguaglianza, le registrazione conti
+nua, ma l” elaboratore denuncia l” errore, che viene
+corretto subito dopo automaticamente.</p>
+</section>
+<section id="le-unita-in-linea">
+<h2>3.2. Le unita” in linea<a class="headerlink" href="#le-unita-in-linea" title="Permalink to this heading">#</a></h2>
+<p>Il collegamento di queste unita” con l’unita” centra
+le e” stato ottenuto mediante appositi organi le cui
+funzioni sono di interpretare gli ordini trasmessi
+dal governo centrale, di coordinare e sincronizzare
+le operazioni che le singole unita” devono eseguire.
+Ogni unita” (stampante parallela, lettore o perfora
+tore di schede, lettore di nastro perforato) e” quin
+di dotata di un proprio governo, mentre il sincro -
+nizzatore e” unico per tutte le unita” e fa parte
+del sistema centrale.</p>
+<section id="sincronizzatore">
+<h3>Sincronizzatore<a class="headerlink" href="#sincronizzatore" title="Permalink to this heading">#</a></h3>
+<p>Il sincronizzatore e” connesso da un lato all’unita”
+centrale e dall’altro a tante unita” in linea quan-
+te sono previste nella particolare installazione per
+un massimo di 10. Esso contiene anche tutta la logi-
+ca comune al gruppo di apparecchiature connesse e ne
+cessarie allo smistamento di informazioni fra le va-
+rie unita”
+Esso dispone di 10 bocchettoni di entrata ed uscita
+numerati da 1 a 10.
+Ad uno qualsiasi di questi bocchettoni puo”
+essere
+connessa una qualsiasi unita” meccanica.</p>
+<p>Dal momento in cui essa e connessa ad un certo boc-
+chettone, il numero di ordine di questo diviene l’in
+dirizzo dell” unita” suddetta e con questo indirizzo
+il programmatore da” qualsiasi indicazione che la ri
+guardi.</p>
+<p>Data l’assenza di ogni differenziazione per i bocchet
+toni, e” possibile collegare ad essi qualunque tipo
+di unita” entro il limite di 10: come ad esempio 10
+stampanti oppure 10 perforatrici, oppure 10 lettori di
+schede oppure 10 lettori di banda.</p>
+<p>Naturalmente nell’uso normale sono collegate simulta
+neamente unita” di tipo diverso.</p>
+</section>
+<section id="lettore-di-schede">
+<h3>Lettore di schede<a class="headerlink" href="#lettore-di-schede" title="Permalink to this heading">#</a></h3>
+<p>Il lettore di schede puo” leggere schede a 80 colon-
+ne, con qualsiasi tipo di codice di perforazione, al-
+la velocita” di 500 schede al minuto: e dotato di
+due caselle di alimentazione e quattro caselle di ri
+cezione.</p>
+<p>La scheda si presenta sotto forma di cartoncino inde
+formabile, reso elettricamente isolante con opportu-
+no trattamento, ed avente forma rettangolare.</p>
+<p>Essa puo” essere perforata in diverse posizioni, dispo
+ste in 12 linee a 80 colonne. Su ognuna di queste 80
+colonne si puo” rappresentare un dato numerico median
+te una perforazione posta in una determinata posizio-
+ne, a seconda della cifra che si vuol rappresentare ;
+e” pure possibile la rappresentazione di un carattere
+alfabetico mediante due perforazioni nella stessa co-
+lonna, secondo particolari codificazioni.</p>
+<p>La lettura delle schede e” eseguita da una apparecchia
+tura fornita di due spazzole a 80 posizioni; la prima
+spazzola e utilizzata per la lettura vera e propria.
+la seconda per la verifica dell” esatta lettura.</p>
+<p>Con una sola istruzione di programma si specifica l’unita
+interessata, si ordina la lettura di una scheda; la re
+gistrazione delle informazioni nella memoria di tran-
+sito e il trasferimento delle informazioni stesse dal
+la memoria di transito alla memoria principale, nelle
+posizioni specificate dall’istruzione. Tutte queste o
+perazioni sono rigorosamente controllate.</p>
+</section>
+<section id="perforatore-di-schede">
+<h3>Perforatore di schede<a class="headerlink" href="#perforatore-di-schede" title="Permalink to this heading">#</a></h3>
+<p>Il perforatore di schede puo” perforare schede ad 80
+colonne, alla velocita” di 150 schede al minuto: e” do
+tato di una casella di alimentazione, di due caselle
+di ricezione e di una stazione di lettura a valle del
+la stazione di perforazione.</p>
+<p>L” esatta perforazione e” verificata rileggendo le sche
+de, dopo che la perforazione e” stata eseguita, per
+mezzo di una stazione di lettura a 80 posizioni</p>
+</section>
+<section id="stampante-in-linea">
+<h3>Stampante in linea<a class="headerlink" href="#stampante-in-linea" title="Permalink to this heading">#</a></h3>
+<p>E” collegata all” unita” centrale e serve astampare ad
+alta velocita” le informazioni elaborate provenienti
+dalla memoria principale. Le modalita” di stampa pos-
+sono essere determinate sia dall” unita” centrale, sia
+dal governo proprio della stampante .</p>
+<p>28
+IL FOTOLETTORE</p>
+<p>L’operazione di stampa non ostacola il processo di e
+laborazione.</p>
+<p>Il blocco di stampa si compone di 102 ruote di stam-
+pa capace ciascuna di stampare 36 caratteri alfanume
+rici.</p>
+<p>La velocita” e” di 300 righe al minuto. La memoria di
+transito contiene 104 caratteri alfanumerici preleva
+ti dalla memoria principale.</p>
+<p>Prima di essere utilizzate per la stampa, tutte le
+informazioni vengono controllate e, qualora si rile-
+vi un errore, questo viene posto in evidenza median-
+te la stampa di un carattere convenzionale ai margi-
+ni del foglio.</p>
+<p>Tutte le unita” in linea possono essere dotate di
+pannelli di connessione.</p>
+</section>
+<section id="fotolettore">
+<h3>Fotolettore<a class="headerlink" href="#fotolettore" title="Permalink to this heading">#</a></h3>
+<p>Questo organo permette di registrare direttamente nel
+la memoria principale del calcolatore le informazio-
+ni contenute su banda perforata, alla velocita” di
+800 caratteri al secondo. Ad esso si ricorre normal-
+mente per introdurre programmi da mettere a punto, ma
+puo” essere utilizzato vantaggiosamente per l’intro-
+duzione di piccole quantita” di informazioni.</p>
+<p>La forma rettangolare dei fori di perforazione (1,65x
+2,05 mm) consente il raggiungimento delle piu” alte
+velocita” agli apparecchi di fotolettura.</p>
+<p>Infatti a parita” di dimensione assiale (il lato per
+la sezione rettangolare, il diametro per la sezione
+tonda) tra fori di forma diversa, il fascio lumino-
+so gode nel nostro caso di una maggiore sezione di
+indagine fotoelettrica.</p>
+</section>
+<section id="il-convertitore-da-banda-o-schede-perforate-a-nastro-magnetico">
+<h3>Il convertitore da banda o schede perforate a nastro magnetico<a class="headerlink" href="#il-convertitore-da-banda-o-schede-perforate-a-nastro-magnetico" title="Permalink to this heading">#</a></h3>
+<p>Questa unita” non e” collegata al calcolatore; essa
+trascrive su nastro magnetico le informazioni conte
+nute su schede o banda perforata, allo scopo di in-
+trodurle nel calcolatore per mezzo delle unita”
+nastro magnetico, a velocita” maggiore di quella con
+sentita dai lettori di schede e dal fotolettore in
+linea.</p>
+<p>Consta di due fotolettori, capaci ciascuno di legge
+re 800 caratteri al secondo, e di un lettore di sche
+de che legge 700 schede al minuto; il lettore di
+schede e” munito di piu” caselle di ricezione,
+per agevolare l’asportazione delle schede gia” lette.</p>
+<p>Le informazioni sono riportate su nastro magnetico
+per mezzo di una unita” anastro collegata; esse ven
+gono automaticamente riorganizzate, se necessario, e
+trascritte a blocchi di lunghezza prefissabile fino
+ad un massimo di 1200 caratteri.</p>
+<p>Pure automaticamente vengono registrati sul nastro
+magnetico, nelle posizioni opportune, i caratteri di
+servizio necessari alla sua utilizzazione in fase di
+elaborazione; si possono inserire sino a 10 costan-
+ti diverse, e togliere o aggiungere il segno a una
+parola numerica.</p>
+<p>Il controllo della lettura del carattere in uscita
+da banda o scheda perforata viene eseguito rileggen
+do lo stesso carattere per mezzo di due testine fo-
+toelettriche o di due spazzole di lettura, ed ese-
+guendo quindi un confronto.</p>
+<p>30
+IL CONVERTITORE DA BANDA PERFORATA A NASTRO MAGNETICO</p>
+<p>Il controllo della registrazione su nastro magneti
+co viene effettuato mediante il bit di disparita”.</p>
+</section>
+<section id="la-stampante-fuori-linea">
+<h3>La stampante fuori linea<a class="headerlink" href="#la-stampante-fuori-linea" title="Permalink to this heading">#</a></h3>
+<p>Questa unita” non e” collegata al calcolatore; es-
+sa stampa, ad una velocita” variabile da 600 a 1000
+righe/minuto, con 120 caratteri/riga, il contenuto
+dei nastri magnetici ottenuto sia come risultato di
+elaborazioni effettuate dal calcolatore sia per la
+conversione da schede o da nastro perforato. Rice-
+ve i dati da una unita” a nastro magnetico e prov-
+vede alla loro organizzazione per la stampa median
+te un pannello mobile di connessione e un lettore
+fotoelettrico di un anello di nastro perforato.
+Le informazioni da stampare sono organizzate su na
+stro magnetico nel modo consueto e vengono lette e
+trasferite, un blocco alla volta, nella memoria di
+transito che ha la capacita” di 2048 caratteri al-
+fanumerici.</p>
+<p>Da qui vengono prelevate all’istante voluto e in-
+viate alla stampa tramite un pannello mobile di con
+nessione, che determina sia il tempo sia la desti-
+nazione d’uscita.</p>
+<p>L’eccezionale flessibilita” del convertitore da na
+stro magnetico a stampa permette di eliminare, du-
+rante l” elaborazione nel calcolatore, il tempo ne-
+cessario alla organizzazione dei dati per la stam-
+pa e di ottenere, dallo stesso nastro, stampati di
+versi sia orizzontalmente che verticalmente.</p>
+<p>La lettura del nastro, la registrazione nella memoria
+di transito, la trans-codificazione, l” avanzamento
+della carta sono sistematicamente ed automaticamente
+controllati sicche” si rende superflua la presenza di
+un operatore che sorvegli la stampa.</p>
+<p>I caratteri stampabili sono: 10 numerici, 26 alfanu-
+merici, e 20 fra i principali simboli matematici,com
+merciali e di interpunzione. Sono ottenibili fino a
+6 copie simultaneamente.</p>
+<p>LA MEMORIA DI LAVORO</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="04-unita-centrale.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">L’unita” centrale</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="02-caratteristiche-generali.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Caratteristiche logiche dell’unita” centrale</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, Olivetti ELEA9003
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenuti
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Caratteristiche logiche del governo delle unita” a nastro magnetico e delle altre unita” di introduzione e estrazione</a><ul>
+<li><a class="reference internal" href="#caratteristiche-generali">3.0. Caratteristiche generali</a></li>
+<li><a class="reference internal" href="#governo-unita-a-nastro-magnetico-gun">3.1. Governo unita” a nastro magnetico (GUN)</a></li>
+<li><a class="reference internal" href="#le-unita-in-linea">3.2. Le unita” in linea</a><ul>
+<li><a class="reference internal" href="#sincronizzatore">Sincronizzatore</a></li>
+<li><a class="reference internal" href="#lettore-di-schede">Lettore di schede</a></li>
+<li><a class="reference internal" href="#perforatore-di-schede">Perforatore di schede</a></li>
+<li><a class="reference internal" href="#stampante-in-linea">Stampante in linea</a></li>
+<li><a class="reference internal" href="#fotolettore">Fotolettore</a></li>
+<li><a class="reference internal" href="#il-convertitore-da-banda-o-schede-perforate-a-nastro-magnetico">Il convertitore da banda o schede perforate a nastro magnetico</a></li>
+<li><a class="reference internal" href="#la-stampante-fuori-linea">La stampante fuori linea</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    <script src="_static/translations.js"></script>
+    </body>
+</html>
