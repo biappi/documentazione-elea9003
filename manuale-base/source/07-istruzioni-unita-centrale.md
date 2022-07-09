@@ -1,6 +1,12 @@
+```{sectnum}
+---
+start: 7
+---
+```
+
 # Istruzioni riguardanti l'unita' centrale
 
-## 7.1. Istruzioni memoria-accumulatore
+## Istruzioni memoria-accumulatore
 
 Queste istruzioni interessano la memoria principale
 e 1' accumulatore; nel loro svolgimento impegnano la
@@ -498,7 +504,7 @@ Im
 =
 =
 
-## 7.2. Istruzioni memoria-memoria
+## Istruzioni memoria-memoria
 
 Queste istruzioni interessano soltanto la memoria
 principale; nel loro svolgimento impegnano l'unita'
@@ -747,7 +753,7 @@ Indirizzi
 CON FIGURAZIONE
 CARATTEON
 
-## 7.3. Istruzioni memoria-registri
+## Istruzioni memoria-registri
 
 Queste istruzioni interessano la memoria principale
 ed i registri T: nel loro svolgimento impegnano la
@@ -1152,7 +1158,7 @@ Im
 CARAtTER
 o o
 
-## 7.4. - Istruzioni costanti-registri
+## - Istruzioni costanti-registri
 
 Queste istruzioni interessano parole costituite da
 caratteri o valori fissi (costanti): nel loro svol-
@@ -1484,7 +1490,7 @@ CONFIGURAZIONE
 22 a
 To
 
-## 7.5. Istruzioni per la moltiplicazione
+## Istruzioni per la moltiplicazione
 
 Queste istruzioni interessano lamemoria principale,
 i registri T e l' accumulatore; nel loro svolgimento
@@ -1664,7 +1670,7 @@ interno
 'Im
 os
 
-## 7.6. Istruzioni per la ricerca in memoria
+## Istruzioni per la ricerca in memoria
 
 Le istruzioni di ricerca interessano la memoria prin
 cipale; nel loro svolgimento impegnano l'unita' arit
@@ -1796,7 +1802,7 @@ siderato.
 RIi
 CONFIGURAZIONE
 
-## 7.7. Le istruzioni per le operazioni logiche
+## Le istruzioni per le operazioni logiche
 
 Il calcolatore e' capace di eseguire operazioni lo-
 giche, bit per bit, secondo 1' algebra di Boole, fra
@@ -1960,7 +1966,7 @@ CONFIGURAZIONE
 CARATTERE
 Im
 
-## 7.8. Istruzioni relative al tavolo di comando
+## Istruzioni relative al tavolo di comando
 
 Queste istruzioni possono interessare con la memo
 ria principale o il fotolettore o la telescrivente;
@@ -2084,7 +2090,7 @@ CONEIGURAZIONE
 Im
 a
 
-## 7.9. Istruzioni di salto
+## Istruzioni di salto
 
 La successione delle istruzioni di programma puo' do
 ver essere alterata al verificarsi di certe eventua
@@ -2479,7 +2485,7 @@ yyyy
 racc
 X х х х
 
-## 7.10. Istruzioni di salto su errore
+## Istruzioni di salto su errore
 
 La probabilita' di un errore nel movimento di un ca-
 rattere tra i vari organi dell' elaboratore e' estre-

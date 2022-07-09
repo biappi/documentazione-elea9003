@@ -1,6 +1,12 @@
+```{sectnum}
+---
+start: 11
+---
+```
+
 # Il tavolo di comando
 
-## 11.1. Generalita'
+## Generalita'
 
 Il tavolo di comando e' l'organo che costituisce un tra-
 mite di comunicazione fra l'operatore ed il sistema per
@@ -46,7 +52,7 @@ le viene definitivamente registrato su nastro magnetico,
 da dove sara successivamente prelevato nera esecuzionE
 vera e propria del lavoro.
 
-## 11.2. Quadro di comando manuale
+## Quadro di comando manuale
 
 Il quadro di comando manuale e' composto di una serie
 tasti che per comodita' raggruppiamo in 6 zone.
@@ -189,7 +195,7 @@ I tasti non considerati hanno una funzione variabile a seconda del
 le particolari caratteristiche dell'impianto.
 236
 
-## 11.3. Il quadro di controllo
+## Il quadro di controllo
 
 11 quadro di controllo si compone di 13 batterie di indica-
 torl luminosi poste superiormente al quadro di comando ma-

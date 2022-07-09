@@ -1,6 +1,12 @@
+```{sectnum}
+---
+start: 3
+---
+```
+
 # Caratteristiche logiche del governo delle unita' a nastro magnetico e delle altre unita' di introduzione e estrazione
 
-## 3.0. Caratteristiche generali
+## Caratteristiche generali
 
 Il governo dell' unita' a nastro magnetico e' parte co
 stitutiva del sistema Elea 9003. Abbiamo gia' defini
@@ -37,7 +43,7 @@ seguire l'operazione inversa da quella ora descritta
 di portare cioe' i dati da nastro magnetico a sche
 da o nastro perforato, e a stampa.
 
-## 3.1. Governo unita' a nastro magnetico (GUN)
+## Governo unita' a nastro magnetico (GUN)
 
 Fino a 20 unita' a nastro magnetico possono esse
 re collegate ad un apposito governo (che costitui
@@ -92,7 +98,7 @@ Nel caso di disuguaglianza, le registrazione conti
 nua, ma l' elaboratore denuncia l' errore, che viene
 corretto subito dopo automaticamente.
 
-## 3.2. Le unita' in linea
+## Le unita' in linea
 
 Il collegamento di queste unita' con l'unita' centra
 le e' stato ottenuto mediante appositi organi le cui

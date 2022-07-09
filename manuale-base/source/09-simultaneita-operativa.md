@@ -1,6 +1,12 @@
+```{sectnum}
+---
+start: 9
+---
+```
+
 # La simultaneita' operativa dell'ELEA 9003; Logica e utilizzazione del 1° e 2° programma
 
-## 9.1. Considerazioni generali
+## Considerazioni generali
 
 Alla memoria principale dell' ELEA 9003 si puo' acce
 dere mediante due canali di trasferimento delle in-
@@ -90,7 +96,7 @@ mento delle unita' in linea dell' ELEA 9003.
 Esaminiamo ora le caratteristiche particolari dei
 due tipi di programmi precedentemente definiti.
 
-## 9.2. Programma con istruzioni doppie
+## Programma con istruzioni doppie
 
 Non considerando la sequenza relativa al terzo pro.
 gramma, in questo tipo di organizzazione avremo lo
@@ -126,7 +132,7 @@ SIMULTANEITA® DI ELABORAZIONE E LETTURA O REGISTRAZIONE
 CANALE INTEONI
 184
 
-## 9.3. Programma con simultaneita' operative organizzate
+## Programma con simultaneita' operative organizzate
 
 Un programma di questo tipo, sempre non consideran-
 do la sequenza del terzo programma, comprendera due
@@ -137,7 +143,7 @@ zione sono due : a) la necessita di una particola-
 re organizzazione dei dati; b) i rapporti tra le due
 sequenze e la logica della simultaneita' interna.
 
-### 9.3.1. L'organizzazione dei dati
+### L'organizzazione dei dati
 
 Per utilizzare la possibilita' di sovrapposizione
 del tempo esecutivo dei due programmi e' necessario
@@ -212,7 +218,7 @@ Generalmente le istruzioni di elaborazione interna
 saranno modificate da uno o piu° registri per poter
 operare dalle zone Zi a Ze e da Zi a Ze.
 
-### 9.3.2. Rapporti tra le due sequenze di programma
+### Rapporti tra le due sequenze di programma
 
 L' esame delle due sequenze di programma e la contem
 poranea esecuzione vengono eseguiti dalla macchina
@@ -248,7 +254,7 @@ In ogni modo se si volesse fare ugualmente uso del-
 rio scaricarli prima e ricaricarli dopo averli usa-
 ti.
 
-## 9.4. Metodi di utilizzazione del 20 programma
+## Metodi di utilizzazione del 20 programma
 
 Ogni metodo di utilizzazione del 10 e del 2°program
 ma deve soddisfare alle due seguenti condizioni che
@@ -273,7 +279,7 @@ neita' operative, realizzabili mediante le due
 1--
 struzioni di salto speciale S2P e `S2P*`
 
-## 9.5. Descrizione del primo metodo
+## Descrizione del primo metodo
 
 Al secondo programma si accede mediante l'istruzio
 ne S2P (salta al secondo programma) posta sul pri-
@@ -405,7 +411,7 @@ il numero dei blocchi da elaborare e con B. X.d.
 M. 7 i deviatori utilizzati.
 193
 
-## 9.6. Descrizione del secondo metodo
+## Descrizione del secondo metodo
 
 Questo metodo si basa non su una condizione rigida
 di rapporti tra il 10 ed il 20 programma, come avve

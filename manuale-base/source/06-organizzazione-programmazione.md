@@ -1,6 +1,12 @@
+```{sectnum}
+---
+start: 6
+---
+```
+
 # Organizzazione della programmazione
 
-## 6.1. Struttura della programmazione
+## Struttura della programmazione
 
 Chiamiamo programma una sequenza di disposizioni o
 comandi che eseguiti uno di seguito all'altro, por
@@ -53,7 +59,7 @@ alla macchina, se ne elencano le caratteristiche, ed
 infine si espongono le norme relative all'utilizza-
 zione dei nastri e dei programmi plurisequenziali
 
-## 6.2. La codificazione delle informazioni
+## La codificazione delle informazioni
 
 Le informazioni - dati, risultati e istruzioni di
 programma - sono rappresentate per mezzo di caratte
@@ -154,7 +160,7 @@ ecc.
 Un blocco e' composto da uno o piu' elementi. Una se
 auenza e' composta da uno o piu blocchi.
 
-## 6.3. La codificazione delle istruzioni
+## La codificazione delle istruzioni
 
 Una istruzione di programma e' codificata per mezzo
 di otto caratteri alfanumerici. Questi hanno normal
@@ -289,7 +295,7 @@ UV WXYZ
 68
 Tabella N. 3
 
-## 6.4. Modifica automatica delle istruzioni
+## Modifica automatica delle istruzioni
 
 Per ogni istruzione e' indicato se essa e' modifica
 bile automaticamente, nel qual caso il registro T mg
@@ -378,7 +384,7 @@ resse).
 Il contenuto del T modificatore non viene alterato
 dalla modifica automatica dell'istruzione.
 
-## 6.5. Lunghezza degli operandi nelle istruzioni interne.
+## Lunghezza degli operandi nelle istruzioni interne.
 
 Le istruzioni interne sottoindicate possono speci-
 ficare la lunghezza dell' operando, o indicando con
@@ -451,7 +457,7 @@ Posizioni di memoria
 la parte lunghezza e indirizzo dell'istruzione puo'
 essere espressa
 
-## 6.6. Registrazione del programma
+## Registrazione del programma
 
 Perche' possano essere esaminate ed eseguite dalla
 unita' centrale, le istruzioni di programma devono

@@ -1,6 +1,12 @@
+```{sectnum}
+---
+start: 10
+---
+```
+
 # La terza sequenza di programma
 
-## 10.1. Generalita'
+## Generalita'
 
 1) All' unita' centrale del sistema Elea 9003 posso~
 no essere collegate unita' in linea capaci di fun
@@ -36,7 +42,7 @@ che le regola, sono affidate ad un sincronizzato
 re che armonizza tutte le operazioni di terzo pro
 gramma.
 
-## 10.2. Caratteristiche logiche del 30 programma
+## Caratteristiche logiche del 30 programma
 
 1) L'ordine di lavoro alle singole unita' viene tra
 smesso dall' unita' centrale, che procede quindi
@@ -158,7 +164,7 @@ c) puo' eseguire istruzioni di qualsiasi genere pur
 avendo come funzione specifica i comandi relati-
 vi alle apparecchiature in linea.
 
-## 10.3. Fasi di svolgimento del 30 programma
+## Fasi di svolgimento del 30 programma
 
 1) Una istruzione S3P da inizio all'esecuzione del-
 la sequenza. Appositi registri, distinti da quel
@@ -203,7 +209,7 @@ b) se lo STOP e' eseguito dopo 1' avvenuta lettu-
 radegli altri STOP 1' unita' passaallo stato di inat
 tiva ed il programma si arresta.
 
-## 10.4. Funzione e logica delle istruzioni s3P, TOL, STOP
+## Funzione e logica delle istruzioni s3P, TOL, STOP
 
 L'istruzione S3P a) comanda l'inizio di una sequen
 za di 30 programma;
@@ -273,7 +279,7 @@ disporre l' unita' in linea al successivo ciclo di
 lavoro dopo 1' azzeramento automatico della memoria
 di transito.
 
-## 10.5. L'istruzione SP*
+## L'istruzione SP*
 
 Mediante questa istruzione si vuole ovviare all'in-
 conveniente generato dall'uso della sola istruzione
@@ -309,7 +315,7 @@ L' istruzione SUO su unita' fittizia deve appa-
 rire in testa alla sequenza di istruzioni ed esse-
 re letta nel 1° ciclo di 30 programma.
 
-## 10.6. L'organizzazione di un 3° programma che prevede l'uso della istruzione S3P* dovra' pertanto essere legata alle seguenti norme.
+## L'organizzazione di un 3° programma che prevede l'uso della istruzione S3P* dovra' pertanto essere legata alle seguenti norme.
 
 1) Sul 1° o 2° programma deve essere registrata una
 istruzione S3P che permetta l'attivazione di tut
@@ -624,7 +630,7 @@ o
 o
 ```
 
-## 10.7. Esempio di 30 sequenza con uso della sola SP
+## Esempio di 30 sequenza con uso della sola SP
 
 Generalita'
 
@@ -930,7 +936,7 @@ terminate.
 L'esecuzione dello STOP dell' unita' 2
 arrestera' infine il 30 programma.
 
-## 10.8. Esempio di 30 sequenza con uso della SP*
+## Esempio di 30 sequenza con uso della SP*
 
 Generalita'
 - Nell' esempio seguente si fa riferimento ad una se-

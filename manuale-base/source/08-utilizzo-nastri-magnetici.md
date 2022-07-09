@@ -1,6 +1,12 @@
+```{sectnum}
+---
+start: 8
+---
+```
+
 # Utilizzazione dei nastri magnetici
 
-## 8.1. Caratteristiche generali
+## Caratteristiche generali
 
 Il nastro magnetico come supporto d'informazione per
 l'elaborazione elettronica dei dati e' certamente il
@@ -77,7 +83,7 @@ moria di capacita' ridotta implichera' l'impiego di
 blocchi di piccole dimensioni che esalteranno gli
 inconvenienti citati.
 
-## 8.2. La registrazione e la lettura del nastro
+## La registrazione e la lettura del nastro
 
 I caratteri rappresentati nella memoria di lavoro
 mediante sei bit vengono riprodotti sul nastro ma-
@@ -147,7 +153,7 @@ tare che in operazioni di trascrizione da nastro
 a nastro si sommino tra di loro successive dif-
 ferenze di frequenza di impaccamento.
 
-## 8.3. Organizzazione delle informazioni su nastro magnetico
+## Organizzazione delle informazioni su nastro magnetico
 
 Gruppi di caratteri, a seconda della funzione per
 la quale sono stati creati, possono costituire le

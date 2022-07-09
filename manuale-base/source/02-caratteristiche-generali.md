@@ -1,6 +1,11 @@
+```{sectnum}
+---
+start: 2
+---
+```
 # Caratteristiche logiche dell'unita' centrale
 
-## 2.1. Caratteristiche generali
+## Caratteristiche generali
 
 L'unita' centrale del sistema Elea 9003, intesa come insieme di organi interni,
 ha il compito di ricevere le informazioni dalle unita' di introduzione, di
@@ -21,7 +26,7 @@ Gli organi che consentono all' unita centrale di ese guire questi compiti sono
  - l' unita aritmetica e logica
  - il tavolo di comando
 
-## 2.2. Il programma
+## Il programma
 
 La successione delle operazioni da eseguirsi dall'ela boratore e' determinata
 dal "programma" registrato nel la memoria di lavoro: questo e' formato da una
@@ -79,7 +84,7 @@ consentono la conversione nastro perforato - nastro magnetico, schede perforate
 In tal modo puo' dirsi che l'intero complesso e' grado di funzionare come
 convertitore senza che lo svolgimento delle elaborazioni ne venga alterato.
 
-## 2.3. L'unita' di governo
+## L'unita' di governo
 
 Cuore dell' elaboratore e' l' unita di governo; essa dirige tutte le
 operazioni, comanda l' unita' aritmetica e logica, la memoria principale, l'
@@ -91,7 +96,7 @@ quanto e' stato eseguito. Inoltre il governo e' in grado di tenere conto delle
 segnalazioni che i vari organi centrali e periferici possono dare per variare
 il corso delle operazioni.
 
-## 2.4. Il flusso delle informazioni
+## Il flusso delle informazioni
 
 Il collegamento fra le diverse parti componenti l'unita' centrale e assicurato
 da due canali di trasferimento, uno dei quali, detto canale interno", serve
@@ -132,7 +137,7 @@ arrivano allora agli operatori aritmetico e logico l'uno attraver so il canale
 esterno, l'altro attraverso il canale in terno. Il risultato viene inviato in
 memoria dall'operatore aritmetico attraverso il canale interno.
 
-## 2.5. La memoria di lavoro
+## La memoria di lavoro
 
 Tutte le informazioni in entrata vengono convogliate alla memoria di lavoro. Da
 essa sono prelevate le in formazioni in uscita; in essa sono considerati i
@@ -163,7 +168,7 @@ occupate posizioni di memoria per delimitare le parole di lunghezza
 sconosciuta. L'Elea 9003 e dunque una macchina a parole di lunghezza variabile
 senza limitazioni.
 
-## 2.6. L' accumulatore e i registri T
+## L' accumulatore e i registri T
 
 L' accumulatore e' una piccola memoria ausiliare a nuclei magnetici, la cui
 funzione principale e quella di contenere uno degli operandi e,
@@ -190,7 +195,7 @@ accumulatore e viceversa: dalla memoria principale ai registri modificatori e
 vice versa: ma non direttamente dall' accumulatore ai registri e viceversa; il
 tempo di trasferimento dipende dalla lunghezza della parola.
 
-## 2.7. L'unita' aritmetica e logica
+## L'unita' aritmetica e logica
 
 L'unita› aritmetica e logica effettua i calcoli aritmetici, i confronti e le
 operazioni logiche: mo difica le istruzioni per mezzo dei registri T: puo'
@@ -228,7 +233,7 @@ Le caratteristiche di quest' operazione rendono parti colarmente facile
 l'ordinamento alfabetico e la selezione di codici o nominativi di
 identificazione.
 
-## 2.8. I controlli
+## I controlli
 
 L' esatta esecuzione di tutte le elaborazioni che l'Elea 9003 svolge e'
 garantita da un insieme di controlli automatici che individuando qualsiasi
@@ -257,7 +262,7 @@ Nelle operazioni aritmetiche una ulteriore forma di controllo e' data dalla
 verifica della rappresentazione dei caratteri numerici ed alfabetici; in essi
 infatti non compaiono mai le configurazioni c, b, a, = 101, oppure b, a, 10
 
-## 2.9. Il tavolo di comando
+## Il tavolo di comando
 
 Il mezzo di comunicazione fra l'operatore e l'elaboratore e' il tavolo di
 comando, che contiene i comandi manuali, il quadro e le linee di controllo.

@@ -1,6 +1,12 @@
+```{sectnum}
+---
+start: 5
+---
+```
+
 # Le unita' a nastro magnetico
 
-## 5.1. Governo delle unita' a nastro
+## Governo delle unita' a nastro
 
 E' questo l'organo mediante il quale si effettua il
 collegamento tra unita' a nastro e calcolatore, op
@@ -33,7 +39,7 @@ Essa rende possibile la consultazione ed aggiorna-
 mento di un nastro archivio a grande velocita' e sen
 za che sia impegnato il calcolatore
 
-## 5.2. Nastro magnetico
+## Nastro magnetico
 
 Il nastro magnetico e una banda di materia plasti
 ca (mylar) ricoperto su una faccia da ossido di fer
@@ -119,7 +125,7 @@ guenti
 1, 2, 3, 4, 5, 6, 7, 8, 9, ~
 o, A, B, C, D, E, F, G, H, I,
 
-## 5.3. Organizzazione delle informazioni su nastro magnetico
+## Organizzazione delle informazioni su nastro magnetico
 
 Il raggruppamento dei caratteri in blocchi, dovuto
 alla necessita' di trasferire un numero limitato di
