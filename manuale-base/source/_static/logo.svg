@@ -1,0 +1,30 @@
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height="150" width="150">
+    <defs>
+        <g id="s">
+            <line x1= "0" y1= "0" x2="10" y2= "0" />
+            <line x1= "0" y1="10" x2="10" y2="10" />
+            <line x1= "0" y1="10" x2= "0" y2="10" />    
+            <line x1= "0" y1= "0" x2= "0" y2="10" />
+            <line x1="10" y1= "0" x2="10" y2="10" />
+            <line x1= "0" y1= "0" x2="10" y2="10" />
+            <line x1= "0" y1="10" x2="10" y2= "0" />
+        </g>
+        <g id="r">
+            <use x= "0" y="0" xlink:href="#s" />
+            <use x="10" y="0" xlink:href="#s" />
+            <use x="20" y="0" xlink:href="#s" />
+        </g>
+        <g id="w">
+            <use x="0" y= "0" xlink:href="#r" />
+            <use x="0" y="10" xlink:href="#r" />
+            <use x="0" y="20" xlink:href="#r" />
+        </g>
+    </defs>
+
+    <g transform="scale(5 5)">
+        <use x="0" y="0" xlink:href="#w" style="stroke-width: 2px;   stroke: rgb(43, 140, 238);"/>
+        <use x="0" y="0" xlink:href="#w" style="stroke-width: 1.5px; stroke: rgb(26,  28,  30);"/>
+        <rect width="30" height="30"     style="stroke-width: 0.5px;   stroke: rgb(43, 140, 238); fill-opacity: 0%;"/>
+    </g>
+
+</svg>

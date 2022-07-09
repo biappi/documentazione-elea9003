@@ -23,6 +23,9 @@ html_title = project
 copyright = '2022, Olivetti ELEA9003'
 author = 'Olivetti ELEA9003'
 
+html_logo = "_static/logo.svg"
+
+
 
 # -- General configuration ---------------------------------------------------
 
