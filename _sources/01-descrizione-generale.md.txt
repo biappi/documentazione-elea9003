@@ -1,6 +1,12 @@
+```{sectnum}
+---
+start: 1
+---
+```
+
 # Descrizione generale dell'elaboratore
 
-## 1.1. Caratteristiche generali
+## Caratteristiche generali
 
 L' elaboratore elettronico aritmetico Elea 9003 e'
 uno strumento automatico di grandi capacita per
@@ -83,7 +89,7 @@ Q
 IT
 SCHEMA LOGICO DEL SISTEMA ELEA 9003
 
-## 1.2. La struttura modulare
+## La struttura modulare
 
 La struttura modulare, che caratterizza l'intero si-
 stema, permette di adeguare la potenza dell' Elea al
@@ -101,7 +107,7 @@ genze. Queste prerogative consentono all'utente di e
 vitare continue riorganizzazioni del centro di elabo
 razione
 
-## 1.3. La codificazione dei caratteri
+## La codificazione dei caratteri
 
 Un insieme di caratteri numerici, alfabetici o spe-
 ciali, che ha un significato compiuto e che indivi-
@@ -143,7 +149,7 @@ i T
 funzione del tipo di supporto e della struttura del
 le informazioni su cui operare.
 
-## 1.4. I supporti di introduzione e di estrazione
+## I supporti di introduzione e di estrazione
 
 Le informazioni possono essere introdotte nel calco
 latore da nastro magnetico, da schede o da nastro
@@ -257,7 +263,7 @@ Queste caratteristiche contribuiscono a far si che
 sia universale, atto a risolvere problemi di qual-
 siasi tipo.
 
-## 1.5. Caratteristiche tecnologiche del sistema
+## Caratteristiche tecnologiche del sistema
 
 La sicurezza operativa dell' Elea 9003 e' favorita
 dalla moderna tecnologia costruttiva seguita per

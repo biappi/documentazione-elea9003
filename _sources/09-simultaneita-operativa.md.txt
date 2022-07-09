@@ -1,6 +1,12 @@
+```{sectnum}
+---
+start: 9
+---
+```
+
 # La simultaneita' operativa dell'ELEA 9003; Logica e utilizzazione del 1° e 2° programma
 
-## 9.1. Considerazioni generali
+## Considerazioni generali
 
 Alla memoria principale dell' ELEA 9003 si puo' acce
 dere mediante due canali di trasferimento delle in-
@@ -29,9 +35,7 @@ governo delle unita' a nastro magnetico;
 canale esterno;
 40) istruzioni che impegnano il canale interno, ilca
 nale esterno e il governo delle unita' a nastro
-magnetico;
-#
-181
+magnetico; # 181
 50) istruzioni che impegnano il governo delle uni-
 ta' a nastro magnetico.
 In particolare l'istruzione avvolgi nastro (AV) puo'
@@ -92,7 +96,7 @@ mento delle unita' in linea dell' ELEA 9003.
 Esaminiamo ora le caratteristiche particolari dei
 due tipi di programmi precedentemente definiti.
 
-## 9.2. Programma con istruzioni doppie
+## Programma con istruzioni doppie
 
 Non considerando la sequenza relativa al terzo pro.
 gramma, in questo tipo di organizzazione avremo lo
@@ -128,7 +132,7 @@ SIMULTANEITA® DI ELABORAZIONE E LETTURA O REGISTRAZIONE
 CANALE INTEONI
 184
 
-## 9.3. Programma con simultaneita' operative organizzate
+## Programma con simultaneita' operative organizzate
 
 Un programma di questo tipo, sempre non consideran-
 do la sequenza del terzo programma, comprendera due
@@ -139,7 +143,7 @@ zione sono due : a) la necessita di una particola-
 re organizzazione dei dati; b) i rapporti tra le due
 sequenze e la logica della simultaneita' interna.
 
-### 9.3.1. L'organizzazione dei dati
+### L'organizzazione dei dati
 
 Per utilizzare la possibilita' di sovrapposizione
 del tempo esecutivo dei due programmi e' necessario
@@ -214,7 +218,7 @@ Generalmente le istruzioni di elaborazione interna
 saranno modificate da uno o piu° registri per poter
 operare dalle zone Zi a Ze e da Zi a Ze.
 
-### 9.3.2. Rapporti tra le due sequenze di programma
+### Rapporti tra le due sequenze di programma
 
 L' esame delle due sequenze di programma e la contem
 poranea esecuzione vengono eseguiti dalla macchina
@@ -250,7 +254,7 @@ In ogni modo se si volesse fare ugualmente uso del-
 rio scaricarli prima e ricaricarli dopo averli usa-
 ti.
 
-## 9.4. Metodi di utilizzazione del 20 programma
+## Metodi di utilizzazione del 20 programma
 
 Ogni metodo di utilizzazione del 10 e del 2°program
 ma deve soddisfare alle due seguenti condizioni che
@@ -273,9 +277,9 @@ di nuove operazioni esterne da parte del 10 al 20.
 Esistono due metodi di utilizzazione delle simulta
 neita' operative, realizzabili mediante le due
 1--
-struzioni di salto speciale S2P e S2P*
+struzioni di salto speciale S2P e `S2P*`
 
-## 9.5. Descrizione del primo metodo
+## Descrizione del primo metodo
 
 Al secondo programma si accede mediante l'istruzio
 ne S2P (salta al secondo programma) posta sul pri-
@@ -407,7 +411,7 @@ il numero dei blocchi da elaborare e con B. X.d.
 M. 7 i deviatori utilizzati.
 193
 
-## 9.6. Descrizione del secondo metodo
+## Descrizione del secondo metodo
 
 Questo metodo si basa non su una condizione rigida
 di rapporti tra il 10 ed il 20 programma, come avve
@@ -495,20 +499,12 @@ Lo schema logico ed il diagramma a blocchi della fi
 gura 2 definiscono l' applicazione di questo secon-
 do metodo.
 In particolare nella fig. 2 abbiamo indicato con :
-J
-=
-blocco generico introdotto in memoria
-n
-numero dei blocchi da elaborare
-=
-numero delle zone di memoria disponibili
-i
-=
+J = blocco generico introdotto in memoria
+n numero dei blocchi da elaborare =
+numero delle zone di memoria disponibili i =
 indice della zona di memoria in cui vengono in
 trodotti i dati da elaborare
-1' =
-indice della zona di memoria in elaborazione
-=
+1' = indice della zona di memoria in elaborazione =
 indice della zona di memoria contenente dati
 elaborati
 e' = indice della zona di memoria da cui vengono
@@ -541,8 +537,8 @@ E' pero' possibile che ad un certo punto, il 20 pro
 gramma arrivi allo STOP mentre il 1° sta ancora ese
 guendo operazioni interne.
 In questo caso, terminata l'operazione interna, il
-1° programma riavviera' il 20 con l'istruzione $2P*
-La caratteristica operativa dell' $2P*, consente di
+1° programma riavviera' il 20 con l'istruzione `$2P*`
+La caratteristica operativa dell' `$2P*`, consente di
 inserirla nel ciclo principale del 1° programma. Il
 governo dell'unita' centrale la leggera' nel
 cors(
@@ -551,7 +547,7 @@ in corso, non blocchera' lo svolgimento del 10, ma
 ne ritardera' di soli 15 periodi di cifra l' esecu-
 zione.
 In caso contrario, se nel corso del lavoro il 20 pro
-gramma avra' raggiunto lo STOP, il salto $2P* ver-
+gramma avra' raggiunto lo STOP, il salto `$2P*` ver-
 198
 ra' eseguito e dara' corso ad una nuova sequenza del
 2° programma.
@@ -594,6 +590,7 @@ Is
 IIII
 Im
 0
+```
 Salta al 20 Programma *
 S2P*
 (010010)
@@ -601,6 +598,7 @@ Is
 III I
 Im 0
 15
+```
 : carattere di eventualita'
 : registro che ricorda l'indirizzo della posizione p8
 dell'istruzione

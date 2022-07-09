@@ -1,6 +1,12 @@
+```{sectnum}
+---
+start: 4
+---
+```
+
 # L'unita' centrale
 
-## 4.1. Memoria principale
+## Memoria principale
 
 La memoria principale e' costituita da nuclei di fer
 rite a ciclo di isteresi rettangolare. I nuclei sono
@@ -130,7 +136,7 @@ POSIZIONE O PER OGNI GRUPPO TECNOLOGICO DI MEMORIA
 CIRCOLARITA NELL/AMBITO DI UN ELEMENTO TECNOLOGICO DI MEMORIA
 ORDINE DI SUCCESSIONE DEGLI ELEMENTI TECNOLOGICI DI MEMORI
 
-## 4.2. Accumulatore
+## Accumulatore
 
 L' accumulatore e' una speciale memoria a 100 posi-
 zioni; ad ogni posizione e' associato un indirizzo.
@@ -452,7 +458,7 @@ complemento
 vera grandezzo
 45
 
-## 4.3. Registri T
+## Registri T
 
 L'insieme dei registri T e' costituito da una memo-
 ria a nuclei magnetici della capacita' di 200 carat
@@ -523,7 +529,7 @@ un carattere; la tabella precedente indica l'indiriz-
 zo iniziale di ogni registro Tin corrispondenza del
 carattere che lo identifica.
 
-## 4.4. Logica aritmetica dell' Elea 9003
+## Logica aritmetica dell' Elea 9003
 
 Operazioni aritmetiche che possono interessare lame
 moria, 1' accumulatore e i registri T ( + MM :
