@@ -1,0 +1,49 @@
+# This is mostly experimental. Right now, all it does is create a GitHub release
+# and then try to upload to TestPyPI. The second step seems to be consistently
+# failing. :)
+
+name: Release
+on:
+  push:
+    tags:
+      - "*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+
+      - name: Install dependencies
+        run: pip install build
+
+      - name: Generate final distribution
+        run: python -m build
+
+      - name: Upload source distribution as an action artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: sdist
+          path: dist/furo-*.tar.gz
+      - name: Upload wheel distribution as an action artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: wheel
+          path: dist/furo-*-py3-none-any.whl
+
+      - name: Make a GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/*
+
+      - name: Upload to TestPyPI
+        uses: pypa/gh-action-pypi-publish@v1.4.1
+        with:
+          user: __token__
+          password: ${{ secrets.TESTPYPI_API_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
+          verbose: true
