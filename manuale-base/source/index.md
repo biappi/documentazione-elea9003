@@ -21,3 +21,26 @@ Non ci si sofferma invece nel presente manuale sulla descrizione tecnica e
 funzionale delle unita' in linea e fuori linea che restano oggetto di una
 trattazione specifica.
 
+00-indice-generale.md
+
+07-istruzioni-unita-centrale.md
+08-utilizzo-nastri-magnetici.md
+09-simultaneita-operativa.md
+10-terza-sequenza-programma.md
+11-tavolo-comando.md
+
+```{sectnum}
+```
+
+```{toctree}
+:hidden:
+
+
+01-descrizione-generale.md
+02-caratteristiche-generali.md
+03-governo-unita-nastro.md
+04-unita-centrale.md
+05-unita-nastro.md
+06-organizzazione-programmazione.md
+
+```
