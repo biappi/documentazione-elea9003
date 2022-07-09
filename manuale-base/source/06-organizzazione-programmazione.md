@@ -69,6 +69,7 @@ rappresentazione del carattere vero e proprio,
 settimo, che viene denominato bit di disparita ,ser
 60
 61
+```
 LA CONFIGURAZIONE IN BIT DEI CARATTERI DELL' ELEA 9003
 fedcba
 ZONA
@@ -106,6 +107,7 @@ u
 >
 . Un
 .
+```
 ve per il controllo dell' esatta registrazione delle
 informazioni. Piu' precisamente il settimo bit e' 0
 o 1 in modo che il numero dei bit 1 che compaiono in

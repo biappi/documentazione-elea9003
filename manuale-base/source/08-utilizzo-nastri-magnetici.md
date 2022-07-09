@@ -396,6 +396,7 @@ sferire dovra comprendere inizialmente n car atteri - quindi la parola chiave
 • di
 m caratteri. e finalmente il carattere l
 Esempio': per n = 4
+```
 ####4812318
 A BCD487231N
 impostazione parola chiave
@@ -421,6 +422,7 @@ tomatica di blocchi con chiave spezzata.
 Esempio :
 # # # 251 # # 359 # A 0
 168
+```
 Trascrivi Nastro
 TN
 GUN
@@ -502,8 +504,7 @@ moria 1 caratteri che avrebbero dovuto essere piu' tardi registrati su n.
 c Con le istruzioni PIN-NAN possono essere operati blocchi di lunghezza variabile.
 d) I due nastri funzionano in avanti; l'istruzione ha termine quando sono stati le!
 ti (sul nastro n' e in memoria) entrambi i caratteri di fine blocco.
-e) Non e' possibile porre ns o ni inesistenti (carattere
-# )
+e) Non e' possibile porre ns o ni inesistenti (carattere # )
 170
 NO
 Da Nastro, seguendo una Direttrice a Nastro

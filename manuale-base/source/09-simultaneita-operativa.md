@@ -29,9 +29,7 @@ governo delle unita' a nastro magnetico;
 canale esterno;
 40) istruzioni che impegnano il canale interno, ilca
 nale esterno e il governo delle unita' a nastro
-magnetico;
-#
-181
+magnetico; # 181
 50) istruzioni che impegnano il governo delle uni-
 ta' a nastro magnetico.
 In particolare l'istruzione avvolgi nastro (AV) puo'
@@ -273,7 +271,7 @@ di nuove operazioni esterne da parte del 10 al 20.
 Esistono due metodi di utilizzazione delle simulta
 neita' operative, realizzabili mediante le due
 1--
-struzioni di salto speciale S2P e S2P*
+struzioni di salto speciale S2P e `S2P*`
 
 ## 9.5. Descrizione del primo metodo
 
@@ -495,20 +493,12 @@ Lo schema logico ed il diagramma a blocchi della fi
 gura 2 definiscono l' applicazione di questo secon-
 do metodo.
 In particolare nella fig. 2 abbiamo indicato con :
-J
-=
-blocco generico introdotto in memoria
-n
-numero dei blocchi da elaborare
-=
-numero delle zone di memoria disponibili
-i
-=
+J = blocco generico introdotto in memoria
+n numero dei blocchi da elaborare =
+numero delle zone di memoria disponibili i =
 indice della zona di memoria in cui vengono in
 trodotti i dati da elaborare
-1' =
-indice della zona di memoria in elaborazione
-=
+1' = indice della zona di memoria in elaborazione =
 indice della zona di memoria contenente dati
 elaborati
 e' = indice della zona di memoria da cui vengono
@@ -541,8 +531,8 @@ E' pero' possibile che ad un certo punto, il 20 pro
 gramma arrivi allo STOP mentre il 1° sta ancora ese
 guendo operazioni interne.
 In questo caso, terminata l'operazione interna, il
-1° programma riavviera' il 20 con l'istruzione $2P*
-La caratteristica operativa dell' $2P*, consente di
+1° programma riavviera' il 20 con l'istruzione `$2P*`
+La caratteristica operativa dell' `$2P*`, consente di
 inserirla nel ciclo principale del 1° programma. Il
 governo dell'unita' centrale la leggera' nel
 cors(
@@ -551,7 +541,7 @@ in corso, non blocchera' lo svolgimento del 10, ma
 ne ritardera' di soli 15 periodi di cifra l' esecu-
 zione.
 In caso contrario, se nel corso del lavoro il 20 pro
-gramma avra' raggiunto lo STOP, il salto $2P* ver-
+gramma avra' raggiunto lo STOP, il salto `$2P*` ver-
 198
 ra' eseguito e dara' corso ad una nuova sequenza del
 2° programma.
@@ -594,6 +584,7 @@ Is
 IIII
 Im
 0
+```
 Salta al 20 Programma *
 S2P*
 (010010)
@@ -601,6 +592,7 @@ Is
 III I
 Im 0
 15
+```
 : carattere di eventualita'
 : registro che ricorda l'indirizzo della posizione p8
 dell'istruzione

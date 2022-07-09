@@ -590,6 +590,7 @@ d) Per questa istruzione valgono le regole relative ai casi di fine su carattere
 ve: quest'ultimo deve essere contenuto nella zona di memoria con indirizzo speci
 ficato nella MEM.
 TRASEEDISCE
+```
 ## 1.9 2 6 #
 61 9 3 4 #
 95
@@ -606,6 +607,7 @@ Im
 LL
 IIII
 Im
+```
 : lunghezza dei due operandi
 : indirizzo di memoria del secondo operando
 : il registro Im puo' modificare sia l'indirizzo III che
@@ -1184,6 +1186,7 @@ ratteri; istruzione di questo tipo e' la
 111
 interno
 Trasferisce una costante nel registro To
+```
 # C
 c c c c
 To
@@ -1198,9 +1201,11 @@ gistro To
 : registro in cui viene registrata la costante
 trasferisce nel registro To la costante cCCCC registra-
 ta nell'istruzione.
+```
 a) Il bit gT viene posto in corrispondenza della 5ª posizione del registro To•
 b) Se nelle posizioni p7 e p8 è' registrato il carattere - il trasferimento avviene
 solo per la costante CCCC ed il bit gl e posto in 4 posizione
+```
 X, 3 2,5,6,1 2,9
 TRASFERISCE COSTANTE NEL REGISTRO T
 SEGNO
@@ -1229,6 +1234,7 @@ To
 † CT
 : costante da sommarsi al contenuto del registro To
 registro su cui si opera
+```
 somma la costante cCCC al contenuto del registro To
 a) Il bit gl si trova nel registro T, prima dell'istruzione in 5° posizione.
 b) La somma viene effettuata tra i primi 5 caratteri del registro 1 e la costante
@@ -1243,6 +1249,7 @@ teri numerica 1n1 21 almente contenuto nel registro 1 in un indirizzo di 4 cara!
 teri con le migliaia espresse nel modo corretto.
 h) E' possibile percorrere tutti i successivi indirizzi di memoria.
 889,0,0,01
+```
 SOMMA COSTANTE AL CONTENUTL
 11.6.0.00
 REGISTO0 POIA
@@ -1258,6 +1265,7 @@ c c c c
 10
 c C с с
 To
+```
 determinano il tipo di istruzione + CT
 costante da sommarsi al contenuto del registro To
 registro su cui si opera
@@ -1275,6 +1283,7 @@ DEI DESISTONI
 11,10.0.0
 114
 tipo C
+```
 Somma una costante a registro Io
 Ст
 interno
@@ -1288,6 +1297,7 @@ To
 # #
 cC C c
 To
+```
 determinano il tipo di istruzione + CT
 : costante da sommarsi al contenuto del registro To
 registro sn cui si opera
@@ -1300,6 +1310,7 @@ di Il bit &T viene posto in 5° posizione, ed in essa viene generato il caratter
 0 (zero).
 e) Non e' possibile percorrere tutti i successivi indirizzi di memoria non esister
 do interazione tra parte numerica e parte alfabetica.
+```
 #9,0,0,01
 SOMMA COSTANTE AL CONTENUTO
 0,00,0,0
@@ -1378,6 +1389,7 @@ To
 C C C C
 Im
 #
+```
 : posizione non utilizzata
 registro che contiene 11 sottraendo
 : minuendo
@@ -1392,6 +1404,7 @@ e nel registro To non compaiano caratteri alfabetici o speciali
 d) 19) Se Im + CCCC > 9999 il riporto oltre la 4ª cifra non viene considerato;
 2°) Se Io > Im + CCCC in To si ha, a seguito dell'operazione, un risultato in
 complemento
+```
 #2000.01
 SOmPAL
 •CONTENUTO DEL PEr
@@ -1445,6 +1458,7 @@ SIMAOLICO
 IMPEGNAYI
 TEMPO
 IN PEQIODI DI CIERA
+```
 Il registro specificato nella posizione p2 non opera come mo
 di ficatore:
 fa eccezione la CTT che ha in p2 il registro modifi
@@ -1531,6 +1545,7 @@ Nei due esempi che seguono, il moltiplicatore viene trasferito nei registri T tr
 tele istruzioni Y ed MT
 Come si puo' osservare e' possibile ottenere il trasferimento del segno nell'apposi
 to registro solo mediante l'istruzione y
+```
 122
 11.2 1.9.3.2 # 6
 TRASFERISCE DA MEMORIA MOLTIPLICATORE
@@ -1556,6 +1571,7 @@ Mol.rex(3+1)
 LL
 IIII
 Im
+```
 : lunghezza del moltiplicando
 indirizzoin memoria del moltiplicando
 :il registro Im puo' modificare sia 1' indirizzo IIII
@@ -2354,6 +2370,7 @@ Dovendo ad esempio eseguire la terza istruzione oltre la SIN, si avr
 СССС = 0008 . 3 ÷ 0001 = 0025
 d) Il registro 1s deve sempre essere indicato
 e) Il tempo di esecuzione e' di 19 periodi di cifre anziche' di 15
+```
 Arresto
 STOP
 interno
@@ -2362,6 +2379,7 @@ X
 X X X X
 # 0
 10
+```
 a) Pone termine allo svolgimento del programma nel quale l'istruzione e' posta
 b) Se l'istruzione e' posta nel 1° programma, questo ha termine, mentre lo svolgimen
 to del 2° programma puo' proseguire.

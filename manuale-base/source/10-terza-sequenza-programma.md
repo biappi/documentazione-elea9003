@@ -414,6 +414,7 @@ gramma esterno.
 manata:
 2°1 terminata l'esecuzione della sequenza di programma esterno, la S3P puo'
 yaaa
+```
 Salta al programma esterno *
 S3P
 interno
@@ -424,6 +425,7 @@ III I
 Im 0
 10
 : carattere di eventualita
+```
 Is
 : registro che ricorda l'indirizzo della posizione p8
 dell'istruzione
@@ -529,8 +531,7 @@ XXx X #
 O
 10
 0
-U
-#
+U #
 : carattere di eventualita'
 : unita' in linea
 : posizioni non utilizzate
@@ -593,6 +594,7 @@ pUM.
 PIN. PRN
 h nel 10 o nel 20 sia letta ed eseguita una istruzione di salto
 analcinci
+```
 CODICE
 SIMBOLICO
 S3P
@@ -620,6 +622,7 @@ TIm
 #
 o
 o
+```
 
 ## 10.7. Esempio di 30 sequenza con uso della sola SP
 
@@ -657,6 +660,7 @@ gli indirizzi 993 e 1128 (in totale 136 caratteri).
 La sequenza e' fornita da due parti: una aciclica e
 una ciclica.
 218
+```
 SCHEMA DI 3° PROGRAMMA CON USO DELL' ISTRUZIONE S3P
 2• PROGRAMMA
 1° PROGRAMMA
@@ -768,6 +772,7 @@ SI
 11 2 0
 11 2 8
 220
+```
 a) La prima parte e' composta da 2 istruzioni cTme
 diante le quali si portano gli indirizzi delle
 zone impegnate per la prima elaborazione ester-
