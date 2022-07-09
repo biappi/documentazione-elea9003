@@ -118,7 +118,7 @@ def _compute_navigation_tree(context: Dict[str, Any]) -> str:
         toctree = context["toctree"]
         toctree_html = toctree(
             collapse=False,
-            titles_only=True,
+            titles_only=False,
             maxdepth=-1,
             includehidden=True,
         )
