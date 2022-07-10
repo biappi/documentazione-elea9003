@@ -6,4 +6,5 @@
 :hidden:
 
 09-organi-di-funzione.md
+11-organi-di-temporizzazione.md
 ```
