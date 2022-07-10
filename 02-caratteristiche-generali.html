@@ -220,7 +220,7 @@
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-memoria-accumulatore"><span class="sectnum">7.1 </span>Istruzioni memoria-accumulatore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-memoria-memoria"><span class="sectnum">7.2 </span>Istruzioni memoria-memoria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-memoria-registri"><span class="sectnum">7.3 </span>Istruzioni memoria-registri</a></li>
-<li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-costanti-registri"><span class="sectnum">7.4 </span>- Istruzioni costanti-registri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-costanti-registri"><span class="sectnum">7.4 </span>Istruzioni costanti-registri</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-per-la-moltiplicazione"><span class="sectnum">7.5 </span>Istruzioni per la moltiplicazione</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-per-la-ricerca-in-memoria"><span class="sectnum">7.6 </span>Istruzioni per la ricerca in memoria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#le-istruzioni-per-le-operazioni-logiche"><span class="sectnum">7.7 </span>Le istruzioni per le operazioni logiche</a></li>
@@ -255,11 +255,17 @@
 <li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#funzione-e-logica-delle-istruzioni-s3p-tol-stop"><span class="sectnum">10.4 </span>Funzione e logica delle istruzioni s3P, TOL, STOP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#l-istruzione-sp"><span class="sectnum">10.5 </span>L'istruzione SP*</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#l-organizzazione-di-un-3-programma-che-prevede-l-uso-della-istruzione-s3p-dovra-pertanto-essere-legata-alle-seguenti-norme"><span class="sectnum">10.6 </span>L'organizzazione di un 3° programma che prevede l'uso della istruzione S3P* dovra' pertanto essere legata alle seguenti norme.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sola-sp"><span class="sectnum">10.7 </span>Esempio di 30 sequenza con uso della sola SP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sp"><span class="sectnum">10.8 </span>Esempio di 30 sequenza con uso della SP*</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="11-tavolo-comando.html"><span class="sectnum">11 </span>Il tavolo di comando</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="10-terza-sequenza-programma.html#salta-al-programma-esterno-s3p-interno-010101"><span class="sectnum">11 </span>Salta al programma esterno *
+S3P
+interno
+(010101)</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sola-s3p"><span class="sectnum">11.1 </span>Esempio di 30 sequenza con uso della sola S3P</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sp"><span class="sectnum">11.2 </span>Esempio di 30 sequenza con uso della SP*</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="11-tavolo-comando.html"><span class="sectnum">11 </span>Il tavolo di comando</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="11-tavolo-comando.html#generalita"><span class="sectnum">11.1 </span>Generalita'</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11-tavolo-comando.html#quadro-di-comando-manuale"><span class="sectnum">11.2 </span>Quadro di comando manuale</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11-tavolo-comando.html#il-quadro-di-controllo"><span class="sectnum">11.3 </span>Il quadro di controllo</a></li>
@@ -310,8 +316,7 @@ dell'utilizzatore.</p>
 <p>E' quindi l'unita' centrale che riceve gli ordini dal l'esterno, cioe' a dire
 il programma, che lo fa eseguire impegnando via via tutti gli elementi
 richiesti</p>
-<p>Gli organi che consentono all' unita centrale di ese guire questi compiti sono
-:</p>
+<p>Gli organi che consentono all' unita centrale di ese guire questi compiti sono:</p>
 <ul class="simple">
 <li><p>l' unita' di governo</p></li>
 <li><p>la memoria di lavoro</p></li>
@@ -366,10 +371,8 @@ stampatrici parallele direttamente collegate.</p></li>
 <p>E' interessante notare che il terzo programma fa si che queste unita' di
 lettura - stampa - perforazione impegnino in misura minima il calcolatore.</p>
 <p>Qualora esse vengano fatte funzionare insieme ad una unita' a nastro magnetico,
-consentono la conversione nastro perforato - nastro magnetico, schede perforate</p>
-<ul class="simple">
-<li><p>nastro magnetico e nastro magnetico - stampa.</p></li>
-</ul>
+consentono la conversione nastro perforato - nastro magnetico, schede
+perforate - nastro magnetico e nastro magnetico - stampa.</p>
 <p>In tal modo puo' dirsi che l'intero complesso e' grado di funzionare come
 convertitore senza che lo svolgimento delle elaborazioni ne venga alterato.</p>
 </section>

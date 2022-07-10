@@ -220,7 +220,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#istruzioni-memoria-accumulatore"><span class="sectnum">7.1 </span>Istruzioni memoria-accumulatore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#istruzioni-memoria-memoria"><span class="sectnum">7.2 </span>Istruzioni memoria-memoria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#istruzioni-memoria-registri"><span class="sectnum">7.3 </span>Istruzioni memoria-registri</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#istruzioni-costanti-registri"><span class="sectnum">7.4 </span>- Istruzioni costanti-registri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#istruzioni-costanti-registri"><span class="sectnum">7.4 </span>Istruzioni costanti-registri</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#istruzioni-per-la-moltiplicazione"><span class="sectnum">7.5 </span>Istruzioni per la moltiplicazione</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#istruzioni-per-la-ricerca-in-memoria"><span class="sectnum">7.6 </span>Istruzioni per la ricerca in memoria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#le-istruzioni-per-le-operazioni-logiche"><span class="sectnum">7.7 </span>Le istruzioni per le operazioni logiche</a></li>
@@ -255,11 +255,17 @@
 <li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#funzione-e-logica-delle-istruzioni-s3p-tol-stop"><span class="sectnum">10.4 </span>Funzione e logica delle istruzioni s3P, TOL, STOP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#l-istruzione-sp"><span class="sectnum">10.5 </span>L'istruzione SP*</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#l-organizzazione-di-un-3-programma-che-prevede-l-uso-della-istruzione-s3p-dovra-pertanto-essere-legata-alle-seguenti-norme"><span class="sectnum">10.6 </span>L'organizzazione di un 3° programma che prevede l'uso della istruzione S3P* dovra' pertanto essere legata alle seguenti norme.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sola-sp"><span class="sectnum">10.7 </span>Esempio di 30 sequenza con uso della sola SP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sp"><span class="sectnum">10.8 </span>Esempio di 30 sequenza con uso della SP*</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="11-tavolo-comando.html"><span class="sectnum">11 </span>Il tavolo di comando</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="10-terza-sequenza-programma.html#salta-al-programma-esterno-s3p-interno-010101"><span class="sectnum">11 </span>Salta al programma esterno *
+S3P
+interno
+(010101)</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sola-s3p"><span class="sectnum">11.1 </span>Esempio di 30 sequenza con uso della sola S3P</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sp"><span class="sectnum">11.2 </span>Esempio di 30 sequenza con uso della SP*</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="11-tavolo-comando.html"><span class="sectnum">11 </span>Il tavolo di comando</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="11-tavolo-comando.html#generalita"><span class="sectnum">11.1 </span>Generalita'</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11-tavolo-comando.html#quadro-di-comando-manuale"><span class="sectnum">11.2 </span>Quadro di comando manuale</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11-tavolo-comando.html#il-quadro-di-controllo"><span class="sectnum">11.3 </span>Il quadro di controllo</a></li>
@@ -302,75 +308,45 @@
 <h1><span class="sectnum">7 </span>Istruzioni riguardanti l'unita' centrale<a class="headerlink" href="#istruzioni-riguardanti-l-unita-centrale" title="Permalink to this heading">#</a></h1>
 <section id="istruzioni-memoria-accumulatore">
 <h2><span class="sectnum">7.1 </span>Istruzioni memoria-accumulatore<a class="headerlink" href="#istruzioni-memoria-accumulatore" title="Permalink to this heading">#</a></h2>
-<p>Queste istruzioni interessano la memoria principale
-e 1' accumulatore; nel loro svolgimento impegnano la
-unita' aritmetica e logica ed il governo dell' elabo
-ratore.
-Sia durante la fase preparatoria che in quella ese.
-cutiva il canale interno risulta impegnato; a que
-sto gruppo di istruzioni potranno percio' sovrappor
-si operazioni che impegnano il canale esterno ed il
-governo unita a nastro
-Queste istruzioni sono normalmente utilizzate
-a) per trasferimenti da memoria verso accumulatore
-e viceversa di parole segnate o non segnate di
-lunghezza conosciuta o sconosciuta, non superio-
-re a 100 caratteri, hanno questa funzione le i-
-struzioni
-MA, AM, AOM
-b) per operazioni aritmetiche o algebriche su nume-
-ri di lunghezza variabile da 1 a 100 caratteri;
-hanno questa funzione le istruzioni
-~ MA</p>
-<ul class="simple">
-<li><p>MA, + AM
-c) per confronti tra valori assoluti, numeri alge
-brici o parole alfanumeriche, di lunghezza non su
-periore a 100 caratteri; ha questa funzione l'i-
-struzione
-CMA
-d) per determinare la lunghezza di una parola conte
-nuta in accumulatore, escluso l'eventuale segno
-79
-algebrico.
-In quest'ultimo caso e' necessario ricorrere a par
-ticolari accorgimenti di programmazione.
-Sistema a) Sia registrata mediante istruzione FAM
-la lunghezza del numero segnato conte-
-nuto in accumulatore, nelle posizioni
-p7 e p8 di un'istruzione AM o AoM.
-L'opportuna modifica di LL e' ottenibi
-le mediante il registro modificatore in
-dicato in p2 della stessa istruzione.
-E' sufficiente infatti sommare al con-
-tenuto di questo registro il valore
-10.000 perche' il bit gT passi in quin
-ta posizione e la cifra piu' signifi-
-cativa incrementi di una unita' la lun
-gnezza espressa mediante l'istruzione
-FAM.
-Sistema b) Si provvede, mediante una istruzione CT,
-a registrare all'inizio del ciclo di
-elaborazione comprendente l'istruzione
-FAM il valore 1 in un determinato regi
-stro.
-Si invia quindi mediante l'istruzione
-FAM la lunghezza del numero segnato con
-tenuto in accumulatore sulle posizioni
-p3 e p4 di una + CT che permette di som
-mare detta lunghezza all' unita' preesi
-stente nel registro precedentemente ope
-rato.
-Si ottiene in questo modo nel registro
-la lunghezza esatta del numero algebri
-co (valore assoluto + segno) che puo'
-essere trasferita mediante M nell' i-
-struzione interessata all' uscita del da
-to dall' accumulatore.
-80
-Dispone accumulatore
-DA
-interno
+<p>Queste istruzioni interessano la memoria principale e 1' accumulatore; nel loro
+svolgimento impegnano la unita' aritmetica e logica ed il governo dell'
+elaboratore.</p>
+<p>Sia durante la fase preparatoria che in quella esecutiva il canale interno
+risulta impegnato; a questo gruppo di istruzioni potranno percio' sovrapporsi
+operazioni che impegnano il canale esterno ed il governo unita a nastro.</p>
+<p>Queste istruzioni sono normalmente utilizzate</p>
+<p>a) per trasferimenti da memoria verso accumulatore e viceversa di parole
+segnate o non segnate di lunghezza conosciuta o sconosciuta, non superiore a
+100 caratteri, hanno questa funzione le istruzioni MA, AM, AOM.</p>
+<p>b) per operazioni aritmetiche o algebriche su numeri di lunghezza variabile da
+1 a 100 caratteri; hanno questa funzione le istruzioni  ~ MA - MA, + AM c) per
+confronti tra valori assoluti, numeri algebrici o parole alfanumeriche, di
+lunghezza non superiore a 100 caratteri; ha questa funzione l'istruzione CMA</p>
+<p>d) per determinare la lunghezza di una parola contenuta in accumulatore,
+escluso l'eventuale segno algebrico.</p>
+<p>In quest'ultimo caso e' necessario ricorrere a particolari accorgimenti di
+programmazione.</p>
+<p>Sistema a) Sia registrata mediante istruzione FAM la lunghezza del numero
+segnato contenuto in accumulatore, nelle posizioni p7 e p8 di un'istruzione AM
+o AoM.</p>
+<p>L'opportuna modifica di LL e' ottenibile mediante il registro modificatore
+indicato in p2 della stessa istruzione.  E' sufficiente infatti sommare al
+contenuto di questo registro il valore 10.000 perche' il bit gT passi in quinta
+posizione e la cifra piu' significativa incrementi di una unita' la lungnezza
+espressa mediante l'istruzione FAM.</p>
+<p>Sistema b) Si provvede, mediante una istruzione CT, a registrare all'inizio del
+ciclo di elaborazione comprendente l'istruzione FAM il valore 1 in un
+determinato registro.</p>
+<p>Si invia quindi mediante l'istruzione FAM la lunghezza del numero segnato con
+tenuto in accumulatore sulle posizioni p3 e p4 di una +CT che permette di
+sommare detta lunghezza all' unita' preesistente nel registro precedentemente
+operato.</p>
+<p>Si ottiene in questo modo nel registro la lunghezza esatta del numero algebrico
+(valore assoluto + segno) che puo' essere trasferita mediante M nell'
+istruzione interessata all' uscita del dato dall' accumulatore.</p>
+<p>Dispone accumulatore</p>
+<p>DA</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>interno
 XXII
 Im
 A (010001)
@@ -378,23 +354,22 @@ A (010001)
 XXXX
 I I
 Im
-: posizioni non utilizzate
+</pre></div>
+</div>
+<p>: posizioni non utilizzate
 : indirizzo di accumulatore
 : Il registro Im puo' modificare l'indirizzo II
 : fissa l'inizio dell' accumulatore alla Ilesima
-posizione
-a) Il contenuto dell' accumulatore rimane immutatc
-X,x x x 0 2 # A
-DISPONE ACCUMULATOA
+posizione</p>
+<p>a) Il contenuto dell' accumulatore rimane immutatc
+X,x x x 0 2 # A</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>DISPONE ACCUMULATOA
 198653471
 POSIZIONATE
 X x x x 0.5 #
-1.9 8 6.5.</p></li>
-</ul>
-<ol class="arabic simple" start="3">
-<li></li>
-</ol>
-<p>tat
+1.9 8 6.5.
+3.
+tat
 81
 interno
 Trasferisce da memoria ad accumulatore
@@ -407,31 +382,34 @@ MA
 IIII
 Im
 F
-: lunghezza dell' operando da trasferire in accumulatore
-indirizzo di memoria dell' operando che deve essere tra-
-sferito
-il registro Im puo' modificare sia l' indirizzo IIII che
-la cifra delle unita' della lunghezza LL
-: trasferisce dalla memoria a partire dall'indirizzo IIII
-per lunghezza LL e per indirizzi decrescenti all' accumu
-latore a partire da
-DA
-a, La memoria non resta azzerata.
-b) I caratteri trasferiti si sostituiscono a quelli precedentemente contenuti nell'ac
-cumulatore
-c) In corrispondenza dell'ultimo carattere trasferito viene posto un bit gA
-d) Se all'indirizzo IIII si trova un segno questo viene registrato nell'apposito regi
-stro del segno e l'informazione viene trasferita nell' accumulatore, da DA e per una
-lunghezza LL-1 a partire dall'indirizzo di memoria IIII-1.
-e) Per questa istruzione valgono le regole relative ai casi di fine su carattere chi:
-ve; in accumulatore, invece del carattere chiave, viene trasferito uno zero, ec
-1 1.
-bit gA posizionato sotto quest'ultimo.
+:
+</pre></div>
+</div>
+<p>lunghezza dell' operando da trasferire in accumulatore indirizzo di memoria
+dell' operando che deve essere trasferito</p>
+<p>il registro Im puo' modificare sia l' indirizzo IIII che la cifra delle unita'
+della lunghezza LL: trasferisce dalla memoria a partire dall'indirizzo IIII per
+lunghezza LL e per indirizzi decrescenti all' accumulatore a partire da DA</p>
+<p>a) La memoria non resta azzerata.</p>
+<p>b) I caratteri trasferiti si sostituiscono a quelli precedentemente contenuti
+nell'accumulatore</p>
+<p>c) In corrispondenza dell'ultimo carattere trasferito viene posto un bit gA</p>
+<p>d) Se all'indirizzo IIII si trova un segno questo viene registrato
+nell'apposito registro del segno e l'informazione viene trasferita nell'
+accumulatore, da DA e per una lunghezza LL-1 a partire dall'indirizzo di
+memoria IIII-1.</p>
+<p>e) Per questa istruzione valgono le regole relative ai casi di fine su
+carattere chiave; in accumulatore, invece del carattere chiave, viene
+trasferito uno zero, ec 1 1.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>bit gA posizionato sotto quest&#39;ultimo.
+
 0 8 1 930 2.
+
 TRASFERISCE DA MEMORIA AD ACCUMULATORL
 10.00.0.
-82
+
 Trasferisce da accumulatore a memoria senza azzeramento
+
 AM
 interno
 L
@@ -443,26 +421,24 @@ LL
 IIII
 Im
 G
-: lunghezza dell' operando da trasferire dall' accumulatore
-: indirizzo di memoria a cui l'operando deve essere
-sferito
-tra-
-:il registro Im puo' modificare sia l'indirizzo IIII che
-la cifra delle unita' della lunghezza LL
-: trasferisce dall' accumulatore a partire da DA, alla me-
-moria a partire dall'indirizzo IIII per lunghezza LL
-per indirizzi decrescenti
-al Tl contenuto dell' accumulatore e del registro del segno. le posizioni del DA:e del
-bit gA restano invariate
-b) Se la parola contenuta in
-accumulatore e' segnata, il segno viene registrato
-memoria all'indirizzo IIII e i caratteri contenuti in accumulatore, a partire
-in
-ds
-DA, sono trasferiti in memoria a partire dall'indirizzo IIII-leperlunghezzaLL-1
-c) Per questa istruzione valgono le regole relative ai casi di fine su carattere chia
-ve : quest'ultimo deve essere contenuto in memoria.
-0 6 19.30 1,G
+</pre></div>
+</div>
+<p>: lunghezza dell' operando da trasferire dall' accumulatore</p>
+<p>: indirizzo di memoria a cui l'operando deve essere trasferito</p>
+<p>: il registro Im puo' modificare sia l'indirizzo IIII che la cifra delle unita'
+della lunghezza LL</p>
+<p>: trasferisce dall' accumulatore a partire da DA, alla memoria a partire
+dall'indirizzo IIII per lunghezza LL per indirizzi decrescenti</p>
+<p>a) Il contenuto dell' accumulatore e del registro del segno. le posizioni del
+DA: e del bit gA restano invariate</p>
+<p>b) Se la parola contenuta in accumulatore e' segnata, il segno viene registrato
+memoria all'indirizzo IIII e i caratteri contenuti in accumulatore, a partire</p>
+<p>in
+ds</p>
+<p>DA, sono trasferiti in memoria a partire dall'indirizzo IIII-leperlunghezzaLL-1</p>
+<p>c) Per questa istruzione valgono le regole relative ai casi di fine su carattere chia
+ve : quest'ultimo deve essere contenuto in memoria.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0 6 19.30 1,G
 TRASEEPISCI
 6 4 0
 3.0
@@ -481,26 +457,23 @@ AoM
 LL
 IIII
 Im
-: lunghezza dell' operando da trasferire dalle accumula-
-tore
-: indirizzo di memoria a cui l'operando deve essere tra
-sferito
-: il registro Im puo' modificare sia l'indirizzo IIII
-che la cifra delle unita della lunghezza LL
-: trasferisce dall' accumulatore a partire da DA, allame
-moria a partire dall'indirizzo IIII per lunghezza LL
-e per indirizzi decrescenti
-a, Le posizioni di accumulatore interessate al trasferimento vengono azzerate
-h; In ognuna di queste posizioni e' posto un bit gA.
-c. Il registro del segno passa allo stato &quot;non segnato, in vera grandezza
-di Qualora nelle posizioni p7 e p8 fosse registrato il carattere # (diesis) l'e
-secuzione di una tale istruzione provoca l' azzeramento totale della
-' memoria
-principale.
-e, Per questa istruzione valgono le regole relative ai casi di fine su.
-carattert
-ah ave quest'ultimo deve essere contenuto in memoria
-0819282
+</pre></div>
+</div>
+<p>: lunghezza dell' operando da trasferire dalle accumulatore</p>
+<p>: indirizzo di memoria a cui l'operando deve essere trasferito</p>
+<p>: il registro Im puo' modificare sia l'indirizzo IIII che la cifra delle unita
+della lunghezza LL</p>
+<p>: trasferisce dall' accumulatore a partire da DA, alla memoria a partire
+dall'indirizzo IIII per lunghezza LL e per indirizzi decrescenti</p>
+<p>a. Le posizioni di accumulatore interessate al trasferimento vengono azzerate</p>
+<p>b. In ognuna di queste posizioni e' posto un bit gA.</p>
+<p>c. Il registro del segno passa allo stato &quot;non segnato, in vera grandezza di
+Qualora nelle posizioni p7 e p8 fosse registrato il carattere # (diesis)
+l'esecuzione di una tale istruzione provoca l' azzeramento totale della memoria
+principale.</p>
+<p>e, Per questa istruzione valgono le regole relative ai casi di fine su.
+carattert ah ave quest'ultimo deve essere contenuto in memoria</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0819282
 TRASFERISCE DA ACCUMULATORE A МЕИОР
 ACCUMULATORE DOPO
 ASFERIMENTI
@@ -508,47 +481,49 @@ ASFERIMENTI
 0000000
 10,00,04
 84
+
 Somma memoria ad accumulatore, risultato in accumulatore
 interno
 L
 IIII
 Im
-(010111)</p>
-<ul class="simple">
-<li><p>MA
+(010111)
++ MA
 10 + 1
 LL
 IIII
 Im
-&quot;: lunghezza dell' operando registrato in memoria
-: indirizzo di memoria dello stesso operando
-: il registro Im puo' modificare sia 1' indirizzo IIII che
-la cifra delle unita della lunghezza LL
-: somma il contenuto della memoria a partire dall'indiriz
-20 IIII per lunghezza LL e per indirizzi decrescenti
-al contenuto dell' accumulatore compreso tra DA e bit gA
-a) Il risultato si trova in accumulatore a partire da DA
-b) Il contenuto delle posizioni di memoria interessate dall'istruzione rimane inalte
-raco.
-c) L'operazione si effettua di regola sommando caratteri numerici.
-d) Qualora in uno o in entrambi gli addendi siano presenti caratteri alfabetici, que
-sti vengono sommati secondo la logica aritmetica esposta nel manuale.
-e) E' sufficiente che uno dei due operandi sia segnato perche' la operazione risulti
-a gebrica.</p></li>
-</ul>
-<ol class="arabic simple">
-<li><p>Se uno solo degli operandi e' segnato l'altro e considerato positivo.
-g) Per questa istruzione valgono le regole relative ai casi di fine su carattere chia
-0.6 1.92,1 2,6
+&quot;
+</pre></div>
+</div>
+<p>: lunghezza dell' operando registrato in memoria</p>
+<p>: indirizzo di memoria dello stesso operando</p>
+<p>: il registro Im puo' modificare sia 1' indirizzo IIII che la cifra delle unita
+della lunghezza LL</p>
+<p>: somma il contenuto della memoria a partire dall'indirizzo IIII per lunghezza
+LL e per indirizzi decrescenti al contenuto dell' accumulatore compreso tra DA
+e bit gA</p>
+<p>a) Il risultato si trova in accumulatore a partire da DA</p>
+<p>b) Il contenuto delle posizioni di memoria interessate dall'istruzione rimane
+inalterato.</p>
+<p>c) L'operazione si effettua di regola sommando caratteri numerici.</p>
+<p>d) Qualora in uno o in entrambi gli addendi siano presenti caratteri
+alfabetici, questi vengono sommati secondo la logica aritmetica esposta nel
+manuale.</p>
+<p>e) E' sufficiente che uno dei due operandi sia segnato perche' la operazione
+risulti algebrica.</p>
+<p>f) Se uno solo degli operandi e' segnato l'altro e considerato positivo.</p>
+<p>g) Per questa istruzione valgono le regole relative ai casi di fine su
+carattere chia</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0.6 1.92,1 2,6
 SOMMA MEMORIA
 REG. N
 10,0.0 0 6
 ACCUMULATORE ODINA
-85
-Somma accumulatore a memoria, risultato in memoria</p></li>
-</ol>
-<ul class="simple">
-<li><p>AM
+
+Somma accumulatore a memoria, risultato in memoria
+
++ AM
 interno
 LL
 Im
@@ -558,39 +533,38 @@ LL
 I I I I
 Im
 y
-: lunghezza dell' operando registrato in memoria e lun&quot;
-ghezza massima dell' operando registrato in accumulatore
-: indirizzo dell' operando registrato in memoria
-:il registro Tm puo' modificare sia l'indirizzo IIII che
-la cifra delle unita della lunghezza LL
-• somma il contenuto dell° accumulatore compreso tra DA €
-bit gA al contenuto della memoria a partire dall'indi
-rizzo IIII per lunghezza LLeper indirizzi decrescenti
-a) Se LL e maggiore del numero delle posizioni di accumulatore comprese tra DA e bil
-gA, le cifre oltre il bit gA non vengono operate.
-b) Se LL e' minore del numero delle posizioni di accumulatore comprese tra DA e bit
-gA, le cifre oltre la lunghezza LL non vengono operate, e si ha indicazione di
-overflow.
-c) Il risultato si forma in memoria a partire dall'indirizzo IIII
-d) Il contenuto dell' accumulatore rimane invariato.
-e) Non si ha passaggio di riporto oltre la lunghezza specificata in LL
-il Si ha indicazione di overflow nel caso in cui si dovrebbe avere riporto oltre
-lunghezza indicata.
-g) L'operazione puo'
-essere eseguita anche tra parole segnate con le seguenti limiti
-sioni
-del segno in accumulatore si tiene conto solo per stabilire se il contenuto d
-accumulatore va sommato o sottratto al contenuto delle posizioni di memoria:
-se la memoria e' segnata, l'indirizzo IIII deve essere quello del segno:
-3 - il segno di memoria non viene preso in considerazione e pertanto rimane immu
-cato,
-4 - in caso di sottrazione, se il contenuto dell'accumulatore e' › di quello del
-la memoria il risultato e' in complemento e si ha indicazione di overflow.
-h Per questa istruzione valgono le regole relative ai casi di fine
-caratte
-chiave.
-86
-SOMMA ACCUMULATORE A MEMORIA
+</pre></div>
+</div>
+<p>: lunghezza dell' operando registrato in memoria e lunghezza massima dell'
+operando registrato in accumulatore</p>
+<p>: indirizzo dell' operando registrato in memoria</p>
+<p>: il registro Tm puo' modificare sia l'indirizzo IIII che la cifra delle unita
+della lunghezza LL</p>
+<p>• somma il contenuto dell° accumulatore compreso tra DA € bit gA al contenuto
+della memoria a partire dall'indirizzo IIII per lunghezza LLeper indirizzi
+decrescenti</p>
+<p>a) Se LL e maggiore del numero delle posizioni di accumulatore comprese tra DA
+e bit gA, le cifre oltre il bit gA non vengono operate.</p>
+<p>b) Se LL e' minore del numero delle posizioni di accumulatore comprese tra DA e
+bit gA, le cifre oltre la lunghezza LL non vengono operate, e si ha indicazione
+di overflow.</p>
+<p>c) Il risultato si forma in memoria a partire dall'indirizzo IIII</p>
+<p>d) Il contenuto dell' accumulatore rimane invariato</p>
+<p>e) Non si ha passaggio di riporto oltre la lunghezza specificata in LL</p>
+<p>f) Si ha indicazione di overflow nel caso in cui si dovrebbe avere riporto
+oltre lunghezza indicata.</p>
+<p>g) L'operazione puo' essere eseguita anche tra parole segnate con le seguenti
+limiti sioni del segno in accumulatore si tiene conto solo per stabilire se il
+contenuto dell'accumulatore va sommato o sottratto al contenuto delle posizioni
+di memoria:</p>
+<p>se la memoria e' segnata, l'indirizzo IIII deve essere quello del segno:</p>
+<p>3 - il segno di memoria non viene preso in considerazione e pertanto rimane
+immutato,</p>
+<p>4 - in caso di sottrazione, se il contenuto dell'accumulatore e' › di quello
+della memoria il risultato e' in complemento e si ha indicazione di overflow.</p>
+<p>h Per questa istruzione valgono le regole relative ai casi di fine carattere
+chiave.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SOMMA ACCUMULATORE A MEMORIA
 9 2 4 3
 00 0 000C
 2 4 2 4
@@ -605,31 +579,32 @@ interno
 LL
 I I I I
 Im
-H (011111)</p></li>
-</ul>
-<ul class="simple">
-<li><p>MA
+H (011111)
+- MA
 10 + 1
 LL
 IIII
 Im
 H
-: lunghezza dell' operando registrato in memoria
-: indirizzo di memoria dello stesso operando
-:il registro Im puo' modificare sia l'indirizzo IIII che
-la cifra dellé unita della lunghezza LL
-: sottrae al contenuto dell' accumulatore compreso tra DA
-e bit gA il contenuto della memoria a partire dall'indi
-rizzo IIII per lunghezza LL e per indirizzi decrescenti
-a) Il risultato si trova in accumulatore a partire da DA.
-b) Il contenuto delle posizioni di memoria interessate dall'istruzione rimane inalte
-rato.
-c) L'operazione si effettua sommando al minuendo il complemento del sottraendo.
-d) E sufficiente che uno dei due operandi sia segnato perché' l'operazione risult:
-algebrica.
-e) Se uno solo degli operandi è' segnato l'altro e' considerato positivo.
-f, Per questa istruzione valgono le regole relative ai casi di fine su carattere ch.
-0 6 10 003 H
+</pre></div>
+</div>
+<p>: lunghezza dell' operando registrato in memoria</p>
+<p>: indirizzo di memoria dello stesso operando</p>
+<p>: il registro Im puo' modificare sia l'indirizzo IIII che la cifra dellé unita
+della lunghezza LL</p>
+<p>: sottrae al contenuto dell' accumulatore compreso tra DA e bit gA il contenuto
+della memoria a partire dall'indirizzo IIII per lunghezza LL e per indirizzi
+decrescenti</p>
+<p>a) Il risultato si trova in accumulatore a partire da DA.</p>
+<p>b) Il contenuto delle posizioni di memoria interessate dall'istruzione rimane
+inalterato.</p>
+<p>c) L'operazione si effettua sommando al minuendo il complemento del sottraendo.</p>
+<p>d) E sufficiente che uno dei due operandi sia segnato perché' l'operazione
+risulti algebrica.</p>
+<p>e) Se uno solo degli operandi è' segnato l'altro e' considerato positivo.</p>
+<p>f) Per questa istruzione valgono le regole relative ai casi di fine su
+carattere ch.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0 6 10 003 H
 DA ACCUMULATORE
 1.0.
 0.9.2
@@ -651,32 +626,32 @@ LL
 IIII
 Im
 E
-: lunghezza del termine di confronto registrato in memo-
-ria
-: indirizzo di memoria dello stesso operando
-: il registro Im puo' modificare sia l'indirizzo IIII che
-la cifra delle unita' della lunghezza LL
-: confronta il contenuto della memoria a partire da IIII
-per lunghezza LL e per indirizzi decrescenti con il con
-tenuto dell? accumulatore compreso tra DA e bit ga
-a) Il confrontc
-eseguito per tutti i caratteri anche non numerici, in base all'or
-dine gerarchico dei caratteri (vedi elenco dei caratteri).
-b) Nel confronto si tiene conto dei segni se questi sono
-per l'informazione contenuta in memoria, il primo carattere chiamato:</p></li>
-<li><p>per quella contenuta in accumulatore,il carattere contenuto nel registro del se
-se i caratteri + e - sono contenuti nell'informazione diversamente da come det
-to prima, risulta &gt;+;
-se delle due parole da confrontare una sola è' segnata, quella non segnata
-considerata positiva.
-c) Il risultato del confronto e' ricordato dall'unita' di governo e puo'
-quindi ser
-vire a condizionare il proseguimento dell'elaborazione fino a che non viene
-fettuato un nuovo confronto (CMA, CMT, CM, CCT).
-d) Per questa istruzione valgono le regole relative ai casi di fine
-chiave
-quest'ultimo deve essere contenuto in memoria
-car accert
+</pre></div>
+</div>
+<p>: lunghezza del termine di confronto registrato in memoria</p>
+<p>: indirizzo di memoria dello stesso operando</p>
+<p>: il registro Im puo' modificare sia l'indirizzo IIII che la cifra delle unita'
+della lunghezza LL</p>
+<p>: confronta il contenuto della memoria a partire da IIII per lunghezza LL e per
+indirizzi decrescenti con il contenuto dell' accumulatore compreso tra DA e bit
+gA</p>
+<p>a) Il confronto eseguito per tutti i caratteri anche non numerici, in base
+all'ordine gerarchico dei caratteri (vedi elenco dei caratteri).</p>
+<p>b) Nel confronto si tiene conto dei segni se questi sono per l'informazione
+contenuta in memoria, il primo carattere chiamato:</p>
+<ul class="simple">
+<li><p>per quella contenuta in accumulatore,il carattere contenuto nel registro del
+se se i caratteri + e - sono contenuti nell'informazione diversamente da come
+detto prima, risulta &gt;+;</p></li>
+</ul>
+<p>se delle due parole da confrontare una sola è' segnata, quella non segnata
+considerata positiva.</p>
+<p>c) Il risultato del confronto e' ricordato dall'unita' di governo e puo' quindi
+servire a condizionare il proseguimento dell'elaborazione fino a che non viene
+effettuato un nuovo confronto (CMA, CMT, CM, CCT).</p>
+<p>d) Per questa istruzione valgono le regole relative ai casi di fine chiave
+quest'ultimo deve essere contenuto in memoria</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>car accert
 0 4 0 0 0 0 35
 CONFRONTA MEMORIA
 COn ACCUmULATOR
@@ -694,26 +669,26 @@ g (010010)
 0 1
 IIII
 Im
-: caratteri che determinano il genere di lunghezza ricer
-сата
-: indirizzo a cui viene portata la lunghezza richiesta
-: il registro Im puo' modificare l'indirizzo IIII
-: trasferisce all'indirizzo IIII e per indirizzi decre-
-scenti il numero di cifre contenute in accumulatore d
-DA a bit gA.
-a) Se in p7 e p8 vengono registrati i caratteri 0 1 (zero, uno), all'indirizzc
-IlI e' trasferito il numero delle cifre significative comprese tra DA e bit gA
-b) Se in p7 e p8 vengono registrati i caratteri
-0 (punto zero);
-all' indirizze
-IIII e' trasferito il numero delle cifre significative e non significative com
-prese tra DA e bit gA.
-c) La lunghezza richiesta viene registrata sempre mediante 2 cifre
-d) Se richiedendo il numero di cifre significative (caso &quot;a&quot;) non ne risultasse al
-cuna, vengono trasferiti all'indirizzo IIII e IIII - 1, i caratteri 0 1 (zero
-uno
-Esempio della nota d)
+</pre></div>
+</div>
+<p>: caratteri che determinano il genere di lunghezza ricercata</p>
+<p>: indirizzo a cui viene portata la lunghezza richiesta</p>
+<p>: il registro Im puo' modificare l'indirizzo IIII</p>
+<p>: trasferisce all'indirizzo IIII e per indirizzi decrescenti il numero di cifre
+contenute in accumulatore da DA a bit gA.</p>
+<p>a) Se in p7 e p8 vengono registrati i caratteri 0 1 (zero, uno), all'indirizzo
+IIII e' trasferito il numero delle cifre significative comprese tra DA e bit
+gA.</p>
+<p>b) Se in p7 e p8 vengono registrati i caratteri 0 (punto zero); all' indirizzo
+IIII e' trasferito il numero delle cifre significative e non significative
+comprese tra DA e bit gA.</p>
+<p>c) La lunghezza richiesta viene registrata sempre mediante 2 cifre</p>
+<p>d) Se richiedendo il numero di cifre significative (caso &quot;a&quot;) non ne risultasse
+alcuna, vengono trasferiti all'indirizzo IIII e IIII - 1, i caratteri 0 1 (zero
+uno</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Esempio della nota d)
 0.1 1.9,2,8 #.
+
 • MEMORIA NO CIFRE
 ICATIVE DI ACCUMULATORE.
 0.0.0.
@@ -728,7 +703,7 @@ PASFERISCE IN MEMORIA NO CIERA
 0.04.529
 TRASFERISCE IN MEMORIA NO CIFRE SIGNIFICATIVE
 00 4
-91
+
 SCHEMA RIASSUNTIVO
 Istruzioni Memoria Accumulatore
 Аом
@@ -741,43 +716,40 @@ MA
 СМА
 FAM
 †AM
-Particolarita' dell'Accumulatore
+Particolarita&#39; dell&#39;Accumulatore
 CODICE
 SIMBOLICO
 PANATA
 revod
 IN PERIODI DI CIFRA
-Capacita' : 100 posizioni.
-DA
-fissa l'indirizzo dell'accumulatore.
-Bit gA
-segnale fine-informazione in accumulatore.
-Regole
-) Non viene spostato se l'operando in memoriaha lun
-ghezza uguale al numero di posizioni comprese tra
-DA e bit gA
-b) Viene posto in corrispondenza dell'ultima
-trasferito in accumulatore:
-c) Viene posto in corrispondenza della cifra piu' si
-gnificativa del risultato.
-Registro
+Capacita&#39; : 100 posizioni.
+</pre></div>
+</div>
+<p>DA fissa l'indirizzo dell'accumulatore.</p>
+<p>Bit gA segnale fine-informazione in accumulatore.</p>
+<p>Regole</p>
+<p>a) Non viene spostato se l'operando in memoria ha lunghezza uguale al numero di
+posizioni comprese tra DA e bit gA</p>
+<p>b) Viene posto in corrispondenza dell'ultima trasferito in accumulatore:</p>
+<p>c) Viene posto in corrispondenza della cifra piu' significativa del risultato.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Registro
 da indicazione del segno e della configurazione del
 del segno
 ricultato in accumulatore
-Per le ope la regola di comolementazione e' la seguente: lamac
+Per le ope la regola di comolementazione e&#39; la seguente: lamac
 razioni a.
 china esegue la complementazione se il numero di se
-ritmetiche : gni &quot;meno&quot; che risulta dall'esame del segno dell'ope
-razione, del segno dell'operando in memoria. del se
-eno dell'operando in accumulatore e del segno del moï
+ritmetiche : gni &quot;meno&quot; che risulta dall&#39;esame del segno dell&#39;ope
+razione, del segno dell&#39;operando in memoria. del se
+eno dell&#39;operando in accumulatore e del segno del moï
 tiplicatore.
-e' dispari.
-Dar i segni prevista l'inversione del segno del..
-¡'operando complementato: sono poi valide le regole
+e&#39; dispari.
+Dar i segni prevista l&#39;inversione del segno del..
+¡&#39;operando complementato: sono poi valide le regole
 algebriche sui segni.
 Dar i tro.
 sferimenti
-il registro indichera'
+il registro indichera&#39;
 non segnato in vera grandezza dopo una istruzione
 AMo una MA che neri audi un numero non segnato.
 segnato in vera grandezza dono una istruzione
@@ -794,10 +766,8 @@ DA
 MA
 AM
 дом
-+MA</p></li>
-</ul>
-<ul class="simple">
-<li><p>AM
++MA
++ AM
 …MA
 СМА
 FAM
@@ -809,71 +779,58 @@ CONFIGURAZIONE
 Im
 Im
 =
-=</p></li>
-</ul>
+=
+</pre></div>
+</div>
 </section>
 <section id="istruzioni-memoria-memoria">
 <h2><span class="sectnum">7.2 </span>Istruzioni memoria-memoria<a class="headerlink" href="#istruzioni-memoria-memoria" title="Permalink to this heading">#</a></h2>
-<p>Queste istruzioni interessano soltanto la memoria
-principale; nel loro svolgimento impegnano l'unita'
-aritmetica e logica ed il governo dell' elaboratore.
-La fase preparatoria di una istruzione di
-questc
-gruppo, come per gli altri tipi d' istruzione, impegna
-il solo canale interno, la fase esecutiva invece im
-pegna ambedue i canali
-A questo gruppo di istruzioni possono percio' sovrap
-porsi operazioni eseguibili mediante il solo gover
-no unita a nastro.
-Esse sono normalmente utilizzate
-a) per trasferimenti, da una zona di memoria ad una
-altra, di un numero variabile da 1 ad n-2 carat-
-teri (n = numero totale delle posizioni di memo
-ria); cio' si ottiene mediante le istruzioni
-PUM MEM
-b) operazioni aritmetiche su parole di lunghezza va
-riabile da 1 a n/2 caratteri; hanno queste
-tun
-zioni. le istruzioni
-PUM
-† MM PUM
-MM
-c) confronti tra parole alfanumeriche oppure tra nu-
-meri entrambi segnati, di lunghezza variabile da
-1 a n/2 caratteri; hanno questa funzione le i-
-struzioni
-PUM CMM
-Per ottenere 1' azzeramento della memoria principale
-per un determinato numero di posizioni e' sufficien
-te non indicare alcun indirizzo nelle posizioni da
-p3 a p6 dell' istruzione PUM riferita ad una MEM.
-93
+<p>Queste istruzioni interessano soltanto la memoria principale; nel loro
+svolgimento impegnano l'unita' aritmetica e logica ed il governo dell'
+elaboratore.  La fase preparatoria di una istruzione di questo gruppo, come per
+gli altri tipi d' istruzione, impegna il solo canale interno, la fase esecutiva
+invece impegna ambedue i canali.</p>
+<p>A questo gruppo di istruzioni possono percio' sovrapporsi operazioni eseguibili
+mediante il solo governo unita a nastro.</p>
+<p>Esse sono normalmente utilizzate</p>
+<p>a) per trasferimenti, da una zona di memoria ad una altra, di un numero
+variabile da 1 ad n-2 caratteri (n = numero totale delle posizioni di memoria);
+cio' si ottiene mediante le istruzioni PUM MEM</p>
+<p>b) operazioni aritmetiche su parole di lunghezza variabile da 1 a n/2
+caratteri; hanno queste tun zioni. le istruzioni PUM † MM PUM MM</p>
+<p>c) confronti tra parole alfanumeriche oppure tra numeri entrambi segnati, di
+lunghezza variabile da 1 a n/2 caratteri; hanno questa funzione le istruzioni
+PUM CMM</p>
+<p>Per ottenere 1' azzeramento della memoria principale per un determinato numero
+di posizioni e' sufficiente non indicare alcun indirizzo nelle posizioni da p3
+a p6 dell' istruzione PUM riferita ad una MEM.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>93
 interno
 Prepara uscita memoria
 L
 L
-IIII.</p>
-<ul class="simple">
-<li><p>Im
+IIII.
+- Im
 PUM
 (001110)
 10
 LL
 IIII
 Im
-: lunghezza dell' operando
-: indirizzo dell' operando in memoria
-: il registro Im puo' modificare sia 1' indirizzo IIII che
-la cifra delle unita' della lunghezza LL
-: prepara l' uscita da memoria di un operando.
-a) Se in p% e in p8 e' registrato il carattere# (diesis) la lunghezza dovra' esse
-re indicata dall'istruzione MEM. CM. + MM, - MM che segue.
-b, Se in pl e p8 e' indicata la lunghezza, nella istruzione MEM, CMM, + MM o</p></li>
-<li><p>MM
-che segue, in luogo della lunghezza dovranno essere registrati due zeri (00).
-c) L'istruzione PUM deve essere immediatamente seguita nel programma dalla istruzio
-ne esecutiva
-0 6 1 9 2 6 #
+</pre></div>
+</div>
+<p>: lunghezza dell' operando</p>
+<p>: indirizzo dell' operando in memoria</p>
+<p>: il registro Im puo' modificare sia 1' indirizzo IIII che la cifra delle
+unita' della lunghezza LL</p>
+<p>: prepara l' uscita da memoria di un operando.</p>
+<p>a) Se in p% e in p8 e' registrato il carattere# (diesis) la lunghezza dovra'
+ess re indicata dall'istruzione MEM. CM. + MM, - MM che segue.</p>
+<p>b, Se in pl e p8 e' indicata la lunghezza, nella istruzione MEM, CMM, +MM o -MM
+che segue, in luogo della lunghezza dovranno essere registrati due zeri (00).</p>
+<p>c) L'istruzione PUM deve essere immediatamente seguita nel programma dalla
+istruzione esecutiva</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0 6 1 9 2 6 #
 ÷
 1 2 6
 94
@@ -883,34 +840,33 @@ esterno ed
 interno
 LL
 III I
-I'm
+I&#39;m
 1 (000001)
 10 + 1
 LL
 IIII
 Im
-: lunghezza dell' operando indicato nella PUM
-: indirizzo di memoria a cui l' operando va trasferito
-: il registro Im puo' modificare sia 1' indirizzo IIII che
-la lunghezza LL
-: trasferisce la parola il cui indirizzo e' stato specifi
-cato nella PUM in altra zona di memoria a partire dal-
-l'indirizzo IIII specificato nella MEM per lunghezza LL
-e per indirizzi decrescenti.
-a) Per questa istruzione valgono le osservazioni a, b, c, riguardanti la PUM.
-b) La zona di memoria specificata dalla PUM rimane inalterata
-c) Con temporaneamente a questa istruzione non puo' essere eseguita alcuna istruzione
-che occupi almeno uno dei due canali.
-d) Per questa istruzione valgono le regole relative ai casi di fine su carattere chia
-ve: quest'ultimo deve essere contenuto nella zona di memoria con indirizzo speci
-ficato nella MEM.
-TRASEEDISCE</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## 1.9 2 6 #
+</pre></div>
+</div>
+<p>: lunghezza dell' operando indicato nella PUM</p>
+<p>: indirizzo di memoria a cui l' operando va trasferito</p>
+<p>: il registro Im puo' modificare sia 1' indirizzo IIII che la lunghezza LL</p>
+<p>: trasferisce la parola il cui indirizzo e' stato specificato nella PUM in
+altra zona di memoria a partire dall'indirizzo IIII specificato nella MEM per
+lunghezza LL e per indirizzi decrescenti.</p>
+<p>a) Per questa istruzione valgono le osservazioni a, b, c, riguardanti la PUM.</p>
+<p>b) La zona di memoria specificata dalla PUM rimane inalterata</p>
+<p>c) Con temporaneamente a questa istruzione non puo' essere eseguita alcuna
+istruzione che occupi almeno uno dei due canali.</p>
+<p>d) Per questa istruzione valgono le regole relative ai casi di fine su
+carattere chiave: quest'ultimo deve essere contenuto nella zona di memoria con
+indirizzo specificato nella MEM.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>TRASEEDISCE
+## 1.9 2 6 #
 61 9 3 4 #
 95
 Somma memoria a memoria
-+ MM
++MM
 esterno ed
 interno
 L
@@ -924,31 +880,26 @@ IIII
 Im
 </pre></div>
 </div>
-<p>: lunghezza dei due operandi
-: indirizzo di memoria del secondo operando
-: il registro Im puo' modificare sia l'indirizzo III che
-la cifra delle unita' della lunghezza LL
-: somma il contenuto della memoria a partire dall'indiriz
-20 IIII specificato nella PUM al contenuto della memo-
-ria a partire dall'indirizzo IIII specificato nella + MM
-per lunghezza LL e per indirizzi decrescenti.
-a) Per questa istruzione valgono le osservazioni a, b, c, riguardanti la PUM.
-b Tl risultato si forma in memoria a partire dall'indirizzo IIII specificato nella
-presente istruzione.
-c) Se il risultato e' di lunghezza superiore ad LL non vi e' riporto sulla posizio-
-ne adiacente e vi e' indicazione di overflow
-d) La zona di memoria specificata nella PUM rimane inalterata.
-e) L'operazione puo' avvenire solo per parole non segnate.</p>
-<ol class="arabic simple">
-<li><p>Con temporaneamente a questa istruzione non puo' essere eseguita alcuna istruzio
-ne che occupa almeno uno dei due canala
-g) Per questa istruzione valgono le regole relative ai casi di fine su carattere chia
-ve: quest'ultimo deve essere contenuto nella zona di memoria con indirizzo spe
-cilicaco nella</p></li>
-</ol>
-<ul class="simple">
-<li><p>MM
-0 5
+<p>: lunghezza dei due operandi</p>
+<p>: indirizzo di memoria del secondo operando</p>
+<p>: il registro Im puo' modificare sia l'indirizzo III che la cifra delle unita'
+della lunghezza LL</p>
+<p>: somma il contenuto della memoria a partire dall'indirizzio IIII specificato
+nella PUM al contenuto della memoria a partire dall'indirizzo IIII specificato
+nella +MM per lunghezza LL e per indirizzi decrescenti.</p>
+<p>a) Per questa istruzione valgono le osservazioni a, b, c, riguardanti la PUM.</p>
+<p>b) Il risultato si forma in memoria a partire dall'indirizzo IIII specificato
+nella presente istruzione.</p>
+<p>c) Se il risultato e' di lunghezza superiore ad LL non vi e' riporto sulla
+posizione adiacente e vi e' indicazione di overflow</p>
+<p>d) La zona di memoria specificata nella PUM rimane inalterata.</p>
+<p>e) L'operazione puo' avvenire solo per parole non segnate.</p>
+<p>f) Con temporaneamente a questa istruzione non puo' essere eseguita alcuna
+istruzione che occupa almeno uno dei due canali</p>
+<p>g) Per questa istruzione valgono le regole relative ai casi di fine su
+carattere chiave: quest'ultimo deve essere contenuto nella zona di memoria con
+indirizzo specificato nella +MM</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0 5
 1.9.2,5 #
 o 01
 96
@@ -956,39 +907,34 @@ esterno ed
 interno
 Sottrae memoria da memoria
 IIII
-Im</p></li>
-</ul>
-<ul class="simple">
-<li><p>MM
+Im
+- MM
 8
 (001111)
 10 +
 LL
 IIII
-: lunghezza dei due operandi
-indirizzo di memoria del sottraendo
-: il registro Im puo' modificare sia l'indirizzo IIII
-che la cifra delle unita della lunghezza LL
-: sottrae il contenuto della memoria a partire dall'indi
-rizzo IIII specificato nella presente istruzione al con
-tenuto della memoria il cui indirizzo iniziale e' spe-
-cificato nella PUM, per lunghezza IL e per indirizzi de
-crescenti.
-a) Per questa istruzione valgono le osservazioni a, b, c, riguardanti la PUM.
-b) Il risultato si forma in memoria a partire dall'indirizzo IIII specificato nella
-presente istruzione.
-c) La zona di memoria specificata nella PUM rimane inalterata.
-di l'operazione puo' avvenire solo per parole non segnate
-e) Qualora il minuendo sia minore del sottraendo il risultato appare in complemento
-e si ha indicazione di overtlow.
-†) Contemporaneamente a questa istruzione non puo' essere eseguita alcuna istruzio
-ne che occupi almeno uno dei due
-can all1
-g) Per questa istruzione valgono le regole relative ai casi di fine su carattere chi:
-ve quest ultimo deve essere contenuto nella zona di memoria con indirizzo
-suC
-citicato nella - MM.
-0 4 1.9.2,5 #.
+</pre></div>
+</div>
+<p>: lunghezza dei due operandi indirizzo di memoria del sottraendo</p>
+<p>: il registro Im puo' modificare sia l'indirizzo IIII che la cifra delle unita
+della lunghezza LL</p>
+<p>: sottrae il contenuto della memoria a partire dall'indirizzo IIII specificato
+nella presente istruzione al contenuto della memoria il cui indirizzo iniziale
+e' specificato nella PUM, per lunghezza IL e per indirizzi decrescenti.</p>
+<p>a) Per questa istruzione valgono le osservazioni a, b, c, riguardanti la PUM.</p>
+<p>b) Il risultato si forma in memoria a partire dall'indirizzo IIII specificato
+nella presente istruzione.</p>
+<p>c) La zona di memoria specificata nella PUM rimane inalterata.  di l'operazione
+puo' avvenire solo per parole non segnate</p>
+<p>e) Qualora il minuendo sia minore del sottraendo il risultato appare in
+complemento e si ha indicazione di overtlow.</p>
+<p>f) Contemporaneamente a questa istruzione non puo' essere eseguita alcuna
+istruzione che occupi almeno uno dei due canali</p>
+<p>g) Per questa istruzione valgono le regole relative ai casi di fine su
+carattere chiave quest ultimo deve essere contenuto nella zona di memoria con
+indirizzo specificato nella -MM.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0 4 1.9.2,5 #.
 0.01
 9 3 2 #
 97
@@ -998,33 +944,35 @@ interno ed
 esterno
 LL
 I LI I
-I'm / (001010)
+I&#39;m / (001010)
 10 +1
 L L
 IIII
 Im
-: lunghezza dei due termini di confronto
-: indirizzo del 1° termine di confronto
-: il registro Im puo' modificare sia 1' indirizzo IIII
-che la cifra delle unita di LL
-: confronta il contenuto della memoria a partire dall'in
-dirizzo IIII con il contenuto della memoria specifica-
-to nella PUM per lunghezza LL e per indirizzi decre-
-scenti,
-a, Per questa istruzione valgono le osservazioni a, b, c, riguardanti la PUM
-b. Il 1° termine di confronto e' quello indicato nella presente istruzione.
-c) Le regole del confronto sono le stesse della (MA con l'avvertenza che il confron
-to puo' avvenire solo fra informazioni entrambe segnate o entrambe non
-segnate
-d) Per questa istruzione valgono le regole relative ai casi di fine
-chiave: quest'ultimo deve essere contenuto nella zona di memoria con
-specificato nella CM.
-carattere
+</pre></div>
+</div>
+<p>: lunghezza dei due termini di confronto</p>
+<p>: indirizzo del 1° termine di confronto</p>
+<p>: il registro Im puo' modificare sia 1' indirizzo IIII che la cifra delle unita
+di LL</p>
+<p>: confronta il contenuto della memoria a partire dall'indirizzo IIII con il
+contenuto della memoria specificato nella PUM per lunghezza LL e per indirizzi
+decrescenti,</p>
+<p>a) Per questa istruzione valgono le osservazioni a, b, c, riguardanti la PUM</p>
+<p>b) Il 1° termine di confronto e' quello indicato nella presente istruzione.</p>
+<p>c) Le regole del confronto sono le stesse della (MA con l'avvertenza che il
+confronto puo' avvenire solo fra informazioni entrambe segnate o entrambe non
+segnate</p>
+<p>d) Per questa istruzione valgono le regole relative ai casi di fine chiave:
+quest'ultimo deve essere contenuto nella zona di memoria con specificato nella
+CM.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>carattere
 indirizzo
 9.2.7 $ ÷
 10 5 1 9 3.
 3 #
 98
+
 SCHEMA RIASSUNTIVO
 Istruzioni Memoria Memoria
 Trasferimento
@@ -1038,26 +986,22 @@ MEM
 +MM
 ..MM
 смм
-Particolarita' della memoria centrale
+Particolarita&#39; della memoria centrale
 cAnice
 SIMBOLICO
 CANALI
 IMOEGNATI
 IN PEGIODL DI CIERA
-Capacita'
+Capacita&#39;
 20000 - 40000 posizioni aumentabile a bloc-
 chi di 40000 fino a 160000 posizioni.
-PUM
-est. int.
+PUM est. int.
 Memoria a nuclei
 magnetici
-mi carattere e' materializzato dallo sta-
-to di &quot; nuclei magnetici operati in paralle</p></li>
-</ul>
-<ol class="arabic simple" start="10">
-<li></li>
-</ol>
-<p>MEM
+mi carattere e&#39; materializzato dallo sta-
+to di &quot; nuclei magnetici operati in paralle
+10.
+MEM
 +MM
 Tempo di accesso
 al carattere
@@ -1067,62 +1011,40 @@ Indirizzabilita al singolo carattere.
 смм
 Indirizzi
 :sono espressi per mezzo di quattro cifre da
-0000 a r'99 (vedi tabella del testo).
+0000 a r&#39;99 (vedi tabella del testo).
 CON FIGURAZIONE
-CARATTEON</p>
+CARATTEON
+</pre></div>
+</div>
 </section>
 <section id="istruzioni-memoria-registri">
 <h2><span class="sectnum">7.3 </span>Istruzioni memoria-registri<a class="headerlink" href="#istruzioni-memoria-registri" title="Permalink to this heading">#</a></h2>
-<p>Queste istruzioni interessano la memoria principale
-ed i registri T: nel loro svolgimento impegnano la
-unita' aritmetica e logica ed il governo dell' elabo
-ratore.
-Sia durante la fase preparatoria che in quella ese-
-cutiva il canale interno risulta impegnato : a que.
-ste istruzioni potranno percio sovrapporsi
-onera
-zioni che impegnano il canale esterno ed il governo
-unita' a nastro
-Le istruzioni di questo gruppo sono normalmente uti
-izzarc
-a) per trasferimenti, da memoria verso registri e vi
-ceversa, di parole segnate o non segnate e ner
-lunghezza conosciuta o sconosciuta, non superio-
-re a 10 caratteri; hanno questa funzione le i-
-struzioni:
-MT, TM, Том
-b) per somme o sottrazioni aritmetiche su numeri di
-lunghezza variabile da 1 a 10 caratteri; eventua
-li segni algebrici + o -, vengono considerati ca
-ratteri qualsiasi; hanno questa funzione le i-
-struzioni</p>
-<ul class="simple">
-<li><p>MT, MT,
-TM
-c) per confronti tra numeri aritmetici o parole al-
-fanumeriche di lunghezza non superiore a 10
-ca
-ratteri; ha questa funzione l'istruzione
-СМт
-d) per determinare la lunghezza di una parola conte
-nuta in un registro T; ha questa funzione l'i-
-struzione
-FTM
-100
-Nota : La lunghezza della parola contenuta in un re
-gistro e' sempre espressa dalla istruzione
-FTM mediante due caratteri.
-Si rende pertanto necessario un accorgimento
-di programmazione per posizionare tale lun-
-ghezza nell' unica posizione ad essa riserva
-ta nelle istruzioni da registro a memoria.
-Generalmente tale lunghezza viene registrata
-in una zona di comodo della memoria principa
-le per essere quindi trasferita per lunghez
-za uno (cifra di destra) nella posizione p8
-dell'istruzione TM o ToM.
-101
-interno
+<p>Queste istruzioni interessano la memoria principale ed i registri T: nel loro
+svolgimento impegnano la unita' aritmetica e logica ed il governo dell' elab
+ratore.</p>
+<p>Sia durante la fase preparatoria che in quella e- cutiva il canale interno
+risulta impegnato : a queste istruzioni potranno percio sovrapporsi operazioni
+che impegnano il canale esterno ed il governo unita' a nastro.</p>
+<p>Le istruzioni di questo gruppo sono normalmente utilizzate</p>
+<p>a) per trasferimenti, da memoria verso registri e viceversa, di parole segnate
+o non segnate e ner lunghezza conosciuta o sconosciuta, non superiore a 10
+caratteri; hanno questa funzione le istruzioni: MT, TM, ТоM</p>
+<p>b) per somme o sottrazioni aritmetiche su numeri di lunghezza variabile da 1 a
+10 caratteri; eventuali segni algebrici + o -, vengono considerati caratteri
+qualsiasi; hanno questa funzione le istruzioni +MT, MT, TM</p>
+<p>c) per confronti tra numeri aritmetici o parole alfanumeriche di lunghezza non
+superiore a 10 caratteri; ha questa funzione l'istruzione СМT</p>
+<p>d) per determinare la lunghezza di una parola contenuta in un registro T; ha
+questa funzione l'istruzione FTM</p>
+<p>Nota : La lunghezza della parola contenuta in un registro e' sempre espressa
+dalla istruzione FTM mediante due caratteri.</p>
+<p>Si rende pertanto necessario un accorgimento di programmazione per posizionare
+tale lunghezza nell' unica posizione ad essa riservata nelle istruzioni da
+registro a memoria.</p>
+<p>Generalmente tale lunghezza viene registrata in una zona di comodo della
+memoria principale per essere quindi trasferita per lunghezza uno (cifra di
+destra) nella posizione p8 dell'istruzione TM o ToM.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>interno
 Trasferisce da memoria a registro To
 L
 To
@@ -1135,30 +1057,25 @@ L
 To
 I I I I
 Im
-: lunghezza dell' operando da trasferirsi nel registro To
-: registro in cui va trasferito l'operando
-: indirizzo di memoria dell' operando da trasferirsi
-:il registro Im puo' modificare sia 1' indirizzo IIII che
-il nome del registro Io
-: trasferisce dalla memoria a partire dall'indirizzo IIII
-per lunghezza L e per indirizzi decrescenti, al regi-
-stro To
-a) I caratteri trasferiti si sostituiscono nel registro To a quelli precedentemente
-contenuti nelle posizioni interessate.
-b; In corrispondenza del l'ultimo carattere trasferito viene posto un bit gT.
-c) Se l'indirizzo IIII contiene il segno della parola, tale segno viene registrato
-nella prima posizione del registro To•
-d) Il contenuto della memoria rimane inalterato.
-e) Per questa istruzione valgono le regole relative ai casi di fine
-caratere
-chi ave; nel registro T, invece del carattere chiave,
-viene trasteritc</p></li>
-</ul>
-<ol class="arabic simple" start="111">
-<li></li>
-</ol>
-<p>zero.
-ed il bit ¿™ e' posizionato sotto quest'ultimo.
+</pre></div>
+</div>
+<p>: lunghezza dell' operando da trasferirsi nel registro To</p>
+<p>: registro in cui va trasferito l'operando</p>
+<p>: indirizzo di memoria dell' operando da trasferirsi</p>
+<p>:  il registro Im puo' modificare sia 1' indirizzo IIII che il nome del
+registro Io</p>
+<p>: trasferisce dalla memoria a partire dall'indirizzo IIII per lunghezza L e per
+indirizzi decrescenti, al registro To</p>
+<p>a) I caratteri trasferiti si sostituiscono nel registro To a quelli
+precedentemente contenuti nelle posizioni interessate.</p>
+<p>b) In corrispondenza del l'ultimo carattere trasferito viene posto un bit gT.</p>
+<p>c) Se l'indirizzo IIII contiene il segno della parola, tale segno viene
+registrato nella prima posizione del registro To.</p>
+<p>d) Il contenuto della memoria rimane inalterato.</p>
+<p>e) Per questa istruzione valgono le regole relative ai casi di fine caratere
+chi ave; nel registro T, invece del carattere chiave, viene trasterito zero.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>111.
+ed il bit ¿™ e&#39; posizionato sotto quest&#39;ultimo.
 8 2 1 9 2 83
 TRASFERISCE DA MEMORIA A REGISTRO
 -REG. N. 3
@@ -1180,21 +1097,22 @@ To
 IIII
 Im
 Y
-: lunghezza dell' operando da trasferirsi in memoria
-: registro da cui l' operando viene trasferito
-: indirizzo di memoria a cui viene trasferito l'operando
-contenuto nel registro Io
-:il registro Im puo' modificare sia l'indirizzo IIII che
-il nome del registro To
-: trasferisce il contenuto del registro Io in memoria al
-l'indirizzo IIII per lunghezza L e per indirizzi decre
-scenti.
-a) I caratteri trasferiti si sostituiscono in memoria a quelli precedentemente con
-tenuti nelle posizioni interessace
-b) Il contenuto del registro To rimane in alterato.
-c) Per questa istruzione valgono le regole relative ai casi di fine su carattere
-chiave: quest'ultimo deve essere contenuto in memoria.
-8 2 1 9 2 8 3 Y
+</pre></div>
+</div>
+<p>: lunghezza dell' operando da trasferirsi in memoria</p>
+<p>: registro da cui l' operando viene trasferito</p>
+<p>: indirizzo di memoria a cui viene trasferito l'operando contenuto nel registro
+Io</p>
+<p>:il registro Im puo' modificare sia l'indirizzo IIII che il nome del registro
+To</p>
+<p>: trasferisce il contenuto del registro Io in memoria al l'indirizzo IIII per
+lunghezza L e per indirizzi decre scenti.</p>
+<p>a) I caratteri trasferiti si sostituiscono in memoria a quelli precedentemente
+con tenuti nelle posizioni interessace</p>
+<p>b) Il contenuto del registro To rimane in alterato.</p>
+<p>c) Per questa istruzione valgono le regole relative ai casi di fine su
+carattere chiave: quest'ultimo deve essere contenuto in memoria.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>8 2 1 9 2 8 3 Y
 TRASFERISCE DA REGISTRI
 1,9,2,8
 2.1.213.6 8 4 2
@@ -1207,25 +1125,26 @@ interno
 L
 To
 Im
-T' (100011)
+T&#39; (100011)
 10 +1
 To
 TITI
 T
-: lunghezza dell' operando da trasferirsi in memoria
-: registro in cui e' registrato 1' operando
-: indirizzo di memoria a cui viene trasferito l' operando
-: Il registro Im puo' modificare sia l'indirizzo IIII che
-il nome del registro To
-: trasferisce dal registro To alla memoria dall'indiriz-
-20 IIII per lunghezza L e per indirizzi decrescenti
-a) A trasferimento avvenuto le posizioni del registro 1 interessate sono azzerate.
-b) In ognuna di queste posizioni e' posto un bit gT.
-'c) Per questa istruzione valgono le regole relative ai casi di fine su carattere spe
-erale : quest ultimo deve essere contenuto in memoria.
-19.0.02
+</pre></div>
+</div>
+<p>: lunghezza dell' operando da trasferirsi in memoria</p>
+<p>: registro in cui e' registrato 1' operando</p>
+<p>: indirizzo di memoria a cui viene trasferito l' operando</p>
+<p>: Il registro Im puo' modificare sia l'indirizzo IIII che
+il nome del registro To</p>
+<p>: trasferisce dal registro To alla memoria dall'indirizzo IIII per lunghezza L e per indirizzi decrescenti</p>
+<p>a) A trasferimento avvenuto le posizioni del registro 1 interessate sono azzerate.</p>
+<p>b) In ognuna di queste posizioni e' posto un bit gT.</p>
+<p>c) Per questa istruzione valgono le regole relative ai casi di fine su carattere spe
+erale : quest ultimo deve essere contenuto in memoria.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>19.0.02
 112.3 7.5
-REGISTRO DOPO L'AZZERAMENT
+REGISTRO DOPO L&#39;AZZERAMENT
 REG. N.
 112.0.00
 0 030
@@ -1236,41 +1155,34 @@ L
 To
 IIII
 Im
-U (100111)</p>
-<ul class="simple">
-<li><p>MI
+U (100111)
++ MI
 10 ÷ 1
 L
 To
 IIII
 Im
-: lunghezza dell' operando registrato in memoria
-: registro che contiene il secondo operando
-: indirizzo dell' operando registrato in memoria
-: il registro Im puo' modificare sia l'indirizzo IIII che
-il nome del registro Io
-: somma il contenuto della memoria a partire dall' indi
-rizzo IIII per lunghezza L e per indirizzi decrescenti
+</pre></div>
+</div>
+<p>: lunghezza dell' operando registrato in memoria</p>
+<p>: registro che contiene il secondo operando</p>
+<p>: indirizzo dell' operando registrato in memoria</p>
+<p>: il registro Im puo' modificare sia l'indirizzo IIII che il nome del registro Io</p>
+<p>: somma il contenuto della memoria a partire dall' indirizzo IIII per lunghezza L e per indirizzi decrescenti
 al contenuto del registro To compreso tra la posizione
-iniziale e il bit gT
-a) Il bit gt viene posto in corrispondenza del carattere piu' significativo del ri-
-sutato.
-b) Se il risultato in caso di riporto e' di lunghezza maggiore dei due operandi
-ha indicazione di overflow.
-c) Un eventuale riporto dalla decima posizione invade il registro adiacente
+iniziale e il bit gT</p>
+<p>a) Il bit gt viene posto in corrispondenza del carattere piu' significativo del risultato.</p>
+<p>b) Se il risultato in caso di riporto e' di lunghezza maggiore dei due operandi
+ha indicazione di overflow.</p>
+<p>c) Un eventuale riporto dalla decima posizione invade il registro adiacente
 indicazione di overtlow
-si ha
-d) Se uno degli operandi e' espresso mediante caratteri alfanumerici si puo
+si ha</p>
+<p>d) Se uno degli operandi e' espresso mediante caratteri alfanumerici si puo
 gio cita
-correttamente su di esso fino a che non esista la necessita di un riporto ol
-tre la parte numerica
-e) Non e' possibile mediante la presente istruzione ottenere risultati alfanumeric
-utilizzabili quali indirizzi di memoria.</p></li>
-</ul>
-<ol class="arabic simple">
-<li><p>Per questa istruzione vale solo il caso di fine
-caratteze Z o Y deve essere posto in po.
-carattere
+correttamente su di esso fino a che non esista la necessita di un riporto oltre la parte numerica</p>
+<p>e) Non e' possibile mediante la presente istruzione ottenere risultati alfanumerici utilizzabili quali indirizzi di memoria.</p>
+<p>f) Per questa istruzione vale solo il caso di fine caratteze Z o Y deve essere posto in po.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>carattere
 numerico
 il
 6 2 1 9.2.8 #U
@@ -1287,37 +1199,36 @@ L
 To
 IIII
 Im
-(101110)</p></li>
-</ol>
-<ul class="simple">
-<li><p>TM
+(101110)
++ TM
 10
 L
 III I
+A
 Im
-: lunghezza dell' operando registrato in memoria
-registro che contiene il secondo operando
-: indirizzo dell' operando registrato in memoria
-: il registro Im puo' modificare sia l'indirizzo IIII che
-il nome del registro To
-: somma il contenuto del registro Io compreso fra la posi
-zione iniziale e il bit gT al contenuto della memoria
-partire dall'indirizzo IIII per lunghezza L e per indi
-rizzi decrescenti
-ah Se l.e?
-maggiore del numero delle posizioni del registro T. comprese tra la posi
-zione iniziale ed il bit gT, le cifre oltre il bit gT non vengono operate.
-minore del numero delle posizioni del registro T. comprese tra la posizio
-ne iniziale ed il bit gT, le cifre oltre la lunghezza L non vengono operate e
-ha indicazione di overflow.
-c) Il risultato si forma in memoria a partire dall'indirizzo IIII.
-d) Il registro To rimane invariato.
-e) Il risultato non deve superare la lunghezza L.
-f) Non si ha l'eventuale riporto oltre la lunghezza L ma solo indicazione
-†low
+</pre></div>
+</div>
+<p>: lunghezza dell' operando registrato in memoria
+registro che contiene il secondo operando</p>
+<p>: indirizzo dell' operando registrato in memoria</p>
+<p>: il registro Im puo' modificare sia l'indirizzo IIII che
+il nome del registro To</p>
+<p>: somma il contenuto del registro Io compreso fra la posizione iniziale e il bit gT al contenuto della memoria
+partire dall'indirizzo IIII per lunghezza L e per indirizzi decrescenti</p>
+<p>ah Se l.e?</p>
+<p>maggiore del numero delle posizioni del registro T. comprese tra la posizione iniziale ed il bit gT, le cifre oltre il bit gT non vengono operate.</p>
+<p>minore del numero delle posizioni del registro T. comprese tra la posizione iniziale ed il bit gT, le cifre oltre la lunghezza L non vengono operate e
+ha indicazione di overflow.</p>
+<p>c) Il risultato si forma in memoria a partire dall'indirizzo IIII.</p>
+<p>d) Il registro To rimane invariato.</p>
+<p>e) Il risultato non deve superare la lunghezza L.</p>
+<p>f) Non si ha l'eventuale riporto oltre la lunghezza L ma solo indicazione</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>flow
 avoi
-g) Per questa istruzione valgono le regole relative ai casi di fine su carattert
+
+g) Per questa istruzione valgono le regole relative ai casi di fine su caratteri
 chiave.
+
 5 3 1 0.0.05
 GOMME DEGISTOI
 5 4 7
@@ -1337,29 +1248,29 @@ To
 IIII
 Im
 Z
-: lunghezza dell' operando registrato in memoria
-: registro che contiene il secondo operando
-: indirizzo di memoria a partire dal quale e' registrato
-il sottraendo
-: il registro Im puo' modificare sia l'indirizzo IIII che
-il nome del registro To
-: sottrae il contenuto della memoria a partire dall'indi
-rizzo IIII per lunghezza L, al contenuto del registro
-To compreso fra la posizione iniziale e il bit gT
-a) Il bit gT viene posto in corrispondenza del carattere più' significativo del ri
-sultato.
-bì Se il minuendo e' minore del sottraendo il risultato è' in complemento e si ha
-indicazione di overflow.
-c) Non e' possibile mediante la presente istruzione ottenere risultati al fanumeri.
-ci utilizzabili quali indirizzi di memoria.
-d) Se uno degli operandi e' espresso mediante caratteri alfanumerici si puo
-opers
-re correttamente su di esso fino a che non esista la necessita di un riporto ol
-tre la parte numerica.
-e) Per questa istruzione valgono le regole relative ai casi di fine
-chiave, ponendo in p8 il carattere Z o Y; e evidente che non
-so di fine su di un carattere ben determinato.
-carattert
+</pre></div>
+</div>
+<p>: lunghezza dell' operando registrato in memoria</p>
+<p>: registro che contiene il secondo operando</p>
+<p>: indirizzo di memoria a partire dal quale e' registrato il sottraendo</p>
+<p>: il registro Im puo' modificare sia l'indirizzo IIII che il nome del registro
+To</p>
+<p>: sottrae il contenuto della memoria a partire dall'indirizzo IIII per
+lunghezza L, al contenuto del registro To compreso fra la posizione iniziale e
+il bit gT</p>
+<p>a) Il bit gT viene posto in corrispondenza del carattere più' significativo del
+risultato.</p>
+<p>b) Se il minuendo e' minore del sottraendo il risultato è' in complemento e si
+ha indicazione di overflow.</p>
+<p>c) Non e' possibile mediante la presente istruzione ottenere risultati
+alfanumerici utilizzabili quali indirizzi di memoria.</p>
+<p>d) Se uno degli operandi e' espresso mediante caratteri alfanumerici si puo
+operare correttamente su di esso fino a che non esista la necessita di un
+riporto oltre la parte numerica.</p>
+<p>e) Per questa istruzione valgono le regole relative ai casi di fine chiave,
+ponendo in p8 il carattere Z o Y; e evidente che non so di fine su di un
+carattere ben determinato.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>carattert
 possibileil ca
 5,2 1,9,3,0 #.
 SOTTRAE MEMORIA A REGISTRC
@@ -1383,21 +1294,19 @@ L
 T.
 IIII
 Im
-: lunghezza del termine di confronto contenuto in memoria
-registro che contiene il secondo termine di confronto
-: indirizzo di memoria del termine registrato in memoria
-: il registro Im puo' modificare sia l'indirizzo IIII che
-il nome del registro To
-confronta il contenuto della memoria a partire dall'in-
-dirizzo IIII per lunghezza L, con il contenuto del regi
-stro compreso tra la posizione iniziale e il bit gi
-a) Per questa istruzione vale cio' che é' stato detto per la MA ad eccezione dei se
-gni
-&quot;piu' o meno&quot; , che non vengono mai considerati come segni algebrica ma come ca
-ratterl.
+</pre></div>
+</div>
+<p>: lunghezza del termine di confronto contenuto in memoria
+registro che contiene il secondo termine di confronto</p>
+<p>: indirizzo di memoria del termine registrato in memoria</p>
+<p>: il registro Im puo' modificare sia l'indirizzo IIII che
+il nome del registro To</p>
+<p>confronta il contenuto della memoria a partire dall'indirizzo IIII per lunghezza L, con il contenuto del registro compreso tra la posizione iniziale e il bit gi</p>
+<p>a) Per questa istruzione vale cio' che é' stato detto per la MA ad eccezione dei segni
+&quot;piu' o meno&quot; , che non vengono mai considerati come segni algebrica ma come caratteri
 5 Per questa istruzione valgono le regole relative ai casi di fine su carattert
-chiave': quest'ultimo deve essere contenuco in memoria
-66 1 9.0.05 W
+chiave': quest'ultimo deve essere contenuco in memoria</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>66 1 9.0.05 W
 CONTENUTO REGISTRO T
 0.0.3
 3 0 4
@@ -1412,28 +1321,29 @@ Im
 To
 Im e (100010)
 12 + 1
-: carattere che determina il genere di lunghezza ricercata
-: registro che contiene l'operando di cui si vuole deter.
-minore la lunghezza
-: indirizzo al quale va trasferita la lunghezza ricercata
-: il registro Im puo' modificare sia l'indirizzo IIII che
-il nome del registro To
-: porta all'indirizzo IIII il numero di cifre contenute nel
-registro To dalla posizione iniziale al bit sT.
-a) Se in p8 viene registrato il carattere 0 (zero), viene trasferito all'indirizze
-III il numero delle cifre significative comprese tra la posizione iniziale del
-registro T e il bit gT.
-b) Se in p8 viene registrato il carattere. (punto), viene trasferito all'indiriz-
-20 IIII il numero delle cifre significative e non significative comprese tra la po
-sizione iniziale del registro To e il bit gT.
-c) La lunghezza richiesta viene registrata sempre mediante 2 cifre.
-d) Se richiedendo il numero di cifre significative (caso &quot;a&quot;) non ne risultasse
-cuna, vengono trasferiti all'indirizzo III e IIII-1, due zeri (00)
-01 1 9.3.0 # 8
+</pre></div>
+</div>
+<p>: carattere che determina il genere di lunghezza ricercata</p>
+<p>: registro che contiene l'operando di cui si vuole determinare la lunghezza</p>
+<p>: indirizzo al quale va trasferita la lunghezza ricercata</p>
+<p>: il registro Im puo' modificare sia l'indirizzo IIII che il nome del registro
+To</p>
+<p>: porta all'indirizzo IIII il numero di cifre contenute nel registro To dalla
+posizione iniziale al bit sT.</p>
+<p>a) Se in p8 viene registrato il carattere 0 (zero), viene trasferito
+all'indirizze III il numero delle cifre significative comprese tra la posizione
+iniziale del registro T e il bit gT.</p>
+<p>b) Se in p8 viene registrato il carattere. (punto), viene trasferito
+all'indirizzo IIII il numero delle cifre significative e non significative
+comprese tra la posizione iniziale del registro To e il bit gT.</p>
+<p>c) La lunghezza richiesta viene registrata sempre mediante 2 cifre.</p>
+<p>d) Se richiedendo il numero di cifre significative (caso &quot;a&quot;) non ne risultasse
+cuna, vengono trasferiti all'indirizzo III e IIII-1, due zeri (00)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>01 1 9.3.0 # 8
 TRASFERISCE NO DELLE CIFRE SISNIFICATIVE CONTENUTE NEL REG. T
 5.4,2,319,7 6 2
 NO
-109
+
 SCHEMA RIASSUNTIVO
 Istruzioni Memoria Registri
 Trasferimento
@@ -1444,36 +1354,37 @@ MT
 †MT
 CMT
 ETM
-TM</p></li>
-<li><p>TM
-ToM</p></li>
-</ul>
-<ul class="simple">
-<li><p>MT
-Particolarita' dei Registri
+TM
++ TM
+ToM
+- MT
+
+Particolarita&#39; dei Registri
 Posizioni
-,° dei registri
+A,° dei registri
+
 200
 10
-Indirizzabilita'. di 5 in 5 posizioni indicando il nome del re
-gistro.
-Tabella nome registri:
-01234567890ABCDEFGHI
+</pre></div>
+</div>
+<p>Indirizzabilita'. di 5 in 5 posizioni indicando il nome del registro.</p>
+<p>Tabella nome registri:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>01234567890ABCDEFGHI
 E JKLMNOPOR. STUVWXYZ
-Capacita' del singolo registro : 10 posizioni.
-Modifica Automatica Istruzioni:
-a) posizioni dell'istruzione interessata p7 p6 p5 p4 p3 ;
-b) posizioni del registro interessato 5 4 3 2 1,
-La modifica avviene sommando i caratteri del registro a quelli
-della istruzione nelle posizioni suindicate senza riporto tra p6
-e p7.
-La somma nella 4ª posizione si effettua secondo una aritmetica in
-base venti.
-Il riporto di p7 si somma al carattere p8 dell'istruzione mentre
-l'eventuale riporto di p8 si perde.
-Bit gT: analogo al bit gA dell' accumulatore. Per il suo funzio-
-namento vedere istruzione ner istruzione.
-CODICE
+</pre></div>
+</div>
+<p>Capacita' del singolo registro : 10 posizioni.</p>
+<p>Modifica Automatica Istruzioni:</p>
+<p>a) posizioni dell'istruzione interessata p7 p6 p5 p4 p3;</p>
+<p>b) posizioni del registro interessato 5 4 3 2 1,</p>
+<p>La modifica avviene sommando i caratteri del registro a quelli della istruzione
+nelle posizioni suindicate senza riporto tra p6 e p7.</p>
+<p>La somma nella 4ª posizione si effettua secondo una aritmetica in base venti.</p>
+<p>Il riporto di p7 si somma al carattere p8 dell'istruzione mentre l'eventuale
+riporto di p8 si perde.</p>
+<p>Bit gT: analogo al bit gA dell' accumulatore. Per il suo funzionamento vedere
+istruzione ner istruzione.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>CODICE
 SIMBOLICO
 CANALI
 IN PERIODI DI CIFRA
@@ -1485,46 +1396,37 @@ CON FIGURAZIONE
 Tm
 Im
 CARAtTER
-o o</p></li>
-</ul>
+o o
+</pre></div>
+</div>
 </section>
 <section id="istruzioni-costanti-registri">
-<h2><span class="sectnum">7.4 </span>- Istruzioni costanti-registri<a class="headerlink" href="#istruzioni-costanti-registri" title="Permalink to this heading">#</a></h2>
+<h2><span class="sectnum">7.4 </span>Istruzioni costanti-registri<a class="headerlink" href="#istruzioni-costanti-registri" title="Permalink to this heading">#</a></h2>
 <p>Queste istruzioni interessano parole costituite da
 caratteri o valori fissi (costanti): nel loro svol-
 gimento impegnano 1' unita' aritmetica e logica ed il
-governo dell' elaboratore.
-Sia durante la fase preparatoria che in quella ese
-cutiva il canale interno risulta impegnato; a que
-ste istruzioni potranno percio' sovrapporsi opera-
-zioni che impegnano il canale esterno ed il governo
-unita a nastro.
-Nella loro posizione p8 e' necessario registrare il
+governo dell' elaboratore.</p>
+<p>Sia durante la fase preparatoria che in quella esecutiva il canale interno risulta impegnato; a queste istruzioni potranno percio' sovrapporsi operazioni che impegnano il canale esterno ed il governo
+unita a nastro.</p>
+<p>Nella loro posizione p8 e' necessario registrare il
 carattere &amp; oppure # ; gli eventuali segni, piu' o
-meno, vengono considerati caratteri qualsiasi.
-Esse non possono subire modifica automatica ne' per
+meno, vengono considerati caratteri qualsiasi.</p>
+<p>Esse non possono subire modifica automatica ne' per
 mettono l' introduzione nei registri T dei caratteri
 tE e
-sono normalmente utilizzate
-a) per trasferimenti nei registri T di costanti di
+sono normalmente utilizzate</p>
+<p>a) per trasferimenti nei registri T di costanti di
 lunghezza non superiore a 5 caratteri; ha questa
-funzione 1' istruzione
-ст
-b) per somme o sottrazioni aritmetiche di lunghezza
+funzione l' istruzione ст</p>
+<p>b) per somme o sottrazioni aritmetiche di lunghezza
 non superiore a 5 caratteri: istruzioni di
-gue-
-sto tipo sono</p>
-<ul class="simple">
-<li><p>СТ, - Ст, CTT
-c) per confronti tra numeri aritmetici o parole al-
-fanumeriche di lunghezza variabile da 1 a 5 ca-
-ratteri; istruzione di questo tipo e' la
-ССт
-111
+guesto tipo sono +СТ, -СT, CTT</p>
+<p>c) per confronti tra numeri aritmetici o parole alfanumeriche di lunghezza
+variabile da 1 a 5 caratteri; istruzione di questo tipo e' la ССт</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>111
 interno
-Trasferisce una costante nel registro To</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># C
+Trasferisce una costante nel registro To
+# C
 c c c c
 To
 CI
@@ -1532,20 +1434,17 @@ CI
 10
 #
 cc C C C
-: posizione non utilizzata
-•posizioni riservate alla costante da registrarsi nel re
-gistro To
-: registro in cui viene registrata la costante
-trasferisce nel registro To la costante cCCCC registra-
-ta nell&#39;istruzione.
 </pre></div>
 </div>
-<p>a) Il bit gT viene posto in corrispondenza della 5ª posizione del registro To•
-b) Se nelle posizioni p7 e p8 è' registrato il carattere - il trasferimento avviene
-solo per la costante CCCC ed il bit gl e posto in 4 posizione</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>X, 3 2,5,6,1 2,9
-TRASFERISCE COSTANTE NEL REGISTRO T
-SEGNO
+<p>: posizione non utilizzata</p>
+<p>: posizioni riservate alla costante da registrarsi nel registro To</p>
+<p>: registro in cui viene registrata la costante trasferisce nel registro To la
+costante cCCCC registra- ta nell'istruzione.</p>
+<p>a) Il bit gT viene posto in corrispondenza della 5ª posizione del registro To</p>
+<p>b) Se nelle posizioni p7 e p8 è' registrato il carattere - il trasferimento
+avviene solo per la costante CCCC ed il bit gl e posto in 4 posizione</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>X, 3 2,5,6,1 2,9
+TRASFERISCE COSTANTE NEL REGISTRO T SEGNO
 13,2 5,6,1
 # 5 # # 1,3 5,9
 TRASFEPISCE COSTANTE NEL REGISTRO
@@ -1567,93 +1466,95 @@ To
 10
 c c c c
 To
-: determinano il tipo d&#39;istruzione
-† CT
-: costante da sommarsi al contenuto del registro To
-registro su cui si opera
 </pre></div>
 </div>
-<p>somma la costante cCCC al contenuto del registro To
-a) Il bit gl si trova nel registro T, prima dell'istruzione in 5° posizione.
-b) La somma viene effettuata tra i primi 5 caratteri del registro 1 e la costante
-СССС
-c) Il risultato e espresso per mezzo di 4 caratteri di cui il 4 puo' essere alfa
-betico o speciale.
-d) Il contenuto della 5ª Posizione del registro To rimane inalterato.
-e) Non vi e indicazione di overflow.
-f) Il bit gT viene posto in 4ª posizione.
-g) Ponendo 0000 in CCCC e' possibile trasformare un indirizzo espresso con 5 carat
-teri numerica 1n1 21 almente contenuto nel registro 1 in un indirizzo di 4 cara!
-teri con le migliaia espresse nel modo corretto.
-h) E' possibile percorrere tutti i successivi indirizzi di memoria.
-889,0,0,01</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SOMMA</span> <span class="n">COSTANTE</span> <span class="n">AL</span> <span class="n">CONTENUTL</span>
-<span class="mf">11.6.0.00</span>
-<span class="n">REGISTO0</span> <span class="n">POIA</span>
-<span class="n">DELLELABORAZION</span>
-<span class="mi">1</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
-<span class="mi">112</span>
-<span class="n">tipo</span> <span class="n">B</span>
-<span class="n">interno</span>
-<span class="n">Somma</span> <span class="n">una</span> <span class="n">costante</span> <span class="n">a</span> <span class="n">registro</span> <span class="n">To</span>
-<span class="n">c</span> <span class="n">c</span> <span class="n">c</span> <span class="n">c</span>
-<span class="o">+</span> <span class="n">CT</span>
-<span class="p">(</span><span class="mi">000101</span><span class="p">)</span>
-<span class="mi">10</span>
-<span class="n">c</span> <span class="n">C</span> <span class="n">с</span> <span class="n">с</span>
-<span class="n">To</span>
+<p>: determinano il tipo d'istruzione</p>
+<p>: CT</p>
+<p>: costante da sommarsi al contenuto del registro To
+registro su cui si opera</p>
+<p>somma la costante cCCC al contenuto del registro To</p>
+<p>a) Il bit gl si trova nel registro T, prima dell'istruzione in 5° posizione.</p>
+<p>b) La somma viene effettuata tra i primi 5 caratteri del registro 1 e la costante
+СССС</p>
+<p>c) Il risultato e espresso per mezzo di 4 caratteri di cui il 4 puo' essere alfa
+betico o speciale.</p>
+<p>d) Il contenuto della 5ª Posizione del registro To rimane inalterato.</p>
+<p>e) Non vi e indicazione di overflow.</p>
+<p>f) Il bit gT viene posto in 4ª posizione.</p>
+<p>g) Ponendo 0000 in CCCC e' possibile trasformare un indirizzo espresso con 5
+caratteri numerica 1n1 21 almente contenuto nel registro 1 in un indirizzo di 4
+caratteri con le migliaia espresse nel modo corretto.</p>
+<p>h) E' possibile percorrere tutti i successivi indirizzi di memoria.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>889,0,0,01
+SOMMA COSTANTE AL CONTENUTL
+11.6.0.00
+REGISTO0 POIA
+DELLELABORAZION
+1,1.0,0,0
+112
+tipo B
+interno
+Somma una costante a registro To
+c c c c
++ CT
+(000101)
+10
+c C с с
+To
 </pre></div>
 </div>
-<p>determinano il tipo di istruzione + CT
-costante da sommarsi al contenuto del registro To
-registro su cui si opera
-: somma la costante cCCC al contenuto del. registro To
-a, Il bit g† si trova nel registro o prima dell'istruzione in 4 posizione
-b) La somma viene effettuata sui primi quattro caratteri del registro To•
-c) Il 4° carattere puo' essere, o risultare dopo la somma, alfabetico o speciale
-d) Non vi e' mai riporto sulla quinta posizione del registro To: ne' indicazione
-di overtiow
-e) Il bit gI rimane in 4ª posizione.
-f) E' possibile percorrere tutti i successivi indirizzi di memoria
-6: 90001+
+<p>determinano il tipo di istruzione + CT costante da sommarsi al contenuto del
+registro To</p>
+<p>registro su cui si opera</p>
+<p>: somma la costante cCCC al contenuto del. registro To</p>
+<p>a) Il bit g† si trova nel registro o prima dell'istruzione in 4 posizione</p>
+<p>b) La somma viene effettuata sui primi quattro caratteri del registro To.</p>
+<p>c) Il 4° carattere puo' essere, o risultare dopo la somma, alfabetico o
+speciale</p>
+<p>d) Non vi e' mai riporto sulla quinta posizione del registro To: ne'
+indicazione di overtiow</p>
+<p>e) Il bit gI rimane in 4ª posizione.</p>
+<p>f) E' possibile percorrere tutti i successivi indirizzi di memoria</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>6: 90001+
 DEI DESISTONI
 11.0.0.0
 11,10.0.0
 114
-tipo C</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Somma</span> <span class="n">una</span> <span class="n">costante</span> <span class="n">a</span> <span class="n">registro</span> <span class="n">Io</span>
-<span class="n">Ст</span>
-<span class="n">interno</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
-<span class="n">cc</span> <span class="n">c</span> <span class="n">c</span>
-<span class="n">To</span>
-<span class="o">+</span>
-<span class="p">(</span><span class="mi">000101</span><span class="p">)</span>
-<span class="mi">10</span>
-<span class="c1"># #</span>
-<span class="n">cC</span> <span class="n">C</span> <span class="n">c</span>
-<span class="n">To</span>
+tipo C
+
+Somma una costante a registro Io
+Ст
+interno
+#
+#
+cc c c
+To
++
+(000101)
+10
+# #
+cC C c
+To
+
+determinano il tipo di istruzione + CT
 </pre></div>
 </div>
-<p>determinano il tipo di istruzione + CT
-: costante da sommarsi al contenuto del registro To
-registro sn cui si opera
-: somma la costante CCCC al contenuto del registro Io.
-a) Il bit 8T si trova nel registro To prima dell'istruzione in 4ª posizione.
-b) la somma viene effettuata sui primi quattro caratteri del registro T..
-c) Non vi e' mai riporto sulla quinta posizione del registro To' ne' indicazione
-di overflov
-di Il bit &amp;T viene posto in 5° posizione, ed in essa viene generato il carattere
-0 (zero).
-e) Non e' possibile percorrere tutti i successivi indirizzi di memoria non esister
-do interazione tra parte numerica e parte alfabetica.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#9,0,0,01
+<p>: costante da sommarsi al contenuto del registro To registro sn cui si opera</p>
+<p>: somma la costante CCCC al contenuto del registro Io.</p>
+<p>a) Il bit 8T si trova nel registro To prima dell'istruzione in 4ª posizione.</p>
+<p>b) la somma viene effettuata sui primi quattro caratteri del registro T..</p>
+<p>c) Non vi e' mai riporto sulla quinta posizione del registro To' ne'
+indicazione di overflow di Il bit &amp;T viene posto in 5° posizione, ed in essa
+viene generato il carattere 0 (zero).</p>
+<p>e) Non e' possibile percorrere tutti i successivi indirizzi di memoria non
+esistendo interazione tra parte numerica e parte alfabetica.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#9,0,0,01
 SOMMA COSTANTE AL CONTENUTO
 0,00,0,0
 DELLELABORAZIONE
 11,10.00
 tipo D
+
 Somma una costante a registro Io
 ст
 interno
@@ -1665,16 +1566,18 @@ T.
 10
 #
 To
-: posizione non utilizzata
-*: costante da sommarsi al contenuto del registro Io
-: registro su cui si opera
-somma la costante ccccc al contenuto del registro To.
-a) La somma viene effettuata tra la costante CCCCC e il contenuto del registro 1
-compreso tra la posizione iniziale e il bit gI
-b) Nel caso vi fosse riporto oltre la quinta posizione del registro si ha indica
-zione di overflow.
-&#39;c) Il bit gT dopo l&#39;operazione viene sempre posto in 5ª posizione.
-#0 9,0,0,01,+
+</pre></div>
+</div>
+<p>: posizione non utilizzata</p>
+<p>: costante da sommarsi al contenuto del registro Io</p>
+<p>: registro su cui si opera</p>
+<p>somma la costante ccccc al contenuto del registro To.</p>
+<p>a) La somma viene effettuata tra la costante CCCCC e il contenuto del registro
+1 compreso tra la posizione iniziale e il bit gI</p>
+<p>b) Nel caso vi fosse riporto oltre la quinta posizione del registro si ha
+indicazione di overflow.</p>
+<p>c) Il bit gT dopo l'operazione viene sempre posto in 5ª posizione.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#0 9,0,0,01,+
 SOMMA COSTANTE AL CONTENUTO
 SEGNO
 13,0,0,0.0
@@ -1694,26 +1597,31 @@ To
 CC C C C
 To
 4
-: posizione non utilizzata
-•costante da sottrarsi al contenuto del registro Io
-registro su cui si opera
-sottrae la costante CCCCC al contenuto del registro To
-a L&#39;istruzione » CT puo&#39; essere codificata anche nel seguenti modi:
-# #
-C C C C
-To
-C C C C
-b) Il tipo con il carattere + in pl e p8 vale solo nel caso che, prima dell&#39;istru-
-zione. il bit T sia posto in 4ª posizione
-c) Per l&#39;istruzione - CT valgono le stesse osservazioni della + CT.
-Esempio della nota b)
+</pre></div>
+</div>
+<p>: posizione non utilizzata</p>
+<p>: costante da sottrarsi al contenuto del registro Io</p>
+<p>registro su cui si opera</p>
+<p>sottrae la costante CCCCC al contenuto del registro To</p>
+<p>a) L'istruzione » CT puo' essere codificata anche nel seguenti modi:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># #
+c c c c
+to
+c c c c
+</pre></div>
+</div>
+<p>b) Il tipo con il carattere + in pl e p8 vale solo nel caso che, prima
+dell'istruzione. il bit T sia posto in 4ª posizione</p>
+<p>c) Per l'istruzione - CT valgono le stesse osservazioni della + CT.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Esempio della nota b)
 ÷ : 7.5.0.01.
 5,3,0,0
 8.8.00
 117
-Sottrae registro o ad una costante, risultato in To
-interno
-#
+</pre></div>
+</div>
+<p>Sottrae registro o ad una costante, risultato in To interno</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#
 TO
 C C C C
 I&#39;m
@@ -1728,21 +1636,21 @@ Im
 #
 </pre></div>
 </div>
-<p>: posizione non utilizzata
-registro che contiene 11 sottraendo
-: minuendo
-puo' modificare sia CCCC che il nome del registro To
+<p>: posizione non utilizzata</p>
+<p>registro che contiene 11 sottraendo</p>
+<p>: minuendo</p>
+<p>puo' modificare sia CCCC che il nome del registro To
 sottrae il contenuto delle prime quattro posizioni del
-registro To alla costante ccCC modificabile da Im•
-a) Il risultato della sottrazione e' nel registro To.
-b) Il contenuto della quinta posizione di T. rimane inalterato ed il bit gT viene
-in ogni caso posto in 4° posizione.
-c) Per una corretta esecuzione della presenteistruzione e' necessario che in CCCC
-e nel registro To non compaiano caratteri alfabetici o speciali
-d) 19) Se Im + CCCC &gt; 9999 il riporto oltre la 4ª cifra non viene considerato;
-2°) Se Io &gt; Im + CCCC in To si ha, a seguito dell'operazione, un risultato in
+registro To alla costante ccCC modificabile da Im.</p>
+<p>a) Il risultato della sottrazione e' nel registro To.</p>
+<p>b) Il contenuto della quinta posizione di T. rimane inalterato ed il bit gT viene
+in ogni caso posto in 4° posizione.</p>
+<p>c) Per una corretta esecuzione della presenteistruzione e' necessario che in CCCC
+e nel registro To non compaiano caratteri alfabetici o speciali</p>
+<p>d) 19) Se Im + CCCC &gt; 9999 il riporto oltre la 4ª cifra non viene considerato;</p>
+<p>2°) Se Io &gt; Im + CCCC in To si ha, a seguito dell'operazione, un risultato in
 complemento</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#2000.01
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#2000.01
 SOmPAL
 •CONTENUTO DEL PEr
 0.0.0.0
@@ -1761,21 +1669,22 @@ C C C C
 #
 To
 5
-: posizione non utilizzata
-: 1° termine di confronto
-: nel registro To e&#39; registrato il secondo termine di con
-fronto
-: confronta la costante cCCCC al contenuto del registro
-dall&#39;inizio e fino al bit gT per un massimo di 5
-To
-posizioni.
-a) Le regole del confronto sono le stesse della istruzione CMA ad eccezione per quel
-che non vengono mai considerati come segni algebri
-do che riguarda 1 segni
-ci, ma come caratteri.
-b) Se si desidera che il confronto non tenga conto di tutte le cinque posizioni del
-la costante basta registrare il carattere # nelle posizioni che non interessano.
-# 0 # 0 # 1 35
+</pre></div>
+</div>
+<p>: posizione non utilizzata</p>
+<p>: 1° termine di confronto</p>
+<p>: nel registro To e' registrato il secondo termine di confronto</p>
+<p>: confronta la costante cCCCC al contenuto del registro dall'inizio e fino al
+bit gT per un massimo di 5</p>
+<p>To</p>
+<p>posizioni.</p>
+<p>a) Le regole del confronto sono le stesse della istruzione CMA ad eccezione per
+quel che non vengono mai considerati come segni algebrici, ma come caratteri.</p>
+<p>do che riguarda 1 segni</p>
+<p>b) Se si desidera che il confronto non tenga conto di tutte le cinque posizioni
+della costante basta registrare il carattere # nelle posizioni che non
+interessano.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># 0 # 0 # 1 35
 CONERONTOCOSTANTE COI
 10001
 119
@@ -1797,58 +1706,52 @@ TEMPO
 IN PEQIODI DI CIERA
 </pre></div>
 </div>
-<p>Il registro specificato nella posizione p2 non opera come mo
-di ficatore:
-fa eccezione la CTT che ha in p2 il registro modifi
-catore e in p7 il registro operando.
-istruzioni di questo tipo non sono automaticamente modifica.
+<p>Il registro specificato nella posizione p2 non opera come modificatore: fa
+eccezione la CTT che ha in p2 il registro modificatore e in p7 il registro
+operando.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>istruzioni di questo tipo non sono automaticamente modifica.
+
 = 3 = = = 4
 ст
 interno
 = 5
+
 In corrispondenza di p8 va sempre messo il carattere
 :
-empo necessario all'esecuzione di un'istruzione di questo ti
+
+empo necessario all&#39;esecuzione di un&#39;istruzione di questo ti
 periodi di cifra, esclusa la CTT alla quale ne sono ne
 Do
 ceccani
-Bit gT : analogo al bit gA dell' accumulatore. Per il suo funzio
-namento vedere istruzione per istruzione.
+
+Bit gT : analogo al bit gA dell&#39; accumulatore. Per il suo funzionamento vedere istruzione per istruzione.
 сст
 O A =
 PoRt0 0 71
 CONFIGURAZIONE
 • СС
 22 a
-To</p>
+To
+</pre></div>
+</div>
 </section>
 <section id="istruzioni-per-la-moltiplicazione">
 <h2><span class="sectnum">7.5 </span>Istruzioni per la moltiplicazione<a class="headerlink" href="#istruzioni-per-la-moltiplicazione" title="Permalink to this heading">#</a></h2>
-<p>Queste istruzioni interessano lamemoria principale,
-i registri T e l' accumulatore; nel loro svolgimento
-impegnano l' unita' aritmetica e logica ed il gover-
-no dell' elaboratore.
-Sia durante la fase preparatoria che in quella ese
-cutiva il canale interno risulta impegnato; a que-
-sto gruppo di istruzioni potranno percio' sovrappor
-si operazioni che impegnano il canale esterno ed il
-governo unita' a nastro.
-Esse sono normalmente utilizzate :
-a) per il trasferimento nella memoria dei registri
-T. a partire dalla posizione 00' e per indiriz-
-zi crescenti, del moltiplicatore, per lunghezza
-conosciuta o sconosciuta variabile da 1 a 100 ca
-ratteri; 1' eventuale segno algebrico va a posi.
-Zionarsi in un apposito registro del segno;
-na
-questa funzione l'istruzione
-b) per sommare o sottrarre, automaticamente, il ri-
-sultato della moltiplicazione al contenuto del-
-1' accumulatore; questa funzione e' propria del-
-le istruzioni</p>
-<ul class="simple">
-<li><p>X,
-interno
+<p>Queste istruzioni interessano la memoria principale, i registri T e l'
+accumulatore; nel loro svolgimento impegnano l' unita' aritmetica e logica ed
+il governo dell' elaboratore.</p>
+<p>Sia durante la fase preparatoria che in quella esecutiva il canale interno
+risulta impegnato; a questo gruppo di istruzioni potranno percio' sovrapporsi
+operazioni che impegnano il canale esterno ed il governo unita' a nastro.</p>
+<p>Esse sono normalmente utilizzate:</p>
+<p>a) per il trasferimento nella memoria dei registri T. a partire dalla posizione
+00' e per indirizzi crescenti, del moltiplicatore, per lunghezza conosciuta o
+sconosciuta variabile da 1 a 100 caratteri; 1' eventuale segno algebrico va a
+posizionarsi in un apposito registro del segno;</p>
+<p>na questa funzione l'istruzione</p>
+<p>b) per sommare o sottrarre, automaticamente, il risultato della moltiplicazione
+al contenuto dell'accumulatore; questa funzione e' propria delle istruzioni +X,</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>interno
 Trasferisce il moltiplicatore nei registri T
 LL
 IIII
@@ -1860,32 +1763,33 @@ LL
 III I
 Im
 6
-: lunghezza del moltiplicatore contenuto in memoria
-: indirizzo in memoria del moltiplicatore
-: il registro Tm puo' modificare sia l'indirizzo IIII che
-la cifra delle unita' della lunghezza LL
-: trasferisce la parola contenuta in memoria all'indiriz-
-Zo IIII per lunghezza LL nei registri Tapartire da TO.
-a) La cifra meno significativa della parola occupa la posizione iniziale 0 del regi
-stro 10 e successivamente in ordine progressivo vengono occupate le altre posizio
-b1 Possono essere eventualmente invase tutte le posizioni del gruppo di registri com
-presi tra 10 e TI.
-c) La lunghezza della parola puo' essere al massimo eguale a 100 (LL = 00).
-d) Se la parola e' segnata il segno non viene registrato nella prima posizione
-TO, ma in un apposito registro.
-di
-e) Se la parola non e' segnata e non supera lunghezza 10 l'istruzione Y puo'
-esseg
-sostituita con una qualsiasi delle istruzioni relative ai registri I
-f) Per questa istruzione valgono le regole relative ai casi di fine su carattere chia
-ve, nel caso di trasterimento lungo piu' di 90, non deve essere usato il registrc
-T9.
-Nei due esempi che seguono, il moltiplicatore viene trasferito nei registri T tram
-tele istruzioni Y ed MT
-Come si puo' osservare e' possibile ottenere il trasferimento del segno nell'apposi
-to registro solo mediante l'istruzione y</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>122
+</pre></div>
+</div>
+<p>: lunghezza del moltiplicatore contenuto in memoria</p>
+<p>: indirizzo in memoria del moltiplicatore</p>
+<p>: il registro Tm puo' modificare sia l'indirizzo IIII che la cifra delle unita'
+della lunghezza LL</p>
+<p>: trasferisce la parola contenuta in memoria all'indirizzo IIII per lunghezza
+LL nei registri T a partire da TO.</p>
+<p>a) La cifra meno significativa della parola occupa la posizione iniziale 0 del
+registro 10 e successivamente in ordine progressivo vengono occupate le altre
+posizio</p>
+<p>b) Possono essere eventualmente invase tutte le posizioni del gruppo di
+registri compresi tra 10 e TI.</p>
+<p>c) La lunghezza della parola puo' essere al massimo eguale a 100 (LL = 00).</p>
+<p>d) Se la parola e' segnata il segno non viene registrato nella prima posizione
+TO, ma in un apposito registro.</p>
+<p>di</p>
+<p>e) Se la parola non e' segnata e non supera lunghezza 10 l'istruzione Y puo'
+essere sostituita con una qualsiasi delle istruzioni relative ai registri I</p>
+<p>f) Per questa istruzione valgono le regole relative ai casi di fine su
+carattere chiave, nel caso di trasterimento lungo piu' di 90, non deve essere
+usato il registro T9.</p>
+<p>Nei due esempi che seguono, il moltiplicatore viene trasferito nei registri T
+tramite le istruzioni Y ed MT.</p>
+<p>Come si puo' osservare e' possibile ottenere il trasferimento del segno
+nell'apposito registro solo mediante l'istruzione y.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>122
 11.2 1.9.3.2 # 6
 TRASFERISCE DA MEMORIA MOLTIPLICATORE
 DALL&#39;INDIRIZZO
@@ -1912,22 +1816,19 @@ IIII
 Im
 </pre></div>
 </div>
-<p>: lunghezza del moltiplicando
-indirizzoin memoria del moltiplicando
-:il registro Im puo' modificare sia 1' indirizzo IIII
-che la cifra delle unita' della lunghezza LL
-: somma al contenuto dell' accumulatore il risultato del-
-la moltiplicazione.
-a) La moltiplicazione viene effettuata tra il contenuto della memoria a partire dal
-l'indirizzo IllI e per lunghezza LL, e il contenuto dei registri dalla posizione
-o fIo, fino al primo bit gI
-b) Il contenuto della memoria e dei registri rimane inalterato.
-'c) Affinche' il risultato sia segnato è sufficiente che lo sia il contenuto della
-memoria o quello dell' accumulatore
-d) Non è' sufficiente che sia segnato solo il moltiplicatore.
-e) Per questa istruzione valgono le regole relative ai casi di fine su carattere
-chiave.
-0 5 1 9 3.2 #=
+<p>: lunghezza del moltiplicando</p>
+<p>: indirizzo in memoria del moltiplicando</p>
+<p>:il registro Im puo' modificare sia 1' indirizzo IIII
+che la cifra delle unita' della lunghezza LL</p>
+<p>: somma al contenuto dell' accumulatore il risultato della moltiplicazione.</p>
+<p>a) La moltiplicazione viene effettuata tra il contenuto della memoria a partire dall'indirizzo IIII e per lunghezza LL, e il contenuto dei registri dalla posizione
+o fIo, fino al primo bit gI.</p>
+<p>b) Il contenuto della memoria e dei registri rimane inalterato.</p>
+<p>c) Affinche' il risultato sia segnato è sufficiente che lo sia il contenuto della
+memoria o quello dell' accumulatore</p>
+<p>d) Non è sufficiente che sia segnato solo il moltiplicatore.</p>
+<p>e) Per questa istruzione valgono le regole relative ai casi di fine su carattere chiave.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0 5 1 9 3.2 #=
 00000
 MEMORI
 RISULTATO
@@ -1948,15 +1849,17 @@ Mol.re x (3+1
 LL
 IIII
 Im
-: lunghezza del moltiplicando
-: indirizzo in memoria del moltiplicando
-: il registro Im puo' modificare sia l'indirizzo IIII
-che le cifre delle unita' della lunghezza LL
-: sottrae al contenuto dell' accumulatore il risultato
-della moltiplicazione,
-a) Per l'istruzione - X valgono le osservazioni fatte per la +X.
-0 5 1.9.3.2 #
-SOTTRAE ALL'ACCUMULATORL
+</pre></div>
+</div>
+<p>: lunghezza del moltiplicando</p>
+<p>: indirizzo in memoria del moltiplicando</p>
+<p>: il registro Im puo' modificare sia l'indirizzo IIII
+che le cifre delle unita' della lunghezza LL</p>
+<p>: sottrae al contenuto dell' accumulatore il risultato
+della moltiplicazione,</p>
+<p>a) Per l'istruzione - X valgono le osservazioni fatte per la +X.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0 5 1.9.3.2 #
+SOTTRAE ALL&#39;ACCUMULATORL
 000.00
 • MEMO
 1.9
@@ -1968,7 +1871,7 @@ Trasferimento
 Moltiplicazione
 +X
 *
-Particolarita' della moltiplicazione
+Particolarita&#39; della moltiplicazione
 CODICE
 SIMBOLICO
 CANAL
@@ -1981,18 +1884,15 @@ Esecuzione vera e propria : istruzione
 -X .
 AX,
 La moltiplicazione viene eseguita tra due numeri segnati o non
-segnati dei quali uno (il moltiplicatore)con
-tenuto nei registri T a partire da TO, e l'al
-tro (il moltiplicando) in una posizione qual
-aiosi di memoria.
+segnati dei quali uno (il moltiplicatore) contenuto nei registri T a partire da TO, e l&#39;altro (il moltiplicando) in una posizione qualsiasi di memoria.
+
 Il trasferimento
 Il risultato
-del moltiplicatore in TO deve necessariamen-
-te farsi con la Y solo quando e' un numero
+del moltiplicatore in TO deve necessariamente farsi con la Y solo quando e&#39; un numero
 segnato o di lunghezza maggiore di 10.
-viene sommato o sottratto al contenuto del-
-la accumulatore.
+viene sommato o sottratto al contenuto dell&#39;accumulatore.
 +1 tempo
+
 richiesto per la fase esecutiva delle istru-
 L (3 + 1)
 il numero delle cifre del moltipli
@@ -2001,59 +1901,49 @@ plicando.
 interno
 10 +(3+1) L
 10 +(3+1)L L LILI
-'Im
-os</p>
+&#39;Im
+os
+</pre></div>
+</div>
 </section>
 <section id="istruzioni-per-la-ricerca-in-memoria">
 <h2><span class="sectnum">7.6 </span>Istruzioni per la ricerca in memoria<a class="headerlink" href="#istruzioni-per-la-ricerca-in-memoria" title="Permalink to this heading">#</a></h2>
-<p>Le istruzioni di ricerca interessano la memoria prin
-cipale; nel loro svolgimento impegnano l'unita' arit
-metica e logica ed il governo dell' elaboratore.
-Sia nella fase preparatoria che in quella esecutiva
-il canale interno risulta impegnato. A questo grup-
-po di istruzioni potranno percio' sovrapporsi istru-
-zioni interessanti il canale esterno ed il governo
-unita' a nastro.
-Queste istruzioni consentono di trovare
-1'indirizzo
+<p>Le istruzioni di ricerca interessano la memoria principale; nel loro svolgimento impegnano l'unita' aritmetica e logica ed il governo dell' elaboratore.</p>
+<p>Sia nella fase preparatoria che in quella esecutiva
+il canale interno risulta impegnato. A questo gruppo di istruzioni potranno percio' sovrapporsi istruzioni interessanti il canale esterno ed il governo
+unita' a nastro.</p>
+<p>Queste istruzioni consentono di trovare
+l'indirizzo
 della posizione di memoria che contiene un carattere
 determinato oppure un carattere appartenente ad
 1in a
-classe fissa, e di ricordarlo in un registro T.
-La ricerca viene effettuata da una posizione inizia-
-le di memoria, procedendo sia per indirizzi crescen-
-ti (RIa) sia per indirizzi decrescenti (RIi).
-L'indirizzo della posizione di memoria contenente il
-carattere ricercato viene registrato nelle prime quat
-tro posizioni del registro T9.
-La ricerca avviene confrontando il contenuto della me
-moria con il carattere posto in R.
-Di questo carattere possono essere interessati dal
-confronto tutti o parte dei bit.
-Il numero e la posizione dei bit da confrontare ven-
-gono allora determinati dai bit 1 di un secondo
-ca.
-rattere posto in c.
-Se ne deduce che se il carattere posto in C
-p'
+classe fissa, e di ricordarlo in un registro T.</p>
+<p>La ricerca viene effettuata da una posizione iniziale di memoria, procedendo sia per indirizzi crescenti (RIa) sia per indirizzi decrescenti (RIi).</p>
+<p>L'indirizzo della posizione di memoria contenente il
+carattere ricercato viene registrato nelle prime quattro posizioni del registro T9.</p>
+<p>La ricerca avviene confrontando il contenuto della memoria con il carattere posto in R.</p>
+<p>Di questo carattere possono essere interessati dalconfronto tutti o parte dei bit.</p>
+<p>Il numero e la posizione dei bit da confrontare vengono allora determinati dai bit 1 di un secondo
+carattere posto in c.</p>
+<p>Se ne deduce che se il carattere posto in C</p>
+<p>p'
 Q
-(111111) tutti i bit di R vengono confrontati con i
-bit dei caratteri esistenti in memoria, e che un so..
-lo carattere puo' dare eguaglianza nel confronto: il
-carattere identico ad R.
-126
-Se invece il carattere posto in C e' diverso da Q,
+(111111) tutti i bit di R vengono confrontati con i</p>
+<p>bit dei caratteri esistenti in memoria, e che un solo carattere puo' dare eguaglianza nel confronto: il
+carattere identico ad R.</p>
+<p>126</p>
+<p>Se invece il carattere posto in C e' diverso da Q,
 per l'esclusione di almeno un bit dal confronto, si
 crea un gruppo di caratteri pari alla potenza di 2
-elevato ad esponente uguale al numero dei bit o di c
-fedcb
-Esempio: In p8 sia posto il carattere F (0 1100 1)
-e in p7 sia posto il carattere € (1 10000)
-La macchina ricerchera' un carattere che abbia i
-bit &quot;e&quot; ed fr rispettivamente uguali a &quot;i&quot; e &quot;0&quot;.
-Il numero dei caratteri aventi queste caratteristi
-che e' 24
-= 16
+elevato ad esponente uguale al numero dei bit o di c</p>
+<p>fedcb</p>
+<p>Esempio: In p8 sia posto il carattere F (0 1100 1)
+e in p7 sia posto il carattere € (1 10000)</p>
+<p>La macchina ricerchera' un carattere che abbia i
+bit &quot;e&quot; ed fr rispettivamente uguali a &quot;i&quot; e &quot;0&quot;.</p>
+<p>Il numero dei caratteri aventi queste caratteristi
+che e' 24</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>= 16
 127
 Ricerca avanti
 RIa
@@ -2064,27 +1954,26 @@ Im
 2 (000011)
 15 + 1
 R
-: carattere o classe di carattere ricercati
-: carattere che condiziona i bit di R interessati dalla
-ricerca
-IIII
-: indirizzo da cui si inizia la ricerca
-ricerca a partire dall'indirizzo IIII e procedendo per
-indirizzi crescenti l'indirizzo della prima posizione
-di memoria nella quale sia registrato un carattere ap.
-partenente alla classe individuata da R e C.
-a) L'indirizzo della posizione di memoria contenente il carattere ricercato viene rt
-gistrato nelle prime quattro posizioni del registro T9.
-b) Se 11 carattere ricercato si trova all'indirizzo TITT indicato nella istruzione
-Viene registrato in T9 l'indirizzo IIII.
-c) Se il carattere posto in C e' Q (lllll1), tutti i bit intervengono nella ricerc
-e viene quindi cercato solo il carattere posto in R
-d) Se il carattere posto in C e' diverso da Q, si ricerca una classe
-caratteri
-che abbiano in comune i bit corrispondenti indicati da C.
-e) Il carattere &quot;&quot; indicato nella casella riservata alla durata dell'istruzione si
-riferisce al numero di caratteri confrontati prima di raggiungere quello desiderato.
-Ricerca indietro
+</pre></div>
+</div>
+<p>: carattere o classe di carattere ricercati</p>
+<p>: carattere che condiziona i bit di R interessati dalla ricerca</p>
+<p>IIII : indirizzo da cui si inizia la ricerca ricerca a partire dall'indirizzo
+IIII e procedendo per indirizzi crescenti l'indirizzo della prima posizione di
+memoria nella quale sia registrato un carattere appartenente alla classe
+individuata da R e C.</p>
+<p>a) L'indirizzo della posizione di memoria contenente il carattere ricercato
+viene registrato nelle prime quattro posizioni del registro T9.</p>
+<p>b) Se il carattere ricercato si trova all'indirizzo TITT indicato nella
+istruzione Viene registrato in T9 l'indirizzo IIII.</p>
+<p>c) Se il carattere posto in C e' Q (lllll1), tutti i bit intervengono nella
+ricerca e viene quindi cercato solo il carattere posto in R</p>
+<p>d) Se il carattere posto in C e' diverso da Q, si ricerca una classe caratteri
+che abbiano in comune i bit corrispondenti indicati da C.</p>
+<p>e) Il carattere &quot;&quot; indicato nella casella riservata alla durata dell'istruzione
+si riferisce al numero di caratteri confrontati prima di raggiungere quello
+desiderato.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Ricerca indietro
 RIi
 interno
 RC
@@ -2093,89 +1982,71 @@ Im
 7 (001011)
 15
 R
-carattere o classe di caratteri ricercati
-: carattere che condiziona i bit di R interessati dalla
-ricerca
-: indirizzo da cui si inizia la ricerca
-: ricerca a partire dall'indirizzo IIII e procedendo per
-indirizzi decrescenti l'indirizzo della prima posizio
-ne di memoria nella quale sia registrato un carattere
-appartenente alla classe individuata da Re C.
-a) Valgono le osservazioni fatte a proposito della Ria.
-128
+</pre></div>
+</div>
+<p>carattere o classe di caratteri ricercati</p>
+<p>: carattere che condiziona i bit di R interessati dalla ricerca</p>
+<p>: indirizzo da cui si inizia la ricerca</p>
+<p>: ricerca a partire dall'indirizzo IIII e procedendo per indirizzi decrescenti
+l'indirizzo della prima posizione di memoria nella quale sia registrato un
+carattere appartenente alla classe individuata da R e C.</p>
+<p>a) Valgono le osservazioni fatte a proposito della Ria.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>128
 SCHEMA RIASSUNTIVO
 Istruzioni di Ricerca
 Istruzioni
 RIa
 RIi
-Particolarita' istruzioni di ricerca
+Particolarita&#39; istruzioni di ricerca
 CODICE
 SIMBOLICO
 CANALI
 IMOGENATI
 TElDa
 IN PEDIODI DI CIERA
-Funzione
-consentono di determinare l'indirizzo della posizio
-no di memoria che contiene un dato carattere o un ca
-rattere appartenente ad una classe fissata: lindi.
-rizzo del carattere al trasferito nel registro T9
-RIa interno
-Ta ricerca viene effettuato da una posizione iniziale per indi
-pinne cresconti o decroscenti.
-la ricerca viene eseguita confrontando il contenuto della memo
-ria con il carattere posto in p8 dell'istruzione:
-vengono interessati dal confronto soltanto i bit cor
-rispondenti a quelli che nel carattere posto in pi
-sono uguali ad 1.
-Tempo
-15 + 1 periodi di cifra dove l e il numero di
-co.
-ratteri confrontati prima di raggiungere quello de.
-siderato.
-RIi
-CONFIGURAZIONE</p>
+</pre></div>
+</div>
+<p>Funzione</p>
+<p>consentono di determinare l'indirizzo della posizione di memoria che contiene
+un dato carattere o un carattere appartenente ad una classe fissata:
+l'indirizzo del carattere al trasferito nel registro T9 RIa interno</p>
+<p>La ricerca viene effettuato da una posizione iniziale per indi pinne cresconti
+o decroscenti.</p>
+<p>la ricerca viene eseguita confrontando il contenuto della memoria con il
+carattere posto in p8 dell'istruzione: vengono interessati dal confronto
+soltanto i bit corrispondenti a quelli che nel carattere posto in pi</p>
+<p>sono uguali ad 1.  Tempo 15 + 1 periodi di cifra dove l e il numero di
+caratteri confrontati prima di raggiungere quello desiderato.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RIi
+CONFIGURAZIONE
+</pre></div>
+</div>
 </section>
 <section id="le-istruzioni-per-le-operazioni-logiche">
 <h2><span class="sectnum">7.7 </span>Le istruzioni per le operazioni logiche<a class="headerlink" href="#le-istruzioni-per-le-operazioni-logiche" title="Permalink to this heading">#</a></h2>
-<p>Il calcolatore e' capace di eseguire operazioni lo-
-giche, bit per bit, secondo 1' algebra di Boole, fra
-un operando proveniente da memoria e un altro prove
-niente da un registro T.
-L'operazione puo' eseguirsi sia tra i bit diretti,
+<p>Il calcolatore e' capace di eseguire operazioni logiche, bit per bit, secondo 1' algebra di Boole, fra
+un operando proveniente da memoria e un altro proveniente da un registro T.</p>
+<p>L'operazione puo' eseguirsi sia tra i bit diretti,
 sia tra i bit &quot;negati che si ottengono prendendo i
 bit componenti un carattere e scambiando gli 1
 coT
-o e gli 0 con 1.
-Cosi' ad esempio del carattere F i bit diretti sono
-011001, i bit negati sono 100110.
-La lunghezza degli operandi nelle operazioni logi-
-che non puo' essere superiore a 10.
-Anche queste istruzioni possono operare su dati di
-lunghezza sconosciuta con fine determinabile da pa-
-rola chiave; sono pero' previsti solo i due casi di
-fine su segno o carattere alfabetico.
-Il carattere indicativo del tipo di fine, deve esse
-re specificato nella posizione p8 dell'istruzione
-E' evidente che se l'istruzione comporta l'uso del
-T9 non e' possibile la fine con trasferimento del-
-l'indirizzo della parola chiave. Occorre pure ricor
-dare che queste istruzioni hanno significato se la
-lunghezza e' ≤ 10; quindi il segno o carattere al
-fabetico non deve trovarsi in memoria oltre la deci
-ma posizione toccata.
-Si tenga pero' conto che se la parola del registro
+o e gli 0 con 1.</p>
+<p>Cosi' ad esempio del carattere F i bit diretti sono
+011001, i bit negati sono 100110.</p>
+<p>La lunghezza degli operandi nelle operazioni logiche non puo' essere superiore a 10.</p>
+<p>Anche queste istruzioni possono operare su dati di
+lunghezza sconosciuta con fine determinabile da parola chiave; sono pero' previsti solo i due casi di
+fine su segno o carattere alfabetico.</p>
+<p>Il carattere indicativo del tipo di fine, deve essere specificato nella posizione p8 dell'istruzione.</p>
+<p>E' evidente che se l'istruzione comporta l'uso del
+T9 non e' possibile la fine con trasferimento dell'indirizzo della parola chiave. Occorre pure ricordare che queste istruzioni hanno significato se la
+lunghezza e' ≤ 10; quindi il segno o carattere alfabetico non deve trovarsi in memoria oltre la decima posizione toccata.</p>
+<p>Si tenga pero' conto che se la parola del registro
 e' piu' corta di quella di memoria si ha fine prima
-della comparsa del carattere chiave, e in T9 si tra
-sferisce eventualmente l'indirizzo dell'ultimo ca-
-rattere di memoria operato.
-130
-Se invece la fine avviene per il carattere specia-
-le, l'ultimo periodo operativo e' precedente alla
-comparsa di detto carattere. Nel periodo del carat-
-tere chiave si ha scrittura in T di un zero con pal
-linaccio (g).
-131
+della comparsa del carattere chiave, e in T9 si trasferisce eventualmente l'indirizzo dell'ultimo carattere di memoria operato.</p>
+<p>Se invece la fine avviene per il carattere speciale, l'ultimo periodo operativo e' precedente alla
+comparsa di detto carattere. Nel periodo del carattere chiave si ha scrittura in T di un zero con pallinaccio (g).</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>131
 interno
 Moltiplicazione logica diretta
 L
@@ -2184,28 +2055,28 @@ IIII
 Im ! (100101)
 XLD
 10 + 1
-L
-: lunghezza degli operandi
-To
-: registro in cui si trova il secondo operando
-IIII
-: indirizzo di memoria del primo operando
-:il registro Tm puo' modificare sia l'indirizzo IIII che
-il nome del registro operando To
-: effettua la moltiplicazione logica, bit per bit tra i
-bit diretti dei caratteri costituenti la parola conte-
-nuta in memoria di lunghezza L ed i bit diretti dei ca
-ratteri contenuti nelle prime L posizioni del registro
-To'
-a) Il risultato si forma in To•
-) Il contenuto della memoria rimane inalterato.
-c) Le regole secondo le quali si esegue la moltiplicazione logica diretta sono date
-dalla seguente tabella:
-2°
-d) Per questa istruzione valgono le regole relative ai casi di fine carattere chia
-ve.
-132
-interno
+</pre></div>
+</div>
+<p>L
+: lunghezza degli operandi</p>
+<p>To
+: registro in cui si trova il secondo operando</p>
+<p>IIII
+: indirizzo di memoria del primo operando</p>
+<p>: il registro Tm puo' modificare sia l'indirizzo IIII che
+il nome del registro operando To</p>
+<p>: effettua la moltiplicazione logica, bit per bit tra i bit diretti dei
+caratteri costituenti la parola conte- nuta in memoria di lunghezza L ed i bit
+diretti dei ca ratteri contenuti nelle prime L posizioni del registro To'</p>
+<p>a) Il risultato si forma in To</p>
+<p>b) Il contenuto della memoria rimane inalterato.</p>
+<p>c) Le regole secondo le quali si esegue la moltiplicazione logica diretta sono date
+dalla seguente tabella:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2°
+</pre></div>
+</div>
+<p>d) Per questa istruzione valgono le regole relative ai casi di fine carattere chiave.</p>
+<p>interno
 Moltiplicazione logica negata
 To
 I I I I
@@ -2217,62 +2088,62 @@ XLN
 L
 To
 IIII
-Im
-: lunghezza degli operandi
-registro in cui si trova il secondo operando
-: indirizzo di memoria del primo operando
-: il registro Im puo' modificare sia l'indirizzo IIII che
-il nome del registro operando To
-: effettua la moltiplicazione logica bit per bit, tra i
-bit negati dei caratteri costituenti la parola contenu
-ta in memoria e di lunghezza L e i bit negati dei ca-
-ratteri contenuti melle prime L posizioni di To'
-a) Il risultato si forma in lo°
-b contenuto della memoria rimane in alterato
-c) Le regole secondo le quali si esegue la moltiplicazione logica negata sono date
-dalla seguente tabella
-1°
+Im</p>
+<p>: lunghezza degli operandi
+registro in cui si trova il secondo operando</p>
+<p>: indirizzo di memoria del primo operando</p>
+<p>: il registro Im puo' modificare sia l'indirizzo IIII che
+il nome del registro operando To</p>
+<p>: effettua la moltiplicazione logica bit per bit, tra i
+bit negati dei caratteri costituenti la parola contenuta in memoria e di lunghezza L e i bit negati dei caratteri contenuti melle prime L posizioni di To'</p>
+<p>a) Il risultato si forma in lo°</p>
+<p>b) contenuto della memoria rimane in alterato</p>
+<p>c) Le regole secondo le quali si esegue la moltiplicazione logica negata sono date dalla seguente tabella</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1°
 d rer questa istruzione
 annave
 regol relative ai casi di fine su carattere
-133
+
 Somma logica diretta
 interno
+
 L
 II I I
 Im
-V (100100)</p>
-<ul class="simple">
-<li><p>LD
+V (100100)
++ LD
 10 + 1
 To
 IIII
 Im
-: lunghezza degli operandi
-: registro in cui si trova il secondo operando
-indirizzo di memoria del primo operando
-: puo' modificare sia l'indirizzo IIII che il nome del
-registro operando To
-: effettua la somma logica, bit per bit, tra i bit diret
-ti dei caratteri costituenti la parola contenuta in me
-moria e di lunghezza L ed i bit diretti dei caratteri
-contenuti nelle prime L posizioni del registro Io.
-a) Il risultato si forma in 1.
-b I contenuto della memoria rimane inalterato.
-c) Le regole secondo le quali si esegue la somma logica diretta sono date dalla se
-guente tabella :
-20
+</pre></div>
+</div>
+<p>: lunghezza degli operandi</p>
+<p>: registro in cui si trova il secondo operando
+indirizzo di memoria del primo operando</p>
+<p>: puo' modificare sia l'indirizzo IIII che il nome del
+registro operando To</p>
+<p>: effettua la somma logica, bit per bit, tra i bit diretti dei caratteri
+costituenti la parola contenuta in memoria e di lunghezza L ed i bit diretti
+dei caratteri contenuti nelle prime L posizioni del registro Io.</p>
+<p>a) Il risultato si forma in 1.</p>
+<p>b) I contenuto della memoria rimane inalterato.</p>
+<p>c) Le regole secondo le quali si esegue la somma logica diretta sono date dalla
+seguente tabella:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>20
 1°
-d) Per questa istruzione valgono le regole relative ai casi di fine su caratter
-cnsave
-SCHEMA RIASSUNTIVO
+</pre></div>
+</div>
+<p>d) Per questa istruzione valgono le regole relative ai casi di fine su carattei
+chiave</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SCHEMA RIASSUNTIVO
 Operazioni logiche
 Somma
-Moltiplicazione</p></li>
-<li><p>LD
+Moltiplicazione
++ LD
 XLD
 XI.N
-Particolarita' delle operazioni logiche
+Particolarita&#39; delle operazioni logiche
 CODICE
 SIMBOLICO
 IMPEGNATI
@@ -2281,57 +2152,51 @@ IN PERIODI DI CIFRA
 Oper andi
 Operazioni
 : uno in memoria e uno in un registro T.
-secondo l'algebra di Bole bit per bit: le ope.
-razioni possono avvenire sia tra bit diretti che
-tra bit negati.
+
+secondo l&#39;algebra di Bole bit per bit: le operazioni possono avvenire sia
+tra bit diretti che tra bit negati.
+
 XLD
 interno
 10 +1
 XLN
+
 Bit diretti .bit operati con il valore attuale nella configu
 orione del carattere.
+
 +LD
-Bit negati : ottenuti dai bit diretti invertendo il valore de
-gli &quot;1&quot; con non e degli &quot;on con
-Lunghezza de
-gli operandi ': non puo' essere superiore a 10.
-Risultato :nel registro T. gia' contenente uno degli ope-
-candi.
+Bit negati : ottenuti dai bit diretti invertendo il valore degli &quot;1&quot; con non e degli &quot;on con
+
+Lunghezza degli operandi &#39;: non puo&#39; essere superiore a 10.
+
+Risultato :nel registro T. gia&#39; contenente uno degli operandi.
+
 CONFIGURAZIONE
 CARATTERE
-Im</p></li>
-</ul>
+Im
+</pre></div>
+</div>
 </section>
 <section id="istruzioni-relative-al-tavolo-di-comando">
 <h2><span class="sectnum">7.8 </span>Istruzioni relative al tavolo di comando<a class="headerlink" href="#istruzioni-relative-al-tavolo-di-comando" title="Permalink to this heading">#</a></h2>
-<p>Queste istruzioni possono interessare con la memo
-ria principale o il fotolettore o la telescrivente;
-durante il loro svolgimento impegnano l'unita' arit
-metica e logica ed il governo dell' elaboratore.
-Appartengono a questo gruppo
+<p>Queste istruzioni possono interessare con la memoria principale o il fotolettore o la telescrivente;
+durante il loro svolgimento impegnano l'unita' aritmetica e logica ed il governo dell' elaboratore.</p>
+<p>Appartengono a questo gruppo
 le istruzioni CM (da telescrivente o fotolettore a
-memoria), MS (da memoria a telescrivente).
-La CM, sia durante la fase preparatoria che in quel
-la esecutiva, tiene impegnato il canale interno; a
-questa istruzione potranno percio' sovrapporsi ope
-razioni che impegnano il canale esterno ed il
-verno unita' a nastro.
-La MS impegna il canale interno per tutto il tempo
+memoria), MS (da memoria a telescrivente).</p>
+<p>La CM, sia durante la fase preparatoria che in quella esecutiva, tiene impegnato il canale interno; a
+questa istruzione potranno percio' sovrapporsi operazioni che impegnano il canale esterno ed il
+governo unita' a nastro.</p>
+<p>La MS impegna il canale interno per tutto il tempo
 richiesto dalla fase preparatoria; durante la fase
-esecutiva invece quest'ultimo viene impegnato dal-
-l'istruzione ogni settimo di secondo per il tempo
-necessario al trasferimento di un carattere.
-Le istruzioni di questo gruppo sono normalmente u-
-tilizzate:
-a) per introdurre nella memoria principale, median
-te telescrivente, parole di lunghezza variabile
-da 1 a 100 caratteri, oppure mediante fotoletto
-re, parole di lunghezza qualsiasi;
-b) per estrarre dalla memoria principale, mediante
-telescrivente, parole di lunghezza variabile da
-1 a 100 caratteri.
-136
-interno
+esecutiva invece quest'ultimo viene impegnato dall'istruzione ogni settimo di secondo per il tempo
+necessario al trasferimento di un carattere.</p>
+<p>Le istruzioni di questo gruppo sono normalmente utilizzate:</p>
+<p>a) per introdurre nella memoria principale, mediante telescrivente, parole di lunghezza variabile
+da 1 a 100 caratteri, oppure mediante fotolettore, parole di lunghezza qualsiasi;</p>
+<p>b) per estrarre dalla memoria principale, mediantetelescrivente, parole di lunghezza variabile da
+1 a 100 caratteri.</p>
+<p>interno
 Da tavolo di comando o da fotolettore a memoria
 L
 L
@@ -2342,31 +2207,30 @@ CM
 10
 LL
 IIII
-Im
-: lunghezza dell'informazione da trasferirsi in memoria
-: indirizzo a partire dal quale i caratteri registrati ven
-gono trasferiti in memoria
-: il registro Im puo' modificare sia l'indirizzo IIII che
-la cifra delle unita' di LL
-: legge da tastiera o da fotolettore verso memoria,
-a) La scelta fra tastiera e fotolettore e' fatta mediante la chiave TAST - FL posti
-sul tavolo al comando.
-b) La lettura da tastiera avviene per LL caratteri via via che i rispettivi
-vengono premuti.
-tasti
-caTettura da totoettore avviene</p>
-<ol class="arabic simple">
-<li><p>per un numero di caratteri pari a quello indicato in LL:</p></li>
-<li><p>ponendo ## al posto di LL la lettura avviene per tutti i caratteri registra
-ti su banda perforata fino al primo carattere o (che viene anch'esso registra
-to in memorial.
-d) Sono previsti anche per questa istruzione i due casi di fine su carattere chiav
-(non si ha pero' trasferimento in T9 dell'indirizzo del carattere chiave).
-e) Il senso di registrazione in memoria e' per indirizzi crescenti
-) Il tempo indicato nella casella della durata dell'istruzione si riferisce solo al
-la fase preparatoria; la fase esecutiva avviene alla velocità' di 800 caratteri
-al secondc
-137
+Im</p>
+<p>: lunghezza dell'informazione da trasferirsi in memoria</p>
+<p>: indirizzo a partire dal quale i caratteri registrati vengono trasferiti in memoria</p>
+<p>: il registro Im puo' modificare sia l'indirizzo IIII che la cifra delle unita' di LL</p>
+<p>: legge da tastiera o da fotolettore verso memoria, a) La scelta fra tastiera e
+fotolettore e' fatta mediante la chiave TAST - FL posti sul tavolo al comando.</p>
+<p>b) La lettura da tastiera avviene per LL caratteri via via che i rispettivi
+tasti vengono premuti.</p>
+<p>c) Lettura da totoettore avviene</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1) per un numero di caratteri pari a quello indicato in LL:
+
+2) ponendo ## al posto di LL la lettura avviene per tutti i caratteri
+registra ti su banda perforata fino al primo carattere o (che viene anch&#39;esso
+registra to in memoria.
+</pre></div>
+</div>
+<p>d) Sono previsti anche per questa istruzione i due casi di fine su carattere
+chiave (non si ha pero' trasferimento in T9 dell'indirizzo del carattere
+chiave).</p>
+<p>e) Il senso di registrazione in memoria e' per indirizzi crescenti</p>
+<p>f) Il tempo indicato nella casella della durata dell'istruzione si riferisce
+solo al la fase preparatoria; la fase esecutiva avviene alla velocità' di 800
+caratteri al secondo</p>
+<p>137
 Trasferisce da memoria a telescrivente
 MS
 interno
@@ -2375,98 +2239,83 @@ fILI Im 0 (010000)
 10
 L L
 IIII
-Im
-: lunghezza dell'informazione da stampare
-: indirizzo di memoria in cui e registrato il 1° caratte
-re da trasferire
-:il registro Im puo' modificare sia l'indirizzo IIII che
-la cifra delle unita' della lunghezza LL
-: scrive con la telescrivente LL caratteri a partire da
-quello che si trova all'indirizzo IIII e per indirizzi
-crescenti,
-a) Nello svolgimento del programma in cui e' posta l'istruzione si intercalano pe-
-riodi di telescrivente, in ognuno dei quali si comanda la stampa di un caratte-
-re letto in memoria.
-b) Alla fine del trasferimento si esegue automaticamente un ritorno carrello e in-
-terlinea; se LL e' maggiore di 72, si torna automaticamente a capo.
-c) Se durante l'esecuzione di questa istruzione viene eseguito lo STOP, questa non
-Viene interrotta ma prosegue fino alla fine.
-d) Il tempo indicato nella casella della durata dell'istruzione, si riferisce alla
-fase preparatoria; la fase esecutiva avviene alla velocita' di 7 caratteri al se
-condo
-138
-SCHEMA RIASSUNTIVO
+Im</p>
+<p>: lunghezza dell'informazione da stampare</p>
+<p>: indirizzo di memoria in cui e registrato il 1° carattere da trasferire</p>
+<p>: il registro Im puo' modificare sia l'indirizzo IIII che la cifra delle unita'
+della lunghezza LL</p>
+<p>: scrive con la telescrivente LL caratteri a partire da quello che si trova
+all'indirizzo IIII e per indirizzi crescenti</p>
+<p>a) Nello svolgimento del programma in cui e' posta l'istruzione si intercalano
+periodi di telescrivente, in ognuno dei quali si comanda la stampa di un
+carattere letto in memoria.</p>
+<p>b) Alla fine del trasferimento si esegue automaticamente un ritorno carrello e
+interlinea; se LL e' maggiore di 72, si torna automaticamente a capo.</p>
+<p>c) Se durante l'esecuzione di questa istruzione viene eseguito lo STOP, questa
+non viene interrotta ma prosegue fino alla fine.</p>
+<p>d) Il tempo indicato nella casella della durata dell'istruzione, si riferisce
+alla fase preparatoria; la fase esecutiva avviene alla velocita' di 7 caratteri
+al se condo</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SCHEMA RIASSUNTIVO
 Istruzioni relative al tavolo di comando
 Trasferimento
 См
 MS
-Particolarita' istruzioni relative al tavolo di comando
+Particolarita&#39; istruzioni relative al tavolo di comando
 CODICE
 SIMBOLICO
 CANALI
 IN PERIODI DUCIERA
 Funzione
-consentono di introdurre o di estrarre dei dati
-in o da memoria principale.
-L'introduzione : puo' avvenire tramite latelescrivente per un mas
-simo di 100 caratteri, oppure per mezzo del fo-
-talattore fino al primo carattere o perforato
+consentono di introdurre o di estrarre dei dati in o da memoria principale.
+L&#39;introduzione : puo&#39; avvenire tramite latelescrivente per un massimo di 100
+caratteri, oppure per mezzo del fotalettore fino al primo carattere o perforato
 su nastro.
 см
 intern
-L'estrazione : avviene solo mediante telescrivente per un nume
-ro di caratteri non superiore a 100.
+L&#39;estrazione : avviene solo mediante telescrivente per un numero di
+caratteri non superiore a 100.
 uS
 Tempo
-10 periodi di cifra per la fase preparatoria: la
-fase esecutiva viene eseguita alla velocita'
-800 caratteri al secondo ner la CM, usando il fo
-tolettore. e di 7 caratteri al secondo ner la MS
+10 periodi di cifra per la fase preparatoria: la fase esecutiva viene
+eseguita alla velocita&#39; 800 caratteri al secondo ner la CM, usando il
+fotolettore. e di 7 caratteri al secondo ner la MS
 CONEIGURAZIONE
 Im
-a</p></li>
-</ol>
+a
+</pre></div>
+</div>
 </section>
 <section id="istruzioni-di-salto">
 <h2><span class="sectnum">7.9 </span>Istruzioni di salto<a class="headerlink" href="#istruzioni-di-salto" title="Permalink to this heading">#</a></h2>
-<p>La successione delle istruzioni di programma puo' do
-ver essere alterata al verificarsi di certe eventua
-lita'. A questo scopo servono le istruzioni di sal.
-to, il cui carattere di funzione e' 0 (zero), che agi
-scono sul registro indirizzo istruzioni.
-Al leggere una istruzione di salto il calcolatore de
-a) esaminare se si e' o no verificata una determina
-ta eventualita'.
-Questa viene indicata al calco-
-latore per mezzo del carattere p8, che serve dun
-que a distinguere un' istruzione di salto da una
-altra, e che in seguito sara indicata con lalet
-tera E. Se la eventualita' in esame non si e' ve
-rificata il calcolatore esegue l'istruzione imme
-diatamente seguente l'istruzione di salto; si di
-ce allora che il salto non e' stato eseguito;
-b) se la eventualita' osservata si e' verificata, ese
-guire l'istruzione di indirizzo IIII (modificabi
-le da Tm) indicato dalla istruzione di salto. si
-dice allora che il salto e' stato eseguito;
-c) ricordare, se necessario, l'indirizzo dell'istru
-zione di salto, per ritornare al programma da cui
-si e' saltati, dopo aver eseguito altre istruzio
-ni. Tale necessita' si presenta quando una stes-
-sa sequenza di istruzioni (o sottoprogramma) puo'
-essere chiamata da diversi punti del programma
-principale. In p7 della istruzione di salto side
-ve allora indicare il registro Is in cui si desi
-dera venga ricordato l'indirizzo dell'istruzione
-stessa; in Ts viene registrato, per la precisio-
-ne, l'indirizzo in memoria del carattere p8 di ta
-le istruzione, e solo nel caso che il salto sia
-stato eseguito.
-140
-Hanno questa funzione le seguenti istruzioni:
-SC=, SC # , SC&gt;, SC&lt;, SR=, SR*, SA=, SA&gt;, SA&lt;, SOM,
-STO, SEj, SEz, SEg, SEq, SI, SIN, SN, STOP.
-141
+<p>La successione delle istruzioni di programma puo' dover essere alterata al
+verificarsi di certe eventualita'. A questo scopo servono le istruzioni di
+salto, il cui carattere di funzione e' 0 (zero), che agiscono sul registro
+indirizzo istruzioni.</p>
+<p>Al leggere una istruzione di salto il calcolatore d</p>
+<p>a) esaminare se si e' o no verificata una determinata eventualita'.</p>
+<p>Questa viene indicata al calcolatore per mezzo del carattere p8, che serve
+dunque a distinguere un' istruzione di salto da una altra, e che in seguito
+sara indicata con la lettera E. Se la eventualita' in esame non si e'
+verificata il calcolatore esegue l'istruzione immediatamente seguente
+l'istruzione di salto; si di ce allora che il salto non e' stato eseguito;</p>
+<p>b) se la eventualita' osservata si e' verificata, eseguire l'istruzione di
+indirizzo IIII (modificabile da Tm) indicato dalla istruzione di salto. Si dice
+allora che il salto e' stato eseguito;</p>
+<p>c) ricordare, se necessario, l'indirizzo dell'istruzione di salto, per
+ritornare al programma da cui si e' saltati, dopo aver eseguito altre
+istruzioni. Tale necessita' si presenta quando una stessa sequenza di
+istruzioni (o sottoprogramma) puo' essere chiamata da diversi punti del
+programma principale. In p7 della istruzione di salto si deve allora indicare
+il registro Is in cui si desidera venga ricordato l'indirizzo dell'istruzione
+stessa; in Ts viene registrato, per la precisione, l'indirizzo in memoria del
+carattere p8 di tale istruzione, e solo nel caso che il salto sia stato
+eseguito.</p>
+<p>140
+Hanno questa funzione le seguenti istruzioni:</p>
+<p>SC=, SC # , SC&gt;, SC&lt;, SR=, SR*, SA=, SA&gt;, SA&lt;, SOM,
+STO, SEj, SEz, SEg, SEq, SI, SIN, SN, STOP.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>141
 Salta se uguale da confronto
 SC =
 interno
@@ -2474,21 +2323,21 @@ interno
 X Is
 IIII Im 0
 10 o 15
-a) Salta se nell'ultimo confronto, eseguito per conto del programma in cui la istr
-zione
-posta, la memoria e' risultata uguale al secondo termine di conironto.
-interno
+</pre></div>
+</div>
+<p>a) Salta se nell'ultimo confronto, eseguito per conto del programma in cui la istruzione
+posta, la memoria e' risultata uguale al secondo termine di confronto.</p>
+<p>interno
 Salta se diverso da confronto
 (101011)
 Y. Is
 III I
 SC#
 I'm
-10 o 15
-a) Salta se nell'ultimo confronto, eseguito per conto del programma in cui la istru
-zione
-posta, la memoria e risultata diversa dal secondo termine di confronto
-142
+10 o 15</p>
+<p>a) Salta se nell'ultimo confronto, eseguito per conto del programma in cui la istruzione
+posta, la memoria e risultata diversa dal secondo termine di confronto</p>
+<p>142
 interno
 Salta se maggiore da confronto
 (100001)
@@ -2496,15 +2345,14 @@ s'Is
 III I
 sc'&gt;
 I'm 0
-10 0 15
-a Salta se nel ultimo contronto.
-eseguito per conto del programma in cui la istru,
-Zione e posta, la memoria e risultata maggiore del secondo termine di confron
-co.
-b) Nel caso di conironto tra due zone di memoria operazioni PUM, MM, salta se
-risultata maggiore la zona di memoria specificata dalla M
-Salta se minore da confronto
-Sc'&lt;
+10 0 15</p>
+<p>a) Salta se nel ultimo contronto eseguito per conto del programma in cui la
+istruzione e posta, la memoria e risultata maggiore del secondo termine di
+confronto.</p>
+<p>b) Nel caso di conironto tra due zone di memoria operazioni PUM, MM, salta se
+risultata maggiore la zona di memoria specificata dalla M</p>
+<p>Salta se minore da confronto</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Sc&#39;&lt;
 interno
 (100011)
 T
@@ -2512,81 +2360,77 @@ Is
 I I I I
 Im 0
 10 o 15
-a) Salta se nell'ultimo confronto, eseguito per conto del programma in cul la istru
-zione e posta, la memoria e risultata minore del secondo termine di confronto.
-b) Nel caso di confronto fra due zone di memoria (operazioni PUM, CMM), salta se
-risultata minore
-zona di memoria specificata dalla CM.
-143
-Salta se il Risultato e' uguale a zero
+</pre></div>
+</div>
+<p>a) Salta se nell'ultimo confronto, eseguito per conto del programma in cul la
+istruzione e posta, la memoria e risultata minore del secondo termine di
+confronto.
+b) Nel caso di confronto fra due zone di memoria (operazioni PUM, CMM), salta
+se risultata minore</p>
+<p>zona di memoria specificata dalla CM.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>143
+Salta se il Risultato e&#39; uguale a zero
 SR
 interno
 (100010)
 Is
 IIII Im 0
 10 0 15
-a) Salta se e' uguale a zero il risultato dell'ultima istruzione, eseguita per con
-to del programma in cui l'istruzione di salto e' posta, del tipo
-+X
--X, MA, MT, +MT, -MT, XLD, XIN, +LD, +CT, -CT, CT, +MM,
--MM, Y, +AM, +TM.
-b) Per risultato di una istruzione MA, MT, CT, Y si intende l'informazione trasferi
-ta da dette istruzioni.
-c) L'indicazione di risultato uguale a zero e' annullata, oltre che dalle preceden.
-ti istruzioni,
-anche dalla Aoe To.
-interno
-Salta se il Risultato e' diverso da zero
+</pre></div>
+</div>
+<p>a) Salta se e' uguale a zero il risultato dell'ultima istruzione, eseguita per
+conto del programma in cui l'istruzione di salto e' posta, del tipo +X, -X, MA,
+MT, +MT, -MT, XLD, XIN, +LD, +CT, -CT, CT, +MM, -MM, Y, +AM, +TM.</p>
+<p>b) Per risultato di una istruzione MA, MT, CT, Y si intende l'informazione
+trasferita da dette istruzioni.</p>
+<p>c) L'indicazione di risultato uguale a zero e' annullata, oltre che dalle
+precedenti istruzioni, anche dalla Aoe To.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>interno
+Salta se il Risultato e&#39; diverso da zero
 (100000)
 Is
 IIII Im 0
 SR $
 10 0
 15
-Salta se e' diverso da zero il risultato dell'ultima istruzione, eseguita per co
-to del programma in cui l'istruzione di salto e posta, del tipo †MA, +^, -MA
--X, MA, MT, +MT, -MT, XLD, XI.N, +LD,
-+CT, -CT,
-CT, +MM,
-+AM,
-b) Per risultato di una istruzione MA, MT, CT, Y si intende 1' informazione
-tra.
-sterita da dette istruzioni.
-c) L'indicazione di risultato diverso da zero e' annullata, oltre che dalle prece
-denti 1struzioni, anche dalla AM e ToM
-144
-Salta se l' Accumulatore e' uguale a zero
-SA= 0
+</pre></div>
+</div>
+<p>Salta se e' diverso da zero il risultato dell'ultima istruzione, eseguita per
+conto del programma in cui l'istruzione di salto e posta, del tipo †MA, +^, -MA
+-X, MA, MT, +MT, -MT, XLD, XI.N, +LD, +CT, -CT, CT, +MM, +AM,</p>
+<p>b) Per risultato di una istruzione MA, MT, CT, Y si intende 1' informazione
+trasferita da dette istruzioni.</p>
+<p>c) L'indicazione di risultato diverso da zero e' annullata, oltre che dalle precedenti 1struzioni, anche dalla AM e ToM</p>
+<p>Salta se l' Accumulatore e' uguale a zero</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SA= 0
 interno
 (100100)
 Is
 IIII
 Im 0
 10 0 15
-a) Salta se, a seguito dell'ultima istruzione eseguita del tipo +MA, +X,</p>
-<ul class="simple">
-<li><p>MA,</p></li>
-<li><p>X, MA, 1' accumulatore è' risultato uguale
-a zero
-b) L'indicazione di accumulatore uguale a zero viene annullata quando si esegue una
-successiva istruzione del tipo anzidetto o una istruzione AM.
-Salta se l' Accumulatore e' maggiore di zero
-SA &gt; 0
+</pre></div>
+</div>
+<p>a) Salta se, a seguito dell'ultima istruzione eseguita del tipo +MA, +X,
+-MA, -X, MA, 1' accumulatore è' risultato uguale a zero</p>
+<p>b) L'indicazione di accumulatore uguale a zero viene annullata quando si esegue una
+successiva istruzione del tipo anzidetto o una istruzione AM.</p>
+<p>Salta se l' Accumulatore e' maggiore di zero</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SA &gt; 0
 interno
 (100111)
 y Is
 I I I I
 Im 0
 10 0 15
-a) Salta se, a seguito dell'ultima istruzione eseguita del tipo + MA,</p></li>
-<li><p>X, MA, ]' accumulatore è'
-+X,
-.MA,
-risultato maggiore di zero.
-b) L'indicazione di accumulatore maggiore di zero viene annullata quando si esegue
-una successiva istruzione del tipo anzidetto o una istruzione AoM.
-Salta se 1' Accumulatore e' minore di zero
-SA '&lt;O
+</pre></div>
+</div>
+<p>a) Salta se, a seguito dell'ultima istruzione eseguita del tipo +MA, -X, MA, l'
+accumulatore è +X, .MA, risultato maggiore di zero.</p>
+<p>b) L'indicazione di accumulatore maggiore di zero viene annullata quando si
+esegue una successiva istruzione del tipo anzidetto o una istruzione AoM.</p>
+<p>Salta se l' Accumulatore e' minore di zero</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SA &#39;&lt;O
 interno
 (101000)
 w
@@ -2594,150 +2438,139 @@ Is
 II I I
 Im 0
 10 o 15
-a) Salta se, a seguito dell'ultima istruzione eseguita del tipo
-a X, MA. ' accumulatore e' risultato minore di zero.</p></li>
-</ul>
-<ul class="simple">
-<li><p>MA,
-+X,
-. MA,
-b) L'indicazione di accumulatore minore di zero viene annullata quando si esegue una
-successiva istruzione del tipo anzidetto od una istruzione AoM
-145
-interno
-Salta se vi e' stato Overflow in Memoria
-(101100)
+</pre></div>
+</div>
+<p>a) Salta se, a seguito dell'ultima istruzione eseguita del tipo
+a X, MA. L' accumulatore e' risultato minore di zero.
++MA, +X, . MA,</p>
+<p>b) L'indicazione di accumulatore minore di zero viene annullata quando si esegue una
+successiva istruzione del tipo anzidetto od una istruzione AoM</p>
+<p>interno</p>
+<p>Salta se vi e' stato Overflow in Memoria</p>
+<p>(101100)
 Ts
 IIII
 SOM
 I'm 0
-10 0 15
-a) Salta se si e' avuto overflow in memoria a seguito dell'ultima istruzione
-ese.
-guita per conto del programma in cui l'istruzione di salto e' posta, del
-C1Dc
-&quot;MM, +AM, +IM
-b) Le condizioni che provocano il segnale di overflow sono specificate istruzione
-per iscruzione
-Salta se non vi e' stato Overflow in registro T
-STO
+10 0 15</p>
+<p>a) Salta se si e' avuto overflow in memoria a seguito dell'ultima istruzione
+eseguita per conto del programma in cui l'istruzione di salto e' posta, del</p>
+<p>C1Dc
+&quot;MM, +AM, +IM</p>
+<p>b) Le condizioni che provocano il segnale di overflow sono specificate istruzione
+per iscruzione</p>
+<p>Salta se non vi e' stato Overflow in registro T</p>
+<p>STO
 interno
 (101111)
 Z Is
 Im 0
-10 o 15
-a) Salta se non si e' avuto overflow nel registro T operato dalla ultima istruzio
-ne, eseguita per conto del programma in cui l'istruzione di salto e' posta, del
-tipo +MT, -MT, +CT, -CT.
-b) Le condizioni che provocano il segnale di overflow sono specificate istruzione
-per 1struzione
-146
-interno
-Salta su condizione esterna 1
+10 o 15</p>
+<p>a) Salta se non si e' avuto overflow nel registro T operato dalla ultima istruzione, eseguita per conto del programma in cui l'istruzione di salto e' posta, del
+tipo +MT, -MT, +CT, -CT.</p>
+<p>b) Le condizioni che provocano il segnale di overflow sono specificate istruzione
+per istruzione</p>
+<p>interno</p>
+<p>Salta su condizione esterna 1
 (111110)
 T
 Is
 IIII
 Im 0
 SE1
-10 0 15
-a) Salta su condizione esterna l. L'esecuzione del salto e' subordinata al posizio
-namento della levetta l posta sul tavolo di comando. Il posizionamento viene ef-
-fettuato manualmente dal operatore.
-interno
-Salta su condizione esterna 2
-(111010)
+10 0 15</p>
+<p>a) Salta su condizione esterna l. L'esecuzione del salto e' subordinata al
+posizionamento della levetta l posta sul tavolo di comando. Il posizionamento
+viene effettuato manualmente dal operatore.</p>
+<p>interno</p>
+<p>Salta su condizione esterna 2</p>
+<p>(111010)
 Is
 III I Im 0
 SE2
-10 0 15
-a) Salta su condizione esterna 2 . Come SE per levetta 2
-Salta su condizione esterna 3
-interno
+10 0 15</p>
+<p>a) Salta su condizione esterna 2 . Come SE per levetta 2</p>
+<p>Salta su condizione esterna 3</p>
+<p>interno
 (100101)
 Is
 IIII Im 0
 SE3
-10 0 15
-a) Salta su condizione esterna 3 . Come SE per levetta 3 .
-interno
-Salta su condizione esterna 4
-(101101)
+10 0 15</p>
+<p>a) Salta su condizione esterna 3 . Come SE per levetta 3 .</p>
+<p>interno</p>
+<p>Salta su condizione esterna 4</p>
+<p>(101101)
 Is
 I I I I
 Im 0
 SBA
-10 0 15
-a) Salta su condizione esterna 4 . Come SE- per levetta 4
-147
-Non salta
-(In 7
+10 0 15</p>
+<p>a) Salta su condizione esterna 4 . Come SE- per levetta 4</p>
+<p>Non salta</p>
+<p>(In 7
 SN
 interno
 (111100)
 RIs
 XX x x
 Im 0
-10
-a) Non salta mai, ma immagazzina nel registro Is l'indirizzo del carattere p8 della
-istruzione.
-b) Le posizioni p3 : p6 non vengono prese in considerazione.
-interno
-Salta incondizionatamente
-(100110)
+10</p>
+<p>a) Non salta mai, ma immagazzina nel registro Is l'indirizzo del carattere p8 della istruzione.</p>
+<p>b) Le posizioni p3 : p6 non vengono prese in considerazione.</p>
+<p>interno</p>
+<p>Salta incondizionatamente</p>
+<p>(100110)
 Ts
 SI
 IIII Im 0
-15
-a) Salta in qualsiasi caso.
-148
-Salto invariante
+15</p>
+<p>a) Salta in qualsiasi caso.</p>
+<p>Salto invariante
 SIN
 interno
 (100110)
 )
 cC C c
 Is
-19
-a) Questa e' diversa dalle altre istruzioni di salto, in quanto non indica l'indiriz
-zo della prossima istruzione da eseguire, ma l' addendo CCCC (non modificabile) di
-sommare al contenuto del registro indirizzo istruzioni
-b) Si noti che :</p></li>
-</ul>
-<ol class="arabic simple">
-<li><p>il suo carattere di Funzione non e' zero. ma ~ (approssimato);</p></li>
-<li><p>non vi e' registro 1m modificatore; in p2 e pl deye essere indicato il medesi.
-mo registro</p></li>
-<li><p>in
-1s contrariamente agli altri salti viene immagazzinato l'indirizzo di p2 del
-l'istruzione.
-c) Per effettuare un salto ad una istruzione registrata M istruzioni oltre la SIN,
-in CCCC si deve porre un numero uguale
-(8 M) + 1
-Dovendo ad esempio eseguire la terza istruzione oltre la SIN, si avr
-СССС = 0008 . 3 ÷ 0001 = 0025
-d) Il registro 1s deve sempre essere indicato
-e) Il tempo di esecuzione e' di 19 periodi di cifre anziche' di 15</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Arresto</span>
-<span class="n">STOP</span>
-<span class="n">interno</span>
-<span class="p">(</span><span class="mi">111001</span><span class="p">)</span>
-<span class="n">X</span>
-<span class="n">X</span> <span class="n">X</span> <span class="n">X</span> <span class="n">X</span>
-<span class="c1"># 0</span>
-<span class="mi">10</span>
+19</p>
+<p>a) Questa e' diversa dalle altre istruzioni di salto, in quanto non indica
+l'indirizzo della prossima istruzione da eseguire, ma l' addendo CCCC (non
+modificabile) di sommare al contenuto del registro indirizzo istruzioni</p>
+<p>b) Si noti che :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1) il suo carattere di Funzione non e&#39; zero. ma ~ (approssimato);
+
+2) non vi e&#39; registro 1m modificatore; in p2 e pl deye essere indicato il
+medesimo registro
+
+3) in 1s contrariamente agli altri salti viene immagazzinato l&#39;indirizzo di
+p2 dell&#39;istruzione.
 </pre></div>
 </div>
-<p>a) Pone termine allo svolgimento del programma nel quale l'istruzione e' posta
-b) Se l'istruzione e' posta nel 1° programma, questo ha termine, mentre lo svolgimen
-to del 2° programma puo' proseguire.
-c) Se si ha lo STOP nel 2° programma, questo ha termine mentre il 1° programma puo'
-proseguire
-d) L'istruzione STOP non arresta l'esecuzione della istruzione MS eventualmente in
-corso
-149
-SCHEMA RIASSUNTIVO
+<p>c) Per effettuare un salto ad una istruzione registrata M istruzioni oltre la
+SIN, in CCCC si deve porre un numero uguale (8 M) + 1 Dovendo ad esempio
+eseguire la terza istruzione oltre la SIN, si avra` СССС = 0008 . 3 ÷ 0001 =
+0025</p>
+<p>d) Il registro 1s deve sempre essere indicato</p>
+<p>e) Il tempo di esecuzione e' di 19 periodi di cifre anziche' di 15</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Arresto
+STOP
+interno
+(111001)
+X
+X X X X
+# 0
+10
+</pre></div>
+</div>
+<p>a) Pone termine allo svolgimento del programma nel quale l'istruzione e' posta</p>
+<p>b) Se l'istruzione e' posta nel 1° programma, questo ha termine, mentre lo
+svolgimento del 2° programma puo' proseguire.</p>
+<p>c) Se si ha lo STOP nel 2° programma, questo ha termine mentre il 1° programma
+puo' proseguire</p>
+<p>d) L'istruzione STOP non arresta l'esecuzione della istruzione MS eventualmente
+in corso</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SCHEMA RIASSUNTIVO
 Salti su confronti
 Salti su risultati
 Salti su contenuto accum.
@@ -2756,10 +2589,10 @@ SA &gt;
 STO
 BIS
 SN
-Particolarita' dei salti
+Particolarita&#39; dei salti
 Istruzioni di salto
-sC'&gt;
-SA'&lt;
+sC&#39;&gt;
+SA&#39;&lt;
 SEg
 SIN
 CODICE
@@ -2772,32 +2605,29 @@ TEMPA
 IN PERIODI DI CIERA
 Funzione
 Eventualita
-alterare la successione delle istruzioni di pro
-gramma 'se e' verificata una certa eventualita'.
-viene indicata all' elaboratore per mezzo del ca
-rattere p8 dell'istruzione di salto.
-Registro Ts
-ricorda l'indirizzo del carattere p8 dell'istru
-zione di salto solo nel caso che il salto venga
-eseguito.
-Salta, se l'eventualita
-verificata, all'istruzione di indi
-rigo TITT indicato nell'istruzione di salto.
-Tempo di esecuzione':
-15 periodi di cifra.
-Non salta, se l'eventualita' non si è' verificata, ed esegue l'i-
-struzione immediatamente successiva del program
-ma.
-Tempo di esecuzione': 10 periodi di cifra.
-SC=
+</pre></div>
+</div>
+<p>alterare la successione delle istruzioni di programma 'se e' verificata una
+certa eventualita'.  viene indicata all' elaboratore per mezzo del carattere p8
+dell'istruzione di salto.</p>
+<p>Registro Ts</p>
+<p>ricorda l'indirizzo del carattere p8 dell'istruzione di salto solo nel caso che
+il salto venga eseguito.</p>
+<p>Salta, se l'eventualita verificata, all'istruzione di indirizzo IIII indicato
+nell'istruzione di salto.</p>
+<p>Tempo di esecuzione': 15 periodi di cifra.</p>
+<p>Non salta, se l'eventualita' non si è' verificata, ed esegue l'istruzione
+immediatamente successiva del programma.</p>
+<p>Tempo di esecuzione': 10 periodi di cifra.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SC=
 sC*
-SC'&gt;
-SC'&lt;
+SC&#39;&gt;
+SC&#39;&lt;
 SR=
 SRA
 SA=
-SA'&gt;
-SA'&lt;
+SA&#39;&gt;
+SA&#39;&lt;
 SOM
 STO
 SEy
@@ -2826,32 +2656,26 @@ CONFIGURAZIONE
 Im
 yyyy
 racc
-X х х х</p>
+X х х х
+</pre></div>
+</div>
 </section>
 <section id="istruzioni-di-salto-su-errore">
 <h2><span class="sectnum">7.10 </span>Istruzioni di salto su errore<a class="headerlink" href="#istruzioni-di-salto-su-errore" title="Permalink to this heading">#</a></h2>
-<p>La probabilita' di un errore nel movimento di un ca-
-rattere tra i vari organi dell' elaboratore e' estre-
-mamente piccola.
-E' tuttavia indispensabile cautelarci anche contro
-questa evenienza con appositi dispositivi di macchi-
-na che segnalino il verificarsi dell'errore.
-Questi segnalatori nell' Elea 9003 esistono di fatto
-ed i loro segnali sono rilevabili mediante apposite i
-struzioni di salto.
-Dette istruzioni inserite opportunamente nel program
-ma permettono di ricorrere a programmi di correzione
-ogni qualvolta si verifichi un errore nel corso di u
-na elaborazione.
-Tale errore evidentemente non puo' essere di natura
-logica o imputabile ad inesattezze, a inversioni
-o
-scambi di dati, o a difetti di quadratura, rilevabi-
-li e correggibili con tecniche di altro genere.
-Gli errori in questione possono essere imputati esclu
-sivamente all' imperfetto funzionamento dell' elabora-
-tore in un determinato caso.
-151
+<p>La probabilita' di un errore nel movimento di un carattere tra i vari organi
+dell' elaboratore e' estremamente piccola.</p>
+<p>E' tuttavia indispensabile cautelarci anche contro questa evenienza con
+appositi dispositivi di macchina che segnalino il verificarsi dell'errore.
+Questi segnalatori nell' Elea 9003 esistono di fatto ed i loro segnali sono
+rilevabili mediante apposite istruzioni di salto.</p>
+<p>Dette istruzioni inserite opportunamente nel programma permettono di ricorrere
+a programmi di correzione ogni qualvolta si verifichi un errore nel corso di
+una elaborazione.  Tale errore evidentemente non puo' essere di natura logica o
+imputabile ad inesattezze, a inversioni o scambi di dati, o a difetti di
+quadratura, rilevabili e correggibili con tecniche di altro genere.</p>
+<p>Gli errori in questione possono essere imputati esclusivamente all' imperfetto
+funzionamento dell' elaboratore in un determinato caso.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>151
 Salta se errore qualsiasi
 SE
 interno
@@ -2860,19 +2684,18 @@ Is
 IIII
 Im 0
 10 o 15
-a) Salta se e' stato commesso un errore qualsiasi
-b) Oltre agli errori rilevati dai salti su errore del tipo SEMI, SEUM, SEME,
-SEU, SEN, SEL, rileva se vi e' stato errore nel lettore fotoelettrico
-di
-perforata, collegato al tavolo di comando.
-SEA,
-bande
-c) Se l'istruzione SE rimanda ad una istruzione che non sia di salto, la
-segn al a.
-zione di errore qual si asi
-viene annullata.
-interno
+</pre></div>
+</div>
+<p>a) Salta se e' stato commesso un errore qualsiasiS</p>
+<p>b) Oltre agli errori rilevati dai salti su errore del tipo SEMI, SEUM, SEME,
+SEU, SEN, SEL, SEA, rileva se vi e' stato errore nel lettore fotoelettrico di
+bande perforate, collegato al tavolo di comando.</p>
+<p>c) Se l'istruzione SE rimanda ad una istruzione che non sia di salto, la
+segnalazione di errore qualsiasi viene annullata.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>interno
+
 Salta se errore in uscita da memoria
+
 (110000)
 E
 Is
@@ -2880,108 +2703,106 @@ IIII
 SEUM
 Im
 10 0 15
-a) Salta se e stato rilevato un errore nell'estrazione dalla memoria attraverso i.
-canale interno.
-b) La
-rilevazione dell'errore avviene per mezzo del controllo di disparita
-152
-interno
-Salta se errore in memoria, canale interno
-(110010)</p>
+</pre></div>
+</div>
+<p>a) Salta se e stato rilevato un errore nell'estrazione dalla memoria attraverso
+il canale interno.</p>
+<p>b) La rilevazione dell'errore avviene per mezzo del controllo di disparita'</p>
+<p>interno</p>
+<p>Salta se errore in memoria, canale interno</p>
+<p>(110010)</p>
 <ul class="simple">
 <li><p>Ts
 IIII
 SEMI
 Im 0
-10 0 15
-a) Salta se e' stato rilevato un errore nella introduzione in memoria attraverso il
-canale interno.
-b) La rilevazione dell'errore avviene per mezzo del controllo di disparita'
-interno
-Salta se errore in memoria, canale esterno
+10 0 15</p></li>
+</ul>
+<p>a) Salta se e' stato rilevato un errore nella introduzione in memoria attraverso il
+canale interno.</p>
+<p>b) La rilevazione dell'errore avviene per mezzo del controllo di disparita'
+interno</p>
+<p>Salta se errore in memoria, canale esterno
 (110001)
 J
 Is
 IIII
 SEME
 Im 0
-10 o 15
-a) Salta se e' stato rilevato un errore nella introduzione in memoria attraverso il
-canale esterno.
-b) La rilevazione dell'errore avviene per mezzo del controllo di disparita
-153
-interno
-Salta se errore in accumulatore
-(110011)
+10 o 15</p>
+<p>a) Salta se e' stato rilevato un errore nella introduzione in memoria attraverso il
+canale esterno.A</p>
+<p>b) La rilevazione dell'errore avviene per mezzo del controllo di disparita</p>
+<p>interno</p>
+<p>Salta se errore in accumulatore</p>
+<p>(110011)
 K
 Is
 IIII
 Im 0
 SEA
-10 o 15
-a) Salta se e' stato rilevato un errore nella estrazione dall'accumulatore.
-b) La rilevazione avviene per mezzo del controllo di disparita'
-interno
-Salta se errore in unita' aritmetica
-(110111)
+10 o 15</p>
+<p>a) Salta se e' stato rilevato un errore nella estrazione dall'accumulatore.</p>
+<p>b) La rilevazione avviene per mezzo del controllo di disparita'</p>
+<p>interno</p>
+<p>Salta se errore in unita' aritmetica</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(110111)
 LIs
 III I
-I'm 0
+I&#39;m 0
 SEU
 10 o 15
-a) Salta se l'unita' aritmetica e logica ha commesso un errore.
-b) La rilevazione puo' avvenire per mezzo</p></li>
-</ul>
-<ol class="arabic simple">
-<li><p>del controllo di disparita</p></li>
-<li><p>della prova del 3 ;</p></li>
-<li><p>o dalla presenza di configurazioni speciali in operazioni aritmetiche.
-interno, GUN
-Salta se errore in unita' a nastro magnetico
+</pre></div>
+</div>
+<p>a) Salta se l'unita' aritmetica e logica ha commesso un errore.</p>
+<p>b) La rilevazione puo' avvenire per mezzo</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1) del controllo di disparita
+
+2) della prova del 3;
+</pre></div>
+</div>
+<ol class="arabic" start="3">
+<li><p>o dalla presenza di configurazioni speciali in operazioni aritmetiche.</p>
+<p>interno, GUN</p>
+<p>Salta se errore in unita' a nastro magnetico
 (110100)
 M
 Is
 I I I I
 Im 0
 SEN
-10 o 15
-a) Salta se una unita' a nastro magnetico ha commesso un errore
-b) La rilevazione avviene per mezzo del controllo di disparita
-c) Per le unita' che registrano in avanti la rilevazione avviene inoltre per mezzo
-del controllo di registrazione per rilettura e confronto.
-d) L'istruzione non viene eseguita se e' in corso una eventuale operazione
-stro
-dl na
-154
+10 o 15</p>
+</li>
+</ol>
+<p>a) Salta se una unita' a nastro magnetico ha commesso un errore</p>
+<p>b) La rilevazione avviene per mezzo del controllo di disparita</p>
+<p>c) Per le unita' che registrano in avanti la rilevazione avviene inoltre per
+mezzo del controllo di registrazione per rilettura e confronto.</p>
+<p>d) L'istruzione non viene eseguita se e' in corso una eventuale operazione del
+nastro</p>
+<p>154
 SCHEMA RIASSUNTIVO
 Istruzioni
 SE
 SEMI
 SEUM
-SEME
-Particolarita' dei salti su errori
-Funzione
+SEME</p>
+<p>Particolarita' dei salti su errori</p>
+<p>Funzione
 controllo della corretta elaborazione delle
 informazioni; il salto viene eseguito se
-10
-orrore si al verificato.
-Caratteristiche'.
-'indicazione di un tipo di errore viene
-seryata dal'istante in cui
-si
-rileyato fino alla fine della esecuzione del
-¡Piatenniono di colto di col tipo di erro-
-re, oppure fino alla esecuzione di una istru
-ione di salto relativa a piu° tipi di erro-
-che compare in queste istruzioni e' general-
-mente l'indirizzo della prima istruzione
-un sottoprogramma di segnalazione di errore
-o di correzione di errore.
-Per le istruzioni
-SCA e SE la prima istruzione del sottoprogram
-ma elaborativo deve gasare necessariamente
-un'istruzione di salto,
-Salti su errori
+l'errore si al verificato.</p>
+<p>Caratteristiche'.</p>
+<p>'indicazione di un tipo di errore viene seryata dal'istante in cui
+si rileyato fino alla fine della esecuzione del
+¡Piatenniono di colto di col tipo di errore, oppure fino alla esecuzione di una
+istruzione di salto relativa a piu° tipi di erro-</p>
+<p>che compare in queste istruzioni e' general mente l'indirizzo della prima
+istruzione un sottoprogramma di segnalazione di errore o di correzione di
+errore.</p>
+<p>Per le istruzioni SCA e SE la prima istruzione del sottoprogramma elaborativo
+deve gasare necessariamente un'istruzione di salto,</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Salti su errori
 SEA
 SEU
 SEN
@@ -3003,7 +2824,7 @@ SEL
 interno
 int. GUN
 int. uni-
-ta'linea
+ta&#39;linea
 10 o 15
 § Is
 10 o 15
@@ -3021,10 +2842,12 @@ Ts
 .45
 10 0 15
 Im
-CARATTERE</p></li>
-</ol>
-<p>(o'
-UNITA' A NASTRO MAGNETICO FR - 400 .-</p>
+CARATTERE
+
+(o&#39;
+UNITA&#39; A NASTRO MAGNETICO FR - 400 .-
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -3089,7 +2912,7 @@ UNITA' A NASTRO MAGNETICO FR - 400 .-</p>
 <li><a class="reference internal" href="#istruzioni-memoria-accumulatore"><span class="sectnum">7.1 </span>Istruzioni memoria-accumulatore</a></li>
 <li><a class="reference internal" href="#istruzioni-memoria-memoria"><span class="sectnum">7.2 </span>Istruzioni memoria-memoria</a></li>
 <li><a class="reference internal" href="#istruzioni-memoria-registri"><span class="sectnum">7.3 </span>Istruzioni memoria-registri</a></li>
-<li><a class="reference internal" href="#istruzioni-costanti-registri"><span class="sectnum">7.4 </span>- Istruzioni costanti-registri</a></li>
+<li><a class="reference internal" href="#istruzioni-costanti-registri"><span class="sectnum">7.4 </span>Istruzioni costanti-registri</a></li>
 <li><a class="reference internal" href="#istruzioni-per-la-moltiplicazione"><span class="sectnum">7.5 </span>Istruzioni per la moltiplicazione</a></li>
 <li><a class="reference internal" href="#istruzioni-per-la-ricerca-in-memoria"><span class="sectnum">7.6 </span>Istruzioni per la ricerca in memoria</a></li>
 <li><a class="reference internal" href="#le-istruzioni-per-le-operazioni-logiche"><span class="sectnum">7.7 </span>Le istruzioni per le operazioni logiche</a></li>

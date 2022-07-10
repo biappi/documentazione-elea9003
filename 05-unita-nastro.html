@@ -220,7 +220,7 @@
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-memoria-accumulatore"><span class="sectnum">7.1 </span>Istruzioni memoria-accumulatore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-memoria-memoria"><span class="sectnum">7.2 </span>Istruzioni memoria-memoria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-memoria-registri"><span class="sectnum">7.3 </span>Istruzioni memoria-registri</a></li>
-<li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-costanti-registri"><span class="sectnum">7.4 </span>- Istruzioni costanti-registri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-costanti-registri"><span class="sectnum">7.4 </span>Istruzioni costanti-registri</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-per-la-moltiplicazione"><span class="sectnum">7.5 </span>Istruzioni per la moltiplicazione</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-per-la-ricerca-in-memoria"><span class="sectnum">7.6 </span>Istruzioni per la ricerca in memoria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#le-istruzioni-per-le-operazioni-logiche"><span class="sectnum">7.7 </span>Le istruzioni per le operazioni logiche</a></li>
@@ -255,11 +255,17 @@
 <li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#funzione-e-logica-delle-istruzioni-s3p-tol-stop"><span class="sectnum">10.4 </span>Funzione e logica delle istruzioni s3P, TOL, STOP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#l-istruzione-sp"><span class="sectnum">10.5 </span>L'istruzione SP*</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#l-organizzazione-di-un-3-programma-che-prevede-l-uso-della-istruzione-s3p-dovra-pertanto-essere-legata-alle-seguenti-norme"><span class="sectnum">10.6 </span>L'organizzazione di un 3° programma che prevede l'uso della istruzione S3P* dovra' pertanto essere legata alle seguenti norme.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sola-sp"><span class="sectnum">10.7 </span>Esempio di 30 sequenza con uso della sola SP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sp"><span class="sectnum">10.8 </span>Esempio di 30 sequenza con uso della SP*</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="11-tavolo-comando.html"><span class="sectnum">11 </span>Il tavolo di comando</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="10-terza-sequenza-programma.html#salta-al-programma-esterno-s3p-interno-010101"><span class="sectnum">11 </span>Salta al programma esterno *
+S3P
+interno
+(010101)</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sola-s3p"><span class="sectnum">11.1 </span>Esempio di 30 sequenza con uso della sola S3P</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sp"><span class="sectnum">11.2 </span>Esempio di 30 sequenza con uso della SP*</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="11-tavolo-comando.html"><span class="sectnum">11 </span>Il tavolo di comando</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="11-tavolo-comando.html#generalita"><span class="sectnum">11.1 </span>Generalita'</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11-tavolo-comando.html#quadro-di-comando-manuale"><span class="sectnum">11.2 </span>Quadro di comando manuale</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11-tavolo-comando.html#il-quadro-di-controllo"><span class="sectnum">11.3 </span>Il quadro di controllo</a></li>
@@ -302,149 +308,119 @@
 <h1><span class="sectnum">5 </span>Le unita' a nastro magnetico<a class="headerlink" href="#le-unita-a-nastro-magnetico" title="Permalink to this heading">#</a></h1>
 <section id="governo-delle-unita-a-nastro">
 <h2><span class="sectnum">5.1 </span>Governo delle unita' a nastro<a class="headerlink" href="#governo-delle-unita-a-nastro" title="Permalink to this heading">#</a></h2>
-<p>E' questo l'organo mediante il quale si effettua il
-collegamento tra unita' a nastro e calcolatore, op
-pure fra due unita' a nastro.
-Le unita' collegabili al GUN sono al massimo 20.
-Le caratteristiche funzionali del GUN permettono di
-eseguire la verifica delle registrazioni contempora
-neamente alla registrazione stessa e di rilevare e
-segnalare all' unita' centrale eventuali errori di
-lettura o di registrazione. Il GUN puo' ordinare il
-riavvolgimento contemporaneo delle bobine di un nu-
-mero qualsiasi di unita' a nastro, e durante il riav
-volgimento operare su una unita' in lettura ed una
-in registrazione.
-Altre e piu' complesse operazioni possono essere ese
-guite dal GUN. Esso puo' disporre lo svolgimento di
-un nastro magnetico, nell' uno o nell'altro senso, fi
-no a far passare un numero di blocchi indicato da
-un'istruzione di programma; puo' far trascrivere un
-numero di blocchi indicato da una istruzione, da un
-nastro in lettura a un nastro in registrazione.
-Puo' inoltre ordinare lo svolgimento di un nastro ma
-gnetico fino ad arrivare al blocco che contiene una
-parola di lunghezza variabile previamente trasferi-
-ta in uno speciale registro. Questa operazione, det
-ta di ricerca, puo' essere effettuata anche trascri
-vendo contemporaneamente i blocchi che non contengg
-no la parola cercata ad un nastro in registrazione.
-Essa rende possibile la consultazione ed aggiorna-
-mento di un nastro archivio a grande velocita' e sen
-za che sia impegnato il calcolatore</p>
+<p>E' questo l'organo mediante il quale si effettua il collegamento tra unita' a
+nastro e calcolatore, oppure fra due unita' a nastro.</p>
+<p>Le unita' collegabili al GUN sono al massimo 20.</p>
+<p>Le caratteristiche funzionali del GUN permettono di eseguire la verifica delle
+registrazioni contemporaneamente alla registrazione stessa e di rilevare e
+segnalare all' unita' centrale eventuali errori di lettura o di registrazione.
+Il GUN puo' ordinare il riavvolgimento contemporaneo delle bobine di un numero
+qualsiasi di unita' a nastro, e durante il riavvolgimento operare su una unita'
+in lettura ed una in registrazione.</p>
+<p>Altre e piu' complesse operazioni possono essere eseguite dal GUN. Esso puo'
+disporre lo svolgimento di un nastro magnetico, nell' uno o nell'altro senso,
+fino a far passare un numero di blocchi indicato da un'istruzione di programma;
+puo' far trascrivere un numero di blocchi indicato da una istruzione, da un
+nastro in lettura a un nastro in registrazione.</p>
+<p>Puo' inoltre ordinare lo svolgimento di un nastro magnetico fino ad arrivare al
+blocco che contiene una parola di lunghezza variabile previamente trasferita in
+uno speciale registro. Questa operazione, detta di ricerca, puo' essere
+effettuata anche trascrivendo contemporaneamente i blocchi che non contengano
+la parola cercata ad un nastro in registrazione.</p>
+<p>Essa rende possibile la consultazione ed aggiornamento di un nastro archivio a
+grande velocita' e senza che sia impegnato il calcolatore.</p>
 </section>
 <section id="nastro-magnetico">
 <h2><span class="sectnum">5.2 </span>Nastro magnetico<a class="headerlink" href="#nastro-magnetico" title="Permalink to this heading">#</a></h2>
-<p>Il nastro magnetico e una banda di materia plasti
-ca (mylar) ricoperto su una faccia da ossido di fer
-ro magnetizzabile. si puo' pensare che la superfi-
-cie del nastro sia costituita da numerose piccole
-aree che possono essere magnetizzate o no. Lo stato
-magnetico di ciascuna di queste aree permette dun-
-que la rappresentazione materiale di un bit.
-Degli 8 bit che vengono utilizzati per ciascun ca
-rattere, uno serve per il controllo dell' esattezza
-della registrazione e uno per la temporizzazione.
-Ogni carattere numerico, alfabetico o speciale e'
-quindi rappresentato dalle combinazioni dei 6 bit
-restanti secondo il codice impiegato dall'Elea 9003.
-I caratteri sono registrati uno di seguito all'al-
-tro, in gruppi di capacita' variabile, ma normalmen
-te dell'ordine di diverse centinaia o alcune mi-
-gliaia di caratteri: tali gruppi, detti blocchi, so
-no separati sul nastro da un breve spazio non uti-
-lizzato, detto interblocco. La lunghezza dell' inter
-blocco e di 1 pollice.
-La larghezza del nastro e' di 1,27 cm, la lunghez
-za di una bobina e di circa 1100 metri, La densi-
-ta' di registrazione e' di ~120 caratteri per centi
-metro (corrispondente a 300 caratteri per pollice).
-Conseguentemente ogni bobina di nastro puo' contene
-re fino a 12.960.000 caratteri.
-quio
-&#64;MUC
-Il nastro viene svolto nell' uno e nell' altro senso,
-alla velocita' di 3, 81 mt. al secondo; in un secon
-do vengono letti (o registrati) 45.000 caratteri. Il
-tempo di lettura di una intera bobina ( 12. 960.000
-caratteri ) e quindi inferiore ai 5 minuti.
-ALCUNE UNITÀ' A NASTRO MAGNETICO COLLEGATE FR - 400 ._</p>
+<p>Il nastro magnetico e una banda di materia plastica (mylar) ricoperto su una
+faccia da ossido di ferro magnetizzabile. si puo' pensare che la superficie del
+nastro sia costituita da numerose piccole aree che possono essere magnetizzate
+o no. Lo stato magnetico di ciascuna di queste aree permette dunque la
+rappresentazione materiale di un bit.</p>
+<p>Degli 8 bit che vengono utilizzati per ciascun carattere, uno serve per il
+controllo dell' esattezza della registrazione e uno per la temporizzazione.</p>
+<p>Ogni carattere numerico, alfabetico o speciale e' quindi rappresentato dalle
+combinazioni dei 6 bit restanti secondo il codice impiegato dall'Elea 9003.</p>
+<p>I caratteri sono registrati uno di seguito all'altro, in gruppi di capacita'
+variabile, ma normalmente dell'ordine di diverse centinaia o alcune migliaia di
+caratteri: tali gruppi, detti blocchi, sono separati sul nastro da un breve
+spazio non utilizzato, detto interblocco. La lunghezza dell'interblocco e di 1
+pollice.</p>
+<p>La larghezza del nastro e' di 1,27 cm, la lunghezza di una bobina e di circa
+1100 metri, La densita' di registrazione e' di ~120 caratteri per centimetro
+(corrispondente a 300 caratteri per pollice).</p>
+<p>Conseguentemente ogni bobina di nastro puo' contenere fino a 12.960.000 caratteri.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>quio
+@MUC
+</pre></div>
+</div>
+<p>Il nastro viene svolto nell' uno e nell' altro senso, alla velocita' di 3,81
+mt. al secondo; in un secondo vengono letti (o registrati) 45.000 caratteri. Il
+tempo di lettura di una intera bobina (12.960.000 caratteri) e quindi
+inferiore ai 5 minuti.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALCUNE UNITÀ&#39; A NASTRO MAGNETICO COLLEGATE FR - 400 ._
+</pre></div>
+</div>
 <p>Per conoscere il numero N di caratteri registrabili
 in una bobina di nastro, con blocchi di n caratteri
-in media, si deve applicare la formula seguente :
-12.960.000• n
+in media, si deve applicare la formula seguente:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>12.960.000• n
 N=
-Cosi: ad esempio se i blocchi contengono 1000 carat
-teri, il numero totale di caratteri registrati
-ra' di 9.969.230
-Il numero b dei blocchi registrabili su una bobina
-dato ovviamente dalla formula analoga
-12.960.000
+</pre></div>
+</div>
+<p>Cosi: ad esempio se i blocchi contengono 1000 caratteri, il numero totale di caratteri registrati
+ra' di 9.969.230</p>
+<p>Il numero b dei blocchi registrabili su una bobina
+dato ovviamente dalla formula analoga</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>12.960.000
 n =
 n + 300
-Alle due estremita' della bobina il nastro e' metal-
-lizzato per una lunghezza opportuna, per avvertire
-1' unita' che lo governa della sua prossima fine.
-Le unita' a nastro magnetico dell' Elea 9003 sono do
-tate di due testine, una per la lettura e una per la
-registrazione.
-Esse possono leggere il nastro sia quando questo
-scorre nel senso detto convenzionalmente &quot;avanti&quot;
-sia quando scorre nel senso opposto, detto
-&quot;indie-
-tro&quot;; la verifica della corretta lettura e' effettua
-ta per mezzo del bit di disparita. La registrazio-
-ne e' invece verificata rileggendo con latestina di
-lettura, che si trova a valle di quella di registra
-zione quando il nastro scorre in avanti, quanto ap-
-pena registrato, e confrontandolo con 1' informazio-
-ne che doveva essere registrata. Come conseguenza,
-la registrazione puo' avvenire solo nel senso &quot;avan
-tis
-Quando 1' unita' riceve l'ordine di iniziare la let-
-tura o la registrazione di un blocco impiega un tem
-po di 5,7 millisecondi circa per avviare il nastro;
-terminata la lettura impiega 4,1 millisecondi per ar
-restare il nastro. L'interblocco di 1 pollice di lun
-ghezza corrisponde appunto alla lunghezza di nastro
-svolta durante questi tempi di decelerazione ed ac
-celerazione.
-Le unita' a nastro sono capaci di riavvolgere la bo
-bina completamente, senza intervento dell' elaborato
-re, che si limita ad impartire l'ordine relativo.
-I caratteri che distinguono le diverse unita' a na-
-stro collegabili al GUN, in numero di 20, sono i se
-guenti
-1, 2, 3, 4, 5, 6, 7, 8, 9, ~
-o, A, B, C, D, E, F, G, H, I,</p>
+</pre></div>
+</div>
+<p>Alle due estremita' della bobina il nastro e' metallizzato per una lunghezza
+opportuna, per avvertire l' unita' che lo governa della sua prossima fine.</p>
+<p>Le unita' a nastro magnetico dell' Elea 9003 sono dotate di due testine, una
+per la lettura e una per la registrazione.</p>
+<p>Esse possono leggere il nastro sia quando questo scorre nel senso detto
+convenzionalmente &quot;avanti&quot; sia quando scorre nel senso opposto, detto
+&quot;indietro&quot;; la verifica della corretta lettura e' effettuata per mezzo del bit
+di disparita. La registrazione e' invece verificata rileggendo con la testina
+di lettura, che si trova a valle di quella di registrazione quando il nastro
+scorre in avanti, quanto appena registrato, e confrontandolo con l'
+informazione che doveva essere registrata. Come conseguenza, la registrazione
+puo' avvenire solo nel senso &quot;avanti&quot;.  Quando l' unita' riceve l'ordine di
+iniziare la lettura o la registrazione di un blocco impiega un tempo di 5,7
+millisecondi circa per avviare il nastro; terminata la lettura impiega 4,1
+millisecondi per arrestare il nastro. L'interblocco di 1 pollice di lunghezza
+corrisponde appunto alla lunghezza di nastro svolta durante questi tempi di
+decelerazione ed accelerazione.</p>
+<p>Le unita' a nastro sono capaci di riavvolgere la bobina completamente, senza
+intervento dell' elaboratore, che si limita ad impartire l'ordine relativo.</p>
+<p>I caratteri che distinguono le diverse unita' a nastro collegabili al GUN, in
+numero di 20, sono i seguenti</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1, 2, 3, 4, 5, 6, 7, 8, 9, ~
+o, A, B, C, D, E, F, G, H, I,
+</pre></div>
+</div>
 </section>
 <section id="organizzazione-delle-informazioni-su-nastro-magnetico">
 <h2><span class="sectnum">5.3 </span>Organizzazione delle informazioni su nastro magnetico<a class="headerlink" href="#organizzazione-delle-informazioni-su-nastro-magnetico" title="Permalink to this heading">#</a></h2>
-<p>Il raggruppamento dei caratteri in blocchi, dovuto
-alla necessita' di trasferire un numero limitato di
-caratteri dal nastro magnetico alla memoria princi-
-pale dell' elaboratore, esige d' altra parte - almeno
-se si vuole che la lunghezza del blocco sia variabi
-le - uno speciale carattere che marchi l'inizio e la
-fine di ogni blocco. Tale carattere e', per 1' Elea
-9003, il carattere d: ogni blocco deve iniziare
-terminare con d
-Esiste d'altra parte, in molti casi, la convenienza
-di suddividere in sequenze, comprendenti uno o piu'
-blocchi, l'intera informazione registrata su nastro:
-a questo scopo si fara terminare l'ultimo blocco
-56
-della sequenza, ed iniziare il primo, con il carat-
-tere punto interrogativo&quot; (?) invece che con il ca
-rattere d.
-Per marcare la fine della informazione registrata su
-nastro magnetico viene invece utilizzato il caratte
-re &quot;moltiplicato per (#).
-Per suddividere un blocco in parti di lunghezza de-
-terminata, ai fini di una registrazione o lettura
-su indirizzi non consecutivi di memoria, viene usa-
-to il carattere 0
-57</p>
+<p>Il raggruppamento dei caratteri in blocchi, dovuto alla necessita' di
+trasferire un numero limitato di caratteri dal nastro magnetico alla memoria
+principale dell' elaboratore, esige d' altra parte - almeno se si vuole che la
+lunghezza del blocco sia variabile - uno speciale carattere che marchi l'inizio
+e la fine di ogni blocco. Tale carattere e', per l' Elea 9003, il carattere d:
+ogni blocco deve iniziare terminare con d</p>
+<p>Esiste d'altra parte, in molti casi, la convenienza di suddividere in sequenze,
+comprendenti uno o piu' blocchi, l'intera informazione registrata su nastro: a
+questo scopo si fara terminare l'ultimo blocco</p>
+<p>della sequenza, ed iniziare il primo, con il carattere punto interrogativo&quot; (?)
+invece che con il carattere d.</p>
+<p>Per marcare la fine della informazione registrata su nastro magnetico viene
+invece utilizzato il carattere &quot;moltiplicato per&quot; (#).</p>
+<p>Per suddividere un blocco in parti di lunghezza determinata, ai fini di una
+registrazione o lettura su indirizzi non consecutivi di memoria, viene usato il
+carattere 0.</p>
 </section>
 </section>
 

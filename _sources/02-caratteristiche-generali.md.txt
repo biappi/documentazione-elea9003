@@ -5,6 +5,7 @@ start: 2
 ```
 # Caratteristiche logiche dell'unita' centrale
 
+
 ## Caratteristiche generali
 
 L'unita' centrale del sistema Elea 9003, intesa come insieme di organi interni,
@@ -17,14 +18,14 @@ E' quindi l'unita' centrale che riceve gli ordini dal l'esterno, cioe' a dire
 il programma, che lo fa eseguire impegnando via via tutti gli elementi
 richiesti
 
-Gli organi che consentono all' unita centrale di ese guire questi compiti sono
-:
+Gli organi che consentono all' unita centrale di ese guire questi compiti sono:
 
  - l' unita' di governo
  - la memoria di lavoro
  - l' accumulatore
  - l' unita aritmetica e logica
  - il tavolo di comando
+
 
 ## Il programma
 
@@ -78,11 +79,12 @@ E' interessante notare che il terzo programma fa si che queste unita' di
 lettura - stampa - perforazione impegnino in misura minima il calcolatore.
 
 Qualora esse vengano fatte funzionare insieme ad una unita' a nastro magnetico,
-consentono la conversione nastro perforato - nastro magnetico, schede perforate
-- nastro magnetico e nastro magnetico - stampa.
+consentono la conversione nastro perforato - nastro magnetico, schede
+perforate - nastro magnetico e nastro magnetico - stampa.
 
 In tal modo puo' dirsi che l'intero complesso e' grado di funzionare come
 convertitore senza che lo svolgimento delle elaborazioni ne venga alterato.
+
 
 ## L'unita' di governo
 
@@ -95,6 +97,7 @@ vari organi dell'elaboratore per svolgere le loro funzioni e il controllo di
 quanto e' stato eseguito. Inoltre il governo e' in grado di tenere conto delle
 segnalazioni che i vari organi centrali e periferici possono dare per variare
 il corso delle operazioni.
+
 
 ## Il flusso delle informazioni
 
@@ -137,6 +140,7 @@ arrivano allora agli operatori aritmetico e logico l'uno attraver so il canale
 esterno, l'altro attraverso il canale in terno. Il risultato viene inviato in
 memoria dall'operatore aritmetico attraverso il canale interno.
 
+
 ## La memoria di lavoro
 
 Tutte le informazioni in entrata vengono convogliate alla memoria di lavoro. Da
@@ -168,6 +172,7 @@ occupate posizioni di memoria per delimitare le parole di lunghezza
 sconosciuta. L'Elea 9003 e dunque una macchina a parole di lunghezza variabile
 senza limitazioni.
 
+
 ## L' accumulatore e i registri T
 
 L' accumulatore e' una piccola memoria ausiliare a nuclei magnetici, la cui
@@ -194,6 +199,7 @@ Gli operandi possono essere trasferiti dalla memo ria principale all'
 accumulatore e viceversa: dalla memoria principale ai registri modificatori e
 vice versa: ma non direttamente dall' accumulatore ai registri e viceversa; il
 tempo di trasferimento dipende dalla lunghezza della parola.
+
 
 ## L'unita' aritmetica e logica
 
@@ -223,7 +229,6 @@ consentendoci:
 
  1. l'utilizzazione singola dei bit 2. l'elaborazione di proposizioni logiche
 
-
 Nelle operazioni di confronto l' unita' aritmetica e lo gica ricorda se le
 parole confrontate sono uguali o diverse e, in questo caso qual' e' la
 maggiore; il confronto puo' essere eseguito fra parole numeriche e alfabetiche
@@ -232,6 +237,7 @@ e fra parole dotate o prive di segno.
 Le caratteristiche di quest' operazione rendono parti colarmente facile
 l'ordinamento alfabetico e la selezione di codici o nominativi di
 identificazione.
+
 
 ## I controlli
 
@@ -255,12 +261,12 @@ modulo 3 del moltiplicando, moltiplicato per il resto della divisione modulo 3
 del moltiplicatore e aumentato del resto della divisione modulo 3 dell'
 addendo.
 
-
 Esempio 19 11 215 1 0 2
 
 Nelle operazioni aritmetiche una ulteriore forma di controllo e' data dalla
 verifica della rappresentazione dei caratteri numerici ed alfabetici; in essi
 infatti non compaiono mai le configurazioni c, b, a, = 101, oppure b, a, 10
+
 
 ## Il tavolo di comando
 

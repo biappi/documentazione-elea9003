@@ -220,7 +220,7 @@
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-memoria-accumulatore"><span class="sectnum">7.1 </span>Istruzioni memoria-accumulatore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-memoria-memoria"><span class="sectnum">7.2 </span>Istruzioni memoria-memoria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-memoria-registri"><span class="sectnum">7.3 </span>Istruzioni memoria-registri</a></li>
-<li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-costanti-registri"><span class="sectnum">7.4 </span>- Istruzioni costanti-registri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-costanti-registri"><span class="sectnum">7.4 </span>Istruzioni costanti-registri</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-per-la-moltiplicazione"><span class="sectnum">7.5 </span>Istruzioni per la moltiplicazione</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#istruzioni-per-la-ricerca-in-memoria"><span class="sectnum">7.6 </span>Istruzioni per la ricerca in memoria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07-istruzioni-unita-centrale.html#le-istruzioni-per-le-operazioni-logiche"><span class="sectnum">7.7 </span>Le istruzioni per le operazioni logiche</a></li>
@@ -255,11 +255,17 @@
 <li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#funzione-e-logica-delle-istruzioni-s3p-tol-stop"><span class="sectnum">10.4 </span>Funzione e logica delle istruzioni s3P, TOL, STOP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#l-istruzione-sp"><span class="sectnum">10.5 </span>L'istruzione SP*</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#l-organizzazione-di-un-3-programma-che-prevede-l-uso-della-istruzione-s3p-dovra-pertanto-essere-legata-alle-seguenti-norme"><span class="sectnum">10.6 </span>L'organizzazione di un 3° programma che prevede l'uso della istruzione S3P* dovra' pertanto essere legata alle seguenti norme.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sola-sp"><span class="sectnum">10.7 </span>Esempio di 30 sequenza con uso della sola SP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sp"><span class="sectnum">10.8 </span>Esempio di 30 sequenza con uso della SP*</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="11-tavolo-comando.html"><span class="sectnum">11 </span>Il tavolo di comando</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="10-terza-sequenza-programma.html#salta-al-programma-esterno-s3p-interno-010101"><span class="sectnum">11 </span>Salta al programma esterno *
+S3P
+interno
+(010101)</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sola-s3p"><span class="sectnum">11.1 </span>Esempio di 30 sequenza con uso della sola S3P</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-terza-sequenza-programma.html#esempio-di-30-sequenza-con-uso-della-sp"><span class="sectnum">11.2 </span>Esempio di 30 sequenza con uso della SP*</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="11-tavolo-comando.html"><span class="sectnum">11 </span>Il tavolo di comando</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="11-tavolo-comando.html#generalita"><span class="sectnum">11.1 </span>Generalita'</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11-tavolo-comando.html#quadro-di-comando-manuale"><span class="sectnum">11.2 </span>Quadro di comando manuale</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11-tavolo-comando.html#il-quadro-di-controllo"><span class="sectnum">11.3 </span>Il quadro di controllo</a></li>
@@ -302,188 +308,141 @@
 <h1><span class="sectnum">6 </span>Organizzazione della programmazione<a class="headerlink" href="#organizzazione-della-programmazione" title="Permalink to this heading">#</a></h1>
 <section id="struttura-della-programmazione">
 <h2><span class="sectnum">6.1 </span>Struttura della programmazione<a class="headerlink" href="#struttura-della-programmazione" title="Permalink to this heading">#</a></h2>
-<p>Chiamiamo programma una sequenza di disposizioni o
-comandi che eseguiti uno di seguito all'altro, por
-tano alla soluzione di un problema secondo la logi
-ca particolare dell' elaboratore.
-L'impostazione di un programma puo' essere ovvia-
-mente diversa secondo le caratteristiche dell'ela-
-boratore a cui il programma stesso va indirizzato;
-e' indispensabile quindi conoscerne i particolari
-requisiti, studiarne a fondo le possibili utilizza
-zioni, per riuscire a costruire un programma che
-sfrutti al massimo le capacita' della macchina.
-Oltre che il numero e la struttura dei comandi che
-il sistema Elea 9003 e' in grado di interpretare ed
-eseguire, si rende necessario conoscere di esso le
-peculiari caratteristiche : la simultaneita' opera
-tiva o plurisequenzialita di programma, e lo sfrut
-tamento massimo del nastro magnetico come principa
-le supporto delle informazioni.
-E' sulla traccia di queste nozioni, che il program
-matore deve risolvere i problemi che gli
-vengonc
-sottoposti
-La stesura della soluzione prescelta deve pertanto
-essere espressa mediante un linguaggio comprensibi
-le alla macchina : e' percio richiesta al program
-matore la conoscenza dei simboli con cui i comandi
-devono essere formulati e le regole a cui essi so-
-no soggetti.
-L'esprimersi nel modo sopradetto significa espri-
-mersi in linguaggio macchina.
-59
-E' tuttavia opportuno notare che esiste il modo di
-evitare al programmatore la fatica che questo mezzo
-di comunicazione comporta.
-E' stato cioe' creato un linguaggio, chiamato lin-
-guaggio simbolico, molto piu vicino a quello da noi
-abitualmente usato, e che quindi non richiede lo
-sforzo mentale continuo di adattamento alla macchi-
-na.
-E' evidente pero' che il lavoro di cui viene alleg-
-gerito 1' uomo non puo' che essere trasferito all'e-
-laboratore che viene dotato in questo caso di unpar
-ticolare dispositivo che gli permette la traduzione
-di questo nuovo linguaggio nei simboli ad esso intel
-ligibili.
-Nei capitoli che seguono si trovano illustrate le i
-struzioni, i comandi cioe' che si possono impartire
-alla macchina, se ne elencano le caratteristiche, ed
-infine si espongono le norme relative all'utilizza-
-zione dei nastri e dei programmi plurisequenziali</p>
+<p>Chiamiamo programma una sequenza di disposizioni o comandi che eseguiti uno di
+seguito all'altro, portano alla soluzione di un problema secondo la logica
+particolare dell' elaboratore.</p>
+<p>L'impostazione di un programma puo' essere ovviamente diversa secondo le
+caratteristiche dell'elaboratore a cui il programma stesso va indirizzato; e'
+indispensabile quindi conoscerne i particolari requisiti, studiarne a fondo le
+possibili utilizzazioni, per riuscire a costruire un programma che sfrutti al
+massimo le capacita' della macchina.</p>
+<p>Oltre che il numero e la struttura dei comandi che il sistema Elea 9003 e' in
+grado di interpretare ed eseguire, si rende necessario conoscere di esso le
+peculiari caratteristiche : la simultaneita' operativa o plurisequenzialita di
+programma, e lo sfruttamento massimo del nastro magnetico come principale
+supporto delle informazioni.</p>
+<p>E' sulla traccia di queste nozioni, che il programmatore deve risolvere i
+problemi che gli vengono sottoposti.</p>
+<p>La stesura della soluzione prescelta deve pertanto essere espressa mediante un
+linguaggio comprensibile alla macchina : e' percio richiesta al programmatore
+la conoscenza dei simboli con cui i comandi devono essere formulati e le regole
+a cui essi sono soggetti.</p>
+<p>L'esprimersi nel modo sopradetto significa esprimersi in linguaggio macchina.</p>
+<p>E' tuttavia opportuno notare che esiste il modo di evitare al programmatore la
+fatica che questo mezzo di comunicazione comporta.</p>
+<p>E' stato cioe' creato un linguaggio, chiamato linguaggio simbolico, molto piu
+vicino a quello da noi abitualmente usato, e che quindi non richiede lo sforzo
+mentale continuo di adattamento alla macchina.</p>
+<p>E' evidente pero' che il lavoro di cui viene alleggerito l' uomo non puo' che
+essere trasferito all'elaboratore che viene dotato in questo caso di un
+particolare dispositivo che gli permette la traduzione di questo nuovo
+linguaggio nei simboli ad esso intelligibili.</p>
+<p>Nei capitoli che seguono si trovano illustrate le istruzioni, i comandi cioe'
+che si possono impartire alla macchina, se ne elencano le caratteristiche, ed
+infine si espongono le norme relative all'utilizzazione dei nastri e dei
+programmi plurisequenziali.</p>
 </section>
 <section id="la-codificazione-delle-informazioni">
 <h2><span class="sectnum">6.2 </span>La codificazione delle informazioni<a class="headerlink" href="#la-codificazione-delle-informazioni" title="Permalink to this heading">#</a></h2>
-<p>Le informazioni - dati, risultati e istruzioni di
-programma - sono rappresentate per mezzo di caratte
-ri alfanumerici e speciali, la cui codificazione va
-ria secondo il supporto utilizzato per la loro regi
-strazione.
-Per i seguenti supporti : la memoria principale e i
-registri del calcolatore, i nastri ed i tamburi ma-
-gnetici ed infine la banda perforata, ogni caratte-
-re e' rappresentato da un insieme di sette variabi.
-li binarie denominate bit: sei bit servono per la
-rappresentazione del carattere vero e proprio,
-settimo, che viene denominato bit di disparita ,ser
-60
-61</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LA</span> <span class="n">CONFIGURAZIONE</span> <span class="n">IN</span> <span class="n">BIT</span> <span class="n">DEI</span> <span class="n">CARATTERI</span> <span class="n">DELL</span><span class="s1">&#39; ELEA 9003</span>
-<span class="n">fedcba</span>
-<span class="n">ZONA</span>
-<span class="n">ZONA</span> <span class="n">dc</span> <span class="n">b</span> <span class="n">a</span>
-<span class="n">c</span> <span class="n">e</span>
-<span class="mi">0000</span> <span class="mi">0001</span> <span class="mi">0011</span> <span class="mi">0111</span> <span class="mi">0100</span> <span class="mi">1000</span> <span class="mi">1001</span> <span class="mi">1011</span> <span class="mi">1111</span> <span class="mi">1100</span> <span class="mi">0010</span> <span class="mi">0101</span> <span class="mi">0110</span> <span class="mi">1010</span> <span class="mi">1101</span>
-<span class="mi">1110</span>
-<span class="o">~</span>
-<span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span>
-<span class="c1">#</span>
-<span class="n">biA</span> <span class="n">B</span> <span class="n">C</span> <span class="n">DEEGHI</span>
-<span class="n">È</span><span class="s1">&#39;SKIMNOPOR</span>
-<span class="n">STUVWXYZ</span>
-<span class="p">(</span><span class="n">n</span> <span class="o">*=</span><span class="mi">0</span>
-<span class="c1">#</span>
-<span class="n">o</span>
-<span class="n">LA</span> <span class="n">CONFIGURAZIONE</span> <span class="n">DEI</span> <span class="n">CARATTERI</span> <span class="n">DELL</span><span class="s1">&#39;ELEA 9003 SU NASTRO PERFORATO</span>
-<span class="mi">62</span>
-<span class="mi">65</span> <span class="mi">4321</span>
-<span class="n">ZONA</span> <span class="mi">4</span> <span class="mi">32</span> <span class="mi">1</span>
-<span class="n">ZONA</span>
-<span class="mi">6</span> <span class="mi">5</span>
-<span class="mi">0001</span> <span class="mi">1001</span> <span class="mi">1000</span> <span class="mi">0100</span> <span class="mi">1100</span> <span class="mi">1010</span> <span class="mi">0110</span> <span class="mi">0101</span> <span class="mi">0011</span> <span class="mi">0010</span> <span class="mi">0000</span> <span class="mi">0</span><span class="p">:</span><span class="mi">11</span> <span class="mi">1111</span> <span class="mi">1011</span> <span class="mi">1101</span> <span class="mi">1110</span>
-<span class="o">..</span>
-<span class="c1">#</span>
-<span class="o">+</span>
-<span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span>
-<span class="o">~</span>
-<span class="n">o</span>
-<span class="n">x</span>
-<span class="n">DE</span> <span class="n">EGHIS</span>
-<span class="n">u</span>
-<span class="o">-</span>
-<span class="o">@</span>
-<span class="o">&gt;</span>
-<span class="o">.</span> <span class="n">Un</span>
-<span class="o">.</span>
+<p>Le informazioni - dati, risultati e istruzioni di programma - sono
+rappresentate per mezzo di caratteri alfanumerici e speciali, la cui
+codificazione varia secondo il supporto utilizzato per la loro registrazione.</p>
+<p>Per i seguenti supporti : la memoria principale e i registri del calcolatore, i
+nastri ed i tamburi magnetici ed infine la banda perforata, ogni carattere e'
+rappresentato da un insieme di sette variabili binarie denominate bit: sei bit
+servono per la rappresentazione del carattere vero e proprio, settimo, che
+viene denominato bit di disparita, serve</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>LA CONFIGURAZIONE IN BIT DEI CARATTERI DELL&#39; ELEA 9003
+fedcba
+ZONA
+ZONA dc b a
+c e
+0000 0001 0011 0111 0100 1000 1001 1011 1111 1100 0010 0101 0110 1010 1101
+1110
+~
+3 4 5 6 7 8 9
+#
+biA B C DEEGHI
+È&#39;SKIMNOPOR
+STUVWXYZ
+(n *=0
+#
+o
+LA CONFIGURAZIONE DEI CARATTERI DELL&#39;ELEA 9003 SU NASTRO PERFORATO
+62
+65 4321
+ZONA 4 32 1
+ZONA
+6 5
+0001 1001 1000 0100 1100 1010 0110 0101 0011 0010 0000 0:11 1111 1011 1101 1110
+..
+#
++
+5 6 7 8 9
+~
+o
+x
+DE EGHIS
+u
+-
+@
+&gt;
+. Un
+.
 </pre></div>
 </div>
-<p>ve per il controllo dell' esatta registrazione delle
-informazioni. Piu' precisamente il settimo bit e' 0
-o 1 in modo che il numero dei bit 1 che compaiono in
-ogni carattere sia dispari. Su banda perforata non
-compare il settimo bit.
-Tali bit sono materializzati:</p>
+<p>per il controllo dell' esatta registrazione delle informazioni. Piu'
+precisamente il settimo bit e' 0 o 1 in modo che il numero dei bit 1 che
+compaiono in ogni carattere sia dispari. Su banda perforata non compare il
+settimo bit.</p>
+<p>Tali bit sono materializzati:</p>
 <ul class="simple">
-<li><p>da posizioni di perforazione sulla banda perfora-
-ta:</p></li>
-<li><p>da nuclei magnetizzabili nella memoria principale
-e nei registri del calcolatore;</p></li>
-<li><p>da aree di magnetizzazione nei nastri e tamburi ma
-gnetici.
-I sei bit del codice permettono ovviamente di rap-
-presentare 64 caratteri fra cifre decimali, lette-
-re, punteggiatura, principali simboli matematici, e
-altri caratteri speciali, che solitamente vengono
-utilizzati per l'organizzazione delle informazioni.
-Per codice del calcolatore: si intende il codice
-usato per le memorie a nuclei magnetici e per i na-
-stri e tamburi magnetici; per &quot;codice di perforazio
-ne: il codice utilizzato nella perforazione della
-banda. Le lettere a, b, c, d, e, f, nel codice del
-calcolatore, ed i numeri 1, 2, 3, 4, 5, 6 nel codi-
-ce di perforazione, indicano la posizione dei diver
-si bit nell'ambito del carattere rappresentato.
-I singoli caratteri possono essere raggruppati con
-diversi criteri in modo da formare parole, elemen-
-ti, blocchi, sequenze, ecc. La parola e' formata da
-uno o piu' caratteri e identifica una unita' di in-
-formazione : una quantita' numerica, un nome, una da
-ta, есс
-63
-Durante l'elaborazione una parola puo' essere iden-
-tificata mediante il suo indirizzo iniziale di memo
-ria e la sua lunghezza oppure per mezzo del suo ca-
-rattere estremo scelto a piacere tra i 64 possibi
-li.
-un elemento e composto da una o piu parole
-eral-
-presenta, ad esempio, un fatto contabile o ammini.
-strativo, come un movimento bancario o di magazzi
-no,
-ecc.
-Un blocco e' composto da uno o piu' elementi. Una se
-auenza e' composta da uno o piu blocchi.</p></li>
+<li><p>da posizioni di perforazione sulla banda perforata:</p></li>
+<li><p>da nuclei magnetizzabili nella memoria principale e nei registri del
+calcolatore;</p></li>
+<li><p>da aree di magnetizzazione nei nastri e tamburi magnetici.</p></li>
 </ul>
+<p>I sei bit del codice permettono ovviamente di rappresentare 64 caratteri fra
+cifre decimali, lettere, punteggiatura, principali simboli matematici, e altri
+caratteri speciali, che solitamente vengono utilizzati per l'organizzazione
+delle informazioni.</p>
+<p>Per codice del calcolatore: si intende il codice usato per le memorie a nuclei
+magnetici e per i nastri e tamburi magnetici; per &quot;codice di perforazione: il
+codice utilizzato nella perforazione della banda. Le lettere a, b, c, d, e, f,
+nel codice del calcolatore, ed i numeri 1, 2, 3, 4, 5, 6 nel codice di
+perforazione, indicano la posizione dei diversi bit nell'ambito del carattere
+rappresentato.</p>
+<p>I singoli caratteri possono essere raggruppati con diversi criteri in modo da
+formare parole, elementi, blocchi, sequenze, ecc. La parola e' formata da uno o
+piu' caratteri e identifica una unita' di informazione : una quantita'
+numerica, un nome, una da ta, есс.</p>
+<p>Durante l'elaborazione una parola puo' essere identificata mediante il suo
+indirizzo iniziale di memoria e la sua lunghezza oppure per mezzo del suo
+carattere estremo scelto a piacere tra i 64 possibili.</p>
+<p>un elemento e composto da una o piu parole e rappresenta, ad esempio, un fatto
+contabile o amministrativo, come un movimento bancario o di magazzino, ecc.</p>
+<p>Un blocco e' composto da uno o piu' elementi. Una sequenza e' composta da uno o
+piu blocchi.</p>
 </section>
 <section id="la-codificazione-delle-istruzioni">
 <h2><span class="sectnum">6.3 </span>La codificazione delle istruzioni<a class="headerlink" href="#la-codificazione-delle-istruzioni" title="Permalink to this heading">#</a></h2>
 <p>Una istruzione di programma e' codificata per mezzo
-di otto caratteri alfanumerici. Questi hanno normal
-mente la seguente funzione : il primo - nell'ordine
-in cui sono esaminati dall'unita' di governo - indi
-ca la funzione F, che definisce di quale tipo di i-
-struzione si tratta; il secondo indica il registro
-T modificatore, il cui contenuto modifica l'indiriz
-2o; i quattro seguenti contengono un indirizzo I ;
-gli ultimi due specificano la lunghezza L dell' in
-formazione da trattare.
-Vi sono pero' molte importanti eccezioni a questa re
-gola : ad esempio, per tutte le istruzioni di salto
-l'ultimo carattere specifica il tipo di salto; le i
-struzioni interessanti memorie e registri hanno la
-configurazione
-64
-LA CONFIGURAZIONE DELLE ISTRUZIONI DELL'ELEA 9003
+di otto caratteri alfanumerici. Questi hanno normalmente la seguente funzione : il primo - nell'ordine
+in cui sono esaminati dall'unita' di governo - indica la funzione F, che definisce di quale tipo di istruzione si tratta; il secondo indica il registro
+T modificatore, il cui contenuto modifica l'indirizzo; i quattro seguenti contengono un indirizzo I;
+gli ultimi due specificano la lunghezza L dell'informazione da trattare.</p>
+<p>Vi sono pero' molte importanti eccezioni a questa regola: ad esempio, per tutte le istruzioni di salto
+l'ultimo carattere specifica il tipo di salto; le istruzioni interessanti memorie e registri hanno la
+configurazione</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>LA CONFIGURAZIONE DELLE ISTRUZIONI DELL&#39;ELEA 9003
 SPECIFICA
 ILTIPO OI OPERAZIUN
 INDICAL RE
 GISTRU O MUNICIC
-• PAPPRESENTALONECARAIERI DA URL</p>
-<ul class="simple">
-<li><p>RARE A PARTIRE DALL'INDIRIZZI
+• PAPPRESENTALONECARAIERI DA URL
+- RARE A PARTIRE DALL&#39;INDIRIZZI
 IL TIPO DI OPERAZIONE
-• DA L'INDIRIZZO DELLA PAROLA
+• DA L&#39;INDIRIZZO DELLA PAROLA
 INDICA IL REGISTRO DEL IT° OPERANDO
 DI CARATTERI DA OPERA
 i cocci
@@ -494,7 +453,7 @@ L
 DA OPERARE SUL PEGISTRO 1
 • SPECIFICA IL TIPO DI OPERAZIONE
 = INDICA IL REGISTRO T DI MODIFICA
-• INDIRIZZO DELL'ISTRUZIONE CUI SI SALTI
+• INDIRIZZO DELL&#39;ISTRUZIONE CUI SI SALTI
 = REGISTRO T IN CUI VIENA
 DICORDATO LINDI
 SI DEVE VERIFICARI
@@ -504,60 +463,52 @@ DEGISTRO T DI MODIFICA
 INDIRIZZO DEL BLOCCO IN MEMORI
 UNITA A NASTRO CHIAMATA AD OPERAR
 CARATTERE NON CONSIDERATO
-65
-Qualunque sia il significato degli otto caratteri di
-una istruzione, la sua esecuzione si svolge in due
-fasi : una fase preparatoria ed una fase esecutiva.
-Alcune istruzioni non comportano fase esecutiva.
-La fase preparatoria ha una durata di nove periodi
-di cifra, che si indicano con i simboli da po a p8;
-i periodi da p1 a p8 sono utilizzati per la lettura
-e l'analisi dei caratteri dell'istruzione, e per la
-predisposizione degli organi interessati all'istru-
-zione stessa
-In molti casi alcune posizioni dell'istruzione non
-hanno significato, e non sono neppure esaminate dal
-l'unita' di governo, in queste posizioni si scrive-
-ra, per convenzione. la lettera x
-Esse possono contenere un carattere qualsiasi, e pos
-sono quindi essere utilizzate per la registrazione
-di costanti o altre informazioni.
-Si e' visto che la posizione p2 dell'istruzione in-
-dica il registro T che deve intervenire a modifica-
-re l'istruzione stessa, Se non si desidera che que
-sta venga modificata e' necessario indicare un regi
-stro T inesistente : cio' si ottiene registrando in
-p2 il carattere # (diesis), oppure il carattere
-(da ... a). E' questo un fatto generale : se in una
-istruzione una determinata posizione indica normal-
-mente uno fra diversi organi della macchina, e non
-si vuole richiamare nessun organo di quel tipo, in
-essa si deve registrare un # (diesis).
-Le posizioni da p3 a p6 sono normalmente riservate
-all'indirizzo, e precisamente
-p3 indica le unita' dell'indirizzo
-p4 indica le decine dell'indirizzo
-66
-p5 indica le centinaia dell'indirizzo
-p6 indica le migliaia dell'indirizzo.
-Le unita' e decine sono sempre espresse mediante ca
-ratteri numerici; le centinaia e le migliaia invece
-possono essere espresse con caratteri sia numerici
-che alfabetici o speciali: cio' permette di indica
-re con solo 4 caratteri tutti gli indirizzi della me
-moria principale. La tabella N. 3 in appendice ri-
-porta la corrispondenza fra i caratteri registrati
-in p5 e p6 e le migliaia e centinaia.
-Esempi:
-L'indirizzo 12012 sara' indicato B012
-L'indirizzo 31152 sara' indicato s152
-L'indirizzo 42500 sara' indicato 2E00.
-L'indirizzo che compare nell'istruzione e' quello del
+</pre></div>
+</div>
+<p>Qualunque sia il significato degli otto caratteri di una istruzione, la sua
+esecuzione si svolge in due fasi: una fase preparatoria ed una fase esecutiva.</p>
+<p>Alcune istruzioni non comportano fase esecutiva.</p>
+<p>La fase preparatoria ha una durata di nove periodidi cifra, che si indicano con
+i simboli da p0 a p8; i periodi da p1 a p8 sono utilizzati per la lettura e
+l'analisi dei caratteri dell'istruzione, e per la predisposizione degli organi
+interessati all'istruzione stessa.</p>
+<p>In molti casi alcune posizioni dell'istruzione non hanno significato, e non
+sono neppure esaminate dall'unita' di governo, in queste posizioni si scrivera,
+per convenzione. la lettera x.  Esse possono contenere un carattere qualsiasi,
+e possono quindi essere utilizzate per la registrazione di costanti o altre
+informazioni.</p>
+<p>Si e' visto che la posizione p2 dell'istruzione indica il registro T che deve
+intervenire a modificare l'istruzione stessa, Se non si desidera che questa
+venga modificata e' necessario indicare un registro T inesistente : cio' si
+ottiene registrando in p2 il carattere # (diesis), oppure il carattere (da ...
+a). E' questo un fatto generale: se in una istruzione una determinata posizione
+indica normalmente uno fra diversi organi della macchina, e non si vuole
+richiamare nessun organo di quel tipo, in essa si deve registrare un #
+(diesis).</p>
+<p>Le posizioni da p3 a p6 sono normalmente riservate all'indirizzo, e
+precisamente</p>
+<ul class="simple">
+<li><p>p3 indica le unita' dell'indirizzo</p></li>
+<li><p>p4 indica le decine dell'indirizzo</p></li>
+<li><p>p5 indica le centinaia dell'indirizzo</p></li>
+<li><p>p6 indica le migliaia dell'indirizzo.</p></li>
+</ul>
+<p>Le unita' e decine sono sempre espresse mediante caratteri numerici; le
+centinaia e le migliaia invece possono essere espresse con caratteri sia
+numerici che alfabetici o speciali: cio' permette di indicare con solo 4
+caratteri tutti gli indirizzi della memoria principale. La tabella N. 3 in
+appendice riporta la corrispondenza fra i caratteri registrati in p5 e p6 e le
+migliaia e centinaia.</p>
+<p>Esempi:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>L&#39;indirizzo 12012 sara&#39; indicato B012
+L&#39;indirizzo 31152 sara&#39; indicato s152
+L&#39;indirizzo 42500 sara&#39; indicato 2E00.
+L&#39;indirizzo che compare nell&#39;istruzione e&#39; quello del
 la posizione di memoria in cui compare il segno o il
 carattere meno significativo della parola da opera-
-re. L'operazione inizia dall'indirizzo specificato
-e procede per indirizzi decrescenti. Cosi' ad esem-
-pio l'indirizzo della parola 546ABUL e' 1015
+re. L&#39;operazione inizia dall&#39;indirizzo specificato
+e procede per indirizzi decrescenti. Cosi&#39; ad esem-
+pio l&#39;indirizzo della parola 546ABUL e&#39; 1015
 Caratteri
 Posizioni di memoria
 67
@@ -569,10 +520,8 @@ POSIZIONI
 160.000
 POSIZIONI
 CARATTERI RAPPRESENTANTI LE MIGLIAIA E LE CENTINAIA NEI DIVERSI GRUPPI DI MEMORIA
-DECINE
-UNITA MIGLIAIA
-UNITA CENTINAI
-8 9
+DECINE UNITA MIGLIAIA
+UNITA CENTINAI 8 9
 12 3 4 56 7 8 9
 4 5 6 7 8 9
 E FGH
@@ -590,47 +539,35 @@ M NO PQ
 R
 UV WXYZ
 68
-Tabella N. 3</p></li>
-</ul>
+Tabella N. 3
+</pre></div>
+</div>
 </section>
 <section id="modifica-automatica-delle-istruzioni">
 <h2><span class="sectnum">6.4 </span>Modifica automatica delle istruzioni<a class="headerlink" href="#modifica-automatica-delle-istruzioni" title="Permalink to this heading">#</a></h2>
-<p>Per ogni istruzione e' indicato se essa e' modifica
-bile automaticamente, nel qual caso il registro T mg
-dificatore e' specificato nella posizione p2.
-L'operazione di modifica avviene nel modo seguente:
-i caratteri che si trovano in posizione p3 p4 p5 p6
-p7 dell'istruzione vengono sommati ai caratteri con
-tenuti nel T modificatore, dall'inizio di questo fi
-no al bit gT per un massimo di cinque posizioni. Le
-posizioni p3, p4 e p5 dell'istruzione, cosi' come le
-corrispondenti posizioni 1ª, 2a e 3a del T modifica
-tore, possono contenere solo cifre decimali; su que
-ste posizioni la somma viene effettuata secondo le
-regole della aritmetica in base 10 e gli eventuali
-riporti passano dalla 1a alla 2a posizione, dalla za
-alla 3ª, dalla 3a alla 42, La posizione p6 dell'i-
-struzione e la 4ª posizione del T modificatore pos-
-sono invece contenere i caratteri alfabetici o spe-
-ciali utilizzati per rappresentare le migliaia del-
-l'indirizzo fino a 39.000 (da 40.000 a 79.000 , da
-80. 000 a 119.000, da 120.000 a 159.000 a seconda del
-la capacita' della memoria principale). La addizio
-ne di questi due caratteri da come risultato il ca
-rattere che rappresenta la somma delle migliaia in-
-dicate nei due addendi (tenendo conto dell' eventua-
-le riporto dalla 3ª posizione di somma); oppure se
-viene superato il trentanovesimo migliaio, il carat
-tere che rappresenta la stessa somma diminuito di
-quaranta. Non vi e' mai passaggio di riporto alla 52
-posizione di somma, ma di tale riporto si tiene con
-to sulla 4ª posizione stessa.
-In altre parole, la somma sulla 4à posizione si ef-
-fettua secondo una aritmetica in base quaranta con
-soppressione del riporto; le cifre di tale aritmeti
-ca sono elencate nella tabella N. 3
-69
-ESEMPI D MODIFICA AUTOMATICA DELLE ISTRUZIONI
+<p>Per ogni istruzione e' indicato se essa e' modificabile automaticamente, nel qual caso il registro T modificatore e' specificato nella posizione p2.</p>
+<p>L'operazione di modifica avviene nel modo seguente: i caratteri che si trovano
+in posizione p3 p4 p5 p6 p7 dell'istruzione vengono sommati ai caratteri
+contenuti nel T modificatore, dall'inizio di questo fino al bit gT per un
+massimo di cinque posizioni. Le posizioni p3, p4 e p5 dell'istruzione, cosi'
+come le corrispondenti posizioni 1ª, 2a e 3a del T modificatore, possono
+contenere solo cifre decimali; su queste posizioni la somma viene effettuata
+secondo le regole della aritmetica in base 10 e gli eventuali riporti passano
+dalla 1a alla 2a posizione, dalla za alla 3ª, dalla 3a alla 42, La posizione p6
+dell'istruzione e la 4ª posizione del T modificatore possono invece contenere i
+caratteri alfabetici o speciali utilizzati per rappresentare le migliaia
+dell'indirizzo fino a 39.000 (da 40.000 a 79.000 , da 80. 000 a 119.000, da
+120.000 a 159.000 a seconda della capacita' della memoria principale). La
+addizione di questi due caratteri da come risultato il carattere che
+rappresenta la somma delle migliaia indicate nei due addendi (tenendo conto
+dell' eventuale riporto dalla 3ª posizione di somma); oppure se viene superato
+il trentanovesimo migliaio, il carattere che rappresenta la stessa somma
+diminuito di quaranta. Non vi e' mai passaggio di riporto alla 52 posizione di
+somma, ma di tale riporto si tiene conto sulla 4ª posizione stessa.</p>
+<p>In altre parole, la somma sulla 4à posizione si effettua secondo una aritmetica
+in base quaranta con soppressione del riporto; le cifre di tale aritmetica sono
+elencate nella tabella N. 3</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ESEMPI D MODIFICA AUTOMATICA DELLE ISTRUZIONI
 0 5 4 1 8 7 3 F
 B 0 1 5 E F
 8 2
@@ -648,197 +585,148 @@ ES. 1 - 20:000 POSIZION
 U.A.L
 1 8•H 7 0 5•
 ES. 3 - 20:000 POSIZIONI
-ES. 4 - 40'000 POSIZION
+ES. 4 - 40&#39;000 POSIZION
 3 4 B 0 1.5 EF
 12 SE 028 F
 217 C 3 2
 112 BE 00
 4 1.5 3 3 9.
 1 404 0 0 2•
-~ 20'000 POSIZIONI
-70
+~ 20&#39;000 POSIZIONI
 SEGNC
 U.A.L
-E' chiaro che tali regole permettono lamodifica au
-tomatica degli indirizzi entro 40.000 posizioni di
-memoria circolare.
-L'indicazione delle centinaia nei gruppi di memoria
-oltre le 40.000 posizioni si ha mediante caratteri
-alfabetici o speciali.
-Dal carattere usato per le centinaia l' elaboratore
-riconosce il gruppo di appartenenza di un indiriz-
-Zo.
-Finalmente la 5ª posizione del T modificatore vie-
-ne sommata, secondo le regole dell' aritmetica in ba
-se 10, alla posizione p7 dell'istruzione; tali po-
-sizioni possono quindi contenere solo cifre decima
-li. L'eventuale riporto viene sommato al carattere
-contenuto nella posizione p8 dell'istruzione.
-La modifica automatica non esige alcun tempo sup-
-plementare di fase preparatoria: viene poi esegui-
-ta l'istruzione modificata (nella quale ovviamente
-1' indicazione del T modificatore non ha alcun inte
-resse).
-Il contenuto del T modificatore non viene alterato
-dalla modifica automatica dell'istruzione.</p>
+</pre></div>
+</div>
+<p>E' chiaro che tali regole permettono la modifica automatica degli indirizzi
+entro 40.000 posizioni di memoria circolare.</p>
+<p>L'indicazione delle centinaia nei gruppi di memoria oltre le 40.000 posizioni
+si ha mediante caratteri alfabetici o speciali.  Dal carattere usato per le
+centinaia l' elaboratore riconosce il gruppo di appartenenza di un indirizzo.</p>
+<p>Finalmente la 5ª posizione del T modificatore viene sommata, secondo le regole
+dell' aritmetica in base 10, alla posizione p7 dell'istruzione; tali posizioni
+possono quindi contenere solo cifre decimali. L'eventuale riporto viene sommato
+al carattere contenuto nella posizione p8 dell'istruzione.</p>
+<p>La modifica automatica non esige alcun tempo supplementare di fase
+preparatoria: viene poi eseguita l'istruzione modificata (nella quale
+ovviamente 1' indicazione del T modificatore non ha alcun interesse).</p>
+<p>Il contenuto del T modificatore non viene alterato dalla modifica automatica
+dell'istruzione.</p>
 </section>
 <section id="lunghezza-degli-operandi-nelle-istruzioni-interne">
 <h2><span class="sectnum">6.5 </span>Lunghezza degli operandi nelle istruzioni interne.<a class="headerlink" href="#lunghezza-degli-operandi-nelle-istruzioni-interne" title="Permalink to this heading">#</a></h2>
-<p>Le istruzioni interne sottoindicate possono speci-
-ficare la lunghezza dell' operando, o indicando con
-due caratteri numerici posti in p7 e p8 (LL) il nu
-mero dei caratteri costituenti l' operando,
-oppure
-indicando il carattere registrato in memoria dopo
-l'ultimo carattere dell' operando stesso.
-71
-Cio' puo' essere fatto in due modi diversi :
-a) il carattere che segue l'ultimo carattere del-
-1' operando e' ben determinato e conosciuto dal
-programmatore. Esso deve essere allora registra
-to nella posizione p8 mentre nella posizione p7
-si deve porre
-Q: se si vuole che, terminata l'operazione
-1' indirizzo del carattere chiave sia trasferi
-to nel registro T9 ;</p>
-<ul class="simple">
-<li><p>P: se non interessa che l'indirizzo del ca-
-rattere chiave sia trasferito nelle prime 4 pg
-sizioni del registro T9.
-b) l'ultimo carattere dell'operando e' seguito da
-un carattere alfabetico o speciale. La posizio-
-ne p8 e' allora non interessante, e nella posi
-zione p7 si deve porre</p></li>
-<li><p>Z : se si vuole che, terminata l'operazione
-l'indirizzo del carattere chiave sia trasferi
-to in T9 ;</p></li>
-<li><p>Y: se non interessa che l'indirizzo del ca-
-rattere chiave sia trasferito nelle prime 4 pg
-sizioni del registro T9.
-In entrambi i casi l'operazione prosegue fino a che
-viene letto un carattere non numerico.
-Il carattere chiave letto in memoria e' sempre ri-
-generato nella posizione di memoria in cui si tro.
-Va.
-Agli effetti del calcolo il carattere chiave e' con
-siderato uno zero di memoria, o piu' in generale un
-numero non significativo, Esso indica sempre la fi
-ne della parola in memoria.
-72
-Se il carattere chiave ricercato si trova all'indi
-rizzo IIII, specificato nell'istruzione interessa-
-ta. la macchina si arresta su tale posizione ed ir
-19 viene registrato detto indirizzo.
-Cio' non avviene se il carattere chiave e'
-un
-gno &quot;piu' &quot; o &quot;meno
-Se.
-Le istruzioni che operano secondo le modalita' a)
-e b) precedentemente indicate sono
-MA, AM, AOM, +MA, +AM, -MA, CMA
-MEM, +MM,
--MM, CMM
-Y, +X, -X;
-TOL.
-Le istruzioni che operano soltanto nel modo b) so-
-no:
-MT, TM, ToM, +MT, -MT, CMT ;
-XLD, XLN, +LD.
-Eventuali eccezioni a queste regole sono riportate
-nella descrizione delle singole istruzioni.
-Esempio:
-Nel caso che si voglia trasferire in accumulatore
-mediante un'istruzione MA la parola 519+ registra-
-ta in memoria come in figura :
-carauterl
+<p>Le istruzioni interne sottoindicate possono specificare la lunghezza dell'
+operando, o indicando con due caratteri numerici posti in p7 e p8 (LL) il
+numero dei caratteri costituenti l' operando, oppure indicando il carattere
+registrato in memoria dopo l'ultimo carattere dell' operando stesso.</p>
+<p>Cio' puo' essere fatto in due modi diversi:</p>
+<p>a) il carattere che segue l'ultimo carattere dell' operando e' ben determinato
+e conosciuto dal programmatore. Esso deve essere allora registrato nella
+posizione p8 mentre nella posizione p7 si deve porre</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Q: se si vuole che, terminata l&#39;operazione l&#39; indirizzo del carattere
+  chiave sia trasferito nel registro T9;
+
+- P: se non interessa che l&#39;indirizzo del carattere chiave sia trasferito
+  nelle prime 4 posizioni del registro T9.
+</pre></div>
+</div>
+<p>b) l'ultimo carattere dell'operando e' seguito da un carattere alfabetico o
+speciale. La posizione p8 e' allora non interessante, e nella posizione p7 si
+deve porre</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Z : se si vuole che, terminata l&#39;operazione l&#39;indirizzo del carattere
+  chiave sia trasferi to in T9;
+
+- Y: se non interessa che l&#39;indirizzo del ca- rattere chiave sia trasferito
+  nelle prime 4 pg sizioni del registro T9.
+</pre></div>
+</div>
+<p>In entrambi i casi l'operazione prosegue fino a che viene letto un carattere
+non numerico.</p>
+<p>Il carattere chiave letto in memoria e' sempre rigenerato nella posizione di
+memoria in cui si trova.</p>
+<p>Agli effetti del calcolo il carattere chiave e' considerato uno zero di
+memoria, o piu' in generale un numero non significativo, Esso indica sempre la
+fine della parola in memoria.</p>
+<p>Se il carattere chiave ricercato si trova all'indirizzo IIII, specificato
+nell'istruzione interessata. la macchina si arresta su tale posizione ed ir 19
+viene registrato detto indirizzo.</p>
+<p>Cio' non avviene se il carattere chiave e' un segno &quot;piu' &quot; o &quot;meno&quot;.</p>
+<p>Le istruzioni che operano secondo le modalita' a) e b) precedentemente indicate
+sono</p>
+<p>MA, AM, AOM, +MA, +AM, -MA, CMA, MEM, +MM, -MM, CMM, Y, +X, -X, TOL.</p>
+<p>Le istruzioni che operano soltanto nel modo b) sono:</p>
+<p>MT, TM, ToM, +MT, -MT, CMT, XLD, XLN, +LD.</p>
+<p>Eventuali eccezioni a queste regole sono riportate nella descrizione delle
+singole istruzioni.</p>
+<p>Esempio:</p>
+<p>Nel caso che si voglia trasferire in accumulatore
+mediante un'istruzione MA la parola 519+ registrata in memoria come in figura :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>carauterl
 Posizioni di memoria
-73
-la parte lunghezza e indirizzo dell'istruzione puo'
-essere espressa</p></li>
-</ul>
+</pre></div>
+</div>
+<p>la parte lunghezza e indirizzo dell'istruzione puo' essere espressa</p>
 </section>
 <section id="registrazione-del-programma">
 <h2><span class="sectnum">6.6 </span>Registrazione del programma<a class="headerlink" href="#registrazione-del-programma" title="Permalink to this heading">#</a></h2>
-<p>Perche' possano essere esaminate ed eseguite dalla
-unita' centrale, le istruzioni di programma devono
-essere registrate nella memoria principale.
-Il modo normale di leggere una informazione in memo
-ria principale e' di leggerla - carattere per carat
-tere - per indirizzi decrescenti; l'indirizzo del-
-l'informazione in memoria e' pertanto l' indirizzo
-del suo estremo carattere di destra.
-Conseguentemente, le istruzioni in memoria principa
-le sono registrate come e' indicato dalla figura; il
-carattere F, che sara' esaminato per primo dall' uni
-ta' di governo, occupa la posizione di memoria ad in
-dirizzo piu' elevato; il carattere Tla posizione di
-indirizzo immediatamente minore, e cosi' di segui-
-to.
-Se dopo l'istruzione n deve essere eseguitalaistru
-Zione n+1, questa dovra' essere registrata in memo
-74
-ria alla destra della precedente.
-FIL
+<p>Perche' possano essere esaminate ed eseguite dalla unita' centrale, le
+istruzioni di programma devono essere registrate nella memoria principale.</p>
+<p>Il modo normale di leggere una informazione in memoria principale e' di
+leggerla - carattere per carattere - per indirizzi decrescenti; l'indirizzo
+dell'informazione in memoria e' pertanto l' indirizzo del suo estremo carattere
+di destra.  Conseguentemente, le istruzioni in memoria principale sono
+registrate come e' indicato dalla figura; il carattere F, che sara' esaminato
+per primo dall' unita' di governo, occupa la posizione di memoria ad indirizzo
+piu' elevato; il carattere Tla posizione di indirizzo immediatamente minore, e
+cosi' di seguito.</p>
+<p>Se dopo l'istruzione n deve essere eseguita l'istruzione n+1, questa dovra'
+essere registrata in memoria alla destra della precedente.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>FIL
 ISTRITIONE n
-Il programma puo' essere registrato in una zona qual
-siasi della memoria; questa puo' infatti contenere
-indifferentemente dati da elaborare, risultati o i-
-struzioni di programma, in ogni sua posizione. Sup-
-poniamo di registrare il programma nelle prime posi-
-zioni di memoria, a partire dall'indirizzo 0001: il
-carattere F della prima istruzione avra' quindi lo
-indirizzo 0008, il carattere F della seconda istru-
-zione l'indirizzo 0016, e cosi' via.
-Da quanto si e' detto precedentemente, risulta chia
-ro che, perche' l'organo di governo esegua una i-
-struzione deve rivolgersi all'indirizzo del caratte
-re F di quella istruzione (dunque nel caso anzidet-
-to, successivamente agli indirizzi 0008, 0016, ecc.).
-Tale indirizzo si dice brevemente indirizzo dell'i-
-struzione.
-75
-Ad ogni istruzione e' stato dato anche un codice sim
-bolico piu' facile da ricordarsi mnemonicamente
-quindi piu' comodo nella prima stesura di unprogram
-ma Cosi' ad esempio l'istruzione per confrontare
-fra di loro due zone di memoria che ha come codice
-di funzione il carattere •/. viene indicata con il
-codice simbolico CMM.
-Il programma normalmente viene svolto eseguendo suc
-cessivamente le istruzioni una dopo l'altra nell'or
-dine in cui sono registrate in memoria a partire da
-quella indicata all' avvio sul quadro di controllo;
-speciali organi di governo contengono 1' indirizzo
-dell'istruzione. Si possono svolgere pero contempo
-raneamente tre diversi programmi sequenziali come sa
-ra' meglio specificato in seguito.
-Questo modo di procedere sequenzialmente puo' esse-
-re variato mediante apposite istruzioni (istruzioni
-di &quot;salto:) che permettono di eseguire sequenze di-
-verse sia sistematicamente sia in funzione di even-
-ti rilevati durante l'elaborazione, sia a seguito
-di condizioni impostate direttamente sul quadro di
-controllo. Vi sono 90 diversi tipi di istruzione di
-cui 38 di salto. Le istruzioni di salto: specifica
-no tra l' altro l'indirizzo della prossima istruzio-
-ne da eseguire
-76
-LEGENDA
+</pre></div>
+</div>
+<p>Il programma puo' essere registrato in una zona qualsiasi della memoria; questa
+puo' infatti contenere indifferentemente dati da elaborare, risultati o
+istruzioni di programma, in ogni sua posizione. Supponiamo di registrare il
+programma nelle prime posizioni di memoria, a partire dall'indirizzo 0001: il
+carattere F della prima istruzione avra' quindi l'indirizzo 0008, il carattere
+F della seconda istruzione l'indirizzo 0016, e cosi' via.</p>
+<p>Da quanto si e' detto precedentemente, risulta chiaro che, perche' l'organo di
+governo esegua una istruzione deve rivolgersi all'indirizzo del carattere F di
+quella istruzione (dunque nel caso anzidetto, successivamente agli indirizzi
+0008, 0016, ecc.).</p>
+<p>Tale indirizzo si dice brevemente indirizzo dell'istruzione.</p>
+<p>Ad ogni istruzione e' stato dato anche un codice simbolico piu' facile da
+ricordarsi mnemonicamente quindi piu' comodo nella prima stesura di un
+programma. Cosi' ad esempio l'istruzione per confrontare fra di loro due zone
+di memoria che ha come codice di funzione il carattere •/. viene indicata con
+il codice simbolico CMM.</p>
+<p>Il programma normalmente viene svolto eseguendo successivamente le istruzioni
+una dopo l'altra nell'ordine in cui sono registrate in memoria a partire da
+quella indicata all' avvio sul quadro di controllo; speciali organi di governo
+contengono 1' indirizzo dell'istruzione. Si possono svolgere pero
+contemporaneamente tre diversi programmi sequenziali come sara' meglio
+specificato in seguito.</p>
+<p>Questo modo di procedere sequenzialmente puo' essere variato mediante apposite
+istruzioni (istruzioni di &quot;salto:) che permettono di eseguire sequenze diverse
+sia sistematicamente sia in funzione di eventi rilevati durante l'elaborazione,
+sia a seguito di condizioni impostate direttamente sul quadro di controllo. Vi
+sono 90 diversi tipi di istruzione di cui 38 di salto. Le istruzioni di salto:
+specificano tra l' altro l'indirizzo della prossima istruzione da eseguire.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>LEGENDA
 Schema istruzioni
 , Funzione
-• codice simbolico</p>
-<ul class="simple">
-<li><p>organi impegnati durante
-la fase esecutiva</p></li>
-<li><p>configurazione
+• codice simbolico
+- organi impegnati durante
+la fase esecutiva
+- configurazione
 tempo, in periodi di cifra,
-necessario all'esecuzione
-dell'istruzione (Fasi a e 1).
+necessario all&#39;esecuzione
+dell&#39;istruzione (Fasi a e 1).
 Configurazioni istruzioni
 =
 memoria - registri
-costante</p></li>
-<li><p>registri
+costante
+- registri
 salti
 memoria - accumulatore
 antono.
@@ -849,8 +737,9 @@ Registri T
 Memoria:
 contenuto,
 malizz
-77</p></li>
-</ul>
+77
+</pre></div>
+</div>
 </section>
 </section>
 
