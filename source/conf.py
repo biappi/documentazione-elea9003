@@ -17,11 +17,11 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Manuale base di programmazione'
+project = 'Documentazione Olivetti ELEA 9003'
 html_title = project
 
-copyright = '2022, Olivetti ELEA9003'
-author = 'Olivetti ELEA9003'
+copyright = '2022, Olivetti ELEA 9003'
+author = 'Olivetti ELEA 9003'
 
 html_logo = "_static/logo.svg"
 
