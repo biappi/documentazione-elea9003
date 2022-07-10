@@ -16,7 +16,8 @@ h3 {
 }
 
 h1 > .sectnum,
-h2 > .sectnum {
+h2 > .sectnum,
+h3 > .sectnum {
     display: block;
     color: var(--color-toc-title-text);
     font-size: 11px;

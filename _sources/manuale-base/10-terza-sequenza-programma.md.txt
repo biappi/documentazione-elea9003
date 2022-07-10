@@ -10,36 +10,28 @@ start: 10
 ## Generalita'
 
 1. All' unita' centrale del sistema Elea 9003 possno essere collegate unita' in
-linea capaci di funzionare simultaneamente e di operare senza interrompere lo
-svolgimento del 10 e del 20 programma
+   linea capaci di funzionare simultaneamente e di operare senza interrompere
+   lo svolgimento del 10 e del 20 programma
 
 2. Le unita' collegabili sono
+   - lettori di schede
+   - perforatori di schede
+   - lettori di nastro perforato
+   - lettori e perforatori di schede
+   - stampanti
 
-    - lettori di schede
+   Le varie unita' numerate da 1 a 10 vengono distinte in fase di elaborazione
+   dal proprio numero in dicativo.
 
-    - perforatori di schede
-
-    - lettori di nastro perforato
-
-    - lettori e perforatori di schede
-
-    - stampanti
-
-    Le varie unita' numerate da 1 a 10 vengono distinte in fase di elaborazione
-    dal proprio numero in dicativo.
-
-    Nell'uso normale troviamo simultaneamente collegate unita' di diverso tipo
-    anche se teoricamente esiste la possibilita di porre in linea dieci unita' con
-    medesima funzione.
+   Nell'uso normale troviamo simultaneamente collegate unita' di diverso tipo
+   anche se teoricamente esiste la possibilita di porre in linea dieci unita'
+   con medesima funzione.
 
 3. Ciascuna di queste unita' e' diretta da un proprio governo che contiene l'
    apparecchiatura logica necessaria al suo funzionamento e una memoria a nuclei
    sufficiente a contenere i caratteri necessari per ogni ciclo meccanico di
-   lavoro
-
-   una riga stampa, una scheda,
-
-   un blocco di nastro perforato (max. 104 caratteri)
+   lavoro: una riga stampa, una scheda, un blocco di nastro perforato (max. 104
+   caratteri).
 
 4. L' alternarsi dell' entrata e dell'uscita dei caratteri dalle varie memorie,
    la distribuzione dei dati alle diverse unita' collegate e la logica che le
@@ -49,66 +41,67 @@ svolgimento del 10 e del 20 programma
 
 ## Caratteristiche logiche del 30 programma
 
-1) L'ordine di lavoro alle singole unita' viene trasmesso dall' unita'
-centrale, che procede quindi in parallelo con esse, senza che queste ultime
-rallentino ne' intralcino le operazioni interne; il sincronizzatore provvede a
-smistare gli ordini e le informazioni alle diverse apparecchiature; ogni unita'
-chiamata ad operare esegue il lavoro secondo le peculiari modalita ed il
-proprio tempo meccanico.
+1. L'ordine di lavoro alle singole unita' viene trasmesso dall' unita'
+   centrale, che procede quindi in parallelo con esse, senza che queste ultime
+   rallentino ne' intralcino le operazioni interne; il sincronizzatore
+   provvede a smistare gli ordini e le informazioni alle diverse
+   apparecchiature; ogni unita' chiamata ad operare esegue il lavoro secondo
+   le peculiari modalita ed il proprio tempo meccanico.
 
-Le memorie di transito delle singole unita' di estrazione vengono fornite delle
-informazioni in uscita dall' unita' centrale che provvede pure a prelevare le
-informazioni in entrata dalle unita' di introduzione.
+   Le memorie di transito delle singole unita' di estrazione vengono fornite
+   delle informazioni in uscita dall' unita' centrale che provvede pure a
+   prelevare le informazioni in entrata dalle unita' di introduzione.
 
-Non e' necessaria ad ogni trasferimento dao a unita' centrale un' operazione di
-azzeramento delle memorie di transito in quanto queste vengono azzerate
-automaticamente.
+   Non e' necessaria ad ogni trasferimento dao a unita' centrale un'
+   operazione di azzeramento delle memorie di transito in quanto queste vengono
+   azzerate automaticamente.
 
-2) Durante il collegamento con il calcolatore, le unita' di introduzioneed
-estrazione assumono tre diversi stati possibili;
+2. Durante il collegamento con il calcolatore, le unita' di introduzione ed
+   estrazione assumono tre diversi stati possibili;
 
- - "inattiva" l'unita' che pur collegata con l'unita' centrale attraverso il
-   proprio governo, non sia avviata;
+   - "inattiva" l'unita' che pur collegata con l'unita' centrale attraverso il
+     proprio governo, non sia avviata;
 
- - "avviata" l'unita' che sia stata chiamata ad operare almeno una volta
-   mediante un'istruzione. Lo stato di "avviata" puo' durare per molti cicli
-   meccanici di lavoro;
+   - "avviata" l'unita' che sia stata chiamata ad operare almeno una volta
+     mediante un'istruzione. Lo stato di "avviata" puo' durare per molti cicli
+     meccanici di lavoro;
 
- - "occupata" l' unita' che oltre ad essere avviata sia stata effettivamente
-   messa in funzione da una istruzione esecutiva.
+   - "occupata" l' unita' che oltre ad essere avviata sia stata effettivamente
+     messa in funzione da una istruzione esecutiva.
 
-Ogni unita' avviata ed occupata passa automaticamente allo stato di avviata-non
-occupata al termine di ogni ciclo meccanico di lavoro; passa al lo stato di
-inattiva mediante un' apposita istruzione di STOP.
+    Ogni unita' avviata ed occupata passa automaticamente allo stato di
+    avviata-non occupata al termine di ogni ciclo meccanico di lavoro; passa al
+    lo stato di inattiva mediante un' apposita istruzione di STOP.
 
-La simultaneita' di esecuzione delle operazioni interne della macchina e del
-lavoro delle unita' collegate e' ottenuto mediante una terza sequenza di
-istruzioni eseguibili dall' elaboratore parallelamente alle sequenze di 1° e 20
-programma.
+    La simultaneita' di esecuzione delle operazioni interne della macchina e
+    del lavoro delle unita' collegate e' ottenuto mediante una terza sequenza
+    di istruzioni eseguibili dall' elaboratore parallelamente alle sequenze di
+    1° e 20 programma.
 
-L'uso delle diverse sequenze non comporta intralci ne' inconvenienti alla
-corretta e coerente esecuzione delle istruzioni dei singoli programmi.
+    L'uso delle diverse sequenze non comporta intralci ne' inconvenienti alla
+    corretta e coerente esecuzione delle istruzioni dei singoli programmi.
 
-Esistono prestabilite priorita' sul canale interno, tre diversi registri
-indirizzo istruzioni, e dispositivi distinti per ogni programma per la
-conservazione separata delle seguenti segnalazioni circa determinate
-eventualita' verificabili nel corso dell' elaborazione: risultato dei confronti
-( =, + , > , ' ) e overflow nei registri e nella memoria.
+    Esistono prestabilite priorita' sul canale interno, tre diversi registri
+    indirizzo istruzioni, e dispositivi distinti per ogni programma per la
+    conservazione separata delle seguenti segnalazioni circa determinate
+    eventualita' verificabili nel corso dell' elaborazione: risultato dei
+    confronti (=, !=, >, <) e overflow nei registri e nella memoria.
 
-Si deve inoltre osservare che contrariamente al le istruzioni di canale esterno
-che vengono poste preferibilmente sul 2° programma, per sole ragioni di logica,
-le istruzioni di comando delle apparecchiature in linea devono essere raccolte
-obbligatoriamente sul 30 programma per ragioni funzionali. Questa disposizione
-risulta inoltre logica specie se si considerano le norme che stabiliscono le
-priorita sui canali.
+    Si deve inoltre osservare che contrariamente al le istruzioni di canale
+    esterno che vengono poste preferibilmente sul 2° programma, per sole
+    ragioni di logica, le istruzioni di comando delle apparecchiature in linea
+    devono essere raccolte obbligatoriamente sul 30 programma per ragioni
+    funzionali. Questa disposizione risulta inoltre logica specie se si
+    considerano le norme che stabiliscono le priorita sui canali.
 
-La priorita' sul canale interno e' riservata: prima al 30 programma che per
-l'esecuzione delle istruzioni che lo riguardano non richiede il canale interno
-se non per periodi di tempo assai limitati;
+La priorita' sul canale interno e' riservata:
 
-quindi al 20 programma che si svolge nella massima parte con impegno del solo
-canale esterno; infine al 1° programma che impegna il canale interno sia in
-fase preparatoria che in fase esecutiva.
+- prima al 30 programma che per l'esecuzione delle istruzioni che lo riguardano
+  non richiede il canale interno se non per periodi di tempo assai limitati;
+
+- quindi al 20 programma che si svolge nella massima parte con impegno del solo
+  canale esterno; infine al 1° programma che impegna il canale interno sia in
+  fase preparatoria che in fase esecutiva.
 
 E' evidente che dette priorita' sono studiate in modo da permettere ad ogni
 programma la massima conti nuita senza che l'esecuzione degli altri programma
@@ -118,38 +111,36 @@ Risulta pertanto logico che dovendo i tre programmi ricorrere al canale interno
 per il loro svolgimento, su questo canale debba aver la precedenza il programma
 che meno lo impegna.
 
-In pratica il 30 programma cede la precedenza sul canale interno
+In pratica il 30 programma cede la precedenza sul canale interno:
 
-1° ogni qualvolta le memorie di transito dei governi delle unita' in linea
-risultino fornite dei caratteri necessari ad un ciclo meccanico di lavoro;
+1. ogni qualvolta le memorie di transito dei governi delle unita' in linea
+   risultino fornite dei caratteri necessari ad un ciclo meccanico di lavoro;
 
-2° ogni qualvolta si verifichi un impedimento all'esecuzione di una delle
-istruzioni registrate in detto programma.
+2. ogni qualvolta si verifichi un impedimento all'esecuzione di una delle
+   istruzioni registrate in detto programma.
 
 La precedenza al terzo programma invece non viene immediatamente ceduta in due
-particolari casi 1° allorquando sia stata letta su 10 o 20 programma una
-istruzione preparatoria tipo PUM, PRN, PIN.
+particolari casi:
 
-Nel qual caso il canale interno viene ceduto solo dopo l'esecuzione
-dell'istruzione esecutiva tipo MEM, +MM, -MM , TN, NAN;
+1. allorquando sia stata letta su 10 o 20 programma una istruzione preparatoria
+   tipo PUM, PRN, PIN.  Nel qual caso il canale interno viene ceduto solo dopo
+   l'esecuzione dell'istruzione esecutiva tipo MEM, +MM, -MM , TN, NAN;
 
-2° allorquando sia stata letta ed eseguita su 10 o 20 programma una istruzione
-di salto. Nel qual caso
+2. allorquando sia stata letta ed eseguita su 10 o 20 programma una istruzione
+   di salto. Nel qual caso il canale viene ceduto solo dopo l'esecuzione
+   dell'istruzione a cui il salto rinvia.
 
-il canale viene ceduto solo dopo l'esecuzione del l'istruzione a cui il salto
-rinvia.
+Lа terza seauenza di programma:
 
-Lа terza seauenza di programma
+1. puo' essere avviata da una istruzione particolare di salto S3P, registrata
+   indifferentemente nel 1° o nel 20 programma;
 
-a) puo' essere avviata da una istruzione particolare di salto S3P, registrata
-indifferentemente nel 1° o nel 20 programma;
+2. puo' essere frazionata in piu' sequenze singolarmente avviabili ma non
+   contemporaneamente eseguibili in quanto l' elaboratore puo' essere impegnato
+   nell' esecuzione di una sola sequenza di 30 programma;
 
-b) puo' essere frazionata in piu' sequenze singolarmente avviabili ma non
-contemporaneamente eseguibili in quanto l' elaboratore puo' essere impegnato
-nell' esecuzione di una sola sequenza di 30 programma;
-
-c) puo' eseguire istruzioni di qualsiasi genere pur avendo come funzione
-specifica i comandi relativi alle apparecchiature in linea.
+3. puo' eseguire istruzioni di qualsiasi genere pur avendo come funzione
+   specifica i comandi relativi alle apparecchiature in linea.
 
 
 ## Fasi di svolgimento del 30 programma
@@ -198,54 +189,53 @@ possibili effetti:
 
 L'istruzione S3P
 
-a) comanda l'inizio di una sequenza di 30 programma;
+1. comanda l'inizio di una sequenza di 30 programma;
 
-b) attiva tutte le unita che vengono percorse dal 1° ciclo di 30 programma;
+2. attiva tutte le unita che vengono percorse dal 1° ciclo di 30 programma;
 
-c) viene riciclata qualora sia letta mentre e gia' in corso sequenza di 30
+3. viene riciclata qualora sia letta mentre e gia' in corso sequenza di 30
 programma:
 
-d) puo' riavviare una sequenza di 3° programma non appena ne sia terminata una
+4. puo' riavviare una sequenza di 3° programma non appena ne sia terminata una
 precedente.
 
 L'istruzione SUO permette
 
-a) di avviare l'unita a cui e riferita;
+1. di avviare l'unita a cui e riferita;
 
-b) l'arresto del programma nel caso che nessuna unita sia disponibile;
+2. l'arresto del programma nel caso che nessuna unita sia disponibile;
 
-c) il riavvio del programma ad ogni segnalazione di unita disponibile.
+3. il riavvio del programma ad ogni segnalazione di unita disponibile.
 
-    - Dopo l'arresto su una SUO il riavvio del programma avviene con la lettura
-      dell' istruzione stessa
+- Dopo l'arresto su una SUO il riavvio del programma avviene con la lettura
+  dell' istruzione stessa
 
-    - Nel caso la suo richiamasse una unita' non collegata, il calcolatore non
-      esegue la sequenza di programma relativa a tale unita'.
+- Nel caso la suo richiamasse una unita' non collegata, il calcolatore non
+  esegue la sequenza di programma relativa a tale unita'.
 
 L'istruzione TOL deve seguire immediatamente nel programma la SUO relativa.
-
 Essa permette:
 
-a) di eseguire l'effettivo trasferimento dei dati fra la memoria dell' unita'
-centrale e le memorie di transito delle unita' in 'linea';
+1. di eseguire l'effettivo trasferimento dei dati fra la memoria dell' unita'
+    centrale e le memorie di transito delle unita' in 'linea';
 
-b) di predisporre l'unita' in linea all' esecuzione del ciclo operativo
-successivo: autorizzazione alla prossima lettura, perforazione o stampa,
-preceduta o seguita dall' azzeramento della memoria di transito.
+2. di predisporre l'unita' in linea all' esecuzione del ciclo operativo
+    successivo: autorizzazione alla prossima lettura, perforazione o stampa,
+    preceduta o seguita dall' azzeramento della memoria di transito.
 
 L'istruzione STOP appare generalmente al termine di ogni sequenza d' istruzioni
 relative ad una unita' in linea.
+Essa permette:
 
-Essa permette a) di riportare una unita' allo stato di inattiva non appena sia
-stata completata l'operazione per la quale era stata chiamata;
+1. di riportare una unita' allo stato di inattiva non appena sia stata
+   completata l'operazione per la quale era stata chiamata;
 
-b) di arrestare il 30 programma una volta eseguiti tutti gli STOP delle unita'
-avviate.
+2. di arrestare il 30 programma una volta eseguiti tutti gli STOP delle unita'
+   avviate.
 
 Va rilevato che l'istruzione STOP non arresta il ciclo operativo in corso, ma
-le operazioni atte a pre disporre l' unita' in linea al successivo ciclo di
-lavoro dopo 1' azzeramento automatico della memoria
-di transito.
+le operazioni atte a predisporre l' unita' in linea al successivo ciclo di
+lavoro dopo l'azzeramento automatico della memoria di transito.
 
 
 ## L'istruzione SP\*
@@ -347,17 +337,17 @@ solo un nuovo comando originato da una S3P\* o da una nuova segnalazione di
 disponibilita' puo' permettere un ciclo di lavoro all' unita' resasi
 precedentemente disponibile.
 
-interno
-Il II
-Im
-0
-Salta al programma esterno
-S3P
-(011101)
-Is
-IIII
-Im 0
-10 0 15
+    interno
+    Il II
+    Im
+    0
+    Salta al programma esterno
+    S3P
+    (011101)
+    Is
+    IIII
+    Im 0
+    10 0 15
 
 : carattere di eventualita'
 
@@ -378,11 +368,10 @@ terminata;
 
 2. terminata l'esecuzione della sequenza di programma esterno, la S3P puo'
 
-    Salta al programma esterno *
+    Salta al programma esterno 
     S3P
     interno
-    (010101)
-    =
+    (010101) =
     Is
     III I
 
@@ -418,21 +407,20 @@ intero di : gramma ogni qualvolta ne sorga la necessita'
 d) Il ciclo di 3° programma ottenuto mediante S3P\* parte dall'istruzione
 successiva alla SUO su unita' fittizia e si arresta invece su quest ultima
 
-
-interno
-Salta se l'unita' U e' occupata
-(011010)
-%
-U
-II I I
-I'm 0
-SUO
-10 o 15
-%
-U
-I I II
-Im
-O
+    interno
+    Salta se l'unita' U e' occupata
+    (011010)
+    %
+    U
+    II I I
+    I'm 0
+    SUO
+    10 o 15
+    %
+    U
+    I I II
+    Im
+    O
 
 : carattere di eventualita'
 
