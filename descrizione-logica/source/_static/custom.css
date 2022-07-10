@@ -1,0 +1,27 @@
+h2 {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    margin-top: 1.5em;
+}
+
+.sectnum::before {
+    content: "Capitolo ";
+}
+
+.sectnum {
+    display: none;
+}
+
+h1 > .sectnum,
+h2 > .sectnum {
+    display: block;
+    color: var(--color-toc-title-text);
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+
+
