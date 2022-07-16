@@ -5,4 +5,5 @@
 
 manuale-base/index
 descrizione-logica/index
+schema-logico/index
 ```
