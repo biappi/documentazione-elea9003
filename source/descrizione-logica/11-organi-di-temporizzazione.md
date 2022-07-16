@@ -149,7 +149,7 @@ E' costituito da una rete logica che ha la seguente equazione:
     I != Cp = !(!aCpD * !cCpD * !dCpD * !aCpU * !cCpU * !dCpU)
 
 
-### Decodificatore dei p-pulsi (A p-pulsi)
+### Decodificatore dei p-pulsi (DELTA p-pulsi)
 
 Il decodificatore dei p-pulsi deve fornire in uscita segnali della durata di un
 p.d.c. (10 µs) susseguentesi in un ordine prestabilito. Cio' si ottiene
