@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Indice" href="../genindex.html" /><link rel="search" title="Cerca" href="../search.html" /><link rel="next" title="10 Organi di lunghezza operando da memoria" href="10-organi-lunghezza-operando.html" /><link rel="prev" title="Unita&#39; Centrale - Descrizione Logica degli Organi" href="index.html" />
+<link rel="index" title="Indice" href="../genindex.html" /><link rel="search" title="Cerca" href="../search.html" /><link rel="next" title="11 Organi di temporizzazione" href="11-organi-di-temporizzazione.html" /><link rel="prev" title="9 Organi di funzione" href="09-organi-di-funzione.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
-        <title>9 Organi di funzione - Documentazione Olivetti ELEA 9003</title>
+        <title>10 Organi di lunghezza operando da memoria - Documentazione Olivetti ELEA 9003</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -174,8 +174,8 @@
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Unita' Centrale - Descrizione Logica degli Organi</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><span class="sectnum">9 </span>Organi di funzione</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10-organi-lunghezza-operando.html"><span class="sectnum">10 </span>Organi di lunghezza operando da memoria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-organi-di-funzione.html"><span class="sectnum">9 </span>Organi di funzione</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><span class="sectnum">10 </span>Organi di lunghezza operando da memoria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11-organi-di-temporizzazione.html"><span class="sectnum">11 </span>Organi di temporizzazione</a></li>
 </ul>
 </li>
@@ -213,252 +213,156 @@
           </label>
         </div>
         <article role="main">
-          <section id="organi-di-funzione">
-<h1><span class="sectnum">9 </span>Organi di funzione<a class="headerlink" href="#organi-di-funzione" title="Permalink to this heading">#</a></h1>
-<section id="registro-di-funzione-f">
-<h2><span class="sectnum">9.1 </span>Registro di funzione F<a class="headerlink" href="#registro-di-funzione-f" title="Permalink to this heading">#</a></h2>
-<p>Il primo carattere uscente da Memoria durante la preparazione di una
-istruzione è il carattere F, che stabilisce il tipo di operazione che la
-macchina deve eseguire.</p>
-<p>Questo carattere deve essere presente per tutta la durata dell'istruzione e
-viene perciò immagazzinato nel registro di funzione F, costituito da 6
-flip-flop.</p>
-<p>Esso viene azzerato soltanto all'inizio dell'istruzione successiva.</p>
-<p>Le uscite del registro F vanno direttamente al decodificatore di funzione.</p>
-</section>
-<section id="decodificatore-di-funzione">
-<h2><span class="sectnum">9.2 </span>Decodificatore di funzione<a class="headerlink" href="#decodificatore-di-funzione" title="Permalink to this heading">#</a></h2>
-<section id="decodificati-parziali">
-<h3><span class="sectnum">9.2.1 </span>Decodificati parziali<a class="headerlink" href="#decodificati-parziali" title="Permalink to this heading">#</a></h3>
-<p>I sei bit contenuti nel registro E possono dar luogo a 64 combinazioni
-diverse.</p>
-<p>L'individuazione di queste 64 combinazioni avviene in due stadi successivi. Il
-decodificatore di funzione produce un certo numero di segnali (detti
-decodificati parziali) ognuno dei quali caratterizza una certa classe di
-funzioni.</p>
-<p>Questi decodificati vengono poi combinati fra loro nelle reti che generano i
-comandi dei singoli organi, in modo che ciascun comando sia attivato solo per
-l'istruzione (o le istruzioni) desiderata.</p>
-<p>I decodificati parziali possono essere raggruppati nelle due seguenti classi,
-a seconda di come sono stati generati:</p>
+          <p>`</p>
+<section id="organi-di-lunghezza-operando-da-memoria">
+<h1><span class="sectnum">10 </span>Organi di lunghezza operando da memoria<a class="headerlink" href="#organi-di-lunghezza-operando-da-memoria" title="Permalink to this heading">#</a></h1>
+<section id="registro-di-lunghezza-rl">
+<h2><span class="sectnum">10.1 </span>Registro di lunghezza RL<a class="headerlink" href="#registro-di-lunghezza-rl" title="Permalink to this heading">#</a></h2>
+<p>E' costituito da due gruppi di sei FF, detti rispettivamente LD ed LU.</p>
+<section id="lunghezza-dell-operando-da-memoria">
+<h3><span class="sectnum">10.1.1 </span>Lunghezza dell'operando da Memoria<a class="headerlink" href="#lunghezza-dell-operando-da-memoria" title="Permalink to this heading">#</a></h3>
+<p>La lunghezza dell'operando da memoria nelle operazioni
+fra Memoria ed Accumulatore è indicata con idue caratteri
+uscenti da Memoria nei p.d.c. 7 ed 8 della preparazione; questi caratteri sono immessi in RL.
+Possono darsi due casi:</p>
 <ol class="arabic simple">
-<li><p>decodificati primari, ottenuti direttamente da coppie di bit del registro
-F;</p></li>
-<li><p>decodificati secondari, ottenuti da combinazione dei decodificati primari
-(eccezionalmente da bit dal reg. F).</p></li>
+<li><p>I caratteri sono numerici: durante la fase esecuti
+va il contenuto di du viene alora conirontato ad
+ogni p.d.c. con il contenuto del contatore principale <a class="footnote-reference brackets" href="#id7" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, per mezzo del comparatore di lunghezza Cl <a class="footnote-reference brackets" href="#id8" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. La coincidenza dei due contenuti genera un segnale di fine dell'operando di memoria.</p></li>
+<li><p>I caratteri sono alfabetici: si distinguono allora
+due sottocasi, a seconda che in LD venga immesso uno dei
+caratteri Q, P ovvero Z, Y.</p></li>
+</ol>
+<p>Nel primo sottocaso (Q, P) durante la fase esecutiva il contenuto del solo LD viene confrontato (mediante il comparatore di ricerca) <a class="footnote-reference brackets" href="#id9" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> ad ogni p.d.c.
+con il carattere uscente da Memoria: l'operando da
+Memoria si considera terminato quando esce da Memoria un carattere uguale a quello immesso in LD (detto carattere chiave).</p>
+<p>Il secondo sottocaso (2, Y), riguarda esclusivamente operandi numerici: il contenuto di LD non interessa e l'operando è considerato terminato non appena da Memoria emerge un carattere alfabetico qualsiasi, ovvero un segno.</p>
+<p>Nelle operazioni su Memoria T la lunghezza dell'operando non puo superare 10: la si indica allora con
+una sola cifra decimale (quella che esce da Memoria
+nell'ultimo p.d.c. della preparazione), che viene
+immessa in IU. La lunghezza 10 è indicata (per convenzione) dalla cifra 0. Il carattere uscente da Memoria nel penultimo pdc. delia preparazione (p7)
+non va in questo caso in LU, ma in V dato che rappresenta l'indirizzo del reg. T su cui operare.</p>
+<p>Nelle istruzioni di salto non esiste operando da Memoria: il carattere uscente da Memoria nel p.d.c. 7
+della preparazione è l'indirizzo del registro T in
+cui immagazzinare l'indirizzo raggiunto nel programma da cui si è saltato, e viene pertanto immesso in
+IU (che resta inutilizzato). Il registro LD riceve
+invece normalmente l'ultimo carattere dell'istruzione, che però indica (anzichè una lunghezza) la condizione sotto cui eseguire il salto.</p>
+<p>Il registro LD serve quindi come registro di condizione nelle istruzioni di salto.</p>
+</section>
+<section id="ingreasi-al-registro-di-lunghezza">
+<h3><span class="sectnum">10.1.2 </span>Ingreasi al registro di lunghezza<a class="headerlink" href="#ingreasi-al-registro-di-lunghezza" title="Permalink to this heading">#</a></h3>
+<p>Prima di introdurre informazioni in RL occorre azzerario,
+col comando RL.</p>
+<p>Si hanno due canali di ingresso, uno proveniente dalla
+U.A.D. (e quindi dalla memoria), e uno proveniente dal
+contatore principale.</p>
+<ol class="arabic simple">
+<li><p>L'ingresso sul registro LD dalla unità aritmetica
+si ha dall'M8 al M9 del p.d.c. 8 della fase o se non
+ci sono operazioni DELTA_T.</p></li>
+</ol>
+<p>L'ingresso in IU si ha se è presente il segnale XLC
+cioè dall'M8 all'M9 del p.d.c. 7 della fase ALFA se non
+ci sono operazioni DELTA_T oppure dall'M8 all'M9 del
+p.d.c. 8 della fase O se ci sono operazioni DELTA_T <a class="footnote-reference brackets" href="#id10" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>.</p>
+<ol class="arabic simple" start="2">
+<li><p>L'ingresso da contatore principale Cp è condiziona
+to alla presenza del segnale XLB. Questo è presente
+in fase BETA_W e alla fine della parola contenuta in accumulatore o in Mem T, nelle istruzioni FAM, FTM cioè
+quando si vuol trasferire in memoria la lunghezza
+della parola contenuta in accumulatore o in Mem T.</p></li>
 </ol>
 </section>
-<section id="decodificati-primari">
-<h3><span class="sectnum">9.2.2 </span>Decodificati primari<a class="headerlink" href="#decodificati-primari" title="Permalink to this heading">#</a></h3>
-<p>I decodificati primari sono 12 e sono ottenuti con le
-seguenti equazioni logiche:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>DELTA_S = !f * !e       DELTA_P = !d *  a       DELTA_SIGMA =  c *  b
-DELTA_A = !f *  e       DELTA_M =  d *  a       DELTA_X     =  c * !b
-DELTA_T =  f * !e       DELTA_R = !d * !a       DELTA_U     = !c * !b
-DELTA_V =  f *  e       DELTA_B =  d * !a       DELTA_E     = !c *  b
-</pre></div>
-</div>
-<p>Ogni istruzione è individuata da tre decodificati primari (uno per ciascuno dei
-tre gruppi sopraesposti), secondo le seguenti quattro tabelle:</p>
-<p><strong>Istruzioni DELTA_A</strong></p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p>DELTA_M</p></th>
-<th class="head"><p>DELTA_P</p></th>
-<th class="head"><p>DELTA_R</p></th>
-<th class="head"><p>DELTA_B</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>DELTA_U</p></td>
-<td><p>MA</p></td>
-<td><p>DA</p></td>
-<td><p>MS</p></td>
-<td><p>CMA</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_E</p></td>
-<td><p>AM</p></td>
-<td><p>AoM</p></td>
-<td><p>FAM</p></td>
-<td><p>CM</p></td>
-</tr>
-<tr class="row-even"><td><p>DELTA_SIGMA</p></td>
-<td><p>-MA</p></td>
-<td><p>+MA</p></td>
-<td><p></p></td>
-<td><p>+AM</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_X</p></td>
-<td><p>-X</p></td>
-<td><p>+X</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>Istruzioni DELTA_T</strong></p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p>DELTA_M</p></th>
-<th class="head"><p>DELTA_P</p></th>
-<th class="head"><p>DELTA_R</p></th>
-<th class="head"><p>DELTA_B</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>DELTA_U</p></td>
-<td><p>MT</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p>CMT</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_E</p></td>
-<td><p>TM</p></td>
-<td><p>ToM</p></td>
-<td><p>FTM</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>DELTA_SIGMA</p></td>
-<td><p>-MT</p></td>
-<td><p>+MT</p></td>
-<td><p></p></td>
-<td><p>+TM</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_X</p></td>
-<td><p>XLN</p></td>
-<td><p>XLD</p></td>
-<td><p>+LD</p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>Istruzioni DELTA_S</strong></p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p>DELTA_M</p></th>
-<th class="head"><p>DELTA_P</p></th>
-<th class="head"><p>DELTA_R</p></th>
-<th class="head"><p>DELTA_B</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>DELTA_U</p></td>
-<td><p>Y</p></td>
-<td><p>MEM</p></td>
-<td><p>SALTI</p></td>
-<td><p>CIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_E</p></td>
-<td><p>RIi</p></td>
-<td><p>RIa</p></td>
-<td><p>SIN</p></td>
-<td><p>CMM</p></td>
-</tr>
-<tr class="row-even"><td><p>DELTA_SIGMA</p></td>
-<td><p>-MM</p></td>
-<td><p>+MM</p></td>
-<td><p>ITT</p></td>
-<td><p>PUM</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_X</p></td>
-<td><p>AV</p></td>
-<td><p>+IT</p></td>
-<td><p>-IT</p></td>
-<td><p>IT</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>Istruzioni DELTA_V</strong></p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p>DELTA_M</p></th>
-<th class="head"><p>DELTA_P</p></th>
-<th class="head"><p>DELTA_R</p></th>
-<th class="head"><p>DELTA_B</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>DELTA_U</p></td>
-<td><p>PRN</p></td>
-<td><p>TOL</p></td>
-<td><p>NAN</p></td>
-<td><p>DUB</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_E</p></td>
-<td><p>ZN</p></td>
-<td><p>LNi</p></td>
-<td><p>LNa</p></td>
-<td><p>TN</p></td>
-</tr>
-<tr class="row-even"><td><p>DELTA_SIGMA</p></td>
-<td><p>PLP</p></td>
-<td><p></p></td>
-<td><p>NDN</p></td>
-<td><p>PSP</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_X</p></td>
-<td><p>EM</p></td>
-<td><p></p></td>
-<td><p>RN</p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Come si vede, il decodificato DELTA_A individua prevalentemente istruzioni che
-interessano l'Accumulatore; il decodificato DELTA_T individua prevalentemente istruzioni che
-interessano la Memoria T; il decodificato DELTA_S individua
-istruzioni varie (di unità centrale); il decodificato V
-individua infine istruzioni che interessano unità elettromeccaniche esterne (nastri, tamburo, unità in linea).</p>
+<section id="uscite-dal-registro-di-lunghezza">
+<h3><span class="sectnum">10.1.3 </span>Uscite dal registro di lunghezza<a class="headerlink" href="#uscite-dal-registro-di-lunghezza" title="Permalink to this heading">#</a></h3>
+<p>I segnali di uscita dai registri LU, LD vanno direttamente e continuamente al comparatore di ricerca e
+al comparatore di lunghezza. Su comando di XLD, le uscite di RL possono andare invece alla memoria.</p>
+<p>Le uscite di LD vanno direttamente anche al verificatore di condizione <a class="footnote-reference brackets" href="#id11" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>.</p>
 </section>
 </section>
-<section id="decodificati-secondari">
-<h2><span class="sectnum">9.3 </span>Decodificati secondari<a class="headerlink" href="#decodificati-secondari" title="Permalink to this heading">#</a></h2>
-<p>I decodificati secondari sono invece i seguenti (è stato omesso il prefisso DELTA nei decodificati primari),</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>DELTA_K    = c
-DELTA_N    = !(_SIGMA * _M + _SIGMA * _B) * _V
-DELTA_AER  = _A * _E * _R + _T * + _E * _R
-DELTA_VUR  = _V * _U * _R = DELTA_NN
-DELTA_AEB  = _A * _E * _B
-DELTA_AUR  = _A * _U * _R
-DELTA_RI   = _S * _E *  a
-DELTA_PI   = _V * _X * _B + _S * _SIGMA * _B
-DELTA_SXM  = _S * _X *  _M
-DELTA_I    = _S * _X * !_M + _S * _U * _B
-DELTA_Z    = _S * _R * !c
-DELTA_1AUP = _A * _U * _P
-DELTA_MM   = _S * _SIGMA * _M + _S * _SIGMA * _P + _S * _E * _B + _S * _U * _P
+<section id="comparatore-di-lunghezza-ci">
+<h2><span class="sectnum">10.2 </span>Comparatore di lunghezza (CI)<a class="headerlink" href="#comparatore-di-lunghezza-ci" title="Permalink to this heading">#</a></h2>
+<p>Il comparatore di lunghezza confronta le uscite del contatore principale con il contenuto del registro di lunghezza, dando un'indicazione in uscita nel caso di ugua
+glianza.</p>
+<p>Poichè si confrontano caratteri numerici, da ciascuno
+dei due registri LD ed LU arrivano solo i quattro canali che si riferiscono ai bits a, b, c, d.</p>
+<p>Nelle istruzioni tipo DELTA_T si ha a disposizione una sola
+cifra per indicare la lunghezza <a class="footnote-reference brackets" href="#id12" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>. Questa cifra (l'ultima uscente da Memoria durante la preparazione) viene
+immessa in LU. La lunghezza 10 (la massima su cui si può
+operare nelle DELTA_T) è indicata dalla cifra 0 scritta in
+LU. Nelle DELTA_T si limita quindi la comparazione alla sola
+cifra delle unità.</p>
+<p>La struttura logica del comparatore è impostata sulla
+ricerca delle condizioni di disuguaglianza fra gli ingressi: l'uscita di uguaglianza si ottiene poi come negata della disuguaglianza. Cio` semplifica i circuiti di
+confronto. Si scriverà perciò questa equazione di disuguaglianza.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(Cp != L) = aCpU * !aLU + !aCpU * aLU + bCpU * !bLU + !bCpU * bLU +
+            cCpU * !cLU + !cCpU * cLU + dCpU * !dLU + !dCpU * dLU +
+            (aCpD * !aLD + !aCpD * aLD + bCpD * !bLD + !bCpD * bLD +
+            cCpD * !cLD + !cCpD.cLD + dCpD * !dLD + !dCpD * dLD) * !DELTA_T
+
+(Cp = L) = !(Cp != L)
 </pre></div>
 </div>
-<p>Ogni decodificato secondario individua un gruppo di istruzioni diverse: i
-decodificati secondari sono quindi soltanto dei segnali di comodo che
-semplificano la logica dei comandi.</p>
-<p>Le istruzioni che la macchina può eseguire sono in numero maggiore delle 64
-possibilità di individuazione offerte dal carattere di funzione.</p>
-<p>Infatti tutta la classe delle istruzioni di salto è individuata dalla cifra zero (000000) immessa in F (decodificato parziale secondario 2): le diverse istruzioni sono poi caratterizzate dalla condizione sotto cui
-eseguire il salto, condizione che è rappresentata dal
-carattere uscente da memoria nel p.d.c. 8 della fase di
-preparazione<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
-<p>Questo sistema consente di individuare fino a 64 diverse istruzioni di salto. Ne sono utilizzate soltanto 34.</p>
+<p>L'uscita di Cl è abilitata solamente in BETA_w poichè è interessante nella sola fase di esecuzione.</p>
+<p>Poiché si potrebbe aver indicazione di uguaglianza al
+p.d.c. 0 della fase BETA_w (quando Cp = 0) se in L è contenuto 100, l'uscita di Cl è condizionata alla presenza
+del segnale !p0.</p>
+<p>Inoltre essa è inibita nelle DELTA_RI e quando si ha in LU
+uno dei caratteri P, Q, Y, Z.</p>
+<section id="comparatore-di-ricerca-cr">
+<h3><span class="sectnum">10.2.1 </span>Comparatore di ricerca (Cr)<a class="headerlink" href="#comparatore-di-ricerca-cr" title="Permalink to this heading">#</a></h3>
+<p>Il comparatore di ricerca confronta le uscite del registro di lunghezza con il contenuto di memoria. Esso
+viene utilizzato soltanto in quei casi in cui un carattere chiave è staticizzato nel registro LD.</p>
+<p>Quando dalla memoria esce il carattere chiave, da Cr
+esce un segnale (I PHI I) il quale avverte che tutti i caratteri da memoria sono stati operati. Il carattere chiave
+non viene operato.</p>
+<p>I segnali che escono da LD, LU vanno direttamente e continuamente a Cr e quindi il confronto viene sempre fatto. Il risultato di tale confronto non viene prelevato
+nella DELTA_АЕВ (1 'istruzione CM).</p>
+<p>Anche la logica del comparatore di ricerca è impostata
+sulla ricerca della disuguaglianza: l'uscita di uguaglianza è ottenuta come la negata della disuguaglianza.</p>
+<p>Si ha la seguente equazione logica:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IUCr!= = aMI * !aLD * aLU + !aMI * aLD * aLU + bMI * !bLD * bLU + !bMI * bLD * bLU +
+         cMI * !cLD * cLU + !cMI * cLD * cLU + dMI * !dLD * dLU + !dMI * dLD * dLU +
+         eMI * !eLD * eLU + !eMI * elD * eLU + fMI * !fLD * fLU + !fMI * fLD * fLU
+
+IUCr =  !IUCr!=
+</pre></div>
+</div>
+<p>Il confronto come si vede, è condizionato alla presenza
+dei bit del registro delle unità.</p>
+<p>Esso avverrà solo per i bit UNO del carattere contenuto
+in LU, che, come si ricorderà, è P, o Q, o I, o Z.</p>
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id2" role="note">
+<aside class="footnote brackets" id="id7" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>Questo carattere è immesso come sempre in LD, che comunica con il
-verificatore (vedi 16.1.).</p>
+<p>Vedi 11.2. pag.  109</p>
+</aside>
+<aside class="footnote brackets" id="id8" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Vedi 10.2. pag.  103</p>
+</aside>
+<aside class="footnote brackets" id="id9" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>Vedi 10.3. pag.  104</p>
+</aside>
+<aside class="footnote brackets" id="id10" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>Il registro di lunghezza viene azzerato col comando RL in ALPHA, p1, M7 nelle operazioni in cui sarà
+attivo l'ingresso dall'U.A.D., in M7, nelle opera
+zioni in cui sarà attivo l'ingresso dal contatore
+principale.</p>
+</aside>
+<aside class="footnote brackets" id="id11" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<p>Vedi 16.1</p>
+</aside>
+<aside class="footnote brackets" id="id12" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
+<p>La struttura delle istruzioni DELTA_T è infatti la seguente: <code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">Tb</span> <span class="pre">IIII</span> <span class="pre">Ta</span> <span class="pre">F</span></code></p>
 </aside>
 </aside>
+</section>
 </section>
 </section>
 
@@ -467,23 +371,23 @@ verificatore (vedi 16.1.).</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="10-organi-lunghezza-operando.html">
+          <a class="next-page" href="11-organi-di-temporizzazione.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><span class="sectnum">10 </span>Organi di lunghezza operando da memoria</div>
+                <div class="title"><span class="sectnum">11 </span>Organi di temporizzazione</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="index.html">
+          <a class="prev-page" href="09-organi-di-funzione.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Unita' Centrale - Descrizione Logica degli Organi</div>
+                <div class="title"><span class="sectnum">9 </span>Organi di funzione</div>
                 
               </div>
             </a>
@@ -519,14 +423,17 @@ verificatore (vedi 16.1.).</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#"><span class="sectnum">9 </span>Organi di funzione</a><ul>
-<li><a class="reference internal" href="#registro-di-funzione-f"><span class="sectnum">9.1 </span>Registro di funzione F</a></li>
-<li><a class="reference internal" href="#decodificatore-di-funzione"><span class="sectnum">9.2 </span>Decodificatore di funzione</a><ul>
-<li><a class="reference internal" href="#decodificati-parziali"><span class="sectnum">9.2.1 </span>Decodificati parziali</a></li>
-<li><a class="reference internal" href="#decodificati-primari"><span class="sectnum">9.2.2 </span>Decodificati primari</a></li>
+<li><a class="reference internal" href="#"><span class="sectnum">10 </span>Organi di lunghezza operando da memoria</a><ul>
+<li><a class="reference internal" href="#registro-di-lunghezza-rl"><span class="sectnum">10.1 </span>Registro di lunghezza RL</a><ul>
+<li><a class="reference internal" href="#lunghezza-dell-operando-da-memoria"><span class="sectnum">10.1.1 </span>Lunghezza dell'operando da Memoria</a></li>
+<li><a class="reference internal" href="#ingreasi-al-registro-di-lunghezza"><span class="sectnum">10.1.2 </span>Ingreasi al registro di lunghezza</a></li>
+<li><a class="reference internal" href="#uscite-dal-registro-di-lunghezza"><span class="sectnum">10.1.3 </span>Uscite dal registro di lunghezza</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#decodificati-secondari"><span class="sectnum">9.3 </span>Decodificati secondari</a></li>
+<li><a class="reference internal" href="#comparatore-di-lunghezza-ci"><span class="sectnum">10.2 </span>Comparatore di lunghezza (CI)</a><ul>
+<li><a class="reference internal" href="#comparatore-di-ricerca-cr"><span class="sectnum">10.2.1 </span>Comparatore di ricerca (Cr)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
