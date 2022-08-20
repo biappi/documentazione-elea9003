@@ -21,7 +21,7 @@ Esso viene azzerato soltanto all'inizio dell'istruzione successiva.
 Le uscite del registro F vanno direttamente al decodificatore di funzione.
 
 
-## Decodifioatore di funzione
+## Decodificatore di funzione
 
 
 ### Decodificati parziali
@@ -111,7 +111,7 @@ individua infine istruzioni che interessano unità elettromeccaniche esterne (na
 
 ## Decodificati secondari
 
-I decodificati secondari sono invece i seguenti (è sta to omesso il prefisso DELTA nei decodificati primari),
+I decodificati secondari sono invece i seguenti (è stato omesso il prefisso DELTA nei decodificati primari),
 
     DELTA_K    = c
     DELTA_N    = !(_SIGMA * _M + _SIGMA * _B) * _V
