@@ -177,6 +177,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../descrizione-logica/09-organi-di-funzione.html"><span class="sectnum">9 </span>Organi di funzione</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../descrizione-logica/10-organi-lunghezza-operando.html"><span class="sectnum">10 </span>Organi di lunghezza operando da memoria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../descrizione-logica/11-organi-di-temporizzazione.html"><span class="sectnum">11 </span>Organi di temporizzazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../descrizione-logica/12-le-fasi.html"><span class="sectnum">12 </span>Le fasi</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../schema-logico/index.html">Schema Logico</a></li>
@@ -253,39 +254,15 @@ prelevato nera esecuzione vera e propria del lavoro.</p>
 </section>
 <section id="quadro-di-comando-manuale">
 <h2><span class="sectnum">11.2 </span>Quadro di comando manuale<a class="headerlink" href="#quadro-di-comando-manuale" title="Permalink to this heading">#</a></h2>
-<p>Il quadro di comando manuale e' composto di una serie
-tasti che per comodita' raggruppiamo in 6 zone.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>di
--5
-W. FOT, STOP. FOT
-LASSASSI
-6
-5. SEPISO
-4
-F2F3F4
-20
-MAN. AUTO. SING. CO
-(3,
-(P8
-(P7
-(P6) (P5) (PA
-BL)
-(SGL
-2
-(VIA
-232
-Zona 1 : Pulsanti P1 ÷ P8, tastiera e pulsante BL.
-(P2
-E laboratore, alesseuchparaesstruzion) Impostate di rettamente s61 dia
-dro di comando.
-
-Per questo esiste una tastiera di 64 tasti corrispondenti
-ratteri usati dalla calcolatrice e otto tasti cosi&#39; segnati
-
-a1
-64
-ChE
-,P1, P2, P3, P4, P5, P6, P7, P8.
+<p>Il quadro di comando manuale e' composto di una serie tasti che per comodita'
+raggruppiamo in 6 zone.</p>
+<section id="zona-1-pulsanti-p1-p8-tastiera-e-pulsante-bl">
+<h3><span class="sectnum">11.2.1 </span>Zona 1: Pulsanti P1 ÷ P8, tastiera e pulsante BL.<a class="headerlink" href="#zona-1-pulsanti-p1-p8-tastiera-e-pulsante-bl" title="Permalink to this heading">#</a></h3>
+<p>L'elaboratore oltre che eseguire le istruzioni di programma registrate in
+memoria, esegue pure istruzioni impostate direttamente sul quadro di comando.</p>
+<p>Per questo esiste una tastiera di 64 tasti corrispondenti ratteri usati
+dalla calcolatrice e otto tasti cosi' segnati:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>P1, P2, P3, P4, P5, P6, P7, P8
 </pre></div>
 </div>
 <p>Per impostare un'istruzione sul quadro di comando e' sufficiente premere il
@@ -293,154 +270,303 @@ tasto P8 e quindi premere sulla tastiera gli otto caratteri relativi
 all'istruzione stessa.  Il primo carattere impostato viene registrato in ottava
 posizione (P8), il secondo in P7 e cosi' via.</p>
 <p>Qualsiasi battuta in tastiera dopo l'ottava (P1) non ha alcun effetto.</p>
-<p>Se si vuole correggere un'istruzione gia' impostata e' sufficiente pre mere il
+<p>Se si vuole correggere un'istruzione gia' impostata e' sufficiente premere il
 tasto P corrispondente alla posizione da modificare e battere in tastiera i
 caratteri sostitutivi.</p>
 <p>Il pulsante BL esclude la tastiera. Con l'abbassamento di questo tasto si
 annulla l'efietto di ogni battuta su tastiera.</p>
-<p>Zona 2 : Tasti VIA, SG, SGL.</p>
-<p>(SGL</p>
+</section>
+<section id="zona-2-tasti-via-sg-sgl">
+<h3><span class="sectnum">11.2.2 </span>Zona 2 : Tasti VIA, SG, SGL.<a class="headerlink" href="#zona-2-tasti-via-sg-sgl" title="Permalink to this heading">#</a></h3>
+<section id="sgl">
+<h4><span class="sectnum">11.2.2.1 </span>SGL<a class="headerlink" href="#sgl" title="Permalink to this heading">#</a></h4>
 <p>Serve ad annullare tutte le condizioni automatiche relative alla terza sequenza
 di programma che compaiono sul quadro di controllo nella zona 4</p>
-<p>(56</p>
+</section>
+<section id="sg">
+<h4><span class="sectnum">11.2.2.2 </span>SG<a class="headerlink" href="#sg" title="Permalink to this heading">#</a></h4>
 <p>Serve ad annullare tutte le condizioni automatiche di macchina che appaiono sul
 quadro controllo nelle zone 10, 11, 12, 13</p>
-<p>(VIA)</p>
-<p>Premendo il tasto VIA il calcolatore inizia le ope.  razioni con le modalita'
+</section>
+<section id="via">
+<h4><span class="sectnum">11.2.2.3 </span>VIA<a class="headerlink" href="#via" title="Permalink to this heading">#</a></h4>
+<p>Premendo il tasto VIA il calcolatore inizia le operazioni con le modalita'
 dipendenti dal posizionamento del tasti della zona 3.</p>
-<p>Zona 3 : Tasti MAN, AUTO, SING, CONT, PP.</p>
+</section>
+</section>
+<section id="zona-3-tasti-man-auto-sing-cont-pp">
+<h3><span class="sectnum">11.2.3 </span>Zona 3: Tasti MAN, AUTO, SING, CONT, PP.<a class="headerlink" href="#zona-3-tasti-man-auto-sing-cont-pp" title="Permalink to this heading">#</a></h3>
+<section id="pp">
+<h4><span class="sectnum">11.2.3.1 </span>PP<a class="headerlink" href="#pp" title="Permalink to this heading">#</a></h4>
 <p>Col tasto PP abbassato, premendo il tasto VIA, si esegue una istruzione
 procedendo di cifra per period di cifra</p>
-<p>MAN.AUTO. SING. CONT. P.P.</p>
+</section>
+<section id="cont">
+<h4><span class="sectnum">11.2.3.2 </span>CONT<a class="headerlink" href="#cont" title="Permalink to this heading">#</a></h4>
 <p>Col tasto CONT abbassato, premendo il tasto VIA si esegue la prima istruzione e
 quindi automaticamente tutte le altre fino alla fine del programma.</p>
+</section>
+<section id="sing">
+<h4><span class="sectnum">11.2.3.3 </span>SING<a class="headerlink" href="#sing" title="Permalink to this heading">#</a></h4>
 <p>Col tasto SING abbassato, premendo il pulsante VIA si esegue una istruzione
 alla volta e la calcolatrice si ferma al termine di ogni istruzione.</p>
+</section>
+<section id="auto">
+<h4><span class="sectnum">11.2.3.4 </span>AUTO<a class="headerlink" href="#auto" title="Permalink to this heading">#</a></h4>
 <p>Col tasto AUTO abbassato, premendo il tasto VIA si eseguono le istruzioni del
 programma passo passo, una per volta, oppure tutto il programma a seconda che
-siano rispettivamente abbassati 1| PP, SING, CONT.</p>
-<p>tasti</p>
+siano rispettivamente abbassati i tasti PP, SING, CONT.</p>
+</section>
+<section id="man">
+<h4><span class="sectnum">11.2.3.5 </span>MAN<a class="headerlink" href="#man" title="Permalink to this heading">#</a></h4>
 <p>Col tasto MAN abbassato, premendo il pulsante VIA si esegue l'istruzione
 impostata su quadro di comando che viene eseguita periodo di cifra per periodo
 di cifra interamente a seconda che siano abbassati i tasti PP o SING</p>
-<p>Zona 4 : Tasti 1, 2, 3, 4, E1, E2, E3, E4.</p>
-<p>E1 E2 E3 E4</p>
-<p>I selettori &quot;Condizioni esterne&quot; El, E2, E3, E4, se abbassati abilitano il
+</section>
+</section>
+<section id="zona-4-tasti-1-2-3-4-e1-e2-e3-e4">
+<h3><span class="sectnum">11.2.4 </span>Zona 4 : Tasti 1, 2, 3, 4, E1, E2, E3, E4.<a class="headerlink" href="#zona-4-tasti-1-2-3-4-e1-e2-e3-e4" title="Permalink to this heading">#</a></h3>
+<p>I selettori &quot;Condizioni esterne&quot; E1, E2, E3, E4, se abbassati abilitano il
 salto rispettivamente per le istruzioni, sia da console che da programma
 registrato in memoria, SEI, SE2, SE3, SE4.</p>
-<p>Per passare dalla posizione &quot;Salta&quot; a quella &quot;Non salta&quot; e' sufficiente premere a fondo i singoli tasti.</p>
-<p>I selettori 1, 2, 3, 4 se abbassati permettono il verificarsi delle
-condizioni esterne per il tamburo.</p>
-<p>Zona 5 : Tasti TAMB, TS, FOT, Lett. Fot, Riav.Fot, StopFot</p>
-<p>TAMR TE FOT IETTI FOT QIAY FOLISTOPR</p>
+<p>Per passare dalla posizione &quot;Salta&quot; a quella &quot;Non salta&quot; e' sufficiente premere
+a fondo i singoli tasti.</p>
+<p>I selettori 1, 2, 3, 4 se abbassati permettono il verificarsi delle condizioni
+esterne per il tamburo.</p>
+</section>
+<section id="zona-5-tasti-tamb-ts-fot-lett-fot-riav-fot-stopfot">
+<h3><span class="sectnum">11.2.5 </span>Zona 5 : Tasti Tamb, TS, FOT, Lett.Fot, Riav.Fot, StopFot<a class="headerlink" href="#zona-5-tasti-tamb-ts-fot-lett-fot-riav-fot-stopfot" title="Permalink to this heading">#</a></h3>
+<section id="stopfot">
+<h4><span class="sectnum">11.2.5.1 </span>StopFot<a class="headerlink" href="#stopfot" title="Permalink to this heading">#</a></h4>
 <p>Riporta il fotolettore allo stato &quot;attivato non avviato'</p>
+</section>
+<section id="riav-fot">
+<h4><span class="sectnum">11.2.5.2 </span>Riav.Fot<a class="headerlink" href="#riav-fot" title="Permalink to this heading">#</a></h4>
 <p>Abilita il fotolettore al riavvolgimento del nastro.</p>
+</section>
+<section id="lett-fot">
+<h4><span class="sectnum">11.2.5.3 </span>Lett.Fot<a class="headerlink" href="#lett-fot" title="Permalink to this heading">#</a></h4>
 <p>Abilita la lettura da fotolettore.</p>
+</section>
+<section id="fot">
+<h4><span class="sectnum">11.2.5.4 </span>Fot<a class="headerlink" href="#fot" title="Permalink to this heading">#</a></h4>
 <p>Attiva il fotolettore.</p>
+</section>
+<section id="ts">
+<h4><span class="sectnum">11.2.5.5 </span>TS<a class="headerlink" href="#ts" title="Permalink to this heading">#</a></h4>
 <p>Abilita la telescrivente.</p>
+</section>
+<section id="tamb">
+<h4><span class="sectnum">11.2.5.6 </span>Tamb.<a class="headerlink" href="#tamb" title="Permalink to this heading">#</a></h4>
 <p>Abilita il tamburo.</p>
-<p>Zona 6 : Tasti ASE, AE, ASN, AS, PS, SEP, ISOL.</p>
-<p>ASE. A.E. ASN. A.S. PS.  SEPISOL</p>
+</section>
+</section>
+<section id="zona-6-tasti-ase-ae-asn-as-ps-sep-isol">
+<h3><span class="sectnum">11.2.6 </span>Zona 6 : Tasti ASE, AE, ASN, AS, PS, SEP, ISOL.<a class="headerlink" href="#zona-6-tasti-ase-ae-asn-as-ps-sep-isol" title="Permalink to this heading">#</a></h3>
+<section id="isol">
+<h4><span class="sectnum">11.2.6.1 </span>ISOL<a class="headerlink" href="#isol" title="Permalink to this heading">#</a></h4>
 <p>Permette l'esecuzione dell'istruzione MS contemporaneamente alla elaborazione
 in corso.</p>
+</section>
+<section id="sep">
+<h4><span class="sectnum">11.2.6.2 </span>SEP<a class="headerlink" href="#sep" title="Permalink to this heading">#</a></h4>
 <p>Arresta l'elaborazione alla fine del periodo di cifra in cui si e' verificato
 un errore.</p>
+</section>
+<section id="ps">
+<h4><span class="sectnum">11.2.6.3 </span>PS<a class="headerlink" href="#ps" title="Permalink to this heading">#</a></h4>
 <p>Arresta l'elaborazione al termine dell'istruzione riconosciuta uguale' a quella
 impostata da quadro di comando.</p>
+</section>
+<section id="as">
+<h4><span class="sectnum">11.2.6.4 </span>AS<a class="headerlink" href="#as" title="Permalink to this heading">#</a></h4>
 <p>Arresta l'elaborazione al termine di un'istruzione di salto.</p>
+</section>
+<section id="asn">
+<h4><span class="sectnum">11.2.6.5 </span>ASN<a class="headerlink" href="#asn" title="Permalink to this heading">#</a></h4>
 <p>Arresta l'elaborazione al termine di un'istruzione di salto non verificato.</p>
+</section>
+<section id="ae">
+<h4><span class="sectnum">11.2.6.6 </span>AE<a class="headerlink" href="#ae" title="Permalink to this heading">#</a></h4>
 <p>Arresta l'elaborazione dopo la rilevazione di un errore.</p>
+</section>
+<section id="ase">
+<h4><span class="sectnum">11.2.6.7 </span>ASE<a class="headerlink" href="#ase" title="Permalink to this heading">#</a></h4>
 <p>Arresta l'elaborazione al termine di un'istruzione di salto su errore.</p>
-<p>I tasti non considerati hanno una funzione variabile a seconda del le
+<p>I tasti non considerati hanno una funzione variabile a seconda delle
 particolari caratteristiche dell'impianto.</p>
+</section>
+</section>
 </section>
 <section id="il-quadro-di-controllo">
 <h2><span class="sectnum">11.3 </span>Il quadro di controllo<a class="headerlink" href="#il-quadro-di-controllo" title="Permalink to this heading">#</a></h2>
 <p>Il quadro di controllo si compone di 13 batterie di indicatori luminosi poste superiormente al quadro di comando manuale.</p>
 <p>Ad ogni batteria corrisponde una delle zone sottoindicate</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>006000606
-0@@11500
--a.
-ib
-12
-166666
-2
-237
-</pre></div>
-</div>
-<p>Zona 1 : Riquadro di alimentazione</p>
-<p>~ CORPO CENTR.</p>
-<p>~ GENERALE</p>
-<p>~ UN. NASTRO</p>
-<p>~ TAMBURO</p>
-<p>~ MOT. IN LIN</p>
-<p>~ ALIM. 48</p>
+<section id="zona-1-riquadro-di-alimentazione">
+<h3><span class="sectnum">11.3.1 </span>Zona 1 : Riquadro di alimentazione<a class="headerlink" href="#zona-1-riquadro-di-alimentazione" title="Permalink to this heading">#</a></h3>
+<section id="priv">
+<h4><span class="sectnum">11.3.1.1 </span>~ PRIV<a class="headerlink" href="#priv" title="Permalink to this heading">#</a></h4>
 <p>Interruttore corrente alternata privilegiata del corpo centrale</p>
+</section>
+<section id="alim">
+<h4><span class="sectnum">11.3.1.2 </span>~ ALIM<a class="headerlink" href="#alim" title="Permalink to this heading">#</a></h4>
 <p>Interruttore corrente alternata alimentatore.</p>
+</section>
+<section id="corpo-centr">
+<h4><span class="sectnum">11.3.1.3 </span>~ CORPO CENTR.<a class="headerlink" href="#corpo-centr" title="Permalink to this heading">#</a></h4>
 <p>Interruttore corrente continua del corpo centrale.</p>
+</section>
+<section id="generale">
+<h4><span class="sectnum">11.3.1.4 </span>~ GENERALE<a class="headerlink" href="#generale" title="Permalink to this heading">#</a></h4>
 <p>Interruttore corrente centro elettronico.</p>
+</section>
+<section id="un-nastro">
+<h4><span class="sectnum">11.3.1.5 </span>~ UN.NASTRO<a class="headerlink" href="#un-nastro" title="Permalink to this heading">#</a></h4>
 <p>Interruttore corrente del governo unita' nastro.</p>
+</section>
+<section id="tamburo">
+<h4><span class="sectnum">11.3.1.6 </span>~ TAMBURO<a class="headerlink" href="#tamburo" title="Permalink to this heading">#</a></h4>
 <p>Interruttore corrente del tamburo.</p>
+</section>
+<section id="mot-in-lin">
+<h4><span class="sectnum">11.3.1.7 </span>~ MOT. IN LIN<a class="headerlink" href="#mot-in-lin" title="Permalink to this heading">#</a></h4>
 <p>Interruttore corrente alternata delle unita' in linea</p>
+</section>
+<section id="alim-48">
+<h4><span class="sectnum">11.3.1.8 </span>~ ALIM. 48<a class="headerlink" href="#alim-48" title="Permalink to this heading">#</a></h4>
 <p>Interruttore corrente delle unita' in linea.</p>
-<p>Zona
-In questa zona possono apparire dispositivi diversi
+</section>
+</section>
+<section id="zona-2">
+<h3><span class="sectnum">11.3.2 </span>Zona 2<a class="headerlink" href="#zona-2" title="Permalink to this heading">#</a></h3>
+<p>In questa zona possono apparire dispositivi diversi
 condo le necessita' particolari dell'utente.</p>
-<p>Zona 3:</p>
-<p>Indicatori &quot;Istruzione manuale&quot; permettono il controllo delle istruzioni
-impostate manualmente</p>
+</section>
+<section id="zona-3-indicatori-istruzione-manuale">
+<h3><span class="sectnum">11.3.3 </span>Zona 3: Indicatori &quot;Istruzione manuale&quot;<a class="headerlink" href="#zona-3-indicatori-istruzione-manuale" title="Permalink to this heading">#</a></h3>
+<p>Permettono il controllo delle istruzioni impostate manualmente.</p>
 <p>Gli indicatori accesi riportano nel codice di calcolatore i caratteri
 dell'istruzione impostata.</p>
-<p>L' indicatore acceso segnalala posizione da P8 a P1 successiva a quella
+<p>L'indicatore acceso segnalala posizione da P8 a P1 successiva a quella
 raggiunta durante l'impostazione della istruzione manuale.</p>
-<p>Zona 4 : Indicatori relativi alla terza sequenza di pro</p>
+</section>
+<section id="zona-4-indicatori-relativi-alla-terza-sequenza-di-programma">
+<h3><span class="sectnum">11.3.4 </span>Zona 4: Indicatori relativi alla terza sequenza di programma<a class="headerlink" href="#zona-4-indicatori-relativi-alla-terza-sequenza-di-programma" title="Permalink to this heading">#</a></h3>
 <p>Indicatori delle unita' attivate.</p>
 <p>Indicatori delle unita' date.</p>
 <p>Indicatori delle unita' in cui si e' veriiicato un errore</p>
 <p>Indicatori non utilizzati.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(U=
-(10
-(UD
-</pre></div>
-</div>
+<section id="u">
+<h4><span class="sectnum">11.3.4.1 </span>U!=<a class="headerlink" href="#u" title="Permalink to this heading">#</a></h4>
 <p>Indicatore di unita' fittizia attivata.</p>
+</section>
+<section id="c">
+<h4><span class="sectnum">11.3.4.2 </span>1c<a class="headerlink" href="#c" title="Permalink to this heading">#</a></h4>
 <p>Indicatore di primo ciclo di terzo programma, in esecuzione.</p>
+</section>
+<section id="rol">
+<h4><span class="sectnum">11.3.4.3 </span>ROL<a class="headerlink" href="#rol" title="Permalink to this heading">#</a></h4>
 <p>Indicatore di primo ciclo di terzo programma eseguito.</p>
+</section>
+<section id="ud">
+<h4><span class="sectnum">11.3.4.4 </span>UD<a class="headerlink" href="#ud" title="Permalink to this heading">#</a></h4>
 <p>Indicatore di unita' disponibile.</p>
+</section>
+<section id="uao">
+<h4><span class="sectnum">11.3.4.5 </span>UAO<a class="headerlink" href="#uao" title="Permalink to this heading">#</a></h4>
 <p>Indicatore di unita attivata ed occupata.</p>
 <p>Indicatore non utilizzato.</p>
-<p>Zona 5: Indicatori relativi al tamburo magnetico.</p>
-<p>LUNGHEZZ</p>
+</section>
+</section>
+<section id="zona-5-indicatori-relativi-al-tamburo-magnetico">
+<h3><span class="sectnum">11.3.5 </span>Zona 5: Indicatori relativi al tamburo magnetico.<a class="headerlink" href="#zona-5-indicatori-relativi-al-tamburo-magnetico" title="Permalink to this heading">#</a></h3>
+<section id="lunghezza">
+<h4><span class="sectnum">11.3.5.1 </span>Lunghezza<a class="headerlink" href="#lunghezza" title="Permalink to this heading">#</a></h4>
 <p>Lunghezza dell'informazione in codice calcolatore.</p>
+</section>
+<section id="indirizzo-pista">
+<h4><span class="sectnum">11.3.5.2 </span>Indirizzo pista<a class="headerlink" href="#indirizzo-pista" title="Permalink to this heading">#</a></h4>
 <p>Numero della pista in codice calcolatore.</p>
+</section>
+<section id="indirizzo-carattere">
+<h4><span class="sectnum">11.3.5.3 </span>Indirizzo carattere<a class="headerlink" href="#indirizzo-carattere" title="Permalink to this heading">#</a></h4>
 <p>Indirizzo, in codice calcolatore a partire dal quale avviene il trasferimento a
 tamburo.</p>
+</section>
+<section id="er">
+<h4><span class="sectnum">11.3.5.4 </span>Er<a class="headerlink" href="#er" title="Permalink to this heading">#</a></h4>
 <p>Indicatore di errore.</p>
+</section>
+<section id="ag">
+<h4><span class="sectnum">11.3.5.5 </span>AG<a class="headerlink" href="#ag" title="Permalink to this heading">#</a></h4>
 <p>Indicatore di elaborazione su tamburo.</p>
+</section>
+<section id="lt">
+<h4><span class="sectnum">11.3.5.6 </span>LT<a class="headerlink" href="#lt" title="Permalink to this heading">#</a></h4>
 <p>Indicatore di lettura da tamburo.</p>
+</section>
+<section id="rt">
+<h4><span class="sectnum">11.3.5.7 </span>RT<a class="headerlink" href="#rt" title="Permalink to this heading">#</a></h4>
 <p>Indicatore di registrazione su tamburo.</p>
-<p>Indicatore di informazione</p>
-<p>100 caratteri</p>
-<p>Zona 6 : Indicatori relativi alle unita' a nastro magnetico.</p>
+</section>
+<section id="lc">
+<h4><span class="sectnum">11.3.5.8 </span>LC<a class="headerlink" href="#lc" title="Permalink to this heading">#</a></h4>
+<p>Indicatore di informazione &gt; 100 caratteri</p>
+</section>
+</section>
+<section id="zona-6-indicatori-relativi-alle-unita-a-nastro-magnetico">
+<h3><span class="sectnum">11.3.6 </span>Zona 6: Indicatori relativi alle unita' a nastro magnetico.<a class="headerlink" href="#zona-6-indicatori-relativi-alle-unita-a-nastro-magnetico" title="Permalink to this heading">#</a></h3>
+<section id="l">
+<h4><span class="sectnum">11.3.6.1 </span>L<a class="headerlink" href="#l" title="Permalink to this heading">#</a></h4>
 <p>Indicatore delle unita' in lettura</p>
+</section>
+<section id="r">
+<h4><span class="sectnum">11.3.6.2 </span>R<a class="headerlink" href="#r" title="Permalink to this heading">#</a></h4>
 <p>Indicatore delle unita' in registrazione.</p>
+</section>
+<section id="rv">
+<h4><span class="sectnum">11.3.6.3 </span>Rv<a class="headerlink" href="#rv" title="Permalink to this heading">#</a></h4>
 <p>Indicatore delle unita in avvolgimento.</p>
+</section>
+<section id="pe">
+<h4><span class="sectnum">11.3.6.4 </span>Pe<a class="headerlink" href="#pe" title="Permalink to this heading">#</a></h4>
 <p>Indicatore delle unita' non funzionanti.</p>
-<p>Numero deoi blocchi operati. in
-dice calcolatore.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>co
-è 5
-in corso
-in corso
-IN in corso
-DUB in corso
-a
-9000
-</pre></div>
-</div>
+</section>
+<section id="dm-m-c-d-u">
+<h4><span class="sectnum">11.3.6.5 </span>DM, M, C, D, U<a class="headerlink" href="#dm-m-c-d-u" title="Permalink to this heading">#</a></h4>
+<p>Numero dei blocchi operati, in codice calcolatore.</p>
+</section>
+<section id="id1">
+<h4><span class="sectnum">11.3.6.6 </span>R<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<p>RN in corso</p>
+</section>
+<section id="id2">
+<h4><span class="sectnum">11.3.6.7 </span>L<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<p>LNa in corso</p>
+</section>
+<section id="t">
+<h4><span class="sectnum">11.3.6.8 </span>T<a class="headerlink" href="#t" title="Permalink to this heading">#</a></h4>
+<p>TN in corso</p>
+</section>
+<section id="d">
+<h4><span class="sectnum">11.3.6.9 </span>D<a class="headerlink" href="#d" title="Permalink to this heading">#</a></h4>
+<p>DUB in corso</p>
+</section>
+<section id="rc">
+<h4><span class="sectnum">11.3.6.10 </span>Rc<a class="headerlink" href="#rc" title="Permalink to this heading">#</a></h4>
 <p>Ricerca in corso</p>
+</section>
+<section id="nan">
+<h4><span class="sectnum">11.3.6.11 </span>NAN<a class="headerlink" href="#nan" title="Permalink to this heading">#</a></h4>
 <p>NAN in corso</p>
-<p>NI in corso</p>
+</section>
+</section>
+<section id="ndn">
+<h3><span class="sectnum">11.3.7 </span>Ndn<a class="headerlink" href="#ndn" title="Permalink to this heading">#</a></h3>
+<p>NDN in corso</p>
+</section>
+<section id="zn">
+<h3><span class="sectnum">11.3.8 </span>ZN<a class="headerlink" href="#zn" title="Permalink to this heading">#</a></h3>
 <p>KN in corso</p>
 <p>IN; in corso</p>
 <p>b
@@ -456,41 +582,42 @@ possibile un operazione di nastro.</p>
 <p>Errore di disparita' in registrazione.</p>
 <p>Errore in registrazione</p>
 <p>Indicatori non utilizzati.</p>
-<p>Zona 7 : Indicatori relativi alla telescrivente e fotolettore.</p>
-<p>Telescrivente disponibile per la ricezione di un ca
-rattere</p>
+</section>
+<section id="zona-7-indicatori-relativi-alla-telescrivente-e-fotolettore">
+<h3><span class="sectnum">11.3.9 </span>Zona 7: Indicatori relativi alla telescrivente e fotolettore.<a class="headerlink" href="#zona-7-indicatori-relativi-alla-telescrivente-e-fotolettore" title="Permalink to this heading">#</a></h3>
+<p>Telescrivente disponibile per la ricezione di un carattere</p>
 <p>E' in corso un'istruzione di telescrivente (CM, MS).</p>
 <p>La telescrivente e' abilitata all'introduzione o alla scrittura di caratteri.</p>
 <p>Ritorno di carrello a fine operazione.</p>
 <p>E' in corso un ciclo attivo di telescrivente.</p>
-<p>Carattere, in codice perforatore, operato da
-scrivente o fotolettore.</p>
-<p>Zona 8 : Indicatori della configurazione in codice calcolatore dell'istruzione in corso.</p>
+<p>Carattere, in codice perforatore, operato da scrivente o fotolettore.</p>
+</section>
+<section id="zona-8-indicatori-della-configurazione-in-codice-calcolatore-dell-istruzione-in-corso">
+<h3><span class="sectnum">11.3.10 </span>Zona 8: Indicatori della configurazione in codice calcolatore dell'istruzione in corso.<a class="headerlink" href="#zona-8-indicatori-della-configurazione-in-codice-calcolatore-dell-istruzione-in-corso" title="Permalink to this heading">#</a></h3>
 <p>Nome e posizione di memoria T del registro.</p>
 <p>Carattere di funzione.</p>
 <p>Wu Ym</p>
 <p>P6 ÷ P3</p>
-<p>Stato dell'indirizzatore della memoria
-per i dati operati mediante il canale e
+<p>Stato dell'indirizzatore della memoria per i dati operati mediante il canale e
 sterno.</p>
-<p>Stato dell'indirizzatore della
-memoria per i dati operati mediante il
-canale
+<p>Stato dell'indirizzatore della memoria per i dati operati mediante il canale
 interno.</p>
-<p>Rappresentano i caratteri in p7 e p8 del
-istruzione</p>
-<p>Zona 9: Indicatori dei caratteri in corso di elaborazione</p>
+<p>Rappresentano i caratteri in p7 e p8 del istruzione</p>
+</section>
+<section id="zona-9-indicatori-dei-caratteri-in-corso-di-elaborazione">
+<h3><span class="sectnum">11.3.11 </span>Zona 9: Indicatori dei caratteri in corso di elaborazione<a class="headerlink" href="#zona-9-indicatori-dei-caratteri-in-corso-di-elaborazione" title="Permalink to this heading">#</a></h3>
 <p>UE AT UA Rm</p>
 <p>Cifra operanda del moltiplicatore.</p>
-<p>Carattere in uscita da unita aritmetica €
-logica.</p>
+<p>Carattere in uscita da unita aritmetica e logica.</p>
 <p>Carattere in uscita da accumulatore o registri T.</p>
 <p>Carattere in uscita da memoria attraverso il
 canale esterno.</p>
 <p>Carattere in uscita da memoria attraverso il canale interno.</p>
 <p>Carattere in entrata nella memoria dispari.</p>
 <p>Carattere in entrata nella memoria pari.</p>
-<p>Zona 10 : Indicatori delle condizioni della memoria, dell'accumulatore e dei registri T.</p>
+</section>
+<section id="zona-10-indicatori-delle-condizioni-della-memoria-dell-accumulatore-e-dei-registri-t">
+<h3><span class="sectnum">11.3.12 </span>Zona 10: Indicatori delle condizioni della memoria, dell'accumulatore e dei registri T.<a class="headerlink" href="#zona-10-indicatori-delle-condizioni-della-memoria-dell-accumulatore-e-dei-registri-t" title="Permalink to this heading">#</a></h3>
 <p>Gli indirizzi delle informazioni operate mediante istruzioni doppie di memoria sono entrambi pari</p>
 <p>dispari</p>
 <p>Indica l'abilitazione alla conta del registro</p>
@@ -529,30 +656,25 @@ gno da memoria mediante canale interno</p>
 <p>Contenuto di accumulatore. = 0</p>
 <p>(Non interessante).</p>
 <p>Overflow in un registro</p>
-<p>Zona 11 : Indicatori di temporizzazioni</p>
+</section>
+<section id="zona-11-indicatori-di-temporizzazioni">
+<h3><span class="sectnum">11.3.13 </span>Zona 11: Indicatori di temporizzazioni<a class="headerlink" href="#zona-11-indicatori-di-temporizzazioni" title="Permalink to this heading">#</a></h3>
 <p>Indicatori del numero di periodi di cifre eseguiti.</p>
 <p>Indicatori della fase in esecuzione</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(2p)(
-(P.) (.)
-G
-</pre></div>
-</div>
 <p>Stop del primo programma.</p>
 <p>(Non interessante).</p>
 <p>(Non interessanti).</p>
 <p>E' in esecuzione una sequenza di 3 programma</p>
 <p>E' in esecuzione una sequenza di 2° programma</p>
-<p>Zona 12 : Indicatori di fini ed errori</p>
+</section>
+<section id="zona-12-indicatori-di-fini-ed-errori">
+<h3><span class="sectnum">11.3.14 </span>Zona 12: Indicatori di fini ed errori<a class="headerlink" href="#zona-12-indicatori-di-fini-ed-errori" title="Permalink to this heading">#</a></h3>
 <p>Fine dell'esecuzione di un istruzione.</p>
 <p>Si opera sull'ultimo carattere dell'operando di accumulatore o registri T</p>
 <p>La fine di una operazione aritmetica viene ricardata di un periodo di cifra.</p>
-<p>~ terminata la ricerca di un carattere.</p>
+<p>E' terminata la ricerca di un carattere.</p>
 <p>I caratteri precedentemente confrontati sono risultati diversi.</p>
 <p>I dati confrontati risultano di segno opposto.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(C\*
-(Cs
-</pre></div>
-</div>
 <p>Indica la fine di ogni prodotto elementare.</p>
 <p>Si opera sull'ultimo carattere dell' operando di memoria</p>
 <p>Si opera sull'ultimo carattere del moltiplicatore.</p>
@@ -572,22 +694,22 @@ G
 <p>Errore in entrata da fotolettore.</p>
 <p>(Non utilizzato).</p>
 <p>(Non utilizzato).</p>
-<p>Zona 13 : Indicatori relativi a condizioni varie</p>
+</section>
+<section id="zona-13-indicatori-relativi-a-condizioni-varie">
+<h3><span class="sectnum">11.3.15 </span>Zona 13: Indicatori relativi a condizioni varie<a class="headerlink" href="#zona-13-indicatori-relativi-a-condizioni-varie" title="Permalink to this heading">#</a></h3>
 <p>(Non utilizzato).</p>
 <p>L'istruzione in esecuzione e' diversa da quella impostata da guadro di comando</p>
 <p>Si e' verificata la condizione di un'istruzione salto.</p>
 <p>E' bloccato il primo programma.</p>
 <p>E' bloccato il terzo programma.</p>
 <p>E' terminata l'istruzione bloccante del secondo programma</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&amp;- dillilla.
-</pre></div>
-</div>
 <p>(Non interessante)</p>
 <p>L unita' a nastro interessata e' occupata.</p>
 <p>Indicatore di passaggio tra un periodo di cifra e l'altro.</p>
 <p>E' bloccato il secondo programma</p>
 <p>Non interessante</p>
 <p>E' terminata l'istruzione bloccante del terzo programma.</p>
+</section>
 </section>
 </section>
 
@@ -650,8 +772,102 @@ G
             <ul>
 <li><a class="reference internal" href="#"><span class="sectnum">11 </span>Il tavolo di comando</a><ul>
 <li><a class="reference internal" href="#generalita"><span class="sectnum">11.1 </span>Generalita'</a></li>
-<li><a class="reference internal" href="#quadro-di-comando-manuale"><span class="sectnum">11.2 </span>Quadro di comando manuale</a></li>
-<li><a class="reference internal" href="#il-quadro-di-controllo"><span class="sectnum">11.3 </span>Il quadro di controllo</a></li>
+<li><a class="reference internal" href="#quadro-di-comando-manuale"><span class="sectnum">11.2 </span>Quadro di comando manuale</a><ul>
+<li><a class="reference internal" href="#zona-1-pulsanti-p1-p8-tastiera-e-pulsante-bl"><span class="sectnum">11.2.1 </span>Zona 1: Pulsanti P1 ÷ P8, tastiera e pulsante BL.</a></li>
+<li><a class="reference internal" href="#zona-2-tasti-via-sg-sgl"><span class="sectnum">11.2.2 </span>Zona 2 : Tasti VIA, SG, SGL.</a><ul>
+<li><a class="reference internal" href="#sgl"><span class="sectnum">11.2.2.1 </span>SGL</a></li>
+<li><a class="reference internal" href="#sg"><span class="sectnum">11.2.2.2 </span>SG</a></li>
+<li><a class="reference internal" href="#via"><span class="sectnum">11.2.2.3 </span>VIA</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#zona-3-tasti-man-auto-sing-cont-pp"><span class="sectnum">11.2.3 </span>Zona 3: Tasti MAN, AUTO, SING, CONT, PP.</a><ul>
+<li><a class="reference internal" href="#pp"><span class="sectnum">11.2.3.1 </span>PP</a></li>
+<li><a class="reference internal" href="#cont"><span class="sectnum">11.2.3.2 </span>CONT</a></li>
+<li><a class="reference internal" href="#sing"><span class="sectnum">11.2.3.3 </span>SING</a></li>
+<li><a class="reference internal" href="#auto"><span class="sectnum">11.2.3.4 </span>AUTO</a></li>
+<li><a class="reference internal" href="#man"><span class="sectnum">11.2.3.5 </span>MAN</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#zona-4-tasti-1-2-3-4-e1-e2-e3-e4"><span class="sectnum">11.2.4 </span>Zona 4 : Tasti 1, 2, 3, 4, E1, E2, E3, E4.</a></li>
+<li><a class="reference internal" href="#zona-5-tasti-tamb-ts-fot-lett-fot-riav-fot-stopfot"><span class="sectnum">11.2.5 </span>Zona 5 : Tasti Tamb, TS, FOT, Lett.Fot, Riav.Fot, StopFot</a><ul>
+<li><a class="reference internal" href="#stopfot"><span class="sectnum">11.2.5.1 </span>StopFot</a></li>
+<li><a class="reference internal" href="#riav-fot"><span class="sectnum">11.2.5.2 </span>Riav.Fot</a></li>
+<li><a class="reference internal" href="#lett-fot"><span class="sectnum">11.2.5.3 </span>Lett.Fot</a></li>
+<li><a class="reference internal" href="#fot"><span class="sectnum">11.2.5.4 </span>Fot</a></li>
+<li><a class="reference internal" href="#ts"><span class="sectnum">11.2.5.5 </span>TS</a></li>
+<li><a class="reference internal" href="#tamb"><span class="sectnum">11.2.5.6 </span>Tamb.</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#zona-6-tasti-ase-ae-asn-as-ps-sep-isol"><span class="sectnum">11.2.6 </span>Zona 6 : Tasti ASE, AE, ASN, AS, PS, SEP, ISOL.</a><ul>
+<li><a class="reference internal" href="#isol"><span class="sectnum">11.2.6.1 </span>ISOL</a></li>
+<li><a class="reference internal" href="#sep"><span class="sectnum">11.2.6.2 </span>SEP</a></li>
+<li><a class="reference internal" href="#ps"><span class="sectnum">11.2.6.3 </span>PS</a></li>
+<li><a class="reference internal" href="#as"><span class="sectnum">11.2.6.4 </span>AS</a></li>
+<li><a class="reference internal" href="#asn"><span class="sectnum">11.2.6.5 </span>ASN</a></li>
+<li><a class="reference internal" href="#ae"><span class="sectnum">11.2.6.6 </span>AE</a></li>
+<li><a class="reference internal" href="#ase"><span class="sectnum">11.2.6.7 </span>ASE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#il-quadro-di-controllo"><span class="sectnum">11.3 </span>Il quadro di controllo</a><ul>
+<li><a class="reference internal" href="#zona-1-riquadro-di-alimentazione"><span class="sectnum">11.3.1 </span>Zona 1 : Riquadro di alimentazione</a><ul>
+<li><a class="reference internal" href="#priv"><span class="sectnum">11.3.1.1 </span>~ PRIV</a></li>
+<li><a class="reference internal" href="#alim"><span class="sectnum">11.3.1.2 </span>~ ALIM</a></li>
+<li><a class="reference internal" href="#corpo-centr"><span class="sectnum">11.3.1.3 </span>~ CORPO CENTR.</a></li>
+<li><a class="reference internal" href="#generale"><span class="sectnum">11.3.1.4 </span>~ GENERALE</a></li>
+<li><a class="reference internal" href="#un-nastro"><span class="sectnum">11.3.1.5 </span>~ UN.NASTRO</a></li>
+<li><a class="reference internal" href="#tamburo"><span class="sectnum">11.3.1.6 </span>~ TAMBURO</a></li>
+<li><a class="reference internal" href="#mot-in-lin"><span class="sectnum">11.3.1.7 </span>~ MOT. IN LIN</a></li>
+<li><a class="reference internal" href="#alim-48"><span class="sectnum">11.3.1.8 </span>~ ALIM. 48</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#zona-2"><span class="sectnum">11.3.2 </span>Zona 2</a></li>
+<li><a class="reference internal" href="#zona-3-indicatori-istruzione-manuale"><span class="sectnum">11.3.3 </span>Zona 3: Indicatori &quot;Istruzione manuale&quot;</a></li>
+<li><a class="reference internal" href="#zona-4-indicatori-relativi-alla-terza-sequenza-di-programma"><span class="sectnum">11.3.4 </span>Zona 4: Indicatori relativi alla terza sequenza di programma</a><ul>
+<li><a class="reference internal" href="#u"><span class="sectnum">11.3.4.1 </span>U!=</a></li>
+<li><a class="reference internal" href="#c"><span class="sectnum">11.3.4.2 </span>1c</a></li>
+<li><a class="reference internal" href="#rol"><span class="sectnum">11.3.4.3 </span>ROL</a></li>
+<li><a class="reference internal" href="#ud"><span class="sectnum">11.3.4.4 </span>UD</a></li>
+<li><a class="reference internal" href="#uao"><span class="sectnum">11.3.4.5 </span>UAO</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#zona-5-indicatori-relativi-al-tamburo-magnetico"><span class="sectnum">11.3.5 </span>Zona 5: Indicatori relativi al tamburo magnetico.</a><ul>
+<li><a class="reference internal" href="#lunghezza"><span class="sectnum">11.3.5.1 </span>Lunghezza</a></li>
+<li><a class="reference internal" href="#indirizzo-pista"><span class="sectnum">11.3.5.2 </span>Indirizzo pista</a></li>
+<li><a class="reference internal" href="#indirizzo-carattere"><span class="sectnum">11.3.5.3 </span>Indirizzo carattere</a></li>
+<li><a class="reference internal" href="#er"><span class="sectnum">11.3.5.4 </span>Er</a></li>
+<li><a class="reference internal" href="#ag"><span class="sectnum">11.3.5.5 </span>AG</a></li>
+<li><a class="reference internal" href="#lt"><span class="sectnum">11.3.5.6 </span>LT</a></li>
+<li><a class="reference internal" href="#rt"><span class="sectnum">11.3.5.7 </span>RT</a></li>
+<li><a class="reference internal" href="#lc"><span class="sectnum">11.3.5.8 </span>LC</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#zona-6-indicatori-relativi-alle-unita-a-nastro-magnetico"><span class="sectnum">11.3.6 </span>Zona 6: Indicatori relativi alle unita' a nastro magnetico.</a><ul>
+<li><a class="reference internal" href="#l"><span class="sectnum">11.3.6.1 </span>L</a></li>
+<li><a class="reference internal" href="#r"><span class="sectnum">11.3.6.2 </span>R</a></li>
+<li><a class="reference internal" href="#rv"><span class="sectnum">11.3.6.3 </span>Rv</a></li>
+<li><a class="reference internal" href="#pe"><span class="sectnum">11.3.6.4 </span>Pe</a></li>
+<li><a class="reference internal" href="#dm-m-c-d-u"><span class="sectnum">11.3.6.5 </span>DM, M, C, D, U</a></li>
+<li><a class="reference internal" href="#id1"><span class="sectnum">11.3.6.6 </span>R</a></li>
+<li><a class="reference internal" href="#id2"><span class="sectnum">11.3.6.7 </span>L</a></li>
+<li><a class="reference internal" href="#t"><span class="sectnum">11.3.6.8 </span>T</a></li>
+<li><a class="reference internal" href="#d"><span class="sectnum">11.3.6.9 </span>D</a></li>
+<li><a class="reference internal" href="#rc"><span class="sectnum">11.3.6.10 </span>Rc</a></li>
+<li><a class="reference internal" href="#nan"><span class="sectnum">11.3.6.11 </span>NAN</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ndn"><span class="sectnum">11.3.7 </span>Ndn</a></li>
+<li><a class="reference internal" href="#zn"><span class="sectnum">11.3.8 </span>ZN</a></li>
+<li><a class="reference internal" href="#zona-7-indicatori-relativi-alla-telescrivente-e-fotolettore"><span class="sectnum">11.3.9 </span>Zona 7: Indicatori relativi alla telescrivente e fotolettore.</a></li>
+<li><a class="reference internal" href="#zona-8-indicatori-della-configurazione-in-codice-calcolatore-dell-istruzione-in-corso"><span class="sectnum">11.3.10 </span>Zona 8: Indicatori della configurazione in codice calcolatore dell'istruzione in corso.</a></li>
+<li><a class="reference internal" href="#zona-9-indicatori-dei-caratteri-in-corso-di-elaborazione"><span class="sectnum">11.3.11 </span>Zona 9: Indicatori dei caratteri in corso di elaborazione</a></li>
+<li><a class="reference internal" href="#zona-10-indicatori-delle-condizioni-della-memoria-dell-accumulatore-e-dei-registri-t"><span class="sectnum">11.3.12 </span>Zona 10: Indicatori delle condizioni della memoria, dell'accumulatore e dei registri T.</a></li>
+<li><a class="reference internal" href="#zona-11-indicatori-di-temporizzazioni"><span class="sectnum">11.3.13 </span>Zona 11: Indicatori di temporizzazioni</a></li>
+<li><a class="reference internal" href="#zona-12-indicatori-di-fini-ed-errori"><span class="sectnum">11.3.14 </span>Zona 12: Indicatori di fini ed errori</a></li>
+<li><a class="reference internal" href="#zona-13-indicatori-relativi-a-condizioni-varie"><span class="sectnum">11.3.15 </span>Zona 13: Indicatori relativi a condizioni varie</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

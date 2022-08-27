@@ -17,7 +17,7 @@ p.d.c. pO può durare (nella lettura da fotolettore) qualche ms anziché 10 µs.
 Nel p.d.c. occorre poi individuare 1l µs. A ciò provvedono i mastri. Questi
 sono impulsi di larghezza 0,5 µs e a fronti molto ripidi.
 
-Si distinguono 10 mastri diversi MO + M10. Ognuno è presente su una propria
+Si distinguono 10 mastri diversi M0 + M10. Ognuno è presente su una propria
 linea; su ciascuna linea perciò si ha un mastro ogni 10 µs.
 
 I mastri sono ottenuti da una linea di ritardo in cui viene fatto circolare un
@@ -37,7 +37,7 @@ nelle linea un mastro, lo si avrà all'uscita dopo 10 µsec.
 
 Nei punti intermedi si possono prelevare altri mastri con ritardi variabili.
 
-Si prelevano i mastri da MO ad M10. Quando la memoria non scambia informazioni
+Si prelevano i mastri da M0 ad M10. Quando la memoria non scambia informazioni
 con il tamburo o i nastri, la circolazione del mastro nella l.d.r. è ottenuta
 riportando M10 all'ingresso della linea stessa, tramite una porta che è aperta
 se è presente il segnale Ie (vedi FF Ie pag. 109).
@@ -51,10 +51,12 @@ sincronismo, in forma di mastri, detti rispettivamente MoT ed M5T. Questi
 segnali si ripetono ogni 11 µsec. circa e sono sfasati fra di loro esattamente
 di 180°.
 
-I due segnali MoT ed M5T vengono immessi rispettivamente nella prima e nella seconda metà della linea; la temporizzazione di macchina è così asservita al tamburo.
+I due segnali MoT ed M5T vengono immessi rispettivamente nella prima e nella
+seconda metà della linea; la temporizzazione di macchina è così asservita al
+tamburo.
 
 Si noti che i mastri non sono più spaziati uniformemente nel tempo: fra M4 ed
-M5 ci sarà (nominalmente) 1,5 µs; e fra MO ed M10 ci sarà 0,5 µsec [^1].
+M5 ci sarà (nominalmente) 1,5 µs; e fra M0 ed M10 ci sarà 0,5 µsec [^1].
 
 Anche quando è in funzione un nastro magnetico occorre asservire la linea di
 ritardo a un segnale da nastro, detto trig N, che si ripete ogni 18 µsec circa.
@@ -88,10 +90,12 @@ dall'M3.
 Il segnale T5 va alla seconda metà della linea di ritardo tramite un generatore
 di mastri.
 
+
 ### Flip-flop Ie
 
 Questo flip-flop stabilisce se la linea è chiusa su se stessa (Ie) o è invece
 aperta (!Ie).
+
 
 ### Flip-flop Va
 
@@ -101,6 +105,7 @@ attivato.
 
 Il segnale che si ottiene viene derivato e mandato a disporre il flip-flop Cl,
 a fornire perciò il primo impulso alla linea di ritardo.
+
 
 ## Contatore principale (Cp)
 
@@ -124,8 +129,9 @@ fa contare, con una conta ogni 10 µs da 00 a 76 e lo si azzera appena è finito
 il carattere. La conta riprende al carattere successivo. Quando V è nella
 configurazione 40 si ha la conta di Cp.
 
-Il contatore Cp viene azzerato all'M9 di ogni p.d.c. se
-è presente 11 segnale !KZ.
+Il contatore Cp viene azzerato all'M9 di ogni p.d.c. se è presente 11 segnale
+!KZ.
+
 
 ### Il flip-flop KZ
 
@@ -140,9 +146,8 @@ in KZ al p0 in fase ALFA, BETA_w, RO, TAU, ecc.
 
 ### Rete logica != Cp
 
-Essa indioa che il contenuto del contatore principale è
-diverso da 00. In tal caso si ha un segnale in uscita
-(I != Cp).
+Essa indica che il contenuto del contatore principale è diverso da 00. In tal
+caso si ha un segnale in uscita (I != Cp).
 
 E' costituito da una rete logica che ha la seguente equazione:
 

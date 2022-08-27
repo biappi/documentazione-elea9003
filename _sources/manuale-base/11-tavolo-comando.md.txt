@@ -54,40 +54,18 @@ prelevato nera esecuzione vera e propria del lavoro.
 
 ## Quadro di comando manuale
 
-Il quadro di comando manuale e' composto di una serie
-tasti che per comodita' raggruppiamo in 6 zone.
+Il quadro di comando manuale e' composto di una serie tasti che per comodita'
+raggruppiamo in 6 zone.
 
-    di
-    -5
-    W. FOT, STOP. FOT
-    LASSASSI
-    6
-    5. SEPISO
-    4
-    F2F3F4
-    20
-    MAN. AUTO. SING. CO
-    (3,
-    (P8
-    (P7
-    (P6) (P5) (PA
-    BL)
-    (SGL
-    2
-    (VIA
-    232
-    Zona 1 : Pulsanti P1 ÷ P8, tastiera e pulsante BL.
-    (P2
-    E laboratore, alesseuchparaesstruzion) Impostate di rettamente s61 dia
-    dro di comando.
+### Zona 1: Pulsanti P1 ÷ P8, tastiera e pulsante BL.
 
-    Per questo esiste una tastiera di 64 tasti corrispondenti
-    ratteri usati dalla calcolatrice e otto tasti cosi' segnati
+L'elaboratore oltre che eseguire le istruzioni di programma registrate in
+memoria, esegue pure istruzioni impostate direttamente sul quadro di comando.
 
-    a1
-    64
-    ChE
-    ,P1, P2, P3, P4, P5, P6, P7, P8.
+Per questo esiste una tastiera di 64 tasti corrispondenti ratteri usati
+dalla calcolatrice e otto tasti cosi' segnati:
+
+    P1, P2, P3, P4, P5, P6, P7, P8
 
 Per impostare un'istruzione sul quadro di comando e' sufficiente premere il
 tasto P8 e quindi premere sulla tastiera gli otto caratteri relativi
@@ -96,104 +74,119 @@ posizione (P8), il secondo in P7 e cosi' via.
 
 Qualsiasi battuta in tastiera dopo l'ottava (P1) non ha alcun effetto.
 
-Se si vuole correggere un'istruzione gia' impostata e' sufficiente pre mere il
+Se si vuole correggere un'istruzione gia' impostata e' sufficiente premere il
 tasto P corrispondente alla posizione da modificare e battere in tastiera i
 caratteri sostitutivi.
 
 Il pulsante BL esclude la tastiera. Con l'abbassamento di questo tasto si
 annulla l'efietto di ogni battuta su tastiera.
 
-Zona 2 : Tasti VIA, SG, SGL.
 
-(SGL
+### Zona 2 : Tasti VIA, SG, SGL.
 
+#### SGL
 Serve ad annullare tutte le condizioni automatiche relative alla terza sequenza
 di programma che compaiono sul quadro di controllo nella zona 4
 
-(56
-
+#### SG
 Serve ad annullare tutte le condizioni automatiche di macchina che appaiono sul
 quadro controllo nelle zone 10, 11, 12, 13
 
-(VIA)
-
-Premendo il tasto VIA il calcolatore inizia le ope.  razioni con le modalita'
+#### VIA
+Premendo il tasto VIA il calcolatore inizia le operazioni con le modalita'
 dipendenti dal posizionamento del tasti della zona 3.
 
-Zona 3 : Tasti MAN, AUTO, SING, CONT, PP.
 
+### Zona 3: Tasti MAN, AUTO, SING, CONT, PP.
+
+
+#### PP
 Col tasto PP abbassato, premendo il tasto VIA, si esegue una istruzione
 procedendo di cifra per period di cifra
 
-MAN.AUTO. SING. CONT. P.P.
-
+#### CONT
 Col tasto CONT abbassato, premendo il tasto VIA si esegue la prima istruzione e
 quindi automaticamente tutte le altre fino alla fine del programma.
 
+#### SING
 Col tasto SING abbassato, premendo il pulsante VIA si esegue una istruzione
 alla volta e la calcolatrice si ferma al termine di ogni istruzione.
 
+#### AUTO
 Col tasto AUTO abbassato, premendo il tasto VIA si eseguono le istruzioni del
 programma passo passo, una per volta, oppure tutto il programma a seconda che
-siano rispettivamente abbassati 1| PP, SING, CONT.
+siano rispettivamente abbassati i tasti PP, SING, CONT.
 
-tasti
+
+#### MAN
 
 Col tasto MAN abbassato, premendo il pulsante VIA si esegue l'istruzione
 impostata su quadro di comando che viene eseguita periodo di cifra per periodo
 di cifra interamente a seconda che siano abbassati i tasti PP o SING
 
-Zona 4 : Tasti 1, 2, 3, 4, E1, E2, E3, E4.
 
-E1 E2 E3 E4
+### Zona 4 : Tasti 1, 2, 3, 4, E1, E2, E3, E4.
 
-I selettori "Condizioni esterne" El, E2, E3, E4, se abbassati abilitano il
+I selettori "Condizioni esterne" E1, E2, E3, E4, se abbassati abilitano il
 salto rispettivamente per le istruzioni, sia da console che da programma
 registrato in memoria, SEI, SE2, SE3, SE4.
 
-Per passare dalla posizione "Salta" a quella "Non salta" e' sufficiente premere a fondo i singoli tasti.
+Per passare dalla posizione "Salta" a quella "Non salta" e' sufficiente premere
+a fondo i singoli tasti.
 
-I selettori 1, 2, 3, 4 se abbassati permettono il verificarsi delle
-condizioni esterne per il tamburo.
+I selettori 1, 2, 3, 4 se abbassati permettono il verificarsi delle condizioni
+esterne per il tamburo.
 
-Zona 5 : Tasti TAMB, TS, FOT, Lett. Fot, Riav.Fot, StopFot
 
-TAMR TE FOT IETTI FOT QIAY FOLISTOPR
+### Zona 5 : Tasti Tamb, TS, FOT, Lett.Fot, Riav.Fot, StopFot
 
+
+#### StopFot
 Riporta il fotolettore allo stato "attivato non avviato'
 
+#### Riav.Fot
 Abilita il fotolettore al riavvolgimento del nastro.
 
+#### Lett.Fot
 Abilita la lettura da fotolettore.
 
+#### Fot
 Attiva il fotolettore.
 
+#### TS
 Abilita la telescrivente.
 
+#### Tamb.
 Abilita il tamburo.
 
-Zona 6 : Tasti ASE, AE, ASN, AS, PS, SEP, ISOL.
+### Zona 6 : Tasti ASE, AE, ASN, AS, PS, SEP, ISOL.
 
-ASE. A.E. ASN. A.S. PS.  SEPISOL
 
+#### ISOL
 Permette l'esecuzione dell'istruzione MS contemporaneamente alla elaborazione
 in corso.
 
+#### SEP
 Arresta l'elaborazione alla fine del periodo di cifra in cui si e' verificato
 un errore.
 
+#### PS
 Arresta l'elaborazione al termine dell'istruzione riconosciuta uguale' a quella
 impostata da quadro di comando.
 
+#### AS
 Arresta l'elaborazione al termine di un'istruzione di salto.
 
+#### ASN
 Arresta l'elaborazione al termine di un'istruzione di salto non verificato.
 
+#### AE
 Arresta l'elaborazione dopo la rilevazione di un errore.
 
+#### ASE
 Arresta l'elaborazione al termine di un'istruzione di salto su errore.
 
-I tasti non considerati hanno una funzione variabile a seconda del le
+I tasti non considerati hanno una funzione variabile a seconda delle
 particolari caratteristiche dell'impianto.
 
 
@@ -203,62 +196,52 @@ Il quadro di controllo si compone di 13 batterie di indicatori luminosi poste su
 
 Ad ogni batteria corrisponde una delle zone sottoindicate
 
-    006000606
-    0@@11500
-    -a.
-    ib
-    12
-    166666
-    2
-    237
 
-Zona 1 : Riquadro di alimentazione
+### Zona 1 : Riquadro di alimentazione
 
-~ CORPO CENTR.
 
-~ GENERALE
-
-~ UN. NASTRO
-
-~ TAMBURO
-
-~ MOT. IN LIN
-
-~ ALIM. 48
-
+#### ~ PRIV
 Interruttore corrente alternata privilegiata del corpo centrale
 
+#### ~ ALIM
 Interruttore corrente alternata alimentatore.
 
+#### ~ CORPO CENTR.
 Interruttore corrente continua del corpo centrale.
 
+#### ~ GENERALE
 Interruttore corrente centro elettronico.
 
+#### ~ UN.NASTRO
 Interruttore corrente del governo unita' nastro.
 
+#### ~ TAMBURO
 Interruttore corrente del tamburo.
 
+#### ~ MOT. IN LIN
 Interruttore corrente alternata delle unita' in linea
 
+#### ~ ALIM. 48
 Interruttore corrente delle unita' in linea.
 
 
-Zona
+### Zona 2
 In questa zona possono apparire dispositivi diversi
 condo le necessita' particolari dell'utente.
 
-Zona 3:
 
-Indicatori "Istruzione manuale" permettono il controllo delle istruzioni
-impostate manualmente
+### Zona 3: Indicatori "Istruzione manuale"
+
+Permettono il controllo delle istruzioni impostate manualmente.
 
 Gli indicatori accesi riportano nel codice di calcolatore i caratteri
 dell'istruzione impostata.
 
-L' indicatore acceso segnalala posizione da P8 a P1 successiva a quella
+L'indicatore acceso segnalala posizione da P8 a P1 successiva a quella
 raggiunta durante l'impostazione della istruzione manuale.
 
-Zona 4 : Indicatori relativi alla terza sequenza di pro
+
+### Zona 4: Indicatori relativi alla terza sequenza di programma
 
 Indicatori delle unita' attivate.
 
@@ -268,73 +251,92 @@ Indicatori delle unita' in cui si e' veriiicato un errore
 
 Indicatori non utilizzati.
 
-    (U=
-    (10
-    (UD
 
+#### U!=
 Indicatore di unita' fittizia attivata.
 
+#### 1c
 Indicatore di primo ciclo di terzo programma, in esecuzione.
 
+#### ROL
 Indicatore di primo ciclo di terzo programma eseguito.
 
+#### UD
 Indicatore di unita' disponibile.
 
+#### UAO
 Indicatore di unita attivata ed occupata.
 
 Indicatore non utilizzato.
 
-Zona 5: Indicatori relativi al tamburo magnetico.
+### Zona 5: Indicatori relativi al tamburo magnetico.
 
-LUNGHEZZ
 
+#### Lunghezza
 Lunghezza dell'informazione in codice calcolatore.
 
+#### Indirizzo pista
 Numero della pista in codice calcolatore.
 
+#### Indirizzo carattere
 Indirizzo, in codice calcolatore a partire dal quale avviene il trasferimento a
 tamburo.
 
+#### Er
 Indicatore di errore.
 
+#### AG
 Indicatore di elaborazione su tamburo.
 
+#### LT
 Indicatore di lettura da tamburo.
 
+#### RT
 Indicatore di registrazione su tamburo.
 
-Indicatore di informazione
+#### LC
+Indicatore di informazione > 100 caratteri
 
-100 caratteri
 
-Zona 6 : Indicatori relativi alle unita' a nastro magnetico.
+### Zona 6: Indicatori relativi alle unita' a nastro magnetico.
 
+#### L
 Indicatore delle unita' in lettura
 
+#### R
 Indicatore delle unita' in registrazione.
 
+#### Rv
 Indicatore delle unita in avvolgimento.
 
+#### Pe
 Indicatore delle unita' non funzionanti.
 
-Numero deoi blocchi operati. in
-dice calcolatore.
+#### DM, M, C, D, U
+Numero dei blocchi operati, in codice calcolatore.
 
-    co
-    è 5
-    in corso
-    in corso
-    IN in corso
-    DUB in corso
-    a
-    9000
+#### R
+RN in corso
 
+#### L
+LNa in corso
+
+#### T
+TN in corso
+
+#### D
+DUB in corso
+
+#### Rc
 Ricerca in corso
 
+#### NAN
 NAN in corso
 
-NI in corso
+### Ndn
+NDN in corso
 
+### ZN
 KN in corso
 
 IN; in corso
@@ -363,10 +365,9 @@ Errore in registrazione
 
 Indicatori non utilizzati.
 
-Zona 7 : Indicatori relativi alla telescrivente e fotolettore.
+### Zona 7: Indicatori relativi alla telescrivente e fotolettore.
 
-Telescrivente disponibile per la ricezione di un ca
-rattere
+Telescrivente disponibile per la ricezione di un carattere
 
 E' in corso un'istruzione di telescrivente (CM, MS).
 
@@ -376,10 +377,9 @@ Ritorno di carrello a fine operazione.
 
 E' in corso un ciclo attivo di telescrivente.
 
-Carattere, in codice perforatore, operato da
-scrivente o fotolettore.
+Carattere, in codice perforatore, operato da scrivente o fotolettore.
 
-Zona 8 : Indicatori della configurazione in codice calcolatore dell'istruzione in corso.
+### Zona 8: Indicatori della configurazione in codice calcolatore dell'istruzione in corso.
 
 Nome e posizione di memoria T del registro.
 
@@ -389,26 +389,21 @@ Wu Ym
 
 P6 ÷ P3
 
-Stato dell'indirizzatore della memoria
-per i dati operati mediante il canale e
+Stato dell'indirizzatore della memoria per i dati operati mediante il canale e
 sterno.
 
-Stato dell'indirizzatore della
-memoria per i dati operati mediante il
-canale
+Stato dell'indirizzatore della memoria per i dati operati mediante il canale
 interno.
 
-Rappresentano i caratteri in p7 e p8 del
-istruzione
+Rappresentano i caratteri in p7 e p8 del istruzione
 
-Zona 9: Indicatori dei caratteri in corso di elaborazione
+### Zona 9: Indicatori dei caratteri in corso di elaborazione
 
 UE AT UA Rm
 
 Cifra operanda del moltiplicatore.
 
-Carattere in uscita da unita aritmetica €
-logica.
+Carattere in uscita da unita aritmetica e logica.
 
 Carattere in uscita da accumulatore o registri T.
 
@@ -421,7 +416,7 @@ Carattere in entrata nella memoria dispari.
 
 Carattere in entrata nella memoria pari.
 
-Zona 10 : Indicatori delle condizioni della memoria, dell'accumulatore e dei registri T.
+### Zona 10: Indicatori delle condizioni della memoria, dell'accumulatore e dei registri T.
 
 Gli indirizzi delle informazioni operate mediante istruzioni doppie di memoria sono entrambi pari
 
@@ -498,15 +493,11 @@ Contenuto di accumulatore. = 0
 
 Overflow in un registro
 
-Zona 11 : Indicatori di temporizzazioni
+### Zona 11: Indicatori di temporizzazioni
 
 Indicatori del numero di periodi di cifre eseguiti.
 
 Indicatori della fase in esecuzione
-
-    (2p)(
-    (P.) (.)
-    G
 
 Stop del primo programma.
 
@@ -518,7 +509,7 @@ E' in esecuzione una sequenza di 3 programma
 
 E' in esecuzione una sequenza di 2° programma
 
-Zona 12 : Indicatori di fini ed errori
+### Zona 12: Indicatori di fini ed errori
 
 Fine dell'esecuzione di un istruzione.
 
@@ -526,14 +517,11 @@ Si opera sull'ultimo carattere dell'operando di accumulatore o registri T
 
 La fine di una operazione aritmetica viene ricardata di un periodo di cifra.
 
-~ terminata la ricerca di un carattere.
+E' terminata la ricerca di un carattere.
 
 I caratteri precedentemente confrontati sono risultati diversi.
 
 I dati confrontati risultano di segno opposto.
-
-    (C\*
-    (Cs
 
 Indica la fine di ogni prodotto elementare.
 
@@ -573,7 +561,7 @@ Errore in entrata da fotolettore.
 
 (Non utilizzato).
 
-Zona 13 : Indicatori relativi a condizioni varie
+### Zona 13: Indicatori relativi a condizioni varie
 
 (Non utilizzato).
 
@@ -586,8 +574,6 @@ E' bloccato il primo programma.
 E' bloccato il terzo programma.
 
 E' terminata l'istruzione bloccante del secondo programma
-
-    &- dillilla.
 
 (Non interessante)
 

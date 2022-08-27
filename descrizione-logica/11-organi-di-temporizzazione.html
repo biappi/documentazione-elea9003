@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Indice" href="../genindex.html" /><link rel="search" title="Cerca" href="../search.html" /><link rel="next" title="Schema Logico" href="../schema-logico/index.html" /><link rel="prev" title="10 Organi di lunghezza operando da memoria" href="10-organi-lunghezza-operando.html" />
+<link rel="index" title="Indice" href="../genindex.html" /><link rel="search" title="Cerca" href="../search.html" /><link rel="next" title="12 Le fasi" href="12-le-fasi.html" /><link rel="prev" title="10 Organi di lunghezza operando da memoria" href="10-organi-lunghezza-operando.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
         <title>11 Organi di temporizzazione - Documentazione Olivetti ELEA 9003</title>
@@ -177,6 +177,7 @@
 <li class="toctree-l2"><a class="reference internal" href="09-organi-di-funzione.html"><span class="sectnum">9 </span>Organi di funzione</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10-organi-lunghezza-operando.html"><span class="sectnum">10 </span>Organi di lunghezza operando da memoria</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><span class="sectnum">11 </span>Organi di temporizzazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12-le-fasi.html"><span class="sectnum">12 </span>Le fasi</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../schema-logico/index.html">Schema Logico</a></li>
@@ -223,7 +224,7 @@ opera un carattere alfanumerico.</p>
 p.d.c. pO può durare (nella lettura da fotolettore) qualche ms anziché 10 µs.</p>
 <p>Nel p.d.c. occorre poi individuare 1l µs. A ciò provvedono i mastri. Questi
 sono impulsi di larghezza 0,5 µs e a fronti molto ripidi.</p>
-<p>Si distinguono 10 mastri diversi MO + M10. Ognuno è presente su una propria
+<p>Si distinguono 10 mastri diversi M0 + M10. Ognuno è presente su una propria
 linea; su ciascuna linea perciò si ha un mastro ogni 10 µs.</p>
 <p>I mastri sono ottenuti da una linea di ritardo in cui viene fatto circolare un
 impulso di forma identica a quella dei mastri.</p>
@@ -237,7 +238,7 @@ propedeutico D).</p>
 <p>Fra l'ingresso e l'uscita si ha un ritardo di 10 µs; perciò quando si introduce
 nelle linea un mastro, lo si avrà all'uscita dopo 10 µsec.</p>
 <p>Nei punti intermedi si possono prelevare altri mastri con ritardi variabili.</p>
-<p>Si prelevano i mastri da MO ad M10. Quando la memoria non scambia informazioni
+<p>Si prelevano i mastri da M0 ad M10. Quando la memoria non scambia informazioni
 con il tamburo o i nastri, la circolazione del mastro nella l.d.r. è ottenuta
 riportando M10 all'ingresso della linea stessa, tramite una porta che è aperta
 se è presente il segnale Ie (vedi FF Ie pag. 109).</p>
@@ -248,9 +249,11 @@ con esso la temporizzazione di macchina.</p>
 sincronismo, in forma di mastri, detti rispettivamente MoT ed M5T. Questi
 segnali si ripetono ogni 11 µsec. circa e sono sfasati fra di loro esattamente
 di 180°.</p>
-<p>I due segnali MoT ed M5T vengono immessi rispettivamente nella prima e nella seconda metà della linea; la temporizzazione di macchina è così asservita al tamburo.</p>
+<p>I due segnali MoT ed M5T vengono immessi rispettivamente nella prima e nella
+seconda metà della linea; la temporizzazione di macchina è così asservita al
+tamburo.</p>
 <p>Si noti che i mastri non sono più spaziati uniformemente nel tempo: fra M4 ed
-M5 ci sarà (nominalmente) 1,5 µs; e fra MO ed M10 ci sarà 0,5 µsec <a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
+M5 ci sarà (nominalmente) 1,5 µs; e fra M0 ed M10 ci sarà 0,5 µsec <a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <p>Anche quando è in funzione un nastro magnetico occorre asservire la linea di
 ritardo a un segnale da nastro, detto trig N, che si ripete ogni 18 µsec circa.
 Il trig N viene immesso all'ingresso della linea, con le due metà collegate
@@ -310,8 +313,8 @@ temporizzazione della fase esecutiva di questa istruzione; a questo scopo lo si
 fa contare, con una conta ogni 10 µs da 00 a 76 e lo si azzera appena è finito
 il carattere. La conta riprende al carattere successivo. Quando V è nella
 configurazione 40 si ha la conta di Cp.</p>
-<p>Il contatore Cp viene azzerato all'M9 di ogni p.d.c. se
-è presente 11 segnale !KZ.</p>
+<p>Il contatore Cp viene azzerato all'M9 di ogni p.d.c. se è presente 11 segnale
+!KZ.</p>
 <section id="il-flip-flop-kz">
 <h3><span class="sectnum">11.2.1 </span>Il flip-flop KZ<a class="headerlink" href="#il-flip-flop-kz" title="Permalink to this heading">#</a></h3>
 <p>Il FF KZ serve per la cancellazione del contatore principale. Esso viene
@@ -323,9 +326,8 @@ in KZ al p0 in fase ALFA, BETA_w, RO, TAU, ecc.</p>
 </section>
 <section id="rete-logica-cp">
 <h3><span class="sectnum">11.2.2 </span>Rete logica != Cp<a class="headerlink" href="#rete-logica-cp" title="Permalink to this heading">#</a></h3>
-<p>Essa indioa che il contenuto del contatore principale è
-diverso da 00. In tal caso si ha un segnale in uscita
-(I != Cp).</p>
+<p>Essa indica che il contenuto del contatore principale è diverso da 00. In tal
+caso si ha un segnale in uscita (I != Cp).</p>
 <p>E' costituito da una rete logica che ha la seguente equazione:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>I != Cp = !(!aCpD * !cCpD * !dCpD * !aCpU * !cCpU * !dCpU)
 </pre></div>
@@ -397,12 +399,12 @@ ne p0.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../schema-logico/index.html">
+          <a class="next-page" href="12-le-fasi.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Schema Logico</div>
+                <div class="title"><span class="sectnum">12 </span>Le fasi</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>

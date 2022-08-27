@@ -53,10 +53,10 @@ Schema Logico
 
         });
 
-        var map = L.map('image2d').setView(new L.LatLng(0,0), 0);
+        var map = L.map('image2d', {crs: L.CRS.Simple} ).setView(new L.LatLng(0,0), 0);
         var dzLayer = new ImageLayer('../_static/schema-logico/', { 
-            width: 8192, 
-            height: 8192,
+            width: 8192 * 2,
+            height: 8192 * 2,
             tileSize: 256,
             maxZoom: 5,
             noWrap: true,

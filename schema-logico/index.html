@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Indice" href="../genindex.html" /><link rel="search" title="Cerca" href="../search.html" /><link rel="prev" title="11 Organi di temporizzazione" href="../descrizione-logica/11-organi-di-temporizzazione.html" />
+<link rel="index" title="Indice" href="../genindex.html" /><link rel="search" title="Cerca" href="../search.html" /><link rel="prev" title="12 Le fasi" href="../descrizione-logica/12-le-fasi.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
         <title>Schema Logico - Documentazione Olivetti ELEA 9003</title>
@@ -177,6 +177,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../descrizione-logica/09-organi-di-funzione.html"><span class="sectnum">9 </span>Organi di funzione</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../descrizione-logica/10-organi-lunghezza-operando.html"><span class="sectnum">10 </span>Organi di lunghezza operando da memoria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../descrizione-logica/11-organi-di-temporizzazione.html"><span class="sectnum">11 </span>Organi di temporizzazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../descrizione-logica/12-le-fasi.html"><span class="sectnum">12 </span>Le fasi</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Schema Logico</a></li>
@@ -265,10 +266,10 @@
 
     });
 
-    var map = L.map('image2d').setView(new L.LatLng(0,0), 0);
+    var map = L.map('image2d', {crs: L.CRS.Simple} ).setView(new L.LatLng(0,0), 0);
     var dzLayer = new ImageLayer('../_static/schema-logico/', {
-        width: 8192,
-        height: 8192,
+        width: 8192 * 2,
+        height: 8192 * 2,
         tileSize: 256,
         maxZoom: 5,
         noWrap: true,
@@ -282,14 +283,14 @@
         
         <div class="related-pages">
           
-          <a class="prev-page" href="../descrizione-logica/11-organi-di-temporizzazione.html">
+          <a class="prev-page" href="../descrizione-logica/12-le-fasi.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"><span class="sectnum">11 </span>Organi di temporizzazione</div>
+                <div class="title"><span class="sectnum">12 </span>Le fasi</div>
                 
               </div>
             </a>

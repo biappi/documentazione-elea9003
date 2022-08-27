@@ -177,6 +177,7 @@
 <li class="toctree-l2"><a class="reference internal" href="09-organi-di-funzione.html"><span class="sectnum">9 </span>Organi di funzione</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><span class="sectnum">10 </span>Organi di lunghezza operando da memoria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11-organi-di-temporizzazione.html"><span class="sectnum">11 </span>Organi di temporizzazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12-le-fasi.html"><span class="sectnum">12 </span>Le fasi</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../schema-logico/index.html">Schema Logico</a></li>
@@ -213,88 +214,92 @@
           </label>
         </div>
         <article role="main">
-          <p>`</p>
-<section id="organi-di-lunghezza-operando-da-memoria">
+          <section id="organi-di-lunghezza-operando-da-memoria">
 <h1><span class="sectnum">10 </span>Organi di lunghezza operando da memoria<a class="headerlink" href="#organi-di-lunghezza-operando-da-memoria" title="Permalink to this heading">#</a></h1>
 <section id="registro-di-lunghezza-rl">
 <h2><span class="sectnum">10.1 </span>Registro di lunghezza RL<a class="headerlink" href="#registro-di-lunghezza-rl" title="Permalink to this heading">#</a></h2>
 <p>E' costituito da due gruppi di sei FF, detti rispettivamente LD ed LU.</p>
 <section id="lunghezza-dell-operando-da-memoria">
 <h3><span class="sectnum">10.1.1 </span>Lunghezza dell'operando da Memoria<a class="headerlink" href="#lunghezza-dell-operando-da-memoria" title="Permalink to this heading">#</a></h3>
-<p>La lunghezza dell'operando da memoria nelle operazioni
-fra Memoria ed Accumulatore è indicata con idue caratteri
-uscenti da Memoria nei p.d.c. 7 ed 8 della preparazione; questi caratteri sono immessi in RL.
-Possono darsi due casi:</p>
+<p>La lunghezza dell'operando da memoria nelle operazioni fra Memoria ed
+Accumulatore è indicata con i due caratteri uscenti da Memoria nei p.d.c. 7 ed
+8 della preparazione; questi caratteri sono immessi in RL.  Possono darsi due
+casi:</p>
 <ol class="arabic simple">
-<li><p>I caratteri sono numerici: durante la fase esecuti
-va il contenuto di du viene alora conirontato ad
-ogni p.d.c. con il contenuto del contatore principale <a class="footnote-reference brackets" href="#id7" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, per mezzo del comparatore di lunghezza Cl <a class="footnote-reference brackets" href="#id8" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. La coincidenza dei due contenuti genera un segnale di fine dell'operando di memoria.</p></li>
-<li><p>I caratteri sono alfabetici: si distinguono allora
-due sottocasi, a seconda che in LD venga immesso uno dei
-caratteri Q, P ovvero Z, Y.</p></li>
+<li><p>I caratteri sono numerici: durante la fase esecuti va il contenuto di du
+viene alora conirontato ad ogni p.d.c. con il contenuto del contatore
+principale <a class="footnote-reference brackets" href="#id7" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, per mezzo del comparatore di lunghezza Cl <a class="footnote-reference brackets" href="#id8" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. La coincidenza
+dei due contenuti genera un segnale di fine dell'operando di memoria.</p></li>
+<li><p>I caratteri sono alfabetici: si distinguono allora due sottocasi, a seconda
+che in LD venga immesso uno dei caratteri Q, P ovvero Z, Y.</p></li>
 </ol>
-<p>Nel primo sottocaso (Q, P) durante la fase esecutiva il contenuto del solo LD viene confrontato (mediante il comparatore di ricerca) <a class="footnote-reference brackets" href="#id9" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> ad ogni p.d.c.
-con il carattere uscente da Memoria: l'operando da
-Memoria si considera terminato quando esce da Memoria un carattere uguale a quello immesso in LD (detto carattere chiave).</p>
-<p>Il secondo sottocaso (2, Y), riguarda esclusivamente operandi numerici: il contenuto di LD non interessa e l'operando è considerato terminato non appena da Memoria emerge un carattere alfabetico qualsiasi, ovvero un segno.</p>
-<p>Nelle operazioni su Memoria T la lunghezza dell'operando non puo superare 10: la si indica allora con
-una sola cifra decimale (quella che esce da Memoria
-nell'ultimo p.d.c. della preparazione), che viene
-immessa in IU. La lunghezza 10 è indicata (per convenzione) dalla cifra 0. Il carattere uscente da Memoria nel penultimo pdc. delia preparazione (p7)
-non va in questo caso in LU, ma in V dato che rappresenta l'indirizzo del reg. T su cui operare.</p>
-<p>Nelle istruzioni di salto non esiste operando da Memoria: il carattere uscente da Memoria nel p.d.c. 7
-della preparazione è l'indirizzo del registro T in
-cui immagazzinare l'indirizzo raggiunto nel programma da cui si è saltato, e viene pertanto immesso in
-IU (che resta inutilizzato). Il registro LD riceve
-invece normalmente l'ultimo carattere dell'istruzione, che però indica (anzichè una lunghezza) la condizione sotto cui eseguire il salto.</p>
-<p>Il registro LD serve quindi come registro di condizione nelle istruzioni di salto.</p>
+<p>Nel primo sottocaso (Q, P) durante la fase esecutiva il contenuto del solo LD
+viene confrontato (mediante il comparatore di ricerca) <a class="footnote-reference brackets" href="#id9" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> ad ogni p.d.c.  con
+il carattere uscente da Memoria: l'operando da Memoria si considera terminato
+quando esce da Memoria un carattere uguale a quello immesso in LD (detto
+carattere chiave).</p>
+<p>Il secondo sottocaso (2, Y), riguarda esclusivamente operandi numerici: il
+contenuto di LD non interessa e l'operando è considerato terminato non appena
+da Memoria emerge un carattere alfabetico qualsiasi, ovvero un segno.</p>
+<p>Nelle operazioni su Memoria T la lunghezza dell'operando non puo superare 10:
+la si indica allora con una sola cifra decimale (quella che esce da Memoria
+nell'ultimo p.d.c. della preparazione), che viene immessa in IU. La lunghezza
+10 è indicata (per convenzione) dalla cifra 0. Il carattere uscente da Memoria
+nel penultimo pdc. delia preparazione (p7) non va in questo caso in LU, ma in V
+dato che rappresenta l'indirizzo del reg. T su cui operare.</p>
+<p>Nelle istruzioni di salto non esiste operando da Memoria: il carattere uscente
+da Memoria nel p.d.c. 7 della preparazione è l'indirizzo del registro T in cui
+immagazzinare l'indirizzo raggiunto nel programma da cui si è saltato, e viene
+pertanto immesso in IU (che resta inutilizzato). Il registro LD riceve invece
+normalmente l'ultimo carattere dell'istruzione, che però indica (anzichè una
+lunghezza) la condizione sotto cui eseguire il salto.</p>
+<p>Il registro LD serve quindi come registro di condizione nelle istruzioni di
+salto.</p>
 </section>
 <section id="ingreasi-al-registro-di-lunghezza">
 <h3><span class="sectnum">10.1.2 </span>Ingreasi al registro di lunghezza<a class="headerlink" href="#ingreasi-al-registro-di-lunghezza" title="Permalink to this heading">#</a></h3>
-<p>Prima di introdurre informazioni in RL occorre azzerario,
-col comando RL.</p>
-<p>Si hanno due canali di ingresso, uno proveniente dalla
-U.A.D. (e quindi dalla memoria), e uno proveniente dal
-contatore principale.</p>
+<p>Prima di introdurre informazioni in RL occorre azzerario, col comando RL.</p>
+<p>Si hanno due canali di ingresso, uno proveniente dalla U.A.D. (e quindi dalla
+memoria), e uno proveniente dal contatore principale.</p>
 <ol class="arabic simple">
-<li><p>L'ingresso sul registro LD dalla unità aritmetica
-si ha dall'M8 al M9 del p.d.c. 8 della fase o se non
-ci sono operazioni DELTA_T.</p></li>
+<li><p>L'ingresso sul registro LD dalla unità aritmetica si ha dall'M8 al M9 del
+p.d.c. 8 della fase o se non ci sono operazioni DELTA_T.</p></li>
 </ol>
-<p>L'ingresso in IU si ha se è presente il segnale XLC
-cioè dall'M8 all'M9 del p.d.c. 7 della fase ALFA se non
-ci sono operazioni DELTA_T oppure dall'M8 all'M9 del
-p.d.c. 8 della fase O se ci sono operazioni DELTA_T <a class="footnote-reference brackets" href="#id10" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>.</p>
+<p>L'ingresso in IU si ha se è presente il segnale XLC cioè dall'M8 all'M9 del
+p.d.c. 7 della fase ALFA se non ci sono operazioni DELTA_T oppure dall'M8
+all'M9 del p.d.c. 8 della fase O se ci sono operazioni DELTA_T <a class="footnote-reference brackets" href="#id10" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>.</p>
 <ol class="arabic simple" start="2">
-<li><p>L'ingresso da contatore principale Cp è condiziona
-to alla presenza del segnale XLB. Questo è presente
-in fase BETA_W e alla fine della parola contenuta in accumulatore o in Mem T, nelle istruzioni FAM, FTM cioè
-quando si vuol trasferire in memoria la lunghezza
-della parola contenuta in accumulatore o in Mem T.</p></li>
+<li><p>L'ingresso da contatore principale Cp è condiziona to alla presenza del
+segnale XLB. Questo è presente in fase BETA_W e alla fine della parola
+contenuta in accumulatore o in Mem T, nelle istruzioni FAM, FTM cioè quando si
+vuol trasferire in memoria la lunghezza della parola contenuta in accumulatore
+o in Mem T.</p></li>
 </ol>
 </section>
 <section id="uscite-dal-registro-di-lunghezza">
 <h3><span class="sectnum">10.1.3 </span>Uscite dal registro di lunghezza<a class="headerlink" href="#uscite-dal-registro-di-lunghezza" title="Permalink to this heading">#</a></h3>
-<p>I segnali di uscita dai registri LU, LD vanno direttamente e continuamente al comparatore di ricerca e
-al comparatore di lunghezza. Su comando di XLD, le uscite di RL possono andare invece alla memoria.</p>
+<p>I segnali di uscita dai registri LU, LD vanno direttamente e continuamente al
+comparatore di ricerca e al comparatore di lunghezza. Su comando di XLD, le
+uscite di RL possono andare invece alla memoria.</p>
 <p>Le uscite di LD vanno direttamente anche al verificatore di condizione <a class="footnote-reference brackets" href="#id11" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>.</p>
 </section>
 </section>
 <section id="comparatore-di-lunghezza-ci">
 <h2><span class="sectnum">10.2 </span>Comparatore di lunghezza (CI)<a class="headerlink" href="#comparatore-di-lunghezza-ci" title="Permalink to this heading">#</a></h2>
-<p>Il comparatore di lunghezza confronta le uscite del contatore principale con il contenuto del registro di lunghezza, dando un'indicazione in uscita nel caso di ugua
-glianza.</p>
-<p>Poichè si confrontano caratteri numerici, da ciascuno
-dei due registri LD ed LU arrivano solo i quattro canali che si riferiscono ai bits a, b, c, d.</p>
-<p>Nelle istruzioni tipo DELTA_T si ha a disposizione una sola
-cifra per indicare la lunghezza <a class="footnote-reference brackets" href="#id12" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>. Questa cifra (l'ultima uscente da Memoria durante la preparazione) viene
-immessa in LU. La lunghezza 10 (la massima su cui si può
-operare nelle DELTA_T) è indicata dalla cifra 0 scritta in
-LU. Nelle DELTA_T si limita quindi la comparazione alla sola
-cifra delle unità.</p>
-<p>La struttura logica del comparatore è impostata sulla
-ricerca delle condizioni di disuguaglianza fra gli ingressi: l'uscita di uguaglianza si ottiene poi come negata della disuguaglianza. Cio` semplifica i circuiti di
-confronto. Si scriverà perciò questa equazione di disuguaglianza.</p>
+<p>Il comparatore di lunghezza confronta le uscite del contatore principale con il
+contenuto del registro di lunghezza, dando un'indicazione in uscita nel caso di
+ugua glianza.</p>
+<p>Poichè si confrontano caratteri numerici, da ciascuno dei due registri LD ed LU
+arrivano solo i quattro canali che si riferiscono ai bits a, b, c, d.</p>
+<p>Nelle istruzioni tipo DELTA_T si ha a disposizione una sola cifra per indicare
+la lunghezza <a class="footnote-reference brackets" href="#id12" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>. Questa cifra (l'ultima uscente da Memoria durante la
+preparazione) viene immessa in LU. La lunghezza 10 (la massima su cui si può
+operare nelle DELTA_T) è indicata dalla cifra 0 scritta in LU. Nelle DELTA_T si
+limita quindi la comparazione alla sola cifra delle unità.</p>
+<p>La struttura logica del comparatore è impostata sulla ricerca delle condizioni
+di disuguaglianza fra gli ingressi: l'uscita di uguaglianza si ottiene poi come
+negata della disuguaglianza. Cio` semplifica i circuiti di confronto. Si
+scriverà perciò questa equazione di disuguaglianza.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(Cp != L) = aCpU * !aLU + !aCpU * aLU + bCpU * !bLU + !bCpU * bLU +
             cCpU * !cLU + !cCpU * cLU + dCpU * !dLU + !dCpU * dLU +
             (aCpD * !aLD + !aCpD * aLD + bCpD * !bLD + !bCpD * bLD +
@@ -303,23 +308,27 @@ confronto. Si scriverà perciò questa equazione di disuguaglianza.</p>
 (Cp = L) = !(Cp != L)
 </pre></div>
 </div>
-<p>L'uscita di Cl è abilitata solamente in BETA_w poichè è interessante nella sola fase di esecuzione.</p>
-<p>Poiché si potrebbe aver indicazione di uguaglianza al
-p.d.c. 0 della fase BETA_w (quando Cp = 0) se in L è contenuto 100, l'uscita di Cl è condizionata alla presenza
-del segnale !p0.</p>
-<p>Inoltre essa è inibita nelle DELTA_RI e quando si ha in LU
-uno dei caratteri P, Q, Y, Z.</p>
+<p>L'uscita di Cl è abilitata solamente in BETA_w poichè è interessante nella sola
+fase di esecuzione.</p>
+<p>Poiché si potrebbe aver indicazione di uguaglianza al p.d.c. 0 della fase
+BETA_w (quando Cp = 0) se in L è contenuto 100, l'uscita di Cl è condizionata
+alla presenza del segnale !p0.</p>
+<p>Inoltre essa è inibita nelle DELTA_RI e quando si ha in LU uno dei caratteri P,
+Q, Y, Z.</p>
 <section id="comparatore-di-ricerca-cr">
 <h3><span class="sectnum">10.2.1 </span>Comparatore di ricerca (Cr)<a class="headerlink" href="#comparatore-di-ricerca-cr" title="Permalink to this heading">#</a></h3>
-<p>Il comparatore di ricerca confronta le uscite del registro di lunghezza con il contenuto di memoria. Esso
-viene utilizzato soltanto in quei casi in cui un carattere chiave è staticizzato nel registro LD.</p>
-<p>Quando dalla memoria esce il carattere chiave, da Cr
-esce un segnale (I PHI I) il quale avverte che tutti i caratteri da memoria sono stati operati. Il carattere chiave
-non viene operato.</p>
-<p>I segnali che escono da LD, LU vanno direttamente e continuamente a Cr e quindi il confronto viene sempre fatto. Il risultato di tale confronto non viene prelevato
-nella DELTA_АЕВ (1 'istruzione CM).</p>
-<p>Anche la logica del comparatore di ricerca è impostata
-sulla ricerca della disuguaglianza: l'uscita di uguaglianza è ottenuta come la negata della disuguaglianza.</p>
+<p>Il comparatore di ricerca confronta le uscite del registro di lunghezza con il
+contenuto di memoria. Esso viene utilizzato soltanto in quei casi in cui un
+carattere chiave è staticizzato nel registro LD.</p>
+<p>Quando dalla memoria esce il carattere chiave, da Cr esce un segnale (I PHI I)
+il quale avverte che tutti i caratteri da memoria sono stati operati. Il
+carattere chiave non viene operato.</p>
+<p>I segnali che escono da LD, LU vanno direttamente e continuamente a Cr e quindi
+il confronto viene sempre fatto. Il risultato di tale confronto non viene
+prelevato nella DELTA_АЕВ (l'istruzione CM).</p>
+<p>Anche la logica del comparatore di ricerca è impostata sulla ricerca della
+disuguaglianza: l'uscita di uguaglianza è ottenuta come la negata della
+disuguaglianza.</p>
 <p>Si ha la seguente equazione logica:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IUCr!= = aMI * !aLD * aLU + !aMI * aLD * aLU + bMI * !bLD * bLU + !bMI * bLD * bLU +
          cMI * !cLD * cLU + !cMI * cLD * cLU + dMI * !dLD * dLU + !dMI * dLD * dLU +
@@ -328,10 +337,10 @@ sulla ricerca della disuguaglianza: l'uscita di uguaglianza è ottenuta come la 
 IUCr =  !IUCr!=
 </pre></div>
 </div>
-<p>Il confronto come si vede, è condizionato alla presenza
-dei bit del registro delle unità.</p>
-<p>Esso avverrà solo per i bit UNO del carattere contenuto
-in LU, che, come si ricorderà, è P, o Q, o I, o Z.</p>
+<p>Il confronto come si vede, è condizionato alla presenza dei bit del registro
+delle unità.</p>
+<p>Esso avverrà solo per i bit UNO del carattere contenuto in LU, che, come si
+ricorderà, è P, o Q, o I, o Z.</p>
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id7" role="note">
@@ -348,10 +357,9 @@ in LU, che, come si ricorderà, è P, o Q, o I, o Z.</p>
 </aside>
 <aside class="footnote brackets" id="id10" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
-<p>Il registro di lunghezza viene azzerato col comando RL in ALPHA, p1, M7 nelle operazioni in cui sarà
-attivo l'ingresso dall'U.A.D., in M7, nelle opera
-zioni in cui sarà attivo l'ingresso dal contatore
-principale.</p>
+<p>Il registro di lunghezza viene azzerato col comando RL in ALPHA, p1, M7
+nelle operazioni in cui sarà attivo l'ingresso dall'U.A.D., in M7, nelle opera
+zioni in cui sarà attivo l'ingresso dal contatore principale.</p>
 </aside>
 <aside class="footnote brackets" id="id11" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>

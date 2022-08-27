@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Indice" href="../genindex.html" /><link rel="search" title="Cerca" href="../search.html" /><link rel="next" title="10 Organi di lunghezza operando da memoria" href="10-organi-lunghezza-operando.html" /><link rel="prev" title="Unita&#39; Centrale - Descrizione Logica degli Organi" href="index.html" />
+<link rel="index" title="Indice" href="../genindex.html" /><link rel="search" title="Cerca" href="../search.html" /><link rel="next" title="Schema Logico" href="../schema-logico/index.html" /><link rel="prev" title="11 Organi di temporizzazione" href="11-organi-di-temporizzazione.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
-        <title>9 Organi di funzione - Documentazione Olivetti ELEA 9003</title>
+        <title>12 Le fasi - Documentazione Olivetti ELEA 9003</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -174,10 +174,10 @@
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Unita' Centrale - Descrizione Logica degli Organi</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><span class="sectnum">9 </span>Organi di funzione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-organi-di-funzione.html"><span class="sectnum">9 </span>Organi di funzione</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10-organi-lunghezza-operando.html"><span class="sectnum">10 </span>Organi di lunghezza operando da memoria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11-organi-di-temporizzazione.html"><span class="sectnum">11 </span>Organi di temporizzazione</a></li>
-<li class="toctree-l2"><a class="reference internal" href="12-le-fasi.html"><span class="sectnum">12 </span>Le fasi</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><span class="sectnum">12 </span>Le fasi</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../schema-logico/index.html">Schema Logico</a></li>
@@ -214,252 +214,180 @@
           </label>
         </div>
         <article role="main">
-          <section id="organi-di-funzione">
-<h1><span class="sectnum">9 </span>Organi di funzione<a class="headerlink" href="#organi-di-funzione" title="Permalink to this heading">#</a></h1>
-<section id="registro-di-funzione-f">
-<h2><span class="sectnum">9.1 </span>Registro di funzione F<a class="headerlink" href="#registro-di-funzione-f" title="Permalink to this heading">#</a></h2>
-<p>Il primo carattere uscente da Memoria durante la preparazione di una
-istruzione è il carattere F, che stabilisce il tipo di operazione che la
-macchina deve eseguire.</p>
-<p>Questo carattere deve essere presente per tutta la durata dell'istruzione e
-viene perciò immagazzinato nel registro di funzione F, costituito da 6
-flip-flop.</p>
-<p>Esso viene azzerato soltanto all'inizio dell'istruzione successiva.</p>
-<p>Le uscite del registro F vanno direttamente al decodificatore di funzione.</p>
+          <section id="le-fasi">
+<h1><span class="sectnum">12 </span>Le fasi<a class="headerlink" href="#le-fasi" title="Permalink to this heading">#</a></h1>
+<p>Come è noto <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> in ogni operazione di macchina si distiguono sempre due fasi:
+una fase preparatoria e una fase esecutiva.</p>
+<p>Nella fase preparatoria vengono estratti dalla macchina i caratteri
+dell'istruzione che si deve eseguire e si immettono tali caratteri negli
+appositi registri di governo.</p>
+<p>Nella fase esecutiva si compie l'operazione vera e propria, e si ottengono i
+risultati.</p>
+<p>La distinzione fra le fasi è affidata a flip-flop, ognuno dei quali determina
+una certa fase.</p>
+<section id="fase-alpha">
+<h2><span class="sectnum">12.1 </span>Fase ALPHA<a class="headerlink" href="#fase-alpha" title="Permalink to this heading">#</a></h2>
+<p>E' la fase preparatoria normale in cui si legge l'istruzione che la macchina
+dovrà eseguire. La fase ALPHA dura 9 p.d.c. (p0 a p8). La lettura dei caratteri
+dell'istruzione avviene in p1 ÷ p8. Soltanto nelle operazioni DELTA_I la fase
+dura 3 p-pulsi (p0 + p2): sono operazioni in cui si deve trasferire in un
+registro I, una costante contenuta nell'istruzione stessa, oppure si deve
+confrontare questa costante con il contenuto di un certo registro T.</p>
+<p>I segnali ALPHA e !ALPHA sono ottenuti dal flip-flop ALPHA. Esso viene disposto
+in ALPHA al primo M9 dopo la chiusura del tasto VIA in console e alla fine
+della fase esecutiva BETA_w se in console è chiuso il tasto &quot;Continuo&quot; cioè è
+stabilito che dopo l'esecuzione di una istruzione si passi immediatamente alla
+successiva.</p>
+<p>Il FF o viene riposto in !ALPHA del segnale di sgancio dato dalla console; in
+ALPHA, p8; nelle DELTA_I, in ALPHA, p2; ecc.</p>
 </section>
-<section id="decodificatore-di-funzione">
-<h2><span class="sectnum">9.2 </span>Decodificatore di funzione<a class="headerlink" href="#decodificatore-di-funzione" title="Permalink to this heading">#</a></h2>
-<section id="decodificati-parziali">
-<h3><span class="sectnum">9.2.1 </span>Decodificati parziali<a class="headerlink" href="#decodificati-parziali" title="Permalink to this heading">#</a></h3>
-<p>I sei bit contenuti nel registro E possono dar luogo a 64 combinazioni
-diverse.</p>
-<p>L'individuazione di queste 64 combinazioni avviene in due stadi successivi. Il
-decodificatore di funzione produce un certo numero di segnali (detti
-decodificati parziali) ognuno dei quali caratterizza una certa classe di
-funzioni.</p>
-<p>Questi decodificati vengono poi combinati fra loro nelle reti che generano i
-comandi dei singoli organi, in modo che ciascun comando sia attivato solo per
-l'istruzione (o le istruzioni) desiderata.</p>
-<p>I decodificati parziali possono essere raggruppati nelle due seguenti classi,
-a seconda di come sono stati generati:</p>
-<ol class="arabic simple">
-<li><p>decodificati primari, ottenuti direttamente da coppie di bit del registro
-F;</p></li>
-<li><p>decodificati secondari, ottenuti da combinazione dei decodificati primari
-(eccezionalmente da bit dal reg. F).</p></li>
-</ol>
+<section id="fase-alpha-ritardata-alpha-r">
+<h2><span class="sectnum">12.2 </span>Fase ALPHA ritardata (ALPHA_r)<a class="headerlink" href="#fase-alpha-ritardata-alpha-r" title="Permalink to this heading">#</a></h2>
+<p>La fase ALPHA_R comincia 4 µsec dopo l'inizio della fase ALPHA (questa comincia
+all'M9, ALPHA_r all'M4) e termina 4 µsec dopo la fine di ALPHA.</p>
+<p>I segnali ALPHA_r sono dati dal FF ALPHA_r. Questo viene disposto da ALPHA
+all'M3, e riposto da !ALPHA ancora all'M3.</p>
 </section>
-<section id="decodificati-primari">
-<h3><span class="sectnum">9.2.2 </span>Decodificati primari<a class="headerlink" href="#decodificati-primari" title="Permalink to this heading">#</a></h3>
-<p>I decodificati primari sono 12 e sono ottenuti con le
-seguenti equazioni logiche:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>DELTA_S = !f * !e       DELTA_P = !d *  a       DELTA_SIGMA =  c *  b
-DELTA_A = !f *  e       DELTA_M =  d *  a       DELTA_X     =  c * !b
-DELTA_T =  f * !e       DELTA_R = !d * !a       DELTA_U     = !c * !b
-DELTA_V =  f *  e       DELTA_B =  d * !a       DELTA_E     = !c *  b
+<section id="fase-alpha-2">
+<h2><span class="sectnum">12.3 </span>Fase ALPHA_2<a class="headerlink" href="#fase-alpha-2" title="Permalink to this heading">#</a></h2>
+<p>La fase ALPHA_2 è la fase preparatoria delle istruzioni del secondo programma.
+I segnali ALPHA_2 e !ALPHA_2 sono dati dal FF ALPHA_2. Questo e riposto con un
+segnale di sgancio da console o all'M7 di BETA_w, p0. Viene invece disposto da
+tutte le condizioni che dispongono la fase quando la macchina elabora due
+programmi contemporaneamente e sono verificate le condizioni che rendono
+possibile la lettura di una istruzione del 2° programma.</p>
+</section>
+<section id="fase-beta-w">
+<h2><span class="sectnum">12.4 </span>Fase BETA_w<a class="headerlink" href="#fase-beta-w" title="Permalink to this heading">#</a></h2>
+<p>E' la principale fase esecutiva dal programma interno.  I segnali BETA_w e
+!BETA_w sono dati dal flip-flop BETA_w.</p>
+<p>Questo flip-flop viene disposto, all'M9, da tutte le condizioni che ripongono
+il FF ALPHA, a meno che non si abbia una istruzione di moltiplicazione.</p>
+<p>In questo caso (BETA_w viene disposto all'M9, p2 della fase RHO (v. 12.7.).</p>
+<p>Il FF BETA_w viene riposto dal segnale di sgancio da console all'M9 se è
+presente il segnale di fine operazione; nelle moltiplicazioni all'9 se c'è
+segnale di fine prodotto parziale.</p>
+</section>
+<section id="fase-beta-ritardata-beta-r">
+<h2><span class="sectnum">12.5 </span>Fase BETA ritardata (BETA_r)<a class="headerlink" href="#fase-beta-ritardata-beta-r" title="Permalink to this heading">#</a></h2>
+<p>BETA_r si trova, rispetto a BETA_w nella stessa relazione in cui si trova
+ALPHA_r rispetto ad ALPHA. Vale perciò quanto si è detto a proposito di
+ALPHA_r.</p>
+</section>
+<section id="fase-beta-y">
+<h2><span class="sectnum">12.6 </span>Fase BETA_y<a class="headerlink" href="#fase-beta-y" title="Permalink to this heading">#</a></h2>
+<p>E' la principale fase esecutiva delle istruzioni che impegnano il canale
+esterno.</p>
+<p>Come al solito, i segnali BETA_y e !BETA_y sono dati dal flip-flop BETA_y.
+Questo flip-flop viene disposto per esempio all'M7 se sono presenti ALPHA_2,
+BETA_w, !Ne (che indica che il canale esterno è libero e può quindi essere
+impegnato per l'esecuzione dell'istruzione) e DELTA_BETA_y (che è presente per
+esempio nelle istruzioni di preparazione uscita memoria o di preparazione
+ingressi nastri, o di trasferimenti da memoria a memoria ecc.).</p>
+<p>Il FF BETA_y viene riposto dal segnale di sgancio da console; all'M10 nelle
+operazioni da memoria a memoria se c'è segnale di fine operazione; nelle
+operazioni da tamburo e da nastro quando compare il segnale di fine operazione,
+rispettivamente dal GUT, e dal GUN.</p>
+</section>
+<section id="fase-rho">
+<h2><span class="sectnum">12.7 </span>Fase RHO<a class="headerlink" href="#fase-rho" title="Permalink to this heading">#</a></h2>
+<p>E' una fase caratteristica della moltiplicazione: in essa si opera soltanto il
+trasferimento da registri T a Rm di una cifra del moltiplicatore; ad essa segue
+perció immediatamente una fase BETA_w di esecuzione (v. moltiplicazione).</p>
+<p>La fase RHO è stabilita dal flip-flop RHO.</p>
+<p>Tale FF viene disposto all'M9 di ALPHA, p8 nella moltiplicazione; al primo M9
+dopo la comparsa del segnale di fine prodotto parziale. Viene riposto all'M9 di
+RHO, p2, o dal segnale di sgancio da console.</p>
+</section>
+<section id="fase-tau">
+<h2><span class="sectnum">12.8 </span>Fase TAU<a class="headerlink" href="#fase-tau" title="Permalink to this heading">#</a></h2>
+<p>Lo scambio dei caratteri fra U.C. e telescrivente avviene nella fase t, che
+dura 4 p.d.c. (pO + p3).</p>
+<p>La telescrivente può operare isolatamente e allora per tutto il tempo richiesto
+dalla stampa rimane inattiva (v. 8.7.2.) oppure può operare contemporaneamente
+allo svolgimento di un programma di macchina. Occorre ricordare che la
+telescrivente impegna il canale interno.</p>
+<p>I segnali TAU e !TAU sono forniti dal FF TAU.  Quando la telescrivente opera
+isolatamente lo scambio dei caratteri (fase TAU) si ha non appena sono presenti
+i segnali indicanti che la telescrivente è impegnata ed è pronta a ricevere i
+caratteri.</p>
+<p>Quando la telescrivente opera contemporaneamente allo avolgimento di un
+programma di macchina, la fase TAU può iniziare quando si ha un segnale di fine
+operazione (riguardante l'altro programma) e sono presenti i segnali indicanti
+che la telescrivente è stata impegnata e e' pronta a ricevere i caratteri.</p>
+</section>
+<section id="fase-mu">
+<h2><span class="sectnum">12.9 </span>Fase MU<a class="headerlink" href="#fase-mu" title="Permalink to this heading">#</a></h2>
+<p>E' la fase caratteristica della NDN.</p>
+<p>Con questa istruzione si registra dalla memoria alla unita a nastro Ns e
+simultaneamente si legge dalla unità Nl, verso la memoria. Ciascun carattere
+letto su nastro va ad occupare la posizione di memoria da cui si è prelevato il
+corrispondente carattere da registrare.</p>
+<p>Le informazioni vengono lette e registrate a gruppi di caratteri compresi tra
+speciali caratteri (THETA) intercalati nel blocco. Ogni gruppo, in genere,
+corrisponde al contenuto di una scheda meccanografica. In corrispondenza aa
+ogni carattere THETA e possibile cambiare la zona di memoria interessata
+nell'istruzione. Questo cambiamento di indirizzo avviene nella fase MU. In ogni
+fase MU si prepara l'indirizzo che si dovrà selezionare in memoria al prossimo
+THETA.</p>
+<p>Le operazioni che avvengono durante la fase interessano il canale interno
+mentre la istruzione NIN interessa il canale esterno.</p>
+<p>Si ha come al solito un flip-flop che dà i segnali MU e !MU. Esso viene
+disposto all'M9 di BETA_w, pO nella NDN: all'M9 nella stessa istruzione se è
+presente il segnale I_THETA indicante che sul canale esterno di memoria sta
+uscendo il carattere THETA.</p>
+<p>Il FF MU viene poi riposto dal segnale di fine generale dell'operazione; dal
+segnale di sganoio da console; all'M9 di p6 se è presente il segnale I_THETA.
+Per quello che riguarda la fase MU si veda anche il manuale GUN.</p>
+</section>
+<section id="fase-eta">
+<h2><span class="sectnum">12.10 </span>Fase ETA<a class="headerlink" href="#fase-eta" title="Permalink to this heading">#</a></h2>
+<p>Questa fase caratterizza i trasferimenti di indirizzo da W ad un registro T
+prescelto nella fase ALPHA. Il trasferimento avviene attraverso l'U.A.D., i
+caratteri pervengono agli staticizzatori di uscita memoria e da qui sono
+trasferiti ai T. Si passa attraverso l'U.A.D. per poter effettuare la modifica
+dei caratteri provenienti dai T nella ITT.</p>
+<p>I segnali ETA e !ETA vengono ottenuti dal flip-flop ETA. Questo FF viene
+disposto all'M2, in ALPHA, p8 nell'istruzione ITT in cui ai sottrae il
+contenuto delle prime 4 posizioni di un registro T da una costante lasciando
+invariata la 5° cella di T (ETA viene riposto infatti in ETA, p4); nel le
+istruzioni di ricerca in fase BETA, appena ii confronto ha dato esito positivo
+(in queste istruzioni l'indirizzo cercato viene trasferito nei registri T);
+nelle istruzioni di salto con condizione verificata in BETA, p0 poichè in
+queste è necessario trasferire in un T prestabilito l'attuale indirizzo di W,
+che è quello dell'istruzione da cui si salta.</p>
+<p>Il flip-flop ETA viene riposto dal segnale di sgancio da console, e in ETA, p4,
+M9.</p>
+</section>
+<section id="flip-flop-per-particolari-operazioni">
+<h2><span class="sectnum">12.11 </span>Flip-flop per particolari operazioni<a class="headerlink" href="#flip-flop-per-particolari-operazioni" title="Permalink to this heading">#</a></h2>
+<section id="flip-flop-p0">
+<h3><span class="sectnum">12.11.1 </span>Flip-flop p0<a class="headerlink" href="#flip-flop-p0" title="Permalink to this heading">#</a></h3>
+<p>E' il flip-flop che dà il periodo di cifra 0. p0 è ottenuto da un FF poichè la
+sua durata può essere anche diversa da quella normale dei p-pulsi (10 ps). pO
+si potrebbe anche considerare una fase. Si veda guanto detto a proposito del
+decodificatore dei p-pulsi, pag. 111.</p>
+</section>
+<section id="flip-flop-alpha-37">
+<h3><span class="sectnum">12.11.2 </span>Flip-flop ALPHA_37<a class="headerlink" href="#flip-flop-alpha-37" title="Permalink to this heading">#</a></h3>
+<p>Questo flip-flop, quando è disposto dà un segnale che dura da ALPHA, P3 ad
+ALPHA, p7 (compresi).</p>
+<p>Questo segnale serve per esempio nella rete logica del trigger di conta KV. Si
+risparmiano alcuni AND e OR in varie reti logiche.</p>
+<p>Si ha infatti:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALPHA_37 = ALPHA * p3 + ALPHA * p4 + ALPHA * p5 + ALPHA * p6 + ALHA * p7
 </pre></div>
 </div>
-<p>Ogni istruzione è individuata da tre decodificati primari (uno per ciascuno dei
-tre gruppi sopraesposti), secondo le seguenti quattro tabelle:</p>
-<p><strong>Istruzioni DELTA_A</strong></p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p>DELTA_M</p></th>
-<th class="head"><p>DELTA_P</p></th>
-<th class="head"><p>DELTA_R</p></th>
-<th class="head"><p>DELTA_B</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>DELTA_U</p></td>
-<td><p>MA</p></td>
-<td><p>DA</p></td>
-<td><p>MS</p></td>
-<td><p>CMA</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_E</p></td>
-<td><p>AM</p></td>
-<td><p>AoM</p></td>
-<td><p>FAM</p></td>
-<td><p>CM</p></td>
-</tr>
-<tr class="row-even"><td><p>DELTA_SIGMA</p></td>
-<td><p>-MA</p></td>
-<td><p>+MA</p></td>
-<td><p></p></td>
-<td><p>+AM</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_X</p></td>
-<td><p>-X</p></td>
-<td><p>+X</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>Istruzioni DELTA_T</strong></p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p>DELTA_M</p></th>
-<th class="head"><p>DELTA_P</p></th>
-<th class="head"><p>DELTA_R</p></th>
-<th class="head"><p>DELTA_B</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>DELTA_U</p></td>
-<td><p>MT</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p>CMT</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_E</p></td>
-<td><p>TM</p></td>
-<td><p>ToM</p></td>
-<td><p>FTM</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>DELTA_SIGMA</p></td>
-<td><p>-MT</p></td>
-<td><p>+MT</p></td>
-<td><p></p></td>
-<td><p>+TM</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_X</p></td>
-<td><p>XLN</p></td>
-<td><p>XLD</p></td>
-<td><p>+LD</p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>Istruzioni DELTA_S</strong></p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p>DELTA_M</p></th>
-<th class="head"><p>DELTA_P</p></th>
-<th class="head"><p>DELTA_R</p></th>
-<th class="head"><p>DELTA_B</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>DELTA_U</p></td>
-<td><p>Y</p></td>
-<td><p>MEM</p></td>
-<td><p>SALTI</p></td>
-<td><p>CIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_E</p></td>
-<td><p>RIi</p></td>
-<td><p>RIa</p></td>
-<td><p>SIN</p></td>
-<td><p>CMM</p></td>
-</tr>
-<tr class="row-even"><td><p>DELTA_SIGMA</p></td>
-<td><p>-MM</p></td>
-<td><p>+MM</p></td>
-<td><p>ITT</p></td>
-<td><p>PUM</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_X</p></td>
-<td><p>AV</p></td>
-<td><p>+IT</p></td>
-<td><p>-IT</p></td>
-<td><p>IT</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>Istruzioni DELTA_V</strong></p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p>DELTA_M</p></th>
-<th class="head"><p>DELTA_P</p></th>
-<th class="head"><p>DELTA_R</p></th>
-<th class="head"><p>DELTA_B</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>DELTA_U</p></td>
-<td><p>PRN</p></td>
-<td><p>TOL</p></td>
-<td><p>NAN</p></td>
-<td><p>DUB</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_E</p></td>
-<td><p>ZN</p></td>
-<td><p>LNi</p></td>
-<td><p>LNa</p></td>
-<td><p>TN</p></td>
-</tr>
-<tr class="row-even"><td><p>DELTA_SIGMA</p></td>
-<td><p>PLP</p></td>
-<td><p></p></td>
-<td><p>NDN</p></td>
-<td><p>PSP</p></td>
-</tr>
-<tr class="row-odd"><td><p>DELTA_X</p></td>
-<td><p>EM</p></td>
-<td><p></p></td>
-<td><p>RN</p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Come si vede, il decodificato DELTA_A individua prevalentemente istruzioni che
-interessano l'Accumulatore; il decodificato DELTA_T individua prevalentemente istruzioni che
-interessano la Memoria T; il decodificato DELTA_S individua
-istruzioni varie (di unità centrale); il decodificato V
-individua infine istruzioni che interessano unità elettromeccaniche esterne (nastri, tamburo, unità in linea).</p>
-</section>
-</section>
-<section id="decodificati-secondari">
-<h2><span class="sectnum">9.3 </span>Decodificati secondari<a class="headerlink" href="#decodificati-secondari" title="Permalink to this heading">#</a></h2>
-<p>I decodificati secondari sono invece i seguenti (è stato omesso il prefisso DELTA nei decodificati primari),</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>DELTA_K    = c
-DELTA_N    = !(_SIGMA * _M + _SIGMA * _B) * _V
-DELTA_AER  = _A * _E * _R + _T * + _E * _R
-DELTA_VUR  = _V * _U * _R = DELTA_NN
-DELTA_AEB  = _A * _E * _B
-DELTA_AUR  = _A * _U * _R
-DELTA_RI   = _S * _E *  a
-DELTA_PI   = _V * _X * _B + _S * _SIGMA * _B
-DELTA_SXM  = _S * _X *  _M
-DELTA_I    = _S * _X * !_M + _S * _U * _B
-DELTA_Z    = _S * _R * !c
-DELTA_1AUP = _A * _U * _P
-DELTA_MM   = _S * _SIGMA * _M + _S * _SIGMA * _P + _S * _E * _B + _S * _U * _P
-</pre></div>
-</div>
-<p>Ogni decodificato secondario individua un gruppo di istruzioni diverse: i
-decodificati secondari sono quindi soltanto dei segnali di comodo che
-semplificano la logica dei comandi.</p>
-<p>Le istruzioni che la macchina può eseguire sono in numero maggiore delle 64
-possibilità di individuazione offerte dal carattere di funzione.</p>
-<p>Infatti tutta la classe delle istruzioni di salto è individuata dalla cifra zero (000000) immessa in F (decodificato parziale secondario 2): le diverse istruzioni sono poi caratterizzate dalla condizione sotto cui
-eseguire il salto, condizione che è rappresentata dal
-carattere uscente da memoria nel p.d.c. 8 della fase di
-preparazione<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
-<p>Questo sistema consente di individuare fino a 64 diverse istruzioni di salto. Ne sono utilizzate soltanto 34.</p>
+<p>Il flip-flop ALPHA_37 viene disposto in ALPHA, p2, M9 e riposto in pO, M9 o in
+p7, M9 o dal segnale di sgancio da console.</p>
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id2" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>Questo carattere è immesso come sempre in LD, che comunica con il
-verificatore (vedi 16.1.).</p>
+<p>Vedi Manuale propedeutico E.8.</p>
 </aside>
 </aside>
+</section>
 </section>
 </section>
 
@@ -468,23 +396,23 @@ verificatore (vedi 16.1.).</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="10-organi-lunghezza-operando.html">
+          <a class="next-page" href="../schema-logico/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><span class="sectnum">10 </span>Organi di lunghezza operando da memoria</div>
+                <div class="title">Schema Logico</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="index.html">
+          <a class="prev-page" href="11-organi-di-temporizzazione.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Unita' Centrale - Descrizione Logica degli Organi</div>
+                <div class="title"><span class="sectnum">11 </span>Organi di temporizzazione</div>
                 
               </div>
             </a>
@@ -520,14 +448,22 @@ verificatore (vedi 16.1.).</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#"><span class="sectnum">9 </span>Organi di funzione</a><ul>
-<li><a class="reference internal" href="#registro-di-funzione-f"><span class="sectnum">9.1 </span>Registro di funzione F</a></li>
-<li><a class="reference internal" href="#decodificatore-di-funzione"><span class="sectnum">9.2 </span>Decodificatore di funzione</a><ul>
-<li><a class="reference internal" href="#decodificati-parziali"><span class="sectnum">9.2.1 </span>Decodificati parziali</a></li>
-<li><a class="reference internal" href="#decodificati-primari"><span class="sectnum">9.2.2 </span>Decodificati primari</a></li>
+<li><a class="reference internal" href="#"><span class="sectnum">12 </span>Le fasi</a><ul>
+<li><a class="reference internal" href="#fase-alpha"><span class="sectnum">12.1 </span>Fase ALPHA</a></li>
+<li><a class="reference internal" href="#fase-alpha-ritardata-alpha-r"><span class="sectnum">12.2 </span>Fase ALPHA ritardata (ALPHA_r)</a></li>
+<li><a class="reference internal" href="#fase-alpha-2"><span class="sectnum">12.3 </span>Fase ALPHA_2</a></li>
+<li><a class="reference internal" href="#fase-beta-w"><span class="sectnum">12.4 </span>Fase BETA_w</a></li>
+<li><a class="reference internal" href="#fase-beta-ritardata-beta-r"><span class="sectnum">12.5 </span>Fase BETA ritardata (BETA_r)</a></li>
+<li><a class="reference internal" href="#fase-beta-y"><span class="sectnum">12.6 </span>Fase BETA_y</a></li>
+<li><a class="reference internal" href="#fase-rho"><span class="sectnum">12.7 </span>Fase RHO</a></li>
+<li><a class="reference internal" href="#fase-tau"><span class="sectnum">12.8 </span>Fase TAU</a></li>
+<li><a class="reference internal" href="#fase-mu"><span class="sectnum">12.9 </span>Fase MU</a></li>
+<li><a class="reference internal" href="#fase-eta"><span class="sectnum">12.10 </span>Fase ETA</a></li>
+<li><a class="reference internal" href="#flip-flop-per-particolari-operazioni"><span class="sectnum">12.11 </span>Flip-flop per particolari operazioni</a><ul>
+<li><a class="reference internal" href="#flip-flop-p0"><span class="sectnum">12.11.1 </span>Flip-flop p0</a></li>
+<li><a class="reference internal" href="#flip-flop-alpha-37"><span class="sectnum">12.11.2 </span>Flip-flop ALPHA_37</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#decodificati-secondari"><span class="sectnum">9.3 </span>Decodificati secondari</a></li>
 </ul>
 </li>
 </ul>
