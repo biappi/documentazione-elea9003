@@ -8,4 +8,5 @@
 09-organi-di-funzione.md
 10-organi-lunghezza-operando.md
 11-organi-di-temporizzazione.md
+12-le-fasi.md
 ```
